@@ -1,693 +1,624 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>2025冰島極光 </title><style>
-/* cspell:disable-file */
-/* webkit printing magic: print all background colors */
-html {
-	-webkit-print-color-adjust: exact;
-}
-* {
-	box-sizing: border-box;
-	-webkit-print-color-adjust: exact;
-}
-
-html,
-body {
-	margin: 0;
-	padding: 0;
-}
-@media only screen {
-	body {
-		margin: 2em auto;
-		max-width: 900px;
-		color: rgb(55, 53, 47);
-	}
-}
-
-body {
-	line-height: 1.5;
-	white-space: pre-wrap;
-}
-
-a,
-a.visited {
-	color: inherit;
-	text-decoration: underline;
-}
-
-.pdf-relative-link-path {
-	font-size: 80%;
-	color: #444;
-}
-
-h1,
-h2,
-h3 {
-	letter-spacing: -0.01em;
-	line-height: 1.2;
-	font-weight: 600;
-	margin-bottom: 0;
-}
-
-.page-title {
-	font-size: 2.5rem;
-	font-weight: 700;
-	margin-top: 0;
-	margin-bottom: 0.75em;
-}
-
-h1 {
-	font-size: 1.875rem;
-	margin-top: 1.875rem;
-}
-
-h2 {
-	font-size: 1.5rem;
-	margin-top: 1.5rem;
-}
-
-h3 {
-	font-size: 1.25rem;
-	margin-top: 1.25rem;
-}
-
-.source {
-	border: 1px solid #ddd;
-	border-radius: 3px;
-	padding: 1.5em;
-	word-break: break-all;
-}
-
-.callout {
-	border-radius: 3px;
-	padding: 1rem;
-}
-
-figure {
-	margin: 1.25em 0;
-	page-break-inside: avoid;
-}
-
-figcaption {
-	opacity: 0.5;
-	font-size: 85%;
-	margin-top: 0.5em;
-}
-
-mark {
-	background-color: transparent;
-}
-
-.indented {
-	padding-left: 1.5em;
-}
-
-hr {
-	background: transparent;
-	display: block;
-	width: 100%;
-	height: 1px;
-	visibility: visible;
-	border: none;
-	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
-}
-
-img {
-	max-width: 100%;
-}
-
-@media only print {
-	img {
-		max-height: 100vh;
-		object-fit: contain;
-	}
-}
-
-@page {
-	margin: 1in;
-}
-
-.collection-content {
-	font-size: 0.875rem;
-}
-
-.column-list {
-	display: flex;
-	justify-content: space-between;
-}
-
-.column {
-	padding: 0 1em;
-}
-
-.column:first-child {
-	padding-left: 0;
-}
-
-.column:last-child {
-	padding-right: 0;
-}
-
-.table_of_contents-item {
-	display: block;
-	font-size: 0.875rem;
-	line-height: 1.3;
-	padding: 0.125rem;
-}
-
-.table_of_contents-indent-1 {
-	margin-left: 1.5rem;
-}
-
-.table_of_contents-indent-2 {
-	margin-left: 3rem;
-}
-
-.table_of_contents-indent-3 {
-	margin-left: 4.5rem;
-}
-
-.table_of_contents-link {
-	text-decoration: none;
-	opacity: 0.7;
-	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
-}
-
-table,
-th,
-td {
-	border: 1px solid rgba(55, 53, 47, 0.09);
-	border-collapse: collapse;
-}
-
-table {
-	border-left: none;
-	border-right: none;
-}
-
-th,
-td {
-	font-weight: normal;
-	padding: 0.25em 0.5em;
-	line-height: 1.5;
-	min-height: 1.5em;
-	text-align: left;
-}
-
-th {
-	color: rgba(55, 53, 47, 0.6);
-}
-
-ol,
-ul {
-	margin: 0;
-	margin-block-start: 0.6em;
-	margin-block-end: 0.6em;
-}
-
-li > ol:first-child,
-li > ul:first-child {
-	margin-block-start: 0.6em;
-}
-
-ul > li {
-	list-style: disc;
-}
-
-ul.to-do-list {
-	padding-inline-start: 0;
-}
-
-ul.to-do-list > li {
-	list-style: none;
-}
-
-.to-do-children-checked {
-	text-decoration: line-through;
-	opacity: 0.375;
-}
-
-ul.toggle > li {
-	list-style: none;
-}
-
-ul {
-	padding-inline-start: 1.7em;
-}
-
-ul > li {
-	padding-left: 0.1em;
-}
-
-ol {
-	padding-inline-start: 1.6em;
-}
-
-ol > li {
-	padding-left: 0.2em;
-}
-
-.mono ol {
-	padding-inline-start: 2em;
-}
-
-.mono ol > li {
-	text-indent: -0.4em;
-}
-
-.toggle {
-	padding-inline-start: 0em;
-	list-style-type: none;
-}
-
-/* Indent toggle children */
-.toggle > li > details {
-	padding-left: 1.7em;
-}
-
-.toggle > li > details > summary {
-	margin-left: -1.1em;
-}
-
-.selected-value {
-	display: inline-block;
-	padding: 0 0.5em;
-	background: rgba(206, 205, 202, 0.5);
-	border-radius: 3px;
-	margin-right: 0.5em;
-	margin-top: 0.3em;
-	margin-bottom: 0.3em;
-	white-space: nowrap;
-}
-
-.collection-title {
-	display: inline-block;
-	margin-right: 1em;
-}
-
-.page-description {
-	margin-bottom: 2em;
-}
-
-.simple-table {
-	margin-top: 1em;
-	font-size: 0.875rem;
-	empty-cells: show;
-}
-.simple-table td {
-	height: 29px;
-	min-width: 120px;
-}
-
-.simple-table th {
-	height: 29px;
-	min-width: 120px;
-}
-
-.simple-table-header-color {
-	background: rgb(247, 246, 243);
-	color: black;
-}
-.simple-table-header {
-	font-weight: 500;
-}
-
-time {
-	opacity: 0.5;
-}
-
-.icon {
-	display: inline-block;
-	max-width: 1.2em;
-	max-height: 1.2em;
-	text-decoration: none;
-	vertical-align: text-bottom;
-	margin-right: 0.5em;
-}
-
-img.icon {
-	border-radius: 3px;
-}
-
-.user-icon {
-	width: 1.5em;
-	height: 1.5em;
-	border-radius: 100%;
-	margin-right: 0.5rem;
-}
-
-.user-icon-inner {
-	font-size: 0.8em;
-}
-
-.text-icon {
-	border: 1px solid #000;
-	text-align: center;
-}
-
-.page-cover-image {
-	display: block;
-	object-fit: cover;
-	width: 100%;
-	max-height: 30vh;
-}
-
-.page-header-icon {
-	font-size: 3rem;
-	margin-bottom: 1rem;
-}
-
-.page-header-icon-with-cover {
-	margin-top: -0.72em;
-	margin-left: 0.07em;
-}
-
-.page-header-icon img {
-	border-radius: 3px;
-}
-
-.link-to-page {
-	margin: 1em 0;
-	padding: 0;
-	border: none;
-	font-weight: 500;
-}
-
-p > .user {
-	opacity: 0.5;
-}
-
-td > .user,
-td > time {
-	white-space: nowrap;
-}
-
-input[type="checkbox"] {
-	transform: scale(1.5);
-	margin-right: 0.6em;
-	vertical-align: middle;
-}
-
-p {
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
-}
-
-.image {
-	border: none;
-	margin: 1.5em 0;
-	padding: 0;
-	border-radius: 0;
-	text-align: center;
-}
-
-.code,
-code {
-	background: rgba(135, 131, 120, 0.15);
-	border-radius: 3px;
-	padding: 0.2em 0.4em;
-	border-radius: 3px;
-	font-size: 85%;
-	tab-size: 2;
-}
-
-code {
-	color: #eb5757;
-}
-
-.code {
-	padding: 1.5em 1em;
-}
-
-.code-wrap {
-	white-space: pre-wrap;
-	word-break: break-all;
-}
-
-.code > code {
-	background: none;
-	padding: 0;
-	font-size: 100%;
-	color: inherit;
-}
-
-blockquote {
-	font-size: 1.25em;
-	margin: 1em 0;
-	padding-left: 1em;
-	border-left: 3px solid rgb(55, 53, 47);
-}
-
-.bookmark {
-	text-decoration: none;
-	max-height: 8em;
-	padding: 0;
-	display: flex;
-	width: 100%;
-	align-items: stretch;
-}
-
-.bookmark-title {
-	font-size: 0.85em;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	height: 1.75em;
-	white-space: nowrap;
-}
-
-.bookmark-text {
-	display: flex;
-	flex-direction: column;
-}
-
-.bookmark-info {
-	flex: 4 1 180px;
-	padding: 12px 14px 14px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-
-.bookmark-image {
-	width: 33%;
-	flex: 1 1 180px;
-	display: block;
-	position: relative;
-	object-fit: cover;
-	border-radius: 1px;
-}
-
-.bookmark-description {
-	color: rgba(55, 53, 47, 0.6);
-	font-size: 0.75em;
-	overflow: hidden;
-	max-height: 4.5em;
-	word-break: break-word;
-}
-
-.bookmark-href {
-	font-size: 0.75em;
-	margin-top: 0.25em;
-}
-
-.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
-.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
-.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
-.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
-.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
-.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
-.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
-.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
-.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
-.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
-.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
-.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
-.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
-.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
-.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
-.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
-.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
-.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
-.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
-.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
-.highlight-default {
-	color: rgba(50, 48, 44, 1);
-}
-.highlight-gray {
-	color: rgba(120, 119, 116, 1);
-	fill: rgba(120, 119, 116, 1);
-}
-.highlight-brown {
-	color: rgba(159, 107, 83, 1);
-	fill: rgba(159, 107, 83, 1);
-}
-.highlight-orange {
-	color: rgba(217, 115, 13, 1);
-	fill: rgba(217, 115, 13, 1);
-}
-.highlight-yellow {
-	color: rgba(203, 145, 47, 1);
-	fill: rgba(203, 145, 47, 1);
-}
-.highlight-teal {
-	color: rgba(68, 131, 97, 1);
-	fill: rgba(68, 131, 97, 1);
-}
-.highlight-blue {
-	color: rgba(51, 126, 169, 1);
-	fill: rgba(51, 126, 169, 1);
-}
-.highlight-purple {
-	color: rgba(144, 101, 176, 1);
-	fill: rgba(144, 101, 176, 1);
-}
-.highlight-pink {
-	color: rgba(193, 76, 138, 1);
-	fill: rgba(193, 76, 138, 1);
-}
-.highlight-red {
-	color: rgba(212, 76, 71, 1);
-	fill: rgba(212, 76, 71, 1);
-}
-.highlight-default_background {
-	color: rgba(50, 48, 44, 1);
-}
-.highlight-gray_background {
-	background: rgba(248, 248, 247, 1);
-}
-.highlight-brown_background {
-	background: rgba(244, 238, 238, 1);
-}
-.highlight-orange_background {
-	background: rgba(251, 236, 221, 1);
-}
-.highlight-yellow_background {
-	background: rgba(251, 243, 219, 1);
-}
-.highlight-teal_background {
-	background: rgba(237, 243, 236, 1);
-}
-.highlight-blue_background {
-	background: rgba(231, 243, 248, 1);
-}
-.highlight-purple_background {
-	background: rgba(248, 243, 252, 1);
-}
-.highlight-pink_background {
-	background: rgba(252, 241, 246, 1);
-}
-.highlight-red_background {
-	background: rgba(253, 235, 236, 1);
-}
-.block-color-default {
-	color: inherit;
-	fill: inherit;
-}
-.block-color-gray {
-	color: rgba(120, 119, 116, 1);
-	fill: rgba(120, 119, 116, 1);
-}
-.block-color-brown {
-	color: rgba(159, 107, 83, 1);
-	fill: rgba(159, 107, 83, 1);
-}
-.block-color-orange {
-	color: rgba(217, 115, 13, 1);
-	fill: rgba(217, 115, 13, 1);
-}
-.block-color-yellow {
-	color: rgba(203, 145, 47, 1);
-	fill: rgba(203, 145, 47, 1);
-}
-.block-color-teal {
-	color: rgba(68, 131, 97, 1);
-	fill: rgba(68, 131, 97, 1);
-}
-.block-color-blue {
-	color: rgba(51, 126, 169, 1);
-	fill: rgba(51, 126, 169, 1);
-}
-.block-color-purple {
-	color: rgba(144, 101, 176, 1);
-	fill: rgba(144, 101, 176, 1);
-}
-.block-color-pink {
-	color: rgba(193, 76, 138, 1);
-	fill: rgba(193, 76, 138, 1);
-}
-.block-color-red {
-	color: rgba(212, 76, 71, 1);
-	fill: rgba(212, 76, 71, 1);
-}
-.block-color-default_background {
-	color: inherit;
-	fill: inherit;
-}
-.block-color-gray_background {
-	background: rgba(248, 248, 247, 1);
-}
-.block-color-brown_background {
-	background: rgba(244, 238, 238, 1);
-}
-.block-color-orange_background {
-	background: rgba(251, 236, 221, 1);
-}
-.block-color-yellow_background {
-	background: rgba(251, 243, 219, 1);
-}
-.block-color-teal_background {
-	background: rgba(237, 243, 236, 1);
-}
-.block-color-blue_background {
-	background: rgba(231, 243, 248, 1);
-}
-.block-color-purple_background {
-	background: rgba(248, 243, 252, 1);
-}
-.block-color-pink_background {
-	background: rgba(252, 241, 246, 1);
-}
-.block-color-red_background {
-	background: rgba(253, 235, 236, 1);
-}
-.select-value-color-uiBlue { background-color: undefined; }
-.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
-.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
-.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
-.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
-.select-value-color-transparentGray { background-color: undefined; }
-.select-value-color-translucentGray { background-color: undefined; }
-.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
-.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
-.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
-.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
-.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
-.select-value-color-pageGlass { background-color: undefined; }
-.select-value-color-washGlass { background-color: undefined; }
-
-.checkbox {
-	display: inline-flex;
-	vertical-align: text-bottom;
-	width: 16;
-	height: 16;
-	background-size: 16px;
-	margin-left: 2px;
-	margin-right: 5px;
-}
-
-.checkbox-on {
-	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
-}
-
-.checkbox-off {
-	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
-}
-	
-</style></head><body><article id="14f77cd3-e9fc-80a1-8342-f80df72d8b2e" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1610375229632-c7158c35a537?ixlib=rb-4.0.3&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb" style="object-position:center 32.78%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="https://www.notion.so/icons/connecting-flight_orange.svg"/></div><h1 class="page-title">2025冰島極光 </h1><p class="page-description"></p></header><div class="page-body"><p id="14f77cd3-e9fc-81d9-8c0c-dda540bddc6c" class="">
-</p><h2 id="14f77cd3-e9fc-813a-8c9e-c38e01e299fa" class="block-color-teal_background">航班資訊</h2><p id="17777cd3-e9fc-80b8-82b5-cfd1b244aee6" class=""><br/> <br/><strong> 10/4(六) ~ 10/26(日) </strong></p><table id="17777cd3-e9fc-8043-880f-e3c26872fd85" class="simple-table"><tbody><tr id="a9f7122f-a3f2-4e27-b26e-562df734b5ef"><td id="WQH|" class="">10/4(六) <strong>19:55</strong></td><td id="JegA" class="" style="width:80px">TPE</td><td id="aa{M" class=""> 出發</td><td id="BhR[" class=""><strong>10/5(日) 06:55</strong></td><td id="cELP" class="" style="width:78px">AMS</td><td id="RM;M" class="" style="width:76px">17h </td><td id="Y}fX" class="" style="width:93px"></td></tr><tr id="5b43e396-3a58-44b5-be5c-834109b1c384"><td id="WQH|" class=""><strong>10/5(日) 12:30</strong></td><td id="JegA" class="" style="width:80px">AMS</td><td id="aa{M" class=""></td><td id="BhR[" class=""><strong>10/5(日) 13:50</strong></td><td id="cELP" class="" style="width:78px">KEF </td><td id="RM;M" class="" style="width:76px">3h</td><td id="Y}fX" class="" style="width:93px">$5325</td></tr><tr id="1af77cd3-e9fc-802b-a64d-cf86447e5b91"><td id="WQH|" class=""><strong>10/5(日) 13:50</strong></td><td id="JegA" class="" style="width:80px"><strong>KEF</strong></td><td id="aa{M" class="">冰島自駕 11天</td><td id="BhR[" class=""></td><td id="cELP" class="" style="width:78px"></td><td id="RM;M" class="" style="width:76px"></td><td id="Y}fX" class="" style="width:93px"></td></tr><tr id="96ac0194-9318-4b21-a777-cabaa2d2c4a5"><td id="WQH|" class=""><strong>10/16(四) 10:30</strong></td><td id="JegA" class="" style="width:80px">KEF</td><td id="aa{M" class=""></td><td id="BhR[" class=""><strong>10/16(四) 15:45  </strong></td><td id="cELP" class="" style="width:78px">AMS</td><td id="RM;M" class="" style="width:76px"></td><td id="Y}fX" class="" style="width:93px"></td></tr><tr id="17777cd3-e9fc-8013-b134-e82b6dcd8fe5"><td id="WQH|" class=""><strong>10/16(四) 15:45</strong></td><td id="JegA" class="" style="width:80px">AMS</td><td id="aa{M" class="">入住荷蘭</td><td id="BhR[" class=""></td><td id="cELP" class="" style="width:78px"></td><td id="RM;M" class="" style="width:76px"></td><td id="Y}fX" class="" style="width:93px"></td></tr><tr id="17777cd3-e9fc-80d7-95a3-da27fe576ea2"><td id="WQH|" class=""><strong>10/17(五) </strong></td><td id="JegA" class="" style="width:80px">AMS</td><td id="aa{M" class=""><strong>荷蘭7日遊</strong></td><td id="BhR[" class=""></td><td id="cELP" class="" style="width:78px"></td><td id="RM;M" class="" style="width:76px"></td><td id="Y}fX" class="" style="width:93px"></td></tr><tr id="17777cd3-e9fc-8032-a5e3-c8ee6d22cc58"><td id="WQH|" class="">10/24(六) 12:15 </td><td id="JegA" class="" style="width:80px">AMS</td><td id="aa{M" class="">回家了</td><td id="BhR[" class="">10/25(日)  08:55</td><td id="cELP" class="" style="width:78px">TEP </td><td id="RM;M" class="" style="width:76px">14h</td><td id="Y}fX" class="" style="width:93px"></td></tr><tr id="17777cd3-e9fc-801b-a679-d76a939b8c15"><td id="WQH|" class=""></td><td id="JegA" class="" style="width:80px"></td><td id="aa{M" class=""></td><td id="BhR[" class=""></td><td id="cELP" class="" style="width:78px"></td><td id="RM;M" class="" style="width:76px"></td><td id="Y}fX" class="" style="width:93px"></td></tr></tbody></table><p id="1af77cd3-e9fc-80f7-b6a5-dbf2d90fa2f1" class="">
-</p><p id="17777cd3-e9fc-8000-a81d-e7cbe8135004" class="">總共19天，請假天數11天</p><p id="1ef77cd3-e9fc-80ae-8fe9-f18884d5b2ae" class="">
-</p><p id="1ef77cd3-e9fc-8022-95e4-ccd9fea2a164" class=""> </p><p id="1af77cd3-e9fc-8057-8e64-d8c21c985d92" class="">10/5 </p><figure id="1af77cd3-e9fc-80d8-84dc-d9e653e201d6" class="image"><a href="2025%E5%86%B0%E5%B3%B6%E6%A5%B5%E5%85%89%2014f77cd3e9fc80a18342f80df72d8b2e/image.png"><img style="width:1009.984375px" src="2025%E5%86%B0%E5%B3%B6%E6%A5%B5%E5%85%89%2014f77cd3e9fc80a18342f80df72d8b2e/image.png"/></a></figure><p id="17777cd3-e9fc-80d6-924e-e19146e7e53f" class=""><br/>10/ 16 KEF - AMS <br/>冰島到AMS有比較早比較便宜的航班，可以選擇要便宜，還是要舒服（不用一早起退房）<br/></p><figure id="1ef77cd3-e9fc-808e-b337-e12adf2c36f6" class="image"><a href="2025%E5%86%B0%E5%B3%B6%E6%A5%B5%E5%85%89%2014f77cd3e9fc80a18342f80df72d8b2e/image%201.png"><img style="width:707px" src="2025%E5%86%B0%E5%B3%B6%E6%A5%B5%E5%85%89%2014f77cd3e9fc80a18342f80df72d8b2e/image%201.png"/></a></figure><p id="1ef77cd3-e9fc-80d5-a21f-c1b8636fd8e0" class="">
-</p><figure id="14f77cd3-e9fc-81f1-8d82-c6631564aef6" class="link-to-page"><a href="https://www.notion.so/14f77cd3e9fc81f18d82c6631564aef6?pvs=21"><img class="icon" src="https://www.notion.so/icons/bookmark-outline_lightgray.svg"/>行程參考資料</a></figure><h2 id="14f77cd3-e9fc-8125-91d6-d3991cbd6931" class="block-color-teal_background">出發Go!</h2><h2 id="14f77cd3-e9fc-81b2-9ba3-c53f4050dd86" class="block-color-teal_background">行程安排</h2><p id="18b77cd3-e9fc-80b9-9b0e-c3894b419297" class="">
-</p><hr id="14f77cd3-e9fc-81e4-8cad-f992a1940ab0"/><p id="14f77cd3-e9fc-8116-8ab7-c97a9274f413" class="">
-</p><div id="14f77cd3-e9fc-81c1-9522-cedac4f03e3b" class="collection-content"><h4 class="collection-title">行程安排</h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(71, 70, 68, 0.6);flex-shrink:0" class="typesTitle"><path d="M0.637695 13.1914C1.0957 13.1914 1.32812 13 1.47852 12.5215L2.24414 10.3887H6.14746L6.90625 12.5215C7.05664 13 7.2959 13.1914 7.74707 13.1914C8.22559 13.1914 8.5332 12.9043 8.5332 12.4531C8.5332 12.2891 8.50586 12.1523 8.44434 11.9678L5.41602 3.79199C5.2041 3.21777 4.82129 2.9375 4.19922 2.9375C3.60449 2.9375 3.21484 3.21777 3.0166 3.78516L-0.0322266 12.002C-0.09375 12.1797 -0.121094 12.3232 -0.121094 12.4668C-0.121094 12.918 0.166016 13.1914 0.637695 13.1914ZM2.63379 9.12402L4.17871 4.68066H4.21973L5.76465 9.12402H2.63379ZM12.2793 13.2324C13.3115 13.2324 14.2891 12.6787 14.7129 11.8037H14.7402V12.5762C14.7471 12.9863 15.0273 13.2393 15.4238 13.2393C15.834 13.2393 16.1143 12.9795 16.1143 12.5215V8.00977C16.1143 6.49902 14.9658 5.52148 13.1543 5.52148C11.7666 5.52148 10.6592 6.08887 10.2695 6.99121C10.1943 7.15527 10.1533 7.3125 10.1533 7.46289C10.1533 7.81152 10.4062 8.04395 10.7686 8.04395C11.0215 8.04395 11.2129 7.94824 11.3496 7.73633C11.7529 6.99121 12.2861 6.65625 13.1064 6.65625C14.0977 6.65625 14.6992 7.20996 14.6992 8.1123V8.67285L12.5664 8.7959C10.7686 8.8916 9.77734 9.69824 9.77734 11.0107C9.77734 12.3369 10.8096 13.2324 12.2793 13.2324ZM12.6621 12.1387C11.8008 12.1387 11.2129 11.667 11.2129 10.9561C11.2129 10.2725 11.7598 9.82129 12.7578 9.75977L14.6992 9.62988V10.3203C14.6992 11.3457 13.7969 12.1387 12.6621 12.1387Z"></path></svg></span>地點</th><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(71, 70, 68, 0.6);flex-shrink:0" class="typesDate"><path d="M3.29688 14.4561H12.7031C14.1797 14.4561 14.9453 13.6904 14.9453 12.2344V3.91504C14.9453 2.45215 14.1797 1.69336 12.7031 1.69336H3.29688C1.82031 1.69336 1.05469 2.45215 1.05469 3.91504V12.2344C1.05469 13.6973 1.82031 14.4561 3.29688 14.4561ZM3.27637 13.1162C2.70898 13.1162 2.39453 12.8154 2.39453 12.2207V5.9043C2.39453 5.30273 2.70898 5.00879 3.27637 5.00879H12.71C13.2842 5.00879 13.6055 5.30273 13.6055 5.9043V12.2207C13.6055 12.8154 13.2842 13.1162 12.71 13.1162H3.27637ZM6.68066 7.38086H7.08398C7.33008 7.38086 7.41211 7.30566 7.41211 7.05957V6.66309C7.41211 6.41699 7.33008 6.3418 7.08398 6.3418H6.68066C6.44141 6.3418 6.35938 6.41699 6.35938 6.66309V7.05957C6.35938 7.30566 6.44141 7.38086 6.68066 7.38086ZM8.92285 7.38086H9.31934C9.56543 7.38086 9.64746 7.30566 9.64746 7.05957V6.66309C9.64746 6.41699 9.56543 6.3418 9.31934 6.3418H8.92285C8.67676 6.3418 8.59473 6.41699 8.59473 6.66309V7.05957C8.59473 7.30566 8.67676 7.38086 8.92285 7.38086ZM11.1582 7.38086H11.5547C11.8008 7.38086 11.8828 7.30566 11.8828 7.05957V6.66309C11.8828 6.41699 11.8008 6.3418 11.5547 6.3418H11.1582C10.9121 6.3418 10.8301 6.41699 10.8301 6.66309V7.05957C10.8301 7.30566 10.9121 7.38086 11.1582 7.38086ZM4.44531 9.58203H4.84863C5.09473 9.58203 5.17676 9.50684 5.17676 9.26074V8.86426C5.17676 8.61816 5.09473 8.54297 4.84863 8.54297H4.44531C4.20605 8.54297 4.12402 8.61816 4.12402 8.86426V9.26074C4.12402 9.50684 4.20605 9.58203 4.44531 9.58203ZM6.68066 9.58203H7.08398C7.33008 9.58203 7.41211 9.50684 7.41211 9.26074V8.86426C7.41211 8.61816 7.33008 8.54297 7.08398 8.54297H6.68066C6.44141 8.54297 6.35938 8.61816 6.35938 8.86426V9.26074C6.35938 9.50684 6.44141 9.58203 6.68066 9.58203ZM8.92285 9.58203H9.31934C9.56543 9.58203 9.64746 9.50684 9.64746 9.26074V8.86426C9.64746 8.61816 9.56543 8.54297 9.31934 8.54297H8.92285C8.67676 8.54297 8.59473 8.61816 8.59473 8.86426V9.26074C8.59473 9.50684 8.67676 9.58203 8.92285 9.58203ZM11.1582 9.58203H11.5547C11.8008 9.58203 11.8828 9.50684 11.8828 9.26074V8.86426C11.8828 8.61816 11.8008 8.54297 11.5547 8.54297H11.1582C10.9121 8.54297 10.8301 8.61816 10.8301 8.86426V9.26074C10.8301 9.50684 10.9121 9.58203 11.1582 9.58203ZM4.44531 11.7832H4.84863C5.09473 11.7832 5.17676 11.708 5.17676 11.4619V11.0654C5.17676 10.8193 5.09473 10.7441 4.84863 10.7441H4.44531C4.20605 10.7441 4.12402 10.8193 4.12402 11.0654V11.4619C4.12402 11.708 4.20605 11.7832 4.44531 11.7832ZM6.68066 11.7832H7.08398C7.33008 11.7832 7.41211 11.708 7.41211 11.4619V11.0654C7.41211 10.8193 7.33008 10.7441 7.08398 10.7441H6.68066C6.44141 10.7441 6.35938 10.8193 6.35938 11.0654V11.4619C6.35938 11.708 6.44141 11.7832 6.68066 11.7832ZM8.92285 11.7832H9.31934C9.56543 11.7832 9.64746 11.708 9.64746 11.4619V11.0654C9.64746 10.8193 9.56543 10.7441 9.31934 10.7441H8.92285C8.67676 10.7441 8.59473 10.8193 8.59473 11.0654V11.4619C8.59473 11.708 8.67676 11.7832 8.92285 11.7832Z"></path></svg></span>Date</th><th><span class="icon property-icon"><img src="https://www.notion.so/icons/atm_gray.svg" style="width:14px;height:14px;display:block"/></span>克朗</th><th><span class="icon property-icon"><img src="https://www.notion.so/icons/atm_gray.svg" style="width:14px;height:14px;display:block"/></span>台幣</th><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(71, 70, 68, 0.6);flex-shrink:0" class="typesFormula"><path d="M5.04688 14.3604H11.2744C11.7324 14.3604 12.0537 14.0801 12.0537 13.6494C12.0537 13.2119 11.7324 12.9248 11.2744 12.9248H5.81934V12.8564L9.30566 8.82324C9.54492 8.57031 9.6748 8.29688 9.6748 8.0166C9.6748 7.73633 9.54492 7.45605 9.29883 7.20996L5.81934 3.2793V3.21094H11.2812C11.7393 3.21094 12.0537 2.92383 12.0537 2.48633C12.0537 2.05566 11.7393 1.77539 11.2812 1.77539H5.05371C4.34277 1.77539 3.95312 2.26758 3.95312 2.81445C3.95312 3.12207 4.07617 3.44336 4.33594 3.69629L8.15039 7.96875V8.05078L4.3291 12.4395C4.06934 12.6924 3.94629 13.0137 3.94629 13.3213C3.94629 13.8682 4.33594 14.3604 5.04688 14.3604Z"></path></svg></span>台幣結算</th><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(71, 70, 68, 0.6);flex-shrink:0" class="typesText"><path d="M1.56738 3.25879H14.4258C14.7676 3.25879 15.0479 2.97852 15.0479 2.63672C15.0479 2.29492 14.7744 2.02148 14.4258 2.02148H1.56738C1.21875 2.02148 0.952148 2.29492 0.952148 2.63672C0.952148 2.97852 1.22559 3.25879 1.56738 3.25879ZM1.56738 6.84082H14.4258C14.7676 6.84082 15.0479 6.56055 15.0479 6.21875C15.0479 5.87695 14.7744 5.60352 14.4258 5.60352H1.56738C1.21875 5.60352 0.952148 5.87695 0.952148 6.21875C0.952148 6.56055 1.22559 6.84082 1.56738 6.84082ZM1.56738 10.4229H14.4258C14.7676 10.4229 15.0479 10.1426 15.0479 9.80078C15.0479 9.45898 14.7744 9.18555 14.4258 9.18555H1.56738C1.21875 9.18555 0.952148 9.45898 0.952148 9.80078C0.952148 10.1426 1.22559 10.4229 1.56738 10.4229ZM1.56738 14.0049H8.75879C9.10059 14.0049 9.38086 13.7246 9.38086 13.3828C9.38086 13.041 9.10742 12.7676 8.75879 12.7676H1.56738C1.21875 12.7676 0.952148 13.041 0.952148 13.3828C0.952148 13.7246 1.22559 14.0049 1.56738 14.0049Z"></path></svg></span>描述</th><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(71, 70, 68, 0.6);flex-shrink:0" class="typesFile"><path d="M12.5938 8.44043L7.54883 13.4854C6.26367 14.7773 4.54102 14.6475 3.44043 13.54C2.32617 12.4326 2.20312 10.7168 3.49512 9.4248L10.3926 2.52734C11.1445 1.77539 12.2725 1.63867 13.0039 2.37695C13.7422 3.11523 13.6055 4.22949 12.8535 4.98828L6.08594 11.7627C5.77832 12.0703 5.41602 11.9814 5.2041 11.7764C4.99902 11.5576 4.91016 11.2021 5.21777 10.8877L9.93457 6.1709C10.1738 5.93164 10.1875 5.58301 9.96191 5.35059C9.72949 5.13184 9.38086 5.13867 9.1416 5.37793L4.39746 10.1152C3.67285 10.8535 3.7002 11.9746 4.34961 12.624C5.05371 13.3281 6.12012 13.3145 6.8584 12.5762L13.6602 5.77441C14.9795 4.45508 14.9316 2.71875 13.7764 1.55664C12.6416 0.428711 10.8779 0.34668 9.55176 1.66602L2.61328 8.61816C0.883789 10.3477 1 12.8291 2.57227 14.4014C4.14453 15.9668 6.63281 16.0898 8.3623 14.3672L13.4414 9.28809C13.6738 9.0625 13.667 8.64551 13.4346 8.41992C13.209 8.18066 12.833 8.21484 12.5938 8.44043Z"></path></svg></span>照片</th><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(71, 70, 68, 0.6);flex-shrink:0" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>第幾天</th><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(71, 70, 68, 0.6);flex-shrink:0" class="typesUrl"><path d="M7.69922 10.8945L8.73828 9.84863C7.91797 9.77344 7.34375 9.51367 6.91992 9.08984C5.76465 7.93457 5.76465 6.29395 6.91309 5.14551L9.18262 2.87598C10.3379 1.7207 11.9717 1.7207 13.127 2.87598C14.2891 4.04492 14.2822 5.67188 13.1338 6.82031L11.958 7.99609C12.1768 8.49512 12.2451 9.10352 12.1289 9.62988L14.0908 7.6748C15.7725 6 15.7793 3.62109 14.084 1.92578C12.3887 0.223633 10.0098 0.237305 8.33496 1.91211L5.95605 4.29785C4.28125 5.97266 4.26758 8.35156 5.96289 10.0469C6.36621 10.4434 6.90625 10.7441 7.69922 10.8945ZM8.30078 5.13184L7.26855 6.17773C8.08203 6.25293 8.66309 6.51953 9.08008 6.93652C10.2422 8.09863 10.2422 9.73242 9.08691 10.8809L6.81738 13.1504C5.66211 14.3057 4.03516 14.3057 2.87305 13.1504C1.71094 11.9883 1.71777 10.3545 2.87305 9.20605L4.04199 8.03027C3.83008 7.53125 3.75488 6.92969 3.87109 6.39648L1.91602 8.35156C0.234375 10.0264 0.227539 12.4121 1.92285 14.1074C3.61816 15.8027 5.99707 15.7891 7.67188 14.1143L10.0439 11.7354C11.7256 10.0537 11.7324 7.6748 10.0371 5.98633C9.64062 5.58301 9.10059 5.28223 8.30078 5.13184Z"></path></svg></span>網址</th><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(71, 70, 68, 0.6);flex-shrink:0" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>類別</th></tr></thead><tbody><tr id="14f77cd3-e9fc-81a1-b5d8-c666e4816bd6"><td class="cell-title"><a href="https://www.notion.so/14f77cd3e9fc81a1b5d8c666e4816bd6?pvs=21">家→桃機</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-blue">Day 0</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-blue">🚗 移動</span></td></tr><tr id="14f77cd3-e9fc-8193-9125-cf0dc070ebd4"><td class="cell-title"><a href="https://www.notion.so/13-50-14f77cd3e9fc81939125cf0dc070ebd4?pvs=21"><span class="icon">✈️</span>航班 13:50 到</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-brown">Day 1 雷克雅維克 10/5</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-blue">🚗 移動</span></td></tr><tr id="14f77cd3-e9fc-8090-8485-e411092da506"><td class="cell-title"><a href="https://www.notion.so/14f77cd3e9fc80908485e411092da506?pvs=21">租車</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-brown">Day 1 雷克雅維克 10/5</span></td><td class="cell-i::s"></td><td class="cell-:QwR"></td></tr><tr id="18b77cd3-e9fc-80ae-9ff5-e1b1b355bbd2"><td class="cell-title"><a href="https://www.notion.so/1h-18b77cd3e9fc80ae9ff5e1b1b355bbd2?pvs=21">1h</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-brown">Day 1 雷克雅維克 10/5</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-blue">🚗 移動</span></td></tr><tr id="18b77cd3-e9fc-8004-8d40-c5e244db3271"><td class="cell-title"><a href="https://www.notion.so/1h-45m-18b77cd3e9fc80048d40c5e244db3271?pvs=21">1h 45m</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-yellow">Day 2 黃金圈</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-blue">🚗 移動</span></td></tr><tr id="14f77cd3-e9fc-80b2-8087-c8cb474ca747"><td class="cell-title"><a href="https://www.notion.so/Svarta-Kaffid-14f77cd3e9fc80b28087c8cb474ca747?pvs=21">Svarta Kaffid 麵包湯</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"><span style="margin-right:6px"><a href="https://mimihan.tw/wp-content/uploads/20180706200030_83.jpg"><img style="width:20px;max-height:24px" src="https://mimihan.tw/wp-content/uploads/20180706200030_83.jpg" alt="https://mimihan.tw/wp-content/uploads/20180706200030_83.jpg"/></a></span></td><td class="cell-rj]="><span class="selected-value select-value-color-brown">Day 1 雷克雅維克 10/5</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-yellow">🧁 吃喝</span></td></tr><tr id="14f77cd3-e9fc-8001-b06d-f33356be3db8"><td class="cell-title"><a href="https://www.notion.so/Braud-Co-14f77cd3e9fc8001b06df33356be3db8?pvs=21">Braud &amp; Co麵包店</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"><span style="margin-right:6px"><a href="https://mimihan.tw/wp-content/uploads/20180503165237_63.jpg"><img style="width:20px;max-height:24px" src="https://mimihan.tw/wp-content/uploads/20180503165237_63.jpg" alt="https://mimihan.tw/wp-content/uploads/20180503165237_63.jpg"/></a></span></td><td class="cell-rj]="><span class="selected-value select-value-color-brown">Day 1 雷克雅維克 10/5</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-yellow">🧁 吃喝</span></td></tr><tr id="14f77cd3-e9fc-80f1-b9ad-db48d30129ae"><td class="cell-title"><a href="https://www.notion.so/Harpa-14f77cd3e9fc80f1b9addb48d30129ae?pvs=21">Harpa音樂廳</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z">曾被<strong>《紐約時報》評選「全球最值得旅遊的41個地方」</strong>之一</td><td class="cell-@)Dm"><span style="margin-right:6px"><a href="https://bobbyworld.tw/wp-content/uploads/pixnet/e69707fafbb86d7381c6565d441727f7.jpg"><img style="width:20px;max-height:24px" src="https://bobbyworld.tw/wp-content/uploads/pixnet/e69707fafbb86d7381c6565d441727f7.jpg" alt="https://bobbyworld.tw/wp-content/uploads/pixnet/e69707fafbb86d7381c6565d441727f7.jpg"/></a></span></td><td class="cell-rj]="><span class="selected-value select-value-color-brown">Day 1 雷克雅維克 10/5</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-brown">⛱ 景點</span></td></tr><tr id="14f77cd3-e9fc-80d5-86d1-f369d240cdc3"><td class="cell-title"><a href="https://www.notion.so/Hallgr-mskirkja-14f77cd3e9fc80d586d1f369d240cdc3?pvs=21">哈爾格林姆教堂( Hallgrímskirkja</a></td><td class="cell-rWb{"></td><td class="cell-OEaF">1,400</td><td class="cell-x^FC"></td><td class="cell-_FHJ">322</td><td class="cell-f.~Z"><strong>全冰島最大教堂</strong>，風格前衛，外觀如被風化的柱狀玄武岩</td><td class="cell-@)Dm"><span style="margin-right:6px"><a href="https://mimihan.tw/wp-content/uploads/20180429160946_55.jpg"><img style="width:20px;max-height:24px" src="https://mimihan.tw/wp-content/uploads/20180429160946_55.jpg" alt="https://mimihan.tw/wp-content/uploads/20180429160946_55.jpg"/></a></span></td><td class="cell-rj]="><span class="selected-value select-value-color-brown">Day 1 雷克雅維克 10/5</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-brown">⛱ 景點</span></td></tr><tr id="18b77cd3-e9fc-8004-a189-d055ea8b341f"><td class="cell-title"><a href="https://www.notion.so/1h-18b77cd3e9fc8004a189d055ea8b341f?pvs=21">1h</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-brown">Day 1 雷克雅維克 10/5</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-blue">🚗 移動</span></td></tr><tr id="14f77cd3-e9fc-80fb-8bb2-d3a9bf56810e"><td class="cell-title"><a href="https://www.notion.so/14f77cd3e9fc80fb8bb2d3a9bf56810e?pvs=21">藍湖</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"><span style="margin-right:6px"><a href="https://bobbyworld.tw/wp-content/uploads/pixnet/9f13156749eb0d1db3bd5dbd7190ff51.jpg"><img style="width:20px;max-height:24px" src="https://bobbyworld.tw/wp-content/uploads/pixnet/9f13156749eb0d1db3bd5dbd7190ff51.jpg" alt="https://bobbyworld.tw/wp-content/uploads/pixnet/9f13156749eb0d1db3bd5dbd7190ff51.jpg"/></a></span></td><td class="cell-rj]="><span class="selected-value select-value-color-brown">Day 1 雷克雅維克 10/5</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-brown">⛱ 景點</span></td></tr><tr id="18c77cd3-e9fc-8069-88e3-c9fb5c2c5c59"><td class="cell-title"><a href="https://www.notion.so/18c77cd3e9fc806988e3c9fb5c2c5c59?pvs=21">住雷克雅維克</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-brown">Day 1 雷克雅維克 10/5</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-green">🏡 住宿</span></td></tr><tr id="18c77cd3-e9fc-80e2-9152-edf417d8c64a"><td class="cell-title"><a href="https://www.notion.so/18c77cd3e9fc80e29152edf417d8c64a?pvs=21">Untitled</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-brown">Day 1 雷克雅維克 10/5</span></td><td class="cell-i::s"></td><td class="cell-:QwR"></td></tr><tr id="14f77cd3-e9fc-803c-a2bb-c60cd697db76"><td class="cell-title"><a href="https://www.notion.so/ingvellir-National-Park-14f77cd3e9fc803ca2bbc60cd697db76?pvs=21">辛格韋德利國家公園Þingvellir National Park</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z">世界上唯一在海平面以上的<strong>北美板塊與歐亞板塊</strong>，走在上<strong>見證板塊持續移動的痕跡</strong></td><td class="cell-@)Dm"><span style="margin-right:6px"><a href="https://bobbyworld.tw/wp-content/uploads/pixnet/b60bf02b2f8e7debf6d89af4ee21b3d6.jpg"><img style="width:20px;max-height:24px" src="https://bobbyworld.tw/wp-content/uploads/pixnet/b60bf02b2f8e7debf6d89af4ee21b3d6.jpg" alt="https://bobbyworld.tw/wp-content/uploads/pixnet/b60bf02b2f8e7debf6d89af4ee21b3d6.jpg"/></a></span></td><td class="cell-rj]="><span class="selected-value select-value-color-yellow">Day 2 黃金圈</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-brown">⛱ 景點</span></td></tr><tr id="14f77cd3-e9fc-80ed-9a4a-e6e30bbbff6a"><td class="cell-title"><a href="https://www.notion.so/Almannagj-14f77cd3e9fc80ed9a4ae6e30bbbff6a?pvs=21">阿爾曼納陡崖 (Almannagjá)</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"><strong>北美版塊、歐亞板塊分界處</strong><br/>這是世界上唯一在海平面以上的北美板塊與歐亞板塊，兩大板塊<br/><br/><strong>現今每年仍以2公分的速度繼續移動</strong></td><td class="cell-@)Dm"><span style="margin-right:6px"><a href="https://bobbyworld.tw/wp-content/uploads/pixnet/9297d22ba307260f2a0b01ea7db764f8.jpg"><img style="width:20px;max-height:24px" src="https://bobbyworld.tw/wp-content/uploads/pixnet/9297d22ba307260f2a0b01ea7db764f8.jpg" alt="https://bobbyworld.tw/wp-content/uploads/pixnet/9297d22ba307260f2a0b01ea7db764f8.jpg"/></a></span></td><td class="cell-rj]="><span class="selected-value select-value-color-yellow">Day 2 黃金圈</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-brown">⛱ 景點</span></td></tr><tr id="18b77cd3-e9fc-80b9-8898-daa586f12c73"><td class="cell-title"><a href="https://www.notion.so/40m-18b77cd3e9fc80b98898daa586f12c73?pvs=21">40m</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-yellow">Day 2 黃金圈</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-blue">🚗 移動</span></td></tr><tr id="14f77cd3-e9fc-806f-8440-d093a03eba1c"><td class="cell-title"><a href="https://www.notion.so/Strokkur-Geyser-14f77cd3e9fc806f8440d093a03eba1c?pvs=21">史托克間歇泉Strokkur Geyser</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z">史托克間歇泉<strong>水柱高度約落在15-20公尺</strong>，有時可高達40公尺，<strong>噴發時間約4-8分鐘</strong></td><td class="cell-@)Dm"><span style="margin-right:6px"><a href="https://bobbyworld.tw/wp-content/uploads/pixnet/97c71f9eebe535acfed9aaa4f815907c.jpg"><img style="width:20px;max-height:24px" src="https://bobbyworld.tw/wp-content/uploads/pixnet/97c71f9eebe535acfed9aaa4f815907c.jpg" alt="https://bobbyworld.tw/wp-content/uploads/pixnet/97c71f9eebe535acfed9aaa4f815907c.jpg"/></a></span></td><td class="cell-rj]="><span class="selected-value select-value-color-yellow">Day 2 黃金圈</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-brown">⛱ 景點</span></td></tr><tr id="18b77cd3-e9fc-8004-bde6-f55034c5bb83"><td class="cell-title"><a href="https://www.notion.so/35m-18b77cd3e9fc8004bde6f55034c5bb83?pvs=21">35m</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-yellow">Day 2 黃金圈</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-blue">🚗 移動</span></td></tr><tr id="14f77cd3-e9fc-802b-9974-df1e2ed33e8c"><td class="cell-title"><a href="https://www.notion.so/Bruarfoss-14f77cd3e9fc802b9974df1e2ed33e8c?pvs=21">藍色瀑布 Bruarfoss</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"><span style="margin-right:6px"><a href="https://mlz24bjzzgqm.i.optimole.com/w:463/h:694/q:mauto/dpr:2.0/ig:avif/https://dragonflytravelblog.com/wp-content/uploads/2024/07/DSC08814.jpg"><img style="width:20px;max-height:24px" src="https://mlz24bjzzgqm.i.optimole.com/w:463/h:694/q:mauto/dpr:2.0/ig:avif/https://dragonflytravelblog.com/wp-content/uploads/2024/07/DSC08814.jpg" alt="https://mlz24bjzzgqm.i.optimole.com/w:463/h:694/q:mauto/dpr:2.0/ig:avif/https://dragonflytravelblog.com/wp-content/uploads/2024/07/DSC08814.jpg"/></a></span></td><td class="cell-rj]="><span class="selected-value select-value-color-yellow">Day 2 黃金圈</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-brown">⛱ 景點</span></td></tr><tr id="18b77cd3-e9fc-80dc-89d5-fe7fc56722d9"><td class="cell-title"><a href="https://www.notion.so/23m-18b77cd3e9fc80dc89d5fe7fc56722d9?pvs=21">23m</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-yellow">Day 2 黃金圈</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-blue">🚗 移動</span></td></tr><tr id="14f77cd3-e9fc-80b8-8861-f1ff058302f0"><td class="cell-title"><a href="https://www.notion.so/Gullfoss-14f77cd3e9fc80b88861f1ff058302f0?pvs=21">古佛斯瀑布 Gullfoss 黃金</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"><strong>世界十大瀑布之一。有紀念品店、餐廳、廁所</strong></td><td class="cell-@)Dm"><span style="margin-right:6px"><a href="https://bobbyworld.tw/wp-content/uploads/pixnet/6772ba08ae239a0952383c81195d6dd2.jpg"><img style="width:20px;max-height:24px" src="https://bobbyworld.tw/wp-content/uploads/pixnet/6772ba08ae239a0952383c81195d6dd2.jpg" alt="https://bobbyworld.tw/wp-content/uploads/pixnet/6772ba08ae239a0952383c81195d6dd2.jpg"/></a></span></td><td class="cell-rj]="><span class="selected-value select-value-color-yellow">Day 2 黃金圈</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-brown">⛱ 景點</span></td></tr><tr id="14f77cd3-e9fc-8026-981e-cee1f6089d9f"><td class="cell-title"><a href="https://www.notion.so/GullfossKaffi-Ehf-14f77cd3e9fc8026981ecee1f6089d9f?pvs=21">GullfossKaffi Ehf羊肉湯</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z">Gullfoss Waterfall 旁邊</td><td class="cell-@)Dm"><span style="margin-right:6px"><a href="https://bobbyworld.tw/wp-content/uploads/pixnet/9c600eab4147cda40e9a7a0f9e68a57b.jpg"><img style="width:20px;max-height:24px" src="https://bobbyworld.tw/wp-content/uploads/pixnet/9c600eab4147cda40e9a7a0f9e68a57b.jpg" alt="https://bobbyworld.tw/wp-content/uploads/pixnet/9c600eab4147cda40e9a7a0f9e68a57b.jpg"/></a></span></td><td class="cell-rj]="><span class="selected-value select-value-color-yellow">Day 2 黃金圈</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-yellow">🧁 吃喝</span></td></tr><tr id="18c77cd3-e9fc-805b-9ac6-df3ad06bdebe"><td class="cell-title"><a href="https://www.notion.so/1h-18c77cd3e9fc805b9ac6df3ad06bdebe?pvs=21">1h</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-yellow">Day 2 黃金圈</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-blue">🚗 移動</span></td></tr><tr id="18c77cd3-e9fc-803a-b79d-dcb5fd054655"><td class="cell-title"><a href="https://www.notion.so/18c77cd3e9fc803ab79ddcb5fd054655?pvs=21">住塞爾福斯</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-yellow">Day 2 黃金圈</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-green">🏡 住宿</span></td></tr><tr id="18c77cd3-e9fc-8090-bd77-c4f3a409a230"><td class="cell-title"><a href="https://www.notion.so/20m-18c77cd3e9fc8090bd77c4f3a409a230?pvs=21">賽爾弗斯 到 野溪溫泉 20m</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-orange">Day 3 南部</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-blue">🚗 移動</span></td></tr><tr id="14f77cd3-e9fc-80a3-ba51-de76eabdc69c"><td class="cell-title"><a href="https://www.notion.so/Reykjadalur-14f77cd3e9fc80a3ba51de76eabdc69c?pvs=21">Reykjadalur 野溪溫泉</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"><span style="margin-right:6px"><a href="https://mlz24bjzzgqm.i.optimole.com/w:768/h:512/q:mauto/dpr:2.0/ig:avif/https://dragonflytravelblog.com/wp-content/uploads/2024/07/reykjadalur.jpg"><img style="width:20px;max-height:24px" src="https://mlz24bjzzgqm.i.optimole.com/w:768/h:512/q:mauto/dpr:2.0/ig:avif/https://dragonflytravelblog.com/wp-content/uploads/2024/07/reykjadalur.jpg" alt="https://mlz24bjzzgqm.i.optimole.com/w:768/h:512/q:mauto/dpr:2.0/ig:avif/https://dragonflytravelblog.com/wp-content/uploads/2024/07/reykjadalur.jpg"/></a></span></td><td class="cell-rj]="><span class="selected-value select-value-color-orange">Day 3 南部</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-brown">⛱ 景點</span></td></tr><tr id="18c77cd3-e9fc-806d-91be-f6df3504d377"><td class="cell-title"><a href="https://www.notion.so/20m-18c77cd3e9fc806d91bef6df3504d377?pvs=21">賽爾弗斯 到 火口湖 20m</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-orange">Day 3 南部</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-blue">🚗 移動</span></td></tr><tr id="14f77cd3-e9fc-8062-85f5-d8f69434114c"><td class="cell-title"><a href="https://www.notion.so/Kerid-Crater-14f77cd3e9fc806285f5d8f69434114c?pvs=21">凱瑞斯火口湖 Kerid Crater</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"><span style="margin-right:6px"><a href="https://mimihan.tw/wp-content/uploads/20180427004523_29.jpg"><img style="width:20px;max-height:24px" src="https://mimihan.tw/wp-content/uploads/20180427004523_29.jpg" alt="https://mimihan.tw/wp-content/uploads/20180427004523_29.jpg"/></a></span></td><td class="cell-rj]="><span class="selected-value select-value-color-orange">Day 3 南部</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-brown">⛱ 景點</span></td></tr><tr id="18b77cd3-e9fc-8040-a716-ff0c1603fd1f"><td class="cell-title"><a href="https://www.notion.so/to-1h-10m-18b77cd3e9fc8040a716ff0c1603fd1f?pvs=21">火口湖 to 塞里雅蘭瀑布1h 10m</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-orange">Day 3 南部</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-blue">🚗 移動</span></td></tr><tr id="18b77cd3-e9fc-8025-b611-f72cf25cc1a8"><td class="cell-title"><a href="https://www.notion.so/Seljalandsfoss-18b77cd3e9fc8025b611f72cf25cc1a8?pvs=21">塞里雅蘭瀑布 Seljalandsfoss</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z">水簾洞瀑布，有廁所</td><td class="cell-@)Dm"><span style="margin-right:6px"><a href="https://mimihan.tw/wp-content/uploads/20180507121849_84.jpg"><img style="width:20px;max-height:24px" src="https://mimihan.tw/wp-content/uploads/20180507121849_84.jpg" alt="https://mimihan.tw/wp-content/uploads/20180507121849_84.jpg"/></a></span></td><td class="cell-rj]="><span class="selected-value select-value-color-orange">Day 3 南部</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-brown">⛱ 景點</span></td></tr><tr id="18b77cd3-e9fc-80bc-a943-cb1f752299b0"><td class="cell-title"><a href="https://www.notion.so/31m-18b77cd3e9fc80bca943cb1f752299b0?pvs=21">31m</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-orange">Day 3 南部</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-blue">🚗 移動</span></td></tr><tr id="14f77cd3-e9fc-80e4-a933-ddc174193360"><td class="cell-title"><a href="https://www.notion.so/Skogafoss-14f77cd3e9fc80e4a933ddc174193360?pvs=21">斯科加爾瀑布 Skogafoss</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z">高人氣《白日夢冒險王》拍攝場景，又稱<strong>彩虹瀑布</strong>，不少人稱它是<strong>國內最美麗的瀑布</strong></td><td class="cell-@)Dm"><span style="margin-right:6px"><a href="https://bobbyworld.tw/wp-content/uploads/pixnet/b5354d87a4320ee73ff7fafc4ba00d30.jpg"><img style="width:20px;max-height:24px" src="https://bobbyworld.tw/wp-content/uploads/pixnet/b5354d87a4320ee73ff7fafc4ba00d30.jpg" alt="https://bobbyworld.tw/wp-content/uploads/pixnet/b5354d87a4320ee73ff7fafc4ba00d30.jpg"/></a></span></td><td class="cell-rj]="><span class="selected-value select-value-color-orange">Day 3 南部</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-brown">⛱ 景點</span></td></tr><tr id="18c77cd3-e9fc-808f-b287-cf128a56c81b"><td class="cell-title"><a href="https://www.notion.so/32m-18c77cd3e9fc808fb287cf128a56c81b?pvs=21">32m</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-orange">Day 3 南部</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-blue">🚗 移動</span></td></tr><tr id="17977cd3-e9fc-8098-8ebc-cf9f7c096a88"><td class="cell-title"><a href="https://www.notion.so/Reynisfjara-17977cd3e9fc80988ebccf9f7c096a88?pvs=21">Reynisfjara黑沙灘</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z">海蝕洞是千年前火山噴發下的遺跡，高120公尺，拱門甚至大到足以讓漁船通行。1955年還曾有兩位冒險家駕駛小型飛機，直接穿越表演特技</td><td class="cell-@)Dm"><span style="margin-right:6px"><a href="https://bobbyworld.tw/wp-content/uploads/pixnet/9ed7a628e2f547092920693ada18878e.jpg"><img style="width:20px;max-height:24px" src="https://bobbyworld.tw/wp-content/uploads/pixnet/9ed7a628e2f547092920693ada18878e.jpg" alt="https://bobbyworld.tw/wp-content/uploads/pixnet/9ed7a628e2f547092920693ada18878e.jpg"/></a></span><span style="margin-right:6px"><a href="https://bobbyworld.tw/wp-content/uploads/pixnet/4da10f837463f77bb344b3c267fa4950.jpg"><img style="width:20px;max-height:24px" src="https://bobbyworld.tw/wp-content/uploads/pixnet/4da10f837463f77bb344b3c267fa4950.jpg" alt="https://bobbyworld.tw/wp-content/uploads/pixnet/4da10f837463f77bb344b3c267fa4950.jpg"/></a></span></td><td class="cell-rj]="><span class="selected-value select-value-color-orange">Day 3 南部</span></td><td class="cell-i::s"></td><td class="cell-:QwR"></td></tr><tr id="17977cd3-e9fc-8036-9a82-c6b9993afa1d"><td class="cell-title"><a href="https://www.notion.so/Reynisfjara-Beach-17977cd3e9fc80369a82c6b9993afa1d?pvs=21">黑沙灘 Reynisfjara Beach</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"><strong>全球最美沙灘之一</strong></td><td class="cell-@)Dm"><span style="margin-right:6px"><a href="https://bobbyworld.tw/wp-content/uploads/pixnet/97285962cf063764ae1e7fe8cb5b7b3b.jpg"><img style="width:20px;max-height:24px" src="https://bobbyworld.tw/wp-content/uploads/pixnet/97285962cf063764ae1e7fe8cb5b7b3b.jpg" alt="https://bobbyworld.tw/wp-content/uploads/pixnet/97285962cf063764ae1e7fe8cb5b7b3b.jpg"/></a></span></td><td class="cell-rj]="><span class="selected-value select-value-color-orange">Day 3 南部</span></td><td class="cell-i::s"></td><td class="cell-:QwR"></td></tr><tr id="18b77cd3-e9fc-80f9-b9a8-deea88e739c2"><td class="cell-title"><a href="https://www.notion.so/12m-18b77cd3e9fc80f9b9a8deea88e739c2?pvs=21">12m</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-orange">Day 3 南部</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-blue">🚗 移動</span></td></tr><tr id="18c77cd3-e9fc-8035-b853-d7f7f727a237"><td class="cell-title"><a href="https://www.notion.so/18c77cd3e9fc8035b853d7f7f727a237?pvs=21">住 維克</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-orange">Day 3 南部</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-green">🏡 住宿</span></td></tr><tr id="17977cd3-e9fc-8061-ada2-cec5d317b729"><td class="cell-title"><a href="https://www.notion.so/Vik-11-00-3h-17977cd3e9fc8061ada2cec5d317b729?pvs=21">Vik 集合 11:00 卡特拉火山冰洞 3h</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC">7,000</td><td class="cell-_FHJ">7000</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"><span style="margin-right:6px"><a href="https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1295,h_863/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/ilcn9ooatfyz1fhm1yj7/%E5%8D%A1%E7%89%B9%E6%8B%89%E7%81%AB%E5%B1%B1%E5%86%B0%E6%B4%9E%E4%B9%8B%E6%97%85.webp"><img style="width:20px;max-height:24px" src="https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1295,h_863/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/ilcn9ooatfyz1fhm1yj7/%E5%8D%A1%E7%89%B9%E6%8B%89%E7%81%AB%E5%B1%B1%E5%86%B0%E6%B4%9E%E4%B9%8B%E6%97%85.webp" alt="https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1295,h_863/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/ilcn9ooatfyz1fhm1yj7/%E5%8D%A1%E7%89%B9%E6%8B%89%E7%81%AB%E5%B1%B1%E5%86%B0%E6%B4%9E%E4%B9%8B%E6%97%85.webp"/></a></span></td><td class="cell-rj]="><span class="selected-value select-value-color-purple">Day 4</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-brown">⛱ 景點</span></td></tr><tr id="18c77cd3-e9fc-8095-8b1e-cebea6a0df4a"><td class="cell-title"><a href="https://www.notion.so/Vik-50m-18c77cd3e9fc80958b1ecebea6a0df4a?pvs=21">Vik → 羽毛峽谷 50m</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-purple">Day 4</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-blue">🚗 移動</span></td></tr><tr id="14f77cd3-e9fc-802d-8c43-d9a0a8b3ee75"><td class="cell-title"><a href="https://www.notion.so/5h-11-00-14f77cd3e9fc802d8c43d9a0a8b3ee75?pvs=21">冰川健行 5h 11:00</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"><span style="margin-right:6px"><a href="https://adventures.is/media/237243/iceland-skaftafell-glacier-hiking-on-spikes.jpg?anchor=center&amp;mode=crop&amp;width=330&amp;height=188&amp;format=webp&amp;quality=80&amp;rnd=133728672360000000"><img style="width:20px;max-height:24px" src="https://adventures.is/media/237243/iceland-skaftafell-glacier-hiking-on-spikes.jpg?anchor=center&amp;mode=crop&amp;width=330&amp;height=188&amp;format=webp&amp;quality=80&amp;rnd=133728672360000000" alt="https://adventures.is/media/237243/iceland-skaftafell-glacier-hiking-on-spikes.jpg?anchor=center&amp;mode=crop&amp;width=330&amp;height=188&amp;format=webp&amp;quality=80&amp;rnd=133728672360000000"/></a></span></td><td class="cell-rj]="><span class="selected-value select-value-color-brown">Day 5</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-brown">⛱ 景點</span></td></tr><tr id="18c77cd3-e9fc-8080-848b-e0704b22d11e"><td class="cell-title"><a href="https://www.notion.so/50m-18c77cd3e9fc8080848be0704b22d11e?pvs=21">50m</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-brown">Day 5</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-blue">🚗 移動</span></td></tr><tr id="17977cd3-e9fc-80d8-9c9c-e65e48132675"><td class="cell-title"><a href="https://www.notion.so/Fjadrargljufur-Canyon-17977cd3e9fc80d89c9ce65e48132675?pvs=21">羽毛峽谷 (Fjadrargljufur Canyon)</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"><span style="margin-right:6px"><a href="https://bobbyworld.tw/wp-content/uploads/pixnet/c62297747249d35459e0fde974ee8204.jpg"><img style="width:20px;max-height:24px" src="https://bobbyworld.tw/wp-content/uploads/pixnet/c62297747249d35459e0fde974ee8204.jpg" alt="https://bobbyworld.tw/wp-content/uploads/pixnet/c62297747249d35459e0fde974ee8204.jpg"/></a></span></td><td class="cell-rj]="><span class="selected-value select-value-color-purple">Day 4</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-brown">⛱ 景點</span></td></tr><tr id="18c77cd3-e9fc-805e-abb6-f049843eaeec"><td class="cell-title"><a href="https://www.notion.so/1h-18c77cd3e9fc805eabb6f049843eaeec?pvs=21">1h</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-purple">Day 4</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-blue">🚗 移動</span></td></tr><tr id="18c77cd3-e9fc-800b-a447-ffb5364d6574"><td class="cell-title"><a href="https://www.notion.so/18c77cd3e9fc800ba447ffb5364d6574?pvs=21">住 冰河湖</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-brown">Day 5</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-green">🏡 住宿</span></td></tr><tr id="18c77cd3-e9fc-8046-b063-fa896aa44fb4"><td class="cell-title"><a href="https://www.notion.so/Skaftafellsstofa-18c77cd3e9fc8046b063fa896aa44fb4?pvs=21">住 Skaftafellsstofa 附近，但住宿選擇很少很少</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-purple">Day 4</span></td><td class="cell-i::s"></td><td class="cell-:QwR"></td></tr><tr id="17977cd3-e9fc-8006-8cb2-d66e0910bff4"><td class="cell-title"><a href="https://www.notion.so/Jokulsarlon-17977cd3e9fc80068cb2d66e0910bff4?pvs=21">Jokulsarlon冰河湖獨木舟</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC">2,382</td><td class="cell-_FHJ">2382</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"><span style="margin-right:6px"><a href="https://mlz24bjzzgqm.i.optimole.com/w:768/h:512/q:mauto/dpr:2.0/ig:avif/https://dragonflytravelblog.com/wp-content/uploads/2024/08/IMG_0303.jpg"><img style="width:20px;max-height:24px" src="https://mlz24bjzzgqm.i.optimole.com/w:768/h:512/q:mauto/dpr:2.0/ig:avif/https://dragonflytravelblog.com/wp-content/uploads/2024/08/IMG_0303.jpg" alt="https://mlz24bjzzgqm.i.optimole.com/w:768/h:512/q:mauto/dpr:2.0/ig:avif/https://dragonflytravelblog.com/wp-content/uploads/2024/08/IMG_0303.jpg"/></a></span></td><td class="cell-rj]="><span class="selected-value select-value-color-red">Day 6 東邊</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-brown">⛱ 景點</span></td></tr><tr id="18077cd3-e9fc-80a4-8ec8-f8b7934c0cb8"><td class="cell-title"><a href="https://www.notion.so/Bj-rb-in-SPA-18077cd3e9fc80a48ec8f8b7934c0cb8?pvs=21">Bjórböðin SPA </a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC">4,600</td><td class="cell-_FHJ">4600</td><td class="cell-f.~Z">泡 25分鐘 兩人 ＋ 休息區躺25分鐘<br/>戶外溫泉單買是2,000ISK<br/></td><td class="cell-@)Dm"><span style="margin-right:6px"><a href="https://mimihan.tw/wp-content/uploads/20180613111632_26.jpg"><img style="width:20px;max-height:24px" src="https://mimihan.tw/wp-content/uploads/20180613111632_26.jpg" alt="https://mimihan.tw/wp-content/uploads/20180613111632_26.jpg"/></a></span></td><td class="cell-rj]="><span class="selected-value select-value-color-green">Day 11 10/15</span></td><td class="cell-i::s"></td><td class="cell-:QwR"></td></tr><tr id="18c77cd3-e9fc-80ed-9491-f5f00482a490"><td class="cell-title"><a href="https://www.notion.so/1h-22m-18c77cd3e9fc80ed9491f5f00482a490?pvs=21">1h 22m</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-gray">Day 9 北岸 10/13</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-blue">🚗 移動</span></td></tr><tr id="18a77cd3-e9fc-802a-a187-d682cc4d6486"><td class="cell-title"><a href="https://www.notion.so/Glaumbaer-Museum-18a77cd3e9fc802aa187d682cc4d6486?pvs=21">Glaumbaer Museum 草屋博物館</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"><span style="margin-right:6px"><a href="https://mimihan.tw/wp-content/uploads/20180618141607_36.jpg"><img style="width:20px;max-height:24px" src="https://mimihan.tw/wp-content/uploads/20180618141607_36.jpg" alt="https://mimihan.tw/wp-content/uploads/20180618141607_36.jpg"/></a></span></td><td class="cell-rj]="><span class="selected-value select-value-color-gray">Day 9 北岸 10/13</span></td><td class="cell-i::s"></td><td class="cell-:QwR"></td></tr><tr id="18c77cd3-e9fc-804d-b120-d29557e2bb1a"><td class="cell-title"><a href="https://www.notion.so/43m-18c77cd3e9fc804db120d29557e2bb1a?pvs=21">43m</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-gray">Day 9 北岸 10/13</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-blue">🚗 移動</span></td></tr><tr id="18c77cd3-e9fc-80ce-adfb-ce6846f03160"><td class="cell-title"><a href="https://www.notion.so/2h-36m-18c77cd3e9fc80ceadfbce6846f03160?pvs=21">華姆斯唐吉 → 2h 36m</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-pink">Day 10</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-blue">🚗 移動</span></td></tr><tr id="18a77cd3-e9fc-80f3-ab2b-f3fe2aae5a16"><td class="cell-title"><a href="https://www.notion.so/Blonduoskirkja-18a77cd3e9fc80f3ab2bf3fe2aae5a16?pvs=21">Blonduoskirkja 火山教堂、鯨魚教堂</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z">可順便加油</td><td class="cell-@)Dm"><span style="margin-right:6px"><a href="https://mimihan.tw/wp-content/uploads/20180618141633_68.jpg"><img style="width:20px;max-height:24px" src="https://mimihan.tw/wp-content/uploads/20180618141633_68.jpg" alt="https://mimihan.tw/wp-content/uploads/20180618141633_68.jpg"/></a></span></td><td class="cell-rj]="><span class="selected-value select-value-color-gray">Day 9 北岸 10/13</span></td><td class="cell-i::s"></td><td class="cell-:QwR"></td></tr><tr id="18c77cd3-e9fc-8099-912d-e5a98b844bff"><td class="cell-title"><a href="https://www.notion.so/37m-18c77cd3e9fc8099912de5a98b844bff?pvs=21">37m</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-gray">Day 9 北岸 10/13</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-blue">🚗 移動</span></td></tr><tr id="18c77cd3-e9fc-8059-8fc8-da63db380f90"><td class="cell-title"><a href="https://www.notion.so/18c77cd3e9fc80598fc8da63db380f90?pvs=21">巨人峽谷</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-gray">Day 9 北岸 10/13</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-brown">⛱ 景點</span></td></tr><tr id="18c77cd3-e9fc-8089-bf51-fc5a26c7fe9e"><td class="cell-title"><a href="https://www.notion.so/18c77cd3e9fc8089bf51fc5a26c7fe9e?pvs=21">住 華姆斯唐吉？或路上選擇</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-gray">Day 9 北岸 10/13</span></td><td class="cell-i::s"></td><td class="cell-:QwR"></td></tr><tr id="18a77cd3-e9fc-8025-9291-ef1d64564cf1"><td class="cell-title"><a href="https://www.notion.so/Kirkjufellsfoss-18a77cd3e9fc80259291ef1d64564cf1?pvs=21">Kirkjufellsfoss 教堂山</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"><span style="margin-right:6px"><a href="https://mimihan.tw/wp-content/uploads/20180620190950_46.jpg"><img style="width:20px;max-height:24px" src="https://mimihan.tw/wp-content/uploads/20180620190950_46.jpg" alt="https://mimihan.tw/wp-content/uploads/20180620190950_46.jpg"/></a></span></td><td class="cell-rj]="><span class="selected-value select-value-color-pink">Day 10</span></td><td class="cell-i::s"></td><td class="cell-:QwR"></td></tr><tr id="18c77cd3-e9fc-807a-949b-f8c765630917"><td class="cell-title"><a href="https://www.notion.so/20m-18c77cd3e9fc807a949bf8c765630917?pvs=21">20m</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-pink">Day 10</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-blue">🚗 移動</span></td></tr><tr id="18a77cd3-e9fc-8072-aef7-e933e1767ef0"><td class="cell-title"><a href="https://www.notion.so/lafsv-k-18a77cd3e9fc8072aef7e933e1767ef0?pvs=21">Ólafsvík小鎮 </a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z">進入斯奈山國家公園的最後一個比較大的城鎮</td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-pink">Day 10</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-brown">⛱ 景點</span></td></tr><tr id="18c77cd3-e9fc-8049-8157-e1435be07ace"><td class="cell-title"><a href="https://www.notion.so/20m-18c77cd3e9fc80498157e1435be07ace?pvs=21">20m</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-pink">Day 10</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-blue">🚗 移動</span></td></tr><tr id="18a77cd3-e9fc-80b9-a4d4-ca6c375a4f10"><td class="cell-title"><a href="https://www.notion.so/SAXH-LAR-CRATER-18a77cd3e9fc80b9a4d4ca6c375a4f10?pvs=21">SAXHÓLAR CRATER 火山</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z">是一座沈睡400年的火山</td><td class="cell-@)Dm"><span style="margin-right:6px"><a href="https://mimihan.tw/wp-content/uploads/20180826212128_25.jpg"><img style="width:20px;max-height:24px" src="https://mimihan.tw/wp-content/uploads/20180826212128_25.jpg" alt="https://mimihan.tw/wp-content/uploads/20180826212128_25.jpg"/></a></span></td><td class="cell-rj]="><span class="selected-value select-value-color-pink">Day 10</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-brown">⛱ 景點</span></td></tr><tr id="18a77cd3-e9fc-8047-bd03-c4b89cd0e714"><td class="cell-title"><a href="https://www.notion.so/VATNSHELLIR-CAVE-18a77cd3e9fc8047bd03c4b89cd0e714?pvs=21">VATNSHELLIR CAVE 地心探險</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z">每個小時有一團，約莫45分鐘</td><td class="cell-@)Dm"><span style="margin-right:6px"><a href="https://kavana.tw/wp-content/uploads/pixnet/f85425c596023b29c7f0d9089858b438.jpg"><img style="width:20px;max-height:24px" src="https://kavana.tw/wp-content/uploads/pixnet/f85425c596023b29c7f0d9089858b438.jpg" alt="https://kavana.tw/wp-content/uploads/pixnet/f85425c596023b29c7f0d9089858b438.jpg"/></a></span></td><td class="cell-rj]="><span class="selected-value select-value-color-pink">Day 10</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-brown">⛱ 景點</span></td></tr><tr id="18a77cd3-e9fc-805c-a721-c4ac1a172a76"><td class="cell-title"><a href="https://www.notion.so/Londrangar-18a77cd3e9fc805ca721c4ac1a172a76?pvs=21">Londrangar 怪物海岸</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"><span style="margin-right:6px"><a href="https://mimihan.tw/wp-content/uploads/20180826212202_97.jpg"><img style="width:20px;max-height:24px" src="https://mimihan.tw/wp-content/uploads/20180826212202_97.jpg" alt="https://mimihan.tw/wp-content/uploads/20180826212202_97.jpg"/></a></span></td><td class="cell-rj]="><span class="selected-value select-value-color-pink">Day 10</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-brown">⛱ 景點</span></td></tr><tr id="18a77cd3-e9fc-8073-8e4b-e1bf2d780240"><td class="cell-title"><a href="https://www.notion.so/B-R-AR-SAGA-18a77cd3e9fc80738e4be1bf2d780240?pvs=21">BÁRÐAR SAGA 石巨人</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"><span style="margin-right:6px"><a href="https://mimihan.tw/wp-content/uploads/20180826212210_84.jpg"><img style="width:20px;max-height:24px" src="https://mimihan.tw/wp-content/uploads/20180826212210_84.jpg" alt="https://mimihan.tw/wp-content/uploads/20180826212210_84.jpg"/></a></span></td><td class="cell-rj]="><span class="selected-value select-value-color-pink">Day 10</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-brown">⛱ 景點</span></td></tr><tr id="18c77cd3-e9fc-805a-a315-e80cba79b9d9"><td class="cell-title"><a href="https://www.notion.so/30m-18c77cd3e9fc805aa315e80cba79b9d9?pvs=21">30m</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-pink">Day 10</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-blue">🚗 移動</span></td></tr><tr id="17a77cd3-e9fc-8041-ba7e-fb2f48e6193f"><td class="cell-title"><a href="https://www.notion.so/Ytri-Tunga-17a77cd3e9fc8041ba7efb2f48e6193f?pvs=21">Ytri Tunga 海豹沙灘</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z">太晚的話可以隔天來</td><td class="cell-@)Dm"><span style="margin-right:6px"><a href="https://icelandthebeautiful.com/wp-content/uploads/2020/01/Ytri-tunga-beach-snaefellsnes-west-iceland_DSC7489.jpg"><img style="width:20px;max-height:24px" src="https://icelandthebeautiful.com/wp-content/uploads/2020/01/Ytri-tunga-beach-snaefellsnes-west-iceland_DSC7489.jpg" alt="https://icelandthebeautiful.com/wp-content/uploads/2020/01/Ytri-tunga-beach-snaefellsnes-west-iceland_DSC7489.jpg"/></a></span></td><td class="cell-rj]="><span class="selected-value select-value-color-pink">Day 10</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-brown">⛱ 景點</span></td></tr><tr id="18c77cd3-e9fc-809a-8df0-d1dddbf86969"><td class="cell-title"><a href="https://www.notion.so/18c77cd3e9fc809a8df0d1dddbf86969?pvs=21">住 斯奈山半島</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-pink">Day 10</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-green">🏡 住宿</span></td></tr><tr id="18077cd3-e9fc-80ca-b532-f3f98fce70cf"><td class="cell-title"><a href="https://www.notion.so/28m-18077cd3e9fc80cab532f3f98fce70cf?pvs=21">28m</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-green">Day 7 北部</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-blue">🚗 移動</span></td></tr><tr id="18077cd3-e9fc-807d-b1cf-d86dcc1e9633"><td class="cell-title"><a href="https://www.notion.so/Sey-isfj-r-ur-18077cd3e9fc807db1cfd86dcc1e9633?pvs=21">Seyðisfjörður 白日夢冒險王小鎮</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"><span style="margin-right:6px"><a href="https://mimihan.tw/wp-content/uploads/20230408152422_67.jpg"><img style="width:20px;max-height:24px" src="https://mimihan.tw/wp-content/uploads/20230408152422_67.jpg" alt="https://mimihan.tw/wp-content/uploads/20230408152422_67.jpg"/></a></span></td><td class="cell-rj]="><span class="selected-value select-value-color-green">Day 7 北部</span></td><td class="cell-i::s"></td><td class="cell-:QwR"></td></tr><tr id="18077cd3-e9fc-8070-b25f-ccc8247e104d"><td class="cell-title"><a href="https://www.notion.so/Viti-2h-18077cd3e9fc8070b25fccc8247e104d?pvs=21">埃伊爾斯塔濟 → Viti 2h</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-green">Day 7 北部</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-blue">🚗 移動</span></td></tr><tr id="17a77cd3-e9fc-8032-8786-e872c39bc6c8"><td class="cell-title"><a href="https://www.notion.so/Viti-17a77cd3e9fc80328786e872c39bc6c8?pvs=21">Viti 維提火山湖 👍
-</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"><span style="margin-right:6px"><a href="https://mimihan.tw/wp-content/uploads/20230409130510_89.jpg"><img style="width:20px;max-height:24px" src="https://mimihan.tw/wp-content/uploads/20230409130510_89.jpg" alt="https://mimihan.tw/wp-content/uploads/20230409130510_89.jpg"/></a></span></td><td class="cell-rj]="><span class="selected-value select-value-color-green">Day 7 北部</span></td><td class="cell-i::s"></td><td class="cell-:QwR"></td></tr><tr id="18c77cd3-e9fc-8090-8c80-f43bc52de163"><td class="cell-title"><a href="https://www.notion.so/11m-18c77cd3e9fc80908c80f43bc52de163?pvs=21">11m</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-green">Day 7 北部</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-blue">🚗 移動</span></td></tr><tr id="18077cd3-e9fc-80c6-b7d0-c039e2376f04"><td class="cell-title"><a href="https://www.notion.so/N-mafjall-Hverir-18077cd3e9fc80c6b7d0c039e2376f04?pvs=21">Námafjall Hverir 火山地熱谷</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"><span style="margin-right:6px"><a href="https://mimihan.tw/wp-content/uploads/20180529165813_72.jpg"><img style="width:20px;max-height:24px" src="https://mimihan.tw/wp-content/uploads/20180529165813_72.jpg" alt="https://mimihan.tw/wp-content/uploads/20180529165813_72.jpg"/></a></span></td><td class="cell-rj]="><span class="selected-value select-value-color-green">Day 7 北部</span></td><td class="cell-i::s"></td><td class="cell-:QwR"></td></tr><tr id="18877cd3-e9fc-808b-ae1d-dd20807a6a0d"><td class="cell-title"><a href="https://www.notion.so/Grj-tagj-18877cd3e9fc808bae1ddd20807a6a0d?pvs=21">洞穴溫泉Grjótagjá</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"><span style="margin-right:6px"><a href="https://mimihan.tw/wp-content/uploads/20180603221410_36.jpg"><img style="width:20px;max-height:24px" src="https://mimihan.tw/wp-content/uploads/20180603221410_36.jpg" alt="https://mimihan.tw/wp-content/uploads/20180603221410_36.jpg"/></a></span></td><td class="cell-rj]="><span class="selected-value select-value-color-green">Day 7 北部</span></td><td class="cell-i::s"></td><td class="cell-:QwR"></td></tr><tr id="18077cd3-e9fc-8037-91d2-d3f79c666326"><td class="cell-title"><a href="https://www.notion.so/18077cd3e9fc803791d2d3f79c666326?pvs=21">米湖溫泉</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"><span style="margin-right:6px"><a href="https://mimihan.tw/wp-content/uploads/20180530184317_85.jpg"><img style="width:20px;max-height:24px" src="https://mimihan.tw/wp-content/uploads/20180530184317_85.jpg" alt="https://mimihan.tw/wp-content/uploads/20180530184317_85.jpg"/></a></span></td><td class="cell-rj]="><span class="selected-value select-value-color-green">Day 7 北部</span></td><td class="cell-i::s"></td><td class="cell-:QwR"></td></tr><tr id="18077cd3-e9fc-80c4-a93f-d2a422a7d05e"><td class="cell-title"><a href="https://www.notion.so/Vogafjos-Cafe-18077cd3e9fc80c4a93fd2a422a7d05e?pvs=21">Vogafjos Cafe</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-green">Day 7 北部</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-yellow">🧁 吃喝</span></td></tr><tr id="18c77cd3-e9fc-80eb-a84d-f0a8a5cce344"><td class="cell-title"><a href="https://www.notion.so/18c77cd3e9fc80eba84df0a8a5cce344?pvs=21">住米湖</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-green">Day 7 北部</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-green">🏡 住宿</span></td></tr><tr id="18c77cd3-e9fc-8087-aa4d-f3642525a9f0"><td class="cell-title"><a href="https://www.notion.so/18c77cd3e9fc8087aa4df3642525a9f0?pvs=21">鑽石冰沙灘</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"><span style="margin-right:6px"><a href="https://mimihan.tw/wp-content/uploads/20230326222910_99.jpg"><img style="width:20px;max-height:24px" src="https://mimihan.tw/wp-content/uploads/20230326222910_99.jpg" alt="https://mimihan.tw/wp-content/uploads/20230326222910_99.jpg"/></a></span></td><td class="cell-rj]="><span class="selected-value select-value-color-red">Day 6 東邊</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-brown">⛱ 景點</span></td></tr><tr id="18c77cd3-e9fc-80e0-88ee-f182928ec652"><td class="cell-title"><a href="https://www.notion.so/1h-21m-18c77cd3e9fc80e088eef182928ec652?pvs=21">1h 21m</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-red">Day 6 東邊</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-blue">🚗 移動</span></td></tr><tr id="17977cd3-e9fc-805a-86c4-f641b80eefae"><td class="cell-title"><a href="https://www.notion.so/Pakkh-s-Restaurant-17977cd3e9fc805a86c4f641b80eefae?pvs=21">Pakkhús Restaurant 小龍蝦 暫時關閉</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"><span style="margin-right:6px"><a href="https://mimihan.tw/wp-content/uploads/20180628173749_56.jpg"><img style="width:20px;max-height:24px" src="https://mimihan.tw/wp-content/uploads/20180628173749_56.jpg" alt="https://mimihan.tw/wp-content/uploads/20180628173749_56.jpg"/></a></span></td><td class="cell-rj]="><span class="selected-value select-value-color-red">Day 6 東邊</span></td><td class="cell-i::s"></td><td class="cell-:QwR"></td></tr><tr id="18077cd3-e9fc-8093-83b7-cfd083be4baf"><td class="cell-title"><a href="https://www.notion.so/Vestrahorn-x-Viking-Village-18077cd3e9fc809383b7cfd083be4baf?pvs=21">Vestrahorn 蝙蝠山 x 維京人聚落 Viking Village</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"><span style="margin-right:6px"><a href="https://kavana.tw/wp-content/uploads/pixnet/f2174d2460d318a9f09be7bb3a57b0db.jpg"><img style="width:20px;max-height:24px" src="https://kavana.tw/wp-content/uploads/pixnet/f2174d2460d318a9f09be7bb3a57b0db.jpg" alt="https://kavana.tw/wp-content/uploads/pixnet/f2174d2460d318a9f09be7bb3a57b0db.jpg"/></a></span><span style="margin-right:6px"><a href="https://kavana.tw/wp-content/uploads/pixnet/4cc7f163b96e90a32d2ab027110392b7.jpg"><img style="width:20px;max-height:24px" src="https://kavana.tw/wp-content/uploads/pixnet/4cc7f163b96e90a32d2ab027110392b7.jpg" alt="https://kavana.tw/wp-content/uploads/pixnet/4cc7f163b96e90a32d2ab027110392b7.jpg"/></a></span></td><td class="cell-rj]="><span class="selected-value select-value-color-red">Day 6 東邊</span></td><td class="cell-i::s"></td><td class="cell-:QwR"></td></tr><tr id="18077cd3-e9fc-8051-8d6e-d9c6c5e60e11"><td class="cell-title"><a href="https://www.notion.so/3h-18m-18077cd3e9fc80518d6ed9c6c5e60e11?pvs=21">3h 18m</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-red">Day 6 東邊</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-blue">🚗 移動</span></td></tr><tr id="18077cd3-e9fc-808f-b294-d83469796c49"><td class="cell-title"><a href="https://www.notion.so/18077cd3e9fc808fb294d83469796c49?pvs=21">住 埃伊爾斯塔濟 </a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"><strong>冰島</strong>東邊最大的城鎮，有Netto、小豬超市，市區也有餐廳可以覓食，建議可以在這裡把需要的零食餅乾都買好，因為接下來要一直到阿克雷里才有較大的城鎮了。</td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-red">Day 6 東邊</span></td><td class="cell-i::s"></td><td class="cell-:QwR"></td></tr><tr id="17a77cd3-e9fc-8055-b8b4-fd070544ac22"><td class="cell-title"><a href="https://www.notion.so/Hverfjall-2-3h-17a77cd3e9fc8055b8b4fd070544ac22?pvs=21">Hverfjall 惠爾火山 2-3h</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"><span style="margin-right:6px"><a href="https://mimihan.tw/wp-content/uploads/20180529132824_95.jpg"><img style="width:20px;max-height:24px" src="https://mimihan.tw/wp-content/uploads/20180529132824_95.jpg" alt="https://mimihan.tw/wp-content/uploads/20180529132824_95.jpg"/></a></span></td><td class="cell-rj]="><span class="selected-value select-value-color-default">Day 8 米湖</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-brown">⛱ 景點</span></td></tr><tr id="17a77cd3-e9fc-800a-96b5-f494c20b343b"><td class="cell-title"><a href="https://www.notion.so/Dimmuborgir-17a77cd3e9fc800a96b5f494c20b343b?pvs=21">黑色城堡 Dimmuborgir</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"><span style="margin-right:6px"><a href="https://mimihan.tw/wp-content/uploads/20180529221509_26.jpg"><img style="width:20px;max-height:24px" src="https://mimihan.tw/wp-content/uploads/20180529221509_26.jpg" alt="https://mimihan.tw/wp-content/uploads/20180529221509_26.jpg"/></a></span></td><td class="cell-rj]="><span class="selected-value select-value-color-default">Day 8 米湖</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-brown">⛱ 景點</span></td></tr><tr id="18077cd3-e9fc-8074-aa64-d540e7f3b4cd"><td class="cell-title"><a href="https://www.notion.so/50m-18077cd3e9fc8074aa64d540e7f3b4cd?pvs=21">50m</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-default">Day 8 米湖</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-blue">🚗 移動</span></td></tr><tr id="18077cd3-e9fc-8077-b1ce-fe96f7298b03"><td class="cell-title"><a href="https://www.notion.so/Godafoss-18077cd3e9fc8077b1cefe96f7298b03?pvs=21">Godafoss眾神瀑布</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"><span style="margin-right:6px"><a href="https://mimihan.tw/wp-content/uploads/20180609144626_42.jpg"><img style="width:20px;max-height:24px" src="https://mimihan.tw/wp-content/uploads/20180609144626_42.jpg" alt="https://mimihan.tw/wp-content/uploads/20180609144626_42.jpg"/></a></span></td><td class="cell-rj]="><span class="selected-value select-value-color-default">Day 8 米湖</span></td><td class="cell-i::s"></td><td class="cell-:QwR"></td></tr><tr id="18077cd3-e9fc-80a1-aa95-fa9790716a7e"><td class="cell-title"><a href="https://www.notion.so/Hafnarstr-ti-18077cd3e9fc80a1aa95fa9790716a7e?pvs=21">Hafnarstræti 購物街市區晃晃</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-default">Day 8 米湖</span></td><td class="cell-i::s"></td><td class="cell-:QwR"></td></tr><tr id="18077cd3-e9fc-8011-88f8-c1c4b5eee626"><td class="cell-title"><a href="https://www.notion.so/Kaffi-Ilmur-ehf-18077cd3e9fc801188f8c1c4b5eee626?pvs=21">Kaffi Ilmur ehf 暫時關閉</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-default">Day 8 米湖</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-yellow">🧁 吃喝</span></td></tr><tr id="18077cd3-e9fc-805f-8489-da84be06a82a"><td class="cell-title"><a href="https://www.notion.so/Brynja-18077cd3e9fc805f8489da84be06a82a?pvs=21">Brynja 冰淇淋</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-default">Day 8 米湖</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-yellow">🧁 吃喝</span></td></tr><tr id="18077cd3-e9fc-80b4-9d87-fbe855458fca"><td class="cell-title"><a href="https://www.notion.so/Akureyri-18077cd3e9fc80b49d87fbe855458fca?pvs=21">當天可住 Akureyri</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"><strong>Akureyri 阿克雷里</strong>是冰島北邊最大城鎮</td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-default">Day 8 米湖</span></td><td class="cell-i::s"></td><td class="cell-:QwR"></td></tr><tr id="18c77cd3-e9fc-80f5-87e3-c6b70ac5569d"><td class="cell-title"><a href="https://www.notion.so/2h-18c77cd3e9fc80f587e3c6b70ac5569d?pvs=21">斯奈山半島  2h</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-green">Day 11 10/15</span></td><td class="cell-i::s"></td><td class="cell-:QwR"><span class="selected-value select-value-color-blue">🚗 移動</span></td></tr><tr id="18b77cd3-e9fc-800d-908a-c5f84b60dc79"><td class="cell-title"><a href="https://www.notion.so/Sky-Lagoon-18b77cd3e9fc800d908ac5f84b60dc79?pvs=21">Sky Lagoon</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"><span style="margin-right:6px"><a href="https://shiningchan-com.sfo3.digitaloceanspaces.com/wp-content/uploads/2024/10/scimgKj5yjW.webp"><img style="width:20px;max-height:24px" src="https://shiningchan-com.sfo3.digitaloceanspaces.com/wp-content/uploads/2024/10/scimgKj5yjW.webp" alt="https://shiningchan-com.sfo3.digitaloceanspaces.com/wp-content/uploads/2024/10/scimgKj5yjW.webp"/></a></span></td><td class="cell-rj]="><span class="selected-value select-value-color-green">Day 11 10/15</span></td><td class="cell-i::s"></td><td class="cell-:QwR"></td></tr><tr id="18c77cd3-e9fc-8019-9bbc-d30ae039a879"><td class="cell-title"><a href="https://www.notion.so/123-18c77cd3e9fc80199bbcd30ae039a879?pvs=21">123</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-green">Day 11 10/15</span></td><td class="cell-i::s"></td><td class="cell-:QwR"></td></tr><tr id="18b77cd3-e9fc-802d-8a60-e488624b6097"><td class="cell-title"><a href="https://www.notion.so/18b77cd3e9fc802d8a60e488624b6097?pvs=21">Untitled</a></td><td class="cell-rWb{"></td><td class="cell-OEaF"></td><td class="cell-x^FC"></td><td class="cell-_FHJ">0</td><td class="cell-f.~Z"></td><td class="cell-@)Dm"></td><td class="cell-rj]="><span class="selected-value select-value-color-yellow">Day 12</span></td><td class="cell-i::s"></td><td class="cell-:QwR"></td></tr></tbody></table><br/><br/></div><p id="1b177cd3-e9fc-8088-a723-e8a17bc189fa" class="">
-</p><figure id="14f77cd3-e9fc-81d6-a46a-ff8edb0beb12" class="link-to-page"><a href="https://www.notion.so/14f77cd3e9fc81d6a46aff8edb0beb12?pvs=21"><img class="icon" src="https://www.notion.so/icons/suitcase_lightgray.svg"/>行李清單</a></figure><figure id="14f77cd3-e9fc-813e-8e18-cfd4cef480a8" class="link-to-page"><a href="https://www.notion.so/14f77cd3e9fc813e8e18cfd4cef480a8?pvs=21"><img class="icon" src="https://www.notion.so/icons/shopping-cart_lightgray.svg"/>採購清單</a></figure><p id="14f77cd3-e9fc-813f-8e15-c4ec926126c8" class="">
-</p><figure id="18b77cd3-e9fc-803d-bfdb-f6ec47f57bdd" class="link-to-page"><a href="https://www.notion.so/18b77cd3e9fc803dbfdbf6ec47f57bdd?pvs=21">開車注意事項</a></figure><h2 id="14f77cd3-e9fc-8155-87f9-ccb928c25860" class="block-color-teal_background">行前準備</h2></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的冰島12天行程 (手機優化 + 圖片 Modal)</title>
+    <style>
+        /* --- Base Styles --- */
+        html {
+            font-size: 16px;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: #f0f2f5;
+            color: #333;
+            -webkit-text-size-adjust: 100%;
+        }
+        .page-container {
+            max-width: 100%;
+            margin: 0 auto;
+            background: #fff;
+        }
+        header {
+            background-color: #005792;
+            color: white;
+            padding: 1rem 0.75rem;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        /* --- Tabs --- */
+        .tab-container {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            background-color: #e9ecef;
+            border-bottom: 1px solid #dee2e6;
+            -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS for tabs */
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none;  /* Internet Explorer 10+ */
+        }
+        .tab-container::-webkit-scrollbar { /* WebKit */
+            display: none;
+        }
+        .tab-button {
+            background-color: #e9ecef;
+            color: #005792;
+            border: none;
+            padding: 0.75rem 1rem;
+            text-align: center;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background-color 0.3s, color 0.3s;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+        .tab-button:not(:last-child) {
+             border-right: 1px solid #d1d9e0;
+        }
+        .tab-button:hover {
+            background-color: #d1d9e0;
+        }
+        .tab-button.active {
+            background-color: #005792;
+            color: white;
+            font-weight: bold;
+            border-bottom: 3px solid #ffc107;
+        }
+
+        /* --- Tab Content --- */
+        .tab-content {
+            display: none;
+            padding: 1rem 0.75rem;
+            animation: fadeIn 0.5s;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        /* --- Itinerary Item Styles --- */
+        h2 {
+            color: #005792;
+            border-bottom: 2px solid #005792;
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.3em;
+        }
+        ul.itinerary-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        li.itinerary-item {
+            margin-bottom: 1rem;
+            padding: 0.75rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            background-color: #f9f9f9;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        li.itinerary-item strong {
+            color: #005792;
+            display: block;
+            margin-bottom: 0.3rem;
+            font-size: 1.1em;
+        }
+        li.itinerary-item strong a {
+            color: #005792;
+            text-decoration: none;
+        }
+        li.itinerary-item strong a:hover {
+            text-decoration: underline;
+            color: #003f6b;
+        }
+        .item-category {
+            font-weight: bold; display: inline-block; padding: 0.2rem 0.5rem;
+            border-radius: 4px; color: white; margin-right: 0.5rem; font-size: 0.85em;
+            margin-bottom: 0.3rem;
+        }
+        .cat-mov { background-color: #6c757d; }
+        .cat-eat { background-color: #fd7e14; }
+        .cat-see { background-color: #20c997; }
+        .cat-stay { background-color: #17a2b8; }
+        .cat-act { background-color: #ffc107; color: #333;}
+        .cat-default { background-color: #6c757d;}
+
+        .item-description { margin-top: 0.5rem; font-size: 0.9em; color: #555; }
+        .item-photo-thumbnail {
+            max-width: 100px;
+            max-height: 75px;
+            margin-top: 0.5rem;
+            border-radius: 4px;
+            display: block;
+            object-fit: cover;
+            cursor: pointer;
+            border: 1px solid #ccc;
+        }
+        .item-url a { color: #007bff; text-decoration: none; font-size: 0.85em;}
+        .item-url a:hover { text-decoration: underline; }
+        .driving-info {
+            font-style: italic; color: #555; margin: 0.6rem 0; padding: 0.6rem;
+            background-color: #eef7ff; border-left: 3px solid #007bff; border-radius: 4px;
+            font-size: 0.9em;
+        }
+        .map-container { width: 100%; height: 350px; margin-top: 1rem; border: 1px solid #ccc; border-radius: 4px;}
+        .important-notes { background-color: #fff3cd; border-left: 5px solid #ffc107; padding: 0.75rem; margin: 1rem 0.75rem; border-radius: 4px; font-size: 0.9em;}
+
+        /* --- Image Modal Styles --- */
+        .image-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            padding-top: 5vh; /* Use vh for vertical centering */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.9);
+            text-align: center; /* Center the image block */
+        }
+        .image-modal-content {
+            margin: auto;
+            display: inline-block; /* Allows text-align center to work */
+            max-width: 95%;
+            max-height: 90vh; /* Limit height based on viewport */
+            animation-name: zoom;
+            animation-duration: 0.3s;
+        }
+        @keyframes zoom {
+            from {transform:scale(0.5); opacity: 0;}
+            to {transform:scale(1); opacity: 1;}
+        }
+        .image-modal-close {
+            position: absolute;
+            top: 15px;
+            right: 25px; /* Adjusted for better touch target */
+            color: #f1f1f1;
+            font-size: 2.5rem; /* Larger for touch */
+            line-height: 1;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+            padding: 5px; /* Easier to tap */
+        }
+        .image-modal-close:hover,
+        .image-modal-close:focus {
+            color: #bbb;
+            text-decoration: none;
+        }
+
+
+        /* --- Desktop and larger screen adjustments --- */
+        @media (min-width: 768px) {
+            html { font-size: 17px; }
+            .page-container {
+                max-width: 1000px;
+                margin: 20px auto;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                border-radius: 8px;
+            }
+            header { padding: 1.25rem; }
+            header h1 { font-size: 2em; }
+            .tab-container { flex-wrap: wrap; overflow-x: visible; }
+            .tab-button { padding: 0.8rem 1.2rem; font-size: 0.95rem; }
+            .tab-content { padding: 1.5rem; }
+            li.itinerary-item { padding: 1rem; }
+            .item-photo-thumbnail { max-width: 120px; max-height: 90px; }
+            .map-container { height: 450px; }
+            .important-notes { margin: 1.25rem; padding: 1rem; font-size: 1em;}
+            .image-modal-content { max-width: 700px; } /* Modal image size on desktop */
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <header>
+            <h1>我的冰島12天行程</h1>
+        </header>
+
+        <div class="important-notes">
+            <h3>行前重要提醒：</h3>
+            <ul>
+                <li><strong>Google Maps API 金鑰：</strong> 請務必將HTML最下方的 <code>YOUR_API_KEY</code> 替換成您自己的有效金鑰才能使地圖正常顯示。</li>
+                <li>點擊景點名稱可在 Google 地圖中打開該地點。</li>
+                <li>點擊行程中的小圖片可查看大圖。</li>
+            </ul>
+        </div>
+
+        <div class="tab-container" id="tabContainer">
+            <!-- Tab buttons will be generated here by JavaScript -->
+        </div>
+
+        <div id="tabContentContainer">
+            <!-- Tab content will be generated here by JavaScript -->
+        </div>
+    </div>
+
+    <!-- The Modal for Images -->
+    <div id="myImageModal" class="image-modal">
+        <span class="image-modal-close">&times;</span>
+        <img class="image-modal-content" id="imgModalSrc" alt="放大圖片">
+    </div>
+
+    <script>
+    // --- Your Itinerary Data ---
+    const allItineraryData = [
+        // Day 0
+        { dayGroup: "Day 0", dayTitle: "Day 0: 出發", items: [
+            {地點: "家→桃機", 類別: "🚗 移動"}
+        ]},
+        // Day 1
+        { dayGroup: "Day 1", dayTitle: "Day 1: 雷克雅維克 (10/5)", mapCenter: { lat: 64.05, lng: -22.0 }, mapZoom: 9, items: [
+            {地點: "航班 13:50 到", 類別: "🚗 移動", lat: 63.9850, lng: -22.6056, mapLabel: "KEF 機場", mapPriority: 1},
+            {地點: "租車", 類別: ""},
+            {地點: "Svarta Kaffid 麵包湯", 照片: "https://mimihan.tw/wp-content/uploads/20180706200030_83.jpg", 類別: "🧁 吃喝", lat: 64.1455, lng: -21.9320, mapLabel: "Svarta Kaffið", mapPriority: 3},
+            {地點: "Braud & Co麵包店", 照片: "https://mimihan.tw/wp-content/uploads/20180503165237_63.jpg", 類別: "🧁 吃喝", lat: 64.1440, lng: -21.9280, mapLabel: "Brauð & Co.", mapPriority: 4},
+            {地點: "Harpa音樂廳", 描述: "曾被《紐約時報》評選「全球最值得旅遊的41個地方」之一", 照片: "https://bobbyworld.tw/wp-content/uploads/pixnet/e69707fafbb86d7381c6565d441727f7.jpg", 類別: "⛱ 景點", lat: 64.1502, lng: -21.9348, mapLabel: "Harpa Concert Hall and Conference Centre", mapPriority: 5},
+            {地點: "哈爾格林姆教堂( Hallgrímskirkja)", 克朗: "1,400", 描述: "全冰島最大教堂，風格前衛，外觀如被風化的柱狀玄武岩", 照片: "https://mimihan.tw/wp-content/uploads/20180429160946_55.jpg", 類別: "⛱ 景點", lat: 64.1417, lng: -21.9266, mapLabel: "Hallgrímskirkja", mapPriority: 6},
+            {地點: "藍湖", 照片: "https://bobbyworld.tw/wp-content/uploads/pixnet/9f13156749eb0d1db3bd5dbd7190ff51.jpg", 類別: "⛱ 景點", lat: 63.8806, lng: -22.4496, mapLabel: "Blue Lagoon", mapPriority: 2},
+            {地點: "住雷克雅維克", 類別: "🏡 住宿", lat: 64.1466, lng: -21.9426, mapLabel: "雷克雅維克住宿", mapPriority: 7}
+        ]},
+        // Day 2
+        { dayGroup: "Day 2", dayTitle: "Day 2: 黃金圈", mapCenter: { lat: 64.20, lng: -20.7 }, mapZoom: 9, items: [
+            {地點: "移動: 雷克雅維克 → 辛格韋德利國家公園 (約 1h 45m)", 類別: "🚗 移動"},
+            {地點: "辛格韋德利國家公園Þingvellir National Park", 描述: "世界上唯一在海平面以上的北美板塊與歐亞板塊...", 照片: "https://bobbyworld.tw/wp-content/uploads/pixnet/b60bf02b2f8e7debf6d89af4ee21b3d6.jpg", 類別: "⛱ 景點", lat: 64.2558, lng: -21.1295, mapLabel: "Þingvellir National Park", mapPriority: 1},
+            {地點: "阿爾曼納陡崖 (Almannagjá)", 描述: "北美版塊、歐亞板塊分界處...", 照片: "https://bobbyworld.tw/wp-content/uploads/pixnet/9297d22ba307260f2a0b01ea7db764f8.jpg", 類別: "⛱ 景點", lat: 64.2659, lng: -21.1205, mapLabel: "Almannagjá"}, 
+            {地點: "移動: 辛格韋德利 → 間歇泉 (約 40m)", 類別: "🚗 移動"},
+            {地點: "史托克間歇泉Strokkur Geyser", 描述: "水柱高度約落在15-20公尺...", 照片: "https://bobbyworld.tw/wp-content/uploads/pixnet/97c71f9eebe535acfed9aaa4f815907c.jpg", 類別: "⛱ 景點", lat: 64.3127, lng: -20.3000, mapLabel: "Strokkur", mapPriority: 2}, 
+            {地點: "移動: 間歇泉 → 藍色瀑布 (約 35m)", 類別: "🚗 移動"},
+            {地點: "藍色瀑布 Bruarfoss", 照片: "https://mlz24bjzzgqm.i.optimole.com/w:463/h:694/q:mauto/dpr:2.0/ig:avif/https://dragonflytravelblog.com/wp-content/uploads/2024/07/DSC08814.jpg", 類別: "⛱ 景點", lat: 64.2636, lng: -20.2497, mapLabel: "Brúarfoss Waterfall Parking", mapPriority: 3},
+            {地點: "移動: 藍色瀑布 → 黃金瀑布 (約 23m)", 類別: "🚗 移動"},
+            {地點: "古佛斯瀑布 Gullfoss 黃金", 描述: "世界十大瀑布之一...", 照片: "https://bobbyworld.tw/wp-content/uploads/pixnet/6772ba08ae239a0952383c81195d6dd2.jpg", 類別: "⛱ 景點", lat: 64.3271, lng: -20.1199, mapLabel: "Gullfoss Falls", mapPriority: 4},
+            {地點: "GullfossKaffi Ehf羊肉湯", 描述: "Gullfoss Waterfall 旁邊", 照片: "https://bobbyworld.tw/wp-content/uploads/pixnet/9c600eab4147cda40e9a7a0f9e68a57b.jpg", 類別: "🧁 吃喝", lat: 64.3250, lng: -20.1240, mapLabel: "Gullfoss Kaffi"},
+            {地點: "移動: 黃金瀑布 → 塞爾福斯 (約 1h)", 類別: "🚗 移動"},
+            {地點: "住塞爾福斯", 類別: "🏡 住宿", lat: 63.9330, lng: -20.9831, mapLabel: "Selfoss", mapPriority: 5}
+        ]},
+        // Day 3
+        { dayGroup: "Day 3", dayTitle: "Day 3: 南部", mapCenter: { lat: 63.70, lng: -20.0 }, mapZoom: 8, items: [
+            {地點: "移動: 賽爾弗斯 → 野溪溫泉 (約 20m)", 類別: "🚗 移動"},
+            {地點: "Reykjadalur 野溪溫泉", 照片: "https://mlz24bjzzgqm.i.optimole.com/w:768/h:512/q:mauto/dpr:2.0/ig:avif/https://dragonflytravelblog.com/wp-content/uploads/2024/07/reykjadalur.jpg", 類別: "⛱ 景點", lat: 64.0238, lng: -21.2116, mapLabel: "Reykjadalur Hot Spring Thermal River Parking", mapPriority: 1},
+            {地點: "移動: 賽爾弗斯 → 火口湖 (約 20m - 若從Selfoss出發)", 類別: "🚗 移動"},
+            {地點: "凱瑞斯火口湖 Kerid Crater", 照片: "https://mimihan.tw/wp-content/uploads/20180427004523_29.jpg", 類別: "⛱ 景點", lat: 64.0413, lng: -20.8850, mapLabel: "Kerið", mapPriority: 2},
+            {地點: "移動: 火口湖 → 塞里雅蘭瀑布 (約 1h 10m)", 類別: "🚗 移動"},
+            {地點: "塞里雅蘭瀑布 Seljalandsfoss", 描述: "水簾洞瀑布，有廁所", 照片: "https://mimihan.tw/wp-content/uploads/20180507121849_84.jpg", 類別: "⛱ 景點", lat: 63.6156, lng: -19.9886, mapLabel: "Seljalandsfoss", mapPriority: 3},
+            {地點: "移動: 塞里雅蘭瀑布 → 斯科加爾瀑布 (約 31m)", 類別: "🚗 移動"},
+            {地點: "斯科加爾瀑布 Skogafoss", 描述: "高人氣《白日夢冒險王》拍攝場景...", 照片: "https://bobbyworld.tw/wp-content/uploads/pixnet/b5354d87a4320ee73ff7fafc4ba00d30.jpg", 類別: "⛱ 景點", lat: 63.5321, lng: -19.5114, mapLabel: "Skógafoss", mapPriority: 4},
+            {地點: "移動: 斯科加爾瀑布 → 黑沙灘 (約 32m)", 類別: "🚗 移動"},
+            {地點: "Reynisfjara黑沙灘", 描述: "海蝕洞是千年前火山噴發下的遺跡...", 照片: "https://bobbyworld.tw/wp-content/uploads/pixnet/9ed7a628e2f547092920693ada18878e.jpg, https://bobbyworld.tw/wp-content/uploads/pixnet/4da10f837463f77bb344b3c267fa4950.jpg", 類別: "⛱ 景點", lat: 63.4027, lng: -19.0452, mapLabel: "Reynisfjara Beach", mapPriority: 5},
+            {地點: "住 維克", 類別: "🏡 住宿", lat: 63.4186, lng: -19.0060, mapLabel: "Vík í Mýrdal", mapPriority: 6}
+        ]},
+        // Day 4
+        { dayGroup: "Day 4", dayTitle: "Day 4: 維克周邊與冰洞", mapCenter: { lat: 63.6, lng: -18.5 }, mapZoom: 9, items: [
+            {地點: "Vik 集合 11:00 卡特拉火山冰洞 3h", 克朗: "7,000", 網址:"https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1295,h_863/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/ilcn9ooatfyz1fhm1yj7/%E5%8D%A1%E7%89%B9%E6%8B%89%E7%81%AB%E5%B1%B1%E5%86%B0%E6%B4%9E%E4%B9%8B%E6%97%85.webp", 照片: "https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1295,h_863/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/ilcn9ooatfyz1fhm1yj7/%E5%8D%A1%E7%89%B9%E6%8B%89%E7%81%AB%E5%B1%B1%E5%86%B0%E6%B4%9E%E4%B9%8B%E6%97%85.webp", 類別: "⛱ 景點", lat: 63.4186, lng: -19.0060, mapLabel: "維克(冰洞集合)", mapPriority: 1},
+            {地點: "移動: Vik → 羽毛峽谷 (約 50m)", 類別: "🚗 移動"},
+            {地點: "羽毛峽谷 (Fjadrargljufur Canyon)", 照片: "https://bobbyworld.tw/wp-content/uploads/pixnet/c62297747249d35459e0fde974ee8204.jpg", 類別: "⛱ 景點", lat: 63.7713, lng: -18.1719, mapLabel: "Fjaðrárgljúfur", mapPriority: 2},
+            {地點: "移動: 羽毛峽谷 → Skaftafell 區域 (約 1h)", 類別: "🚗 移動"},
+            {地點: "住 Skaftafellsstofa 附近", 描述: "但住宿選擇很少很少", 類別: "🏡 住宿", lat: 64.0162, lng: -16.9661, mapLabel: "Skaftafell Campground (住宿區參考)", mapPriority: 3}
+        ]},
+        // Day 5
+        { dayGroup: "Day 5", dayTitle: "Day 5: 冰川健行與冰河湖", mapCenter: { lat: 64.03, lng: -16.5 }, mapZoom: 9, items: [
+            {地點: "Skaftafell 冰川健行 5h 11:00", 網址: "https://cn.guidetoiceland.is/connect-with-locals/6640/iceland-local-tour-skaftafell-svinafellsjokull-glacier-hiking-experience", 照片: "https://adventures.is/media/237243/iceland-skaftafell-glacier-hiking-on-spikes.jpg?anchor=center&mode=crop&width=330&height=188&format=webp&quality=80&rnd=133728672360000000", 類別: "⛱ 景點", lat: 64.0162, lng: -16.9661, mapLabel: "Skaftafell Visitor Centre (健行集合)", mapPriority: 1},
+            {地點: "移動: Skaftafell → 冰河湖 (約 50m)", 類別: "🚗 移動"},
+            {地點: "住 冰河湖附近", 類別: "🏡 住宿", lat: 64.0700, lng: -16.2200, mapLabel: "Hali Country Hotel (冰河湖附近住宿參考)", mapPriority: 2 }
+        ]},
+        // Day 6
+        { dayGroup: "Day 6", dayTitle: "Day 6: 東邊 - 冰河湖到埃伊爾斯塔濟", mapCenter: { lat: 64.7, lng: -15.3 }, mapZoom: 7, items: [
+            {地點: "Jokulsarlon冰河湖獨木舟", 台幣: "2382", 照片: "https://mlz24bjzzgqm.i.optimole.com/w:768/h:512/q:mauto/dpr:2.0/ig:avif/https://dragonflytravelblog.com/wp-content/uploads/2024/08/IMG_0303.jpg", 類別: "⛱ 景點", lat: 64.0484, lng: -16.1794, mapLabel: "Jökulsárlón", mapPriority: 1},
+            {地點: "鑽石冰沙灘", 照片: "https://mimihan.tw/wp-content/uploads/20230326222910_99.jpg", 類別: "⛱ 景點", lat: 64.0450, lng: -16.1780, mapLabel: "Diamond Beach", mapPriority: 2},
+            {地點: "移動: 冰河湖 → Vestrahorn (約 1h 21m)", 類別: "🚗 移動"},
+            {地點: "Vestrahorn 蝙蝠山 x 維京人聚落 Viking Village", 照片: "https://kavana.tw/wp-content/uploads/pixnet/f2174d2460d318a9f09be7bb3a57b0db.jpg, https://kavana.tw/wp-content/uploads/pixnet/4cc7f163b96e90a32d2ab027110392b7.jpg", 類別: "⛱ 景點", lat: 64.2470, lng: -14.9960, mapLabel: "Stokksnes (Vestrahorn Viewpoint)", mapPriority: 3},
+            {地點: "Pakkhús Restaurant 小龍蝦 暫時關閉", 照片: "https://mimihan.tw/wp-content/uploads/20180628173749_56.jpg", 類別: "🧁 吃喝", lat: 64.2500, lng: -15.2080, mapLabel: "Pakkhús Restaurant (Höfn)"},
+            {地點: "移動: Vestrahorn/Höfn → 埃伊爾斯塔濟 (約 3h 18m)", 類別: "🚗 移動"},
+            {地點: "住 埃伊爾斯塔濟", 描述: "冰島東邊最大的城鎮...", 類別: "🏡 住宿", lat: 65.2669, lng: -14.4014, mapLabel: "Egilsstaðir", mapPriority: 4}
+        ]},
+        // Day 7
+        { dayGroup: "Day 7", dayTitle: "Day 7: 北部 - 米湖周邊", mapCenter: { lat: 65.6, lng: -16.0 }, mapZoom: 8, items: [
+            {地點: "移動: 埃伊爾斯塔濟 → Seyðisfjörður (來回約 1h)", 類別: "🚗 移動"},
+            {地點: "Seyðisfjörður 白日夢冒險王小鎮", 照片: "https://mimihan.tw/wp-content/uploads/20230408152422_67.jpg", 類別: "⛱ 景點", lat: 65.2600, lng: -14.0100, mapLabel: "Seyðisfjarðarkirkja", mapPriority: 1},
+            {地點: "移動: 埃伊爾斯塔濟 → Viti (約 2h)", 類別: "🚗 移動"},
+            {地點: "Viti 維提火山湖 👍", 照片: "https://mimihan.tw/wp-content/uploads/20230409130510_89.jpg", 類別: "⛱ 景點", lat: 65.7165, lng: -16.7522, mapLabel: "Víti crater (Krafla)", mapPriority: 2},
+            {地點: "移動: Viti → Námafjall Hverir (約 11m)", 類別: "🚗 移動"},
+            {地點: "Námafjall Hverir 火山地熱谷", 照片: "https://mimihan.tw/wp-content/uploads/20180529165813_72.jpg", 類別: "⛱ 景點", lat: 65.6415, lng: -16.8093, mapLabel: "Hverir (Námafjall)", mapPriority: 3},
+            {地點: "洞穴溫泉Grjótagjá", 照片: "https://mimihan.tw/wp-content/uploads/20180603221410_36.jpg", 類別: "⛱ 景點", lat: 65.6262, lng: -16.8820, mapLabel: "Grjótagjá cave", mapPriority: 4},
+            {地點: "米湖溫泉", 照片: "https://mimihan.tw/wp-content/uploads/20180530184317_85.jpg", 類別: "⛱ 景點", lat: 65.6305, lng: -16.8480, mapLabel: "Mývatn Nature Baths", mapPriority: 5},
+            {地點: "Vogafjos Cafe", 類別: "🧁 吃喝", lat: 65.5913, lng: -16.9204, mapLabel: "Vogafjós Farm Resort", mapPriority: 6},
+            {地點: "住米湖", 類別: "🏡 住宿", lat: 65.6070, lng: -16.9130, mapLabel: "Reykjahlíð (米湖住宿區)", mapPriority: 7}
+        ]},
+        // Day 8
+        { dayGroup: "Day 8", dayTitle: "Day 8: 米湖到阿克雷里", mapCenter: { lat: 65.65, lng: -17.5 }, mapZoom: 9, items: [
+            {地點: "Hverfjall 惠爾火山 2-3h", 照片: "https://mimihan.tw/wp-content/uploads/20180529132824_95.jpg", 類別: "⛱ 景點", lat: 65.6033, lng: -16.8734, mapLabel: "Hverfjall", mapPriority: 1},
+            {地點: "黑色城堡 Dimmuborgir", 照片: "https://mimihan.tw/wp-content/uploads/20180529221509_26.jpg", 類別: "⛱ 景點", lat: 65.5911, lng: -16.9119, mapLabel: "Dimmuborgir", mapPriority: 2},
+            {地點: "移動: 米湖 → Godafoss (約 50m)", 類別: "🚗 移動"},
+            {地點: "Godafoss眾神瀑布", 照片: "https://mimihan.tw/wp-content/uploads/20180609144626_42.jpg", 類別: "⛱ 景點", lat: 65.6828, lng: -17.5503, mapLabel: "Goðafoss", mapPriority: 3},
+            {地點: "Hafnarstræti 購物街市區晃晃", 類別: "⛱ 景點", lat: 65.6800, lng: -18.0900, mapLabel: "Hafnarstræti Akureyri"},
+            {地點: "Kaffi Ilmur ehf 暫時關閉", 類別: "🧁 吃喝", lat: 65.6805, lng: -18.0903, mapLabel: "Kaffi Ilmur"},
+            {地點: "Brynja 冰淇淋", 類別: "🧁 吃喝", lat: 65.6790, lng: -18.0970, mapLabel: "Brynja"},
+            {地點: "當天可住 Akureyri", 描述: "Akureyri 阿克雷里是冰島北邊最大城鎮", 類別: "🏡 住宿", lat: 65.6825, lng: -18.0870, mapLabel: "Akureyri", mapPriority: 4}
+        ]},
+        // Day 9
+        { dayGroup: "Day 9", dayTitle: "Day 9: 北岸風光 (10/13)", mapCenter: { lat: 65.5, lng: -19.8 }, mapZoom: 8, items: [
+            {地點: "移動: Akureyri → Glaumbær (約 1h 22m)", 類別: "🚗 移動"},
+            {地點: "Glaumbaer Museum 草屋博物館", 照片: "https://mimihan.tw/wp-content/uploads/20180618141607_36.jpg", 類別: "⛱ 景點", lat: 65.6085, lng: -19.5000, mapLabel: "Glaumbær Farm & Museum", mapPriority: 1},
+            {地點: "移動: Glaumbær → Blönduóskirkja (約 43m)", 類別: "🚗 移動"},
+            {地點: "Blonduoskirkja 火山教堂、鯨魚教堂", 描述: "可順便加油", 照片: "https://mimihan.tw/wp-content/uploads/20180618141633_68.jpg", 類別: "⛱ 景點", lat: 65.6580, lng: -20.2785, mapLabel: "Blönduóskirkja", mapPriority: 2},
+            {地點: "移動: Blönduóskirkja → 巨人峽谷 (約 37m)", 類別: "🚗 移動"},
+            {地點: "巨人峽谷 (Kolugljúfur Canyon)", 類別: "⛱ 景點", lat: 65.3303, lng: -20.7008, mapLabel: "Kolugljúfur Canyon", mapPriority: 3},
+            {地點: "住 華姆斯唐吉？或路上選擇", 類別: "🏡 住宿", lat: 65.3967, lng: -20.9331, mapLabel: "Hvammstangi", mapPriority: 4}
+        ]},
+        // Day 10
+        { dayGroup: "Day 10", dayTitle: "Day 10: 斯奈山半島", mapCenter: { lat: 64.85, lng: -23.3 }, mapZoom: 9, items: [
+            {地點: "移動: 華姆斯唐吉 → 教堂山 (約 2h 36m)", 類別: "🚗 移動"},
+            {地點: "Kirkjufellsfoss 教堂山", 照片: "https://mimihan.tw/wp-content/uploads/20180620190950_46.jpg", 類別: "⛱ 景點", lat: 64.9260, lng: -23.2719, mapLabel: "Kirkjufellsfoss", mapPriority: 1},
+            {地點: "移動: 教堂山 → Ólafsvík (約 20m)", 類別: "🚗 移動"},
+            {地點: "Ólafsvík小鎮", 描述: "進入斯奈山國家公園的最後一個比較大的城鎮", 類別: "⛱ 景點", lat: 64.8940, lng: -23.7100, mapLabel: "Ólafsvík", mapPriority: 2},
+            {地點: "移動: Ólafsvík → SAXHÓLAR CRATER (約 20m)", 類別: "🚗 移動"},
+            {地點: "SAXHÓLAR CRATER 火山", 描述: "是一座沈睡400年的火山", 照片: "https://mimihan.tw/wp-content/uploads/20180826212128_25.jpg", 類別: "⛱ 景點", lat: 64.8510, lng: -23.9150, mapLabel: "Saxhóll Crater", mapPriority: 3},
+            {地點: "VATNSHELLIR CAVE 地心探險", 描述: "每個小時有一團，約莫45分鐘", 照片: "https://kavana.tw/wp-content/uploads/pixnet/f85425c596023b29c7f0d9089858b438.jpg", 類別: "⛱ 景點", lat: 64.7520, lng: -23.8200, mapLabel: "Vatnshellir Cave", mapPriority: 4},
+            {地點: "Londrangar 怪物海岸", 照片: "https://mimihan.tw/wp-content/uploads/20180826212202_97.jpg", 類別: "⛱ 景點", lat: 64.7360, lng: -23.7800, mapLabel: "Lóndrangar", mapPriority: 5},
+            {地點: "BÁRÐAR SAGA 石巨人", 照片: "https://mimihan.tw/wp-content/uploads/20180826212210_84.jpg", 類別: "⛱ 景點", lat: 64.7744, lng: -23.7791, mapLabel: "Bárður Snæfellsás (Arnarstapi)", mapPriority: 6},
+            {地點: "移動: Arnarstapi → Ytri Tunga (約 30m)", 類別: "🚗 移動"},
+            {地點: "Ytri Tunga 海豹沙灘", 描述: "太晚的話可以隔天來", 照片: "https://icelandthebeautiful.com/wp-content/uploads/2020/01/Ytri-tunga-beach-snaefellsnes-west-iceland_DSC7489.jpg", 類別: "⛱ 景點", lat: 64.8001, lng: -23.0346, mapLabel: "Ytri Tunga Beach", mapPriority: 7},
+            {地點: "住 斯奈山半島", 類別: "🏡 住宿", lat: 64.8900, lng: -23.2500, mapLabel: "Grundarfjörður (斯奈山住宿參考)", mapPriority: 8}
+        ]},
+        // Day 11
+        { dayGroup: "Day 11", dayTitle: "Day 11: 返回雷克雅維克 (10/15)", mapCenter: { lat: 64.5, lng: -22.5 }, mapZoom: 8, items: [
+            {地點: "移動: 斯奈山半島 → Sky Lagoon (約 2h)", 類別: "🚗 移動"},
+            {地點: "Sky Lagoon", 照片: "https://shiningchan-com.sfo3.digitaloceanspaces.com/wp-content/uploads/2024/10/scimgKj5yjW.webp", 類別: "⛱ 景點", lat: 64.1278, lng: -21.9519, mapLabel: "Sky Lagoon", mapPriority: 1},
+            {地點: "Bjórböðin SPA", 台幣:"4600", 描述: "泡 25分鐘 兩人 ＋ 休息區躺25分鐘...", 照片: "https://mimihan.tw/wp-content/uploads/20180613111632_26.jpg", 類別: "⛱ 景點", lat: 66.0698, lng: -18.5323, mapLabel: "Bjórböðin - The Beer Spa"},
+            {地點: "住雷克雅維克", 類別: "🏡 住宿", lat: 64.1466, lng: -21.9426, mapLabel: "雷克雅維克住宿", mapPriority: 2}
+        ]},
+        // Day 12
+        { dayGroup: "Day 12", dayTitle: "Day 12: 歸途", mapCenter: { lat: 64.05, lng: -22.2 }, mapZoom: 9, items: [
+            {地點: "雷克雅維克市區最後巡禮/採買", 類別: "⛱ 景點", lat: 64.1470, lng: -21.9400, mapLabel: "Reykjavik City Center"},
+            {地點: "移動: 雷克雅維克 → KEF 機場", 類別: "🚗 移動"},
+            {地點: "KEF 機場還車、搭機", 類別: "🚗 移動", lat: 63.9850, lng: -22.6056, mapLabel: "KEF Airport", mapPriority: 1}
+        ]}
+    ];
+
+    const mapsInitialized = {};
+
+    // --- Function to get category class ---
+    function getCategoryClass(category) {
+        if (!category) return 'cat-default';
+        if (category.includes('移動')) return 'cat-mov';
+        if (category.includes('吃喝')) return 'cat-eat';
+        if (category.includes('景點') || category.includes('👍')) return 'cat-see';
+        if (category.includes('住宿')) return 'cat-stay';
+        if (category.includes('活動')) return 'cat-act';
+        return 'cat-default';
+    }
+
+    // --- Image Modal Logic ---
+    const modal = document.getElementById("myImageModal");
+    const modalImg = document.getElementById("imgModalSrc");
+    const modalCloseBtn = document.querySelector(".image-modal-close");
+
+    function openImageModal(imgSrc) {
+        if (modal && modalImg) {
+            modal.style.display = "block";
+            modalImg.src = imgSrc;
+        }
+    }
+    if (modalCloseBtn) {
+        modalCloseBtn.onclick = function() {
+            if (modal) modal.style.display = "none";
+        }
+    }
+    // Close modal if user clicks outside the image (on the modal background)
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            if (modal) modal.style.display = "none";
+        }
+    }
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(event) {
+        if (event.key === "Escape" || event.key === "Esc") {
+            if (modal && modal.style.display === "block") {
+                modal.style.display = "none";
+            }
+        }
+    });
+
+
+    // --- Function to generate HTML for each day's itinerary ---
+    function generateDayHtml(dayData, dayIndex) {
+        let itemsHtml = '<ul class="itinerary-list">';
+        dayData.items.forEach(item => {
+            const categoryClass = getCategoryClass(item.類別);
+            const isDrivingInfo = item.類別 && item.類別.includes('🚗 移動');
+
+            if (isDrivingInfo && item.地點.startsWith("移動:")) {
+                itemsHtml += `<li class="driving-info">${item.地點.replace("移動:", "").trim()}</li>`;
+            } else {
+                itemsHtml += `<li class="itinerary-item">`;
+                itemsHtml += `<span class="item-category ${categoryClass}">${item.類別 || '資訊'}</span>`;
+
+                if (item.lat && item.lng) {
+                    const queryName = encodeURIComponent(item.mapLabel || item.地點);
+                    const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${item.lat},${item.lng}&query_place_id=${queryName}`;
+                    itemsHtml += `<strong><a href="${googleMapsUrl}" target="_blank" title="在 Google 地圖中打開">${item.地點}</a></strong>`;
+                } else {
+                    itemsHtml += `<strong>${item.地點}</strong>`;
+                }
+
+                if (item.描述) itemsHtml += `<div class="item-description">${item.描述}</div>`;
+                if (item.克朗) itemsHtml += `<div class="item-description">費用：約 ${item.克朗} ISK</div>`;
+                if (item.台幣) itemsHtml += `<div class="item-description">費用參考：約 ${item.台幣} TWD</div>`;
+                
+                if (item.照片 && (categoryClass === 'cat-see' || categoryClass === 'cat-eat')) {
+                    const photoUrls = item.照片.split(',');
+                    const photoUrl = photoUrls[0].trim();
+                    if (photoUrl) {
+                       itemsHtml += `<img src="${photoUrl}" alt="${item.地點} 縮圖" class="item-photo-thumbnail" onclick="openImageModal('${photoUrl}')">`;
+                    }
+                }
+                if (item.網址) itemsHtml += `<div class="item-url"><a href="${item.網址}" target="_blank">相關連結</a></div>`;
+                itemsHtml += `</li>`;
+            }
+        });
+        itemsHtml += '</ul>';
+
+        let mapHtml = '';
+        // Ensure map container is only added if there's map data or points for the map
+        const hasMapPoints = dayData.items && dayData.items.some(it => it.lat && it.lng && it.mapLabel && typeof it.mapPriority === 'number');
+        if (dayData.mapCenter || hasMapPoints) {
+            mapHtml = `<div id="mapDay${dayIndex}" class="map-container"></div>`;
+        } else {
+            mapHtml = `<p style="text-align:center; padding:10px; color:#777;">本日無地圖路線規劃。</p>`;
+        }
+        return `<h2>${dayData.dayTitle}</h2>${itemsHtml}${mapHtml}`;
+    }
+
+
+    // --- Google Maps API Functions ---
+    function displayRoute(mapId, locations, mapCenter, mapZoom) {
+        const mapElement = document.getElementById(mapId);
+        if (!mapElement) {
+            console.error("Map element not found:", mapId);
+            return;
+        }
+        if (!google || !google.maps) {
+            console.error("Google Maps API not loaded yet.");
+            mapElement.innerHTML = "<p style='text-align:center; padding-top:20px;'>地圖服務載入中...</p>";
+            return;
+        }
+        
+        if (locations.length === 0 && !mapCenter) {
+             mapElement.innerHTML = "<p style='text-align:center; padding-top:20px;'>本地圖無景點可顯示。</p>";
+            return;
+        }
+
+        const map = new google.maps.Map(mapElement, {
+            zoom: mapZoom || 8,
+            center: mapCenter || locations[0]?.location || { lat: 64.9631, lng: -19.0208 } // Iceland center
+        });
+
+        if (locations.length === 0) {
+            if(mapCenter) new google.maps.Marker({ position: mapCenter, map: map, title: "地圖中心" });
+            return;
+        }
+        
+        if (locations.length === 1) {
+            new google.maps.Marker({
+                position: locations[0].location,
+                map: map,
+                label: 'A',
+                title: locations[0].title
+            });
+            map.setCenter(locations[0].location);
+            return;
+        }
+
+        const directionsService = new google.maps.DirectionsService();
+        const directionsRenderer = new google.maps.DirectionsRenderer({
+            map: map,
+            suppressMarkers: false
+        });
+
+        const waypoints = locations.slice(1, -1).map(loc => ({
+            location: loc.location,
+            stopover: true
+        }));
+
+        const request = {
+            origin: locations[0].location,
+            destination: locations[locations.length - 1].location,
+            waypoints: waypoints,
+            optimizeWaypoints: true,
+            travelMode: google.maps.TravelMode.DRIVING
+        };
+
+        directionsService.route(request, function(result, status) {
+            if (status == 'OK') {
+                directionsRenderer.setDirections(result);
+            } else {
+                console.error('Directions request failed for ' + mapId + ' due to ' + status, result);
+                mapElement.innerHTML = `<p style='text-align:center; padding-top:20px;'>地圖路線載入失敗 (${status})。</p>`;
+                locations.forEach((loc, index) => {
+                    new google.maps.Marker({
+                        position: loc.location,
+                        map: map,
+                        label: String.fromCharCode(65 + index),
+                        title: loc.title
+                    });
+                });
+            }
+        });
+    }
+
+
+    // --- Tab Switching Logic ---
+    function openDayTab(dayIndex) {
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        tabContents.forEach(content => content.classList.remove('active'));
+
+        if (tabButtons[dayIndex]) {
+            tabButtons[dayIndex].classList.add('active');
+        }
+        if (tabContents[dayIndex]) {
+            tabContents[dayIndex].classList.add('active');
+
+            const dayData = allItineraryData[dayIndex];
+            const mapId = `mapDay${dayIndex}`;
+            
+            const locationsForMap = dayData.items
+                .filter(item => item.lat && item.lng && item.mapLabel && typeof item.mapPriority === 'number')
+                .sort((a, b) => a.mapPriority - b.mapPriority)
+                .map(item => ({ location: { lat: item.lat, lng: item.lng }, title: item.mapLabel }));
+
+            // Only try to initialize map if there are locations for it or a defined mapCenter
+            const shouldInitializeMap = dayData.mapCenter || locationsForMap.length > 0;
+
+            if (shouldInitializeMap && !mapsInitialized[mapId]) {
+                if (typeof google !== 'undefined' && google.maps) { // Check if API is loaded
+                    displayRoute(mapId, locationsForMap, dayData.mapCenter, dayData.mapZoom);
+                    mapsInitialized[mapId] = true;
+                } else {
+                    // API not ready, maybe retry or show message.
+                    // For now, initPage is called by API callback, so this should be fine.
+                    console.warn("Google Maps API not ready when trying to init map for tab:", mapId);
+                }
+            }
+        }
+    }
+
+    // --- Initialize Page ---
+    function initPage() { // This is now the callback for Google Maps API
+        const tabContainer = document.getElementById('tabContainer');
+        const tabContentContainer = document.getElementById('tabContentContainer');
+
+        allItineraryData.forEach((dayData, index) => {
+            const tabButton = document.createElement('button');
+            tabButton.className = 'tab-button';
+            tabButton.textContent = dayData.dayGroup;
+            tabButton.onclick = () => openDayTab(index);
+            tabContainer.appendChild(tabButton);
+
+            const tabContent = document.createElement('div');
+            tabContent.className = 'tab-content';
+            tabContent.id = `dayContent${index}`;
+            tabContent.innerHTML = generateDayHtml(dayData, index);
+            tabContentContainer.appendChild(tabContent);
+        });
+
+        if (allItineraryData.length > 0) {
+            openDayTab(0); // Open the first tab, which will also attempt to initialize its map
+        }
+    }
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvDoFpF2Pv3gRDt1-biMzdNcCYa_ilebk&callback=initPage&libraries=routes">
+    </script>
+</body>
+</html>
