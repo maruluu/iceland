@@ -1,1 +1,0 @@
-const GOOGLE_MAPS_API_KEY = process.env.GOOGLE_MAPS_API_KEY || "YOUR_LOCAL_API_KEY";
