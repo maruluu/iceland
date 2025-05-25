@@ -273,7 +273,7 @@
         <span class="image-modal-close">&times;</span>
         <img class="image-modal-content" id="imgModalSrc" alt="放大圖片">
     </div>
-    <script src="const.js"></script>
+    <script src="const.js" type="module"></script>
     <script>
     // --- Your Itinerary Data ---
     const allItineraryData = [
@@ -749,9 +749,12 @@
         });
     }
     </script>
-    <script>
+    <script type="module">
+    import { GOOGLE_MAPS_API_KEY } from './const.js';
+
     // 動態載入 Google Maps API，避免 API KEY 寫死在 HTML
     function loadGoogleMapsApi() {
+  console.log('載入 Google Maps API...', GOOGLE_MAPS_API_KEY);
         if (typeof GOOGLE_MAPS_API_KEY === 'undefined' || !GOOGLE_MAPS_API_KEY || GOOGLE_MAPS_API_KEY.indexOf('__GOOGLE_MAPS_API_KEY__') === 0) {
             console.error('Google Maps API 金鑰未設定，請檢查 const.js');
             return;
@@ -764,6 +767,6 @@
     }
     // 頁面載入後執行
     window.addEventListener('DOMContentLoaded', loadGoogleMapsApi);
-    </script>
+</script>
 </body>
 </html>
