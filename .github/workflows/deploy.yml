@@ -9,8 +9,14 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
+
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Setup git user
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Setup Node.js (for string replacement, not required for static hosting)
         uses: actions/setup-node@v4
