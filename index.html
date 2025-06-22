@@ -4,793 +4,168 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>冰島12天行程</title>
-    <style>
-        /* --- Base Styles --- */
-        html {
-            font-size: 16px;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            background-color: #f0f2f5;
-            color: #333;
-            -webkit-text-size-adjust: 100%;
-        }
-        .page-container {
-            max-width: 100%;
-            margin: 0 auto;
-            background: #fff;
-        }
-        header {
-            background-color: #005792;
-            color: white;
-            padding: 1rem 0.75rem;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 1.5em;
-        }
-
-        /* --- Tabs --- */
-        .tab-container {
-            display: flex;
-            flex-wrap: nowrap;
-            overflow-x: auto;
-            background-color: #e9ecef;
-            border-bottom: 1px solid #dee2e6;
-            -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS for tabs */
-            scrollbar-width: none; /* Firefox */
-            -ms-overflow-style: none;  /* Internet Explorer 10+ */
-        }
-        .tab-container::-webkit-scrollbar { /* WebKit */
-            display: none;
-        }
-        .tab-button {
-            background-color: #e9ecef;
-            color: #005792;
-            border: none;
-            padding: 0.75rem 1rem;
-            text-align: center;
-            cursor: pointer;
-            font-size: 0.9rem;
-            transition: background-color 0.3s, color 0.3s;
-            white-space: nowrap;
-            flex-shrink: 0;
-        }
-        .tab-button:not(:last-child) {
-             border-right: 1px solid #d1d9e0;
-        }
-        .tab-button:hover {
-            background-color: #d1d9e0;
-        }
-        .tab-button.active {
-            background-color: #005792;
-            color: white;
-            font-weight: bold;
-            border-bottom: 3px solid #ffc107;
-        }
-
-        /* --- Tab Content --- */
-        .tab-content {
-            display: none;
-            padding: 1rem 0.75rem;
-            animation: fadeIn 0.5s;
-        }
-        .tab-content.active {
-            display: block;
-        }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-
-        /* Special style for Day 0 (Departure Day) tab content */
-        .tab-content.departure-day-content {
-            /* 移除特殊底色，與其他天相同 */
-            background-color: inherit;
-        }
-        .departure-day-content .itinerary-item {
-            /* 移除特殊 item 樣式，與其他天相同 */
-            background-color: #f9f9f9;
-            border: 1px solid #e0e0e0;
-        }
-
-
-        /* --- Itinerary Item Styles --- */
-        h2 {
-            color: #005792;
-            border-bottom: 2px solid #005792;
-            padding-bottom: 0.5rem;
-            margin-top: 0;
-            margin-bottom: 1rem;
-            font-size: 1.3em;
-        }
-        ul.itinerary-list {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        li.itinerary-item {
-            margin-bottom: 1rem;
-            padding: 0.75rem;
-            border: 1px solid #e0e0e0;
-            border-radius: 6px;
-            background-color: #f9f9f9;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-        }
-        li.itinerary-item strong {
-            color: #005792;
-            display: block;
-            margin-bottom: 0.3rem;
-            font-size: 1.1em;
-        }
-        li.itinerary-item strong a {
-            color: #005792;
-            text-decoration: none;
-        }
-        li.itinerary-item strong a:hover {
-            text-decoration: underline;
-            color: #003f6b;
-        }
-        .item-category {
-            font-weight: bold; display: inline-block; padding: 0.2rem 0.5rem;
-            border-radius: 4px; color: white; margin-right: 0.5rem; font-size: 0.85em;
-            margin-bottom: 0.3rem;
-        }
-        /* Original Categories */
-        .cat-mov { background-color: #6c757d; }
-        .cat-eat { background-color: #fd7e14; }
-        .cat-see { background-color: #20c997; }
-        .cat-stay { background-color: #17a2b8; }
-        .cat-act { background-color: #ffc107; color: #333;}
-        .cat-default { background-color: #6c757d;}
-
-        /* New Categories for Day 0 */
-        .cat-journey-overview { background-color: #005792; color: white; } /* Theme blue */
-        .cat-flight-segment { background-color: #0d6efd; color: white; } /* Bright blue, e.g. Bootstrap primary */
-        .cat-layover-time { background-color: #adb5bd; color: #212529; } /* Lighter grey, e.g. Bootstrap gray-500 */
-        .cat-arrival-next-leg { background-color: #198754; color: white; } /* Green, e.g. Bootstrap success */
-
-
-        .item-description { margin-top: 0.5rem; font-size: 0.9em; color: #555; }
-        .item-photo-thumbnail {
-            max-width: 100px;
-            max-height: 75px;
-            margin-top: 0.5rem;
-            border-radius: 4px;
-            display: block;
-            object-fit: cover;
-            cursor: pointer;
-            border: 1px solid #ccc;
-        }
-        .item-url a { color: #007bff; text-decoration: none; font-size: 0.85em;}
-        .item-url a:hover { text-decoration: underline; }
-        .driving-info {
-            font-style: italic; color: #555; margin: 0.6rem 0; padding: 0.6rem;
-            background-color: #eef7ff; border-left: 3px solid #007bff; border-radius: 4px;
-            font-size: 0.9em;
-        }
-        .map-container { width: 100%; height: 350px; margin-top: 1rem; border: 1px solid #ccc; border-radius: 4px;}
-        .important-notes { background-color: #fff3cd; border-left: 5px solid #ffc107; padding: 0.75rem; margin: 1rem 0.75rem; border-radius: 4px; font-size: 0.9em;}
-
-        /* --- Image Modal Styles --- */
-        .image-modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            padding-top: 5vh; /* Use vh for vertical centering */
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0,0,0,0.9);
-            text-align: center; /* Center the image block */
-        }
-        .image-modal-content {
-            margin: auto;
-            display: inline-block; /* Allows text-align center to work */
-            max-width: 95%;
-            max-height: 90vh; /* Limit height based on viewport */
-            animation-name: zoom;
-            animation-duration: 0.3s;
-        }
-        @keyframes zoom {
-            from {transform:scale(0.5); opacity: 0;}
-            to {transform:scale(1); opacity: 1;}
-        }
-        .image-modal-close {
-            position: absolute;
-            top: 15px;
-            right: 25px; /* Adjusted for better touch target */
-            color: #f1f1f1;
-            font-size: 2.5rem; /* Larger for touch */
-            line-height: 1;
-            font-weight: bold;
-            transition: 0.3s;
-            cursor: pointer;
-            padding: 5px; /* Easier to tap */
-        }
-        .image-modal-close:hover,
-        .image-modal-close:focus {
-            color: #bbb;
-            text-decoration: none;
-        }
-
-
-        /* --- Desktop and larger screen adjustments --- */
-        @media (min-width: 768px) {
-            html { font-size: 17px; }
-            .page-container {
-                max-width: 1000px;
-                margin: 20px auto;
-                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-                border-radius: 8px;
-            }
-            header { padding: 1.25rem; }
-            header h1 { font-size: 2em; }
-            .tab-container { flex-wrap: wrap; overflow-x: visible; }
-            .tab-button { padding: 0.8rem 1.2rem; font-size: 0.95rem; }
-            .tab-content { padding: 1.5rem; }
-             .tab-content.departure-day-content {
-                /* Ensure padding is consistent on desktop too if overridden */
-                padding: 1.5rem;
-            }
-            .departure-day-content .itinerary-item {
-                 padding: 1rem; /* Match general item padding on desktop */
-            }
-            li.itinerary-item { padding: 1rem; }
-            .item-photo-thumbnail { max-width: 120px; max-height: 90px; }
-            .map-container { height: 450px; }
-            .important-notes { font-size: 15px}
-            .image-modal-content { max-width: 700px; } /* Modal image size on desktop */
-        }
-    </style>
+  <script type="module" crossorigin src="/iceland/assets/index-Bcu8RLKL.js"></script>
+  <link rel="stylesheet" crossorigin href="/iceland/assets/index-DZ6tTYeH.css">
 </head>
 <body>
     <div class="page-container">
-        <header>
-            <h1>來去冰島看極光11天行程</h1>
-        </header>
-
+        <header><h1>來去冰島看極光11天行程</h1></header>
         <div class="important-notes">
             <ul>
                 <li>點擊景點名稱可在 Google 地圖中打開該地點。</li>
                 <li>點擊行程中的小圖片可查看大圖。</li>
             </ul>
         </div>
-
-        <div class="tab-container" id="tabContainer">
-            <!-- Tab buttons will be generated here by JavaScript -->
-        </div>
-
-        <div id="tabContentContainer">
-            <!-- Tab content will be generated here by JavaScript -->
-        </div>
+        <div class="tab-container" id="tabContainer"></div>
+        <div id="tabContentContainer"></div>
     </div>
-
-    <!-- The Modal for Images -->
+    <!-- Image Modal -->
     <div id="myImageModal" class="image-modal">
         <span class="image-modal-close">&times;</span>
         <img class="image-modal-content" id="imgModalSrc" alt="放大圖片">
     </div>
-    <script src="const.js?v=1" type="module"></script>
+
     <script>
-    // --- Your Itinerary Data ---
-    const allItineraryData = [
-        // Day 0 - Updated with flight info
-        {
-            dayGroup: "Day 0",
-            dayTitle: "Day 0: 出發前往歐洲 (10/4 週六)",
-            isSpecialDay: "departure", // Flag for special styling
-            items: [
-                { 地點: "✈️ 台北(TPE) → 阿姆斯特丹(AMS)", 類別: "🌟 行程總覽", 描述: "經香港(HKG)轉機。總飛行與轉機時間約 17小時 5分鐘。" },
-                { 地點: "🚗 ", 描述: "從家裡前往桃園國際機場 (TPE)", 類別: "🚗 移動" },
-                { 地點: "✈️ 國泰航空 CX531", 描述: "台北(TPE) 19:50 → 香港(HKG) 22:00. 飛行 2h 10m.", 類別: "✈️ 飛行" },
-                { 地點: "⏳香港(HKG) 轉機", 描述: "停留 1h 15m.", 類別: "⏳ 轉機" },
-                { 地點: "✈️ 國泰航空 CX271", 描述: "香港(HKG) 23:15 → 阿姆斯特丹(AMS) 06:55 (+1日). 飛行 13h 40m. 抵達日期: 10/5 (週日).", 類別: "✈️ 飛行" },
-                { 地點: "⏳10/5(日) 06:55", 描述: " 抵達阿姆斯特丹 (AMS)", 類別: "🏁 抵達待轉"},	
-                { 地點: "✈️ 10/5(日) 12:30 ", 描述: "Play 航空 AMS -> KEF 13:50", 類別: "✈️ 飛行"}
-            ]
-        },
-        // Day 1
-        { dayGroup: "Day 1", dayTitle: "Day 1: 10/5(日)雷克雅維克 ", mapCenter: { lat: 64.05, lng: -22.0 }, mapZoom: 9, items: [
-            {地點: "凱夫拉維克國際機場 (KEF)", 描述:"航班 13:50 抵達", 類別: "🚗 移動", lat: 63.9850, lng: -22.6056, mapLabel: "KEF 機場", mapPriority: 1}, // Updated description slightly
-            {地點: "租車", 類別: "", 描述:"市中心的停車格是要收費的，收費時間星期一至五09:00~18:00；星期六10:00~16:00，其餘時間則是免費" }, // Consider "🚗 活動" or similar
-            {地點: "移動: 機場 → 市區 (40m)", 類別: "🚗 移動"},
-            {地點: "Svarta Kaffid 麵包湯", 照片: "https://mimihan.tw/wp-content/uploads/20180706200030_83.jpg", 類別: "🧁 吃喝", lat: 64.14446, lng: -21.92346, mapLabel: "Svarta Kaffið", mapPriority: 2, 營業時間: "11:30–22:00"},
-            {地點: "Braud & Co麵包店", 描述:"有很多分店",  照片: "https://mimihan.tw/wp-content/uploads/20180503165237_63.jpg", 類別: "🧁 吃喝", lat: 64.1440, lng: -21.9280, mapLabel: "Brauð & Co.", mapPriority: 3, 營業時間: "06:30–17:00"},
-            {地點: "市區採買", 類別: "⛱ 景點", lat: 64.1470, lng: -21.9400, mapLabel: "Reykjavik City Center"},
-            {地點: "Grettir Guesthouse Downtown Charm", 類別: "🏡 住宿", 描述: "<span style='color:green;'>&#10003;</span>廚房，<span style='color:red;'>&#10007;</span>早餐", 照片:"https://cf.bstatic.com/xdata/images/hotel/max1280x900/606428941.jpg?k=b320806e5ae8120e9e96f85a42fd59ede02a2254b487d767a4381df5e47ada66&o=&hp=1" ,網址: "https://www.booking.com/Share-NeX74T", lat: 64.14519954369655, lng: -21.92785747425269, mapLabel: "Grettir Guesthouse", mapPriority: 4},
-        ]},
-        // Day 2
-        { dayGroup: "Day 2", dayTitle: "Day 2: 10/6(一)黃金圈", mapCenter: { lat: 64.20, lng: -20.7 }, mapZoom: 9, items: [
-            {地點: "移動: 雷克雅維克 → 辛格韋德利國家公園 (約 1h 45m)", 類別: "🚗 移動"},
-            {地點: "辛格韋德利國家公園Þingvellir National Park- P1停車場", 描述: "(停留約 1~1.5 小時)，世界上唯一在海平面以上的北美板塊與歐亞板塊...", 照片: "https://bobbyworld.tw/wp-content/uploads/pixnet/b60bf02b2f8e7debf6d89af4ee21b3d6.jpg", 類別: "⛱ 景點", lat: 64.25579, lng: -21.13547,   mapLabel: "Þingvellir Parking P1", mapPriority: 1},
-            {地點: "阿爾曼納陡崖 (Almannagjá)", 描述: "在辛格韋德利國家公園內，北美版塊、歐亞板塊分界處...", 照片: "https://bobbyworld.tw/wp-content/uploads/pixnet/9297d22ba307260f2a0b01ea7db764f8.jpg", 類別: "⛱ 景點", lat: 64.2659, lng: -21.1205, mapLabel: "Almannagjá", mapPriority: 2},
-            {地點: "移動: 辛格韋德利 → Bruarfoss (約 40m)", 類別: "🚗 移動"},
-            {地點: "藍色瀑布 Bruarfoss", 照片: "https://mlz24bjzzgqm.i.optimole.com/w:463/h:694/q:mauto/dpr:2.0/ig:avif/https://dragonflytravelblog.com/wp-content/uploads/2024/07/DSC08814.jpg", 類別: "⛱ 景點", lat: 64.26284, lng: -20.51917, mapLabel: "Brúarfoss Waterfall Parking", mapPriority: 3},
-            {地點: "移動: Bruarfoss → 間歇泉 (約 25m)", 類別: "🚗 移動"},
-            {地點: "史托克間歇泉Strokkur Geyser", 描述: "水柱高度約落在15-20公尺...", 照片: "https://bobbyworld.tw/wp-content/uploads/pixnet/97c71f9eebe535acfed9aaa4f815907c.jpg", 類別: "⛱ 景點", lat: 64.3127, lng: -20.3000, mapLabel: "Strokkur", mapPriority: 4},
-            {地點: "移動: 間歇泉 → 古佛斯瀑布 (約 10m)", 類別: "🚗 移動"},
-            {地點: "古佛斯瀑布 Gullfoss 黃金", 描述: "世界十大瀑布之一...", 照片: "https://bobbyworld.tw/wp-content/uploads/pixnet/6772ba08ae239a0952383c81195d6dd2.jpg", 類別: "⛱ 景點", lat: 64.3271, lng: -20.1199, mapLabel: "Gullfoss Falls", mapPriority: 5},
-            {地點: "GullfossKaffi Ehf羊肉湯", 描述: "Gullfoss Waterfall 旁邊", 照片: "https://bobbyworld.tw/wp-content/uploads/pixnet/9c600eab4147cda40e9a7a0f9e68a57b.jpg", 類別: "🧁 吃喝", lat: 64.3250, lng: -20.1240, mapLabel: "Gullfoss Kaffi"},
-            {地點: "移動: 黃金瀑布 → 塞爾福斯 (約 1h)", 類別: "🚗 移動"},
-            {地點: "Hotel Selfoss", 類別: "🏡 住宿", 描述: "Eyravegur 2, 800 Selfoss, Iceland", 網址: "https://hotelselfoss.is", lat: 63.9341, lng: -20.9990, mapLabel: "Hotel Selfoss"}
-        ]},
-        // Day 3
-        { dayGroup: "Day 3", dayTitle: "Day 3: 10/7(二)南部", mapCenter: { lat: 63.70, lng: -20.0 }, mapZoom: 8, items: [
-            {地點: "移動: 賽爾弗斯 → 野溪溫泉 (約 20m)", 類別: "🚗 移動"},
-            {地點: "Reykjadalur 野溪溫泉", 照片: "https://mlz24bjzzgqm.i.optimole.com/w:768/h:512/q:mauto/dpr:2.0/ig:avif/https://dragonflytravelblog.com/wp-content/uploads/2024/07/reykjadalur.jpg", 類別: "⛱ 景點", lat: 64.0238, lng: -21.2116, mapLabel: "Reykjadalur Hot Spring Thermal River Parking", mapPriority: 1},
-            {地點: "移動: 賽爾弗斯 → 火口湖 (約 20m - 若從Selfoss出發)", 類別: "🚗 移動"},
-            {地點: "凱瑞斯火口湖 Kerid Crater", 照片: "https://mimihan.tw/wp-content/uploads/20180427004523_29.jpg", 類別: "⛱ 景點", lat: 64.0413, lng: -20.8850, mapLabel: "Kerið", mapPriority: 2},
-            {地點: "移動: 火口湖 → 塞里雅蘭瀑布 (約 1h 10m)", 類別: "🚗 移動"},
-            {地點: "塞里雅蘭瀑布 Seljalandsfoss", 描述: "水簾洞瀑布，有廁所", 照片: "https://mimihan.tw/wp-content/uploads/20180507121849_84.jpg", 類別: "⛱ 景點", lat: 63.6156, lng: -19.9886, mapLabel: "Seljalandsfoss", mapPriority: 3},
-            {地點: "移動: 塞里雅蘭瀑布 → 斯科加爾瀑布 (約 31m)", 類別: "🚗 移動"},
-            {地點: "斯科加爾瀑布 Skogafoss", 描述: "高人氣《白日夢冒險王》拍攝場景...", 照片: "https://bobbyworld.tw/wp-content/uploads/pixnet/b5354d87a4320ee73ff7fafc4ba00d30.jpg", 類別: "⛱ 景點", lat: 63.5321, lng: -19.5114, mapLabel: "Skógafoss", mapPriority: 4},
-            {地點: "移動: 斯科加爾瀑布 → 黑沙灘 (約 32m)", 類別: "🚗 移動"},
-            {地點: "Reynisfjara黑沙灘", 描述: "海蝕洞是千年前火山噴發下的遺跡...", 照片: "https://bobbyworld.tw/wp-content/uploads/pixnet/9ed7a628e2f547092920693ada18878e.jpg, https://bobbyworld.tw/wp-content/uploads/pixnet/4da10f837463f77bb344b3c267fa4950.jpg", 類別: "⛱ 景點", lat: 63.4027, lng: -19.0452, mapLabel: "Reynisfjara Beach", mapPriority: 5},
-            {地點: "Black Beach Suites, Vík", 類別: "🏡 住宿", 描述: "Reynishverfisvegur, 871 Vík, Iceland", 網址: "https://www.booking.com/Share-by4zAKY", lat: 63.4070, lng: -19.0040, mapLabel: "Black Beach Suites"}
-        ]},
-        // Day 4
-        { dayGroup: "Day 4", dayTitle: "Day 4: 10/8(三)維克周邊與冰洞", mapCenter: { lat: 63.6, lng: -18.5 }, mapZoom: 9, items: [
-            {地點: "Vik 集合 10:00 卡特拉火山冰洞 3h", 台幣: "7,000", 網址:"https://adventures.is/iceland/day-tours/ice-caves/katla-ice-cave-tour-under-the-volcano/", 照片: "https://image.kkday.com/image/get/s1.kkday.com/product_181018/20240527121341_7vFCr/jpg", 類別: "🎭 活動", lat: 63.4177, lng: -18.9976, mapLabel: "維克(冰洞集合)", mapPriority: 1}, // Changed ⛱ 景點 to 🎭 活動
-            {地點: "移動: Vik → 羽毛峽谷 (約 50m)", 類別: "🚗 移動"},
-            {地點: "羽毛峽谷 (Fjadrargljufur Canyon)", 照片: "https://bobbyworld.tw/wp-content/uploads/pixnet/c62297747249d35459e0fde974ee8204.jpg", 類別: "⛱ 景點", lat: 63.7713, lng: -18.1719, mapLabel: "Fjaðrárgljúfur", mapPriority: 2},
-            {地點: "移動: 羽毛峽谷 → Skaftafell 區域 (約 1h)", 類別: "🚗 移動"},
-            {地點: "玄武岩黑瀑布（Svartifoss", 描述: "到時候決定要不要去", 照片: "https://mimihan.tw/wp-content/uploads/20230326222137_3.jpg", 類別: "⛱ 景點", lat: 64.01637, lng: -16.9691857, mapLabel: "Svartifoss", mapPriority: 3},
-            {地點: "住 Skaftafellsstofa 附近", 描述: "但住宿選擇很少很少", 類別: "🏡 住宿", lat: 64.0162, lng: -16.9661, mapLabel: "Skaftafell Campground (住宿區參考)", mapPriority: 4}
-        ]},
-        // Day 5
-        { dayGroup: "Day 5", dayTitle: "Day 5: 10/9(四)冰川健行與冰河湖", mapCenter: { lat: 64.03, lng: -16.5 }, mapZoom: 9, items: [
-            {地點: "Skaftafell 冰川健行 5h 11:00", 網址: "https://cn.guidetoiceland.is/connect-with-locals/6640/iceland-local-tour-skaftafell-svinafellsjokull-glacier-hiking-experience", 照片: "https://adventures.is/media/237243/iceland-skaftafell-glacier-hiking-on-spikes.jpg?anchor=center&mode=crop&width=330&height=188&format=webp&quality=80&rnd=133728672360000000", 類別: "🎭 活動", lat: 64.0162, lng: -16.9661, mapLabel: "Skaftafell Visitor Centre (健行集合)", mapPriority: 1}, // Changed ⛱ 景點 to 🎭 活動
-            {地點: "移動: Skaftafell → 冰河湖 (約 50m)", 類別: "🚗 移動"},
-            {地點: "住 冰河湖附近", 類別: "🏡 住宿", lat: 64.0700, lng: -16.2200, mapLabel: "Hali Country Hotel", 網址: "https://www.booking.com/Share-8VGzua"},
-            {地點: "Fosshotel Glacier Lagoon", 類別: "🏡 住宿", 描述: "Hnappavellir, 785 Öræfi, Iceland", 網址: "https://www.booking.com/Share-8VGzua", lat: 64.2100, lng: -16.6000, mapLabel: "Fosshotel Glacier Lagoon"}
-        ]},
-        // Day 6
-        { dayGroup: "Day 6", dayTitle: "Day 6: 10/10(五) 東邊 - 冰河湖到埃伊爾斯塔濟", mapCenter: { lat: 64.7, lng: -15.3 }, mapZoom: 7, items: [
-            {地點: "Jokulsarlon冰河湖獨木舟", 台幣: "2382", 照片: "https://mlz24bjzzgqm.i.optimole.com/w:768/h:512/q:mauto/dpr:2.0/ig:avif/https://dragonflytravelblog.com/wp-content/uploads/2024/08/IMG_0303.jpg", 類別: "🎭 活動", lat: 64.0484, lng: -16.1794, mapLabel: "Jökulsárlón", mapPriority: 1}, // Changed ⛱ 景點 to 🎭 活動
-            {地點: "鑽石冰沙灘", 照片: "https://mimihan.tw/wp-content/uploads/20230326222910_99.jpg", 類別: "⛱ 景點", lat: 64.0450, lng: -16.1780, mapLabel: "Diamond Beach", mapPriority: 2},
-            {地點: "移動: 冰河湖 → Vestrahorn (約 1h 21m)", 類別: "🚗 移動"},
-            {地點: "Vestrahorn 蝙蝠山 x 維京人聚落 Viking Village", 照片: "https://kavana.tw/wp-content/uploads/pixnet/f2174d2460d318a9f09be7bb3a57b0db.jpg, https://kavana.tw/wp-content/uploads/pixnet/4cc7f163b96e90a32d2ab027110392b7.jpg", 類別: "⛱ 景點", lat: 64.2470, lng: -14.9960, mapLabel: "Stokksnes (Vestrahorn Viewpoint)", mapPriority: 3},
-            {地點: "Pakkhús Restaurant 小龍蝦 暫時關閉", 照片: "https://mimihan.tw/wp-content/uploads/20180628173749_56.jpg", 類別: "🧁 吃喝", lat: 64.2500, lng: -15.2080, mapLabel: "Pakkhús Restaurant (Höfn)"},
-            {地點: "移動: Vestrahorn/Höfn → 埃伊爾斯塔濟 (約 3h 18m)", 類別: "🚗 移動"},
-            {地點: "住 埃伊爾斯塔濟", 描述: "冰島東邊最大的城鎮...", 類別: "🏡 住宿", lat: 65.2669, lng: -14.4014, mapLabel: "Egilsstaðir", mapPriority: 4}
-        ]},
-        // Day 7
-        { dayGroup: "Day 7", dayTitle: "Day 7: 10/11(六) 北部 - 米湖周邊", mapCenter: { lat: 65.6, lng: -16.0 }, mapZoom: 8, items: [
-            {地點: "移動: 埃伊爾斯塔濟 → Seyðisfjörður (來回約 1h)", 類別: "🚗 移動"},
-            {地點: "Seyðisfjörður 白日夢冒險王小鎮", 照片: "https://mimihan.tw/wp-content/uploads/20230408152422_67.jpg", 類別: "⛱ 景點", lat: 65.2600, lng: -14.0100, mapLabel: "Seyðisfjarðarkirkja", mapPriority: 1},
-            {地點: "移動: 埃伊爾斯塔濟 → Viti (約 2h)", 類別: "🚗 移動"},
-            {地點: "Viti 維提火山湖 👍", 照片: "https://mimihan.tw/wp-content/uploads/20230409130510_89.jpg", 類別: "⛱ 景點", lat: 65.7165, lng: -16.7522, mapLabel: "Víti crater (Krafla)", mapPriority: 2},
-            {地點: "移動: Viti → Námafjall Hverir (約 11m)", 類別: "🚗 移動"},
-            {地點: "Námafjall Hverir 火山地熱谷", 照片: "https://mimihan.tw/wp-content/uploads/20180529165813_72.jpg", 類別: "⛱ 景點", lat: 65.6415, lng: -16.8093, mapLabel: "Hverir (Námafjall)", mapPriority: 3},
-            {地點: "洞穴溫泉Grjótagjá", 照片: "https://mimihan.tw/wp-content/uploads/20180603221410_36.jpg", 類別: "⛱ 景點", lat: 65.6262, lng: -16.8820, mapLabel: "Grjótagjá cave", mapPriority: 4},
-            {地點: "米湖溫泉", 照片: "https://mimihan.tw/wp-content/uploads/20180530184317_85.jpg", 類別: "🎭 活動", lat: 65.6305, lng: -16.8480, mapLabel: "Mývatn Nature Baths", mapPriority: 5}, // Changed ⛱ 景點 to 🎭 活動 (bathing is an activity)
-            {地點: "Vogafjos Cafe", 類別: "🧁 吃喝", lat: 65.5913, lng: -16.9204, mapLabel: "Vogafjós Farm Resort", mapPriority: 6},
-            {地點: "Vogafjós Farm Resort, Mývatn", 類別: "🏡 住宿", 描述: "Vogafjós, 660 Mývatn, Iceland", 網址: "https://www.booking.com/Share-I4uimAK", lat: 65.6241, lng: -16.9228, mapLabel: "Vogafjós Farm Resort"}
-        ]},
-        // Day 8
-        { dayGroup: "Day 8", dayTitle: "Day 8: 10/12(日)米湖到阿克雷里", mapCenter: { lat: 65.65, lng: -17.5 }, mapZoom: 9, items: [
-            {地點: "Hverfjall 惠爾火山 2-3h", 照片: "https://mimihan.tw/wp-content/uploads/20180529132824_95.jpg", 類別: "🎭 活動", lat: 65.6033, lng: -16.8734, mapLabel: "Hverfjall", mapPriority: 1}, // Hiking is an activity
-            {地點: "黑色城堡 Dimmuborgir", 照片: "https://mimihan.tw/wp-content/uploads/20180529221509_26.jpg", 類別: "⛱ 景點", lat: 65.5911, lng: -16.9119, mapLabel: "Dimmuborgir", mapPriority: 2},
-            {地點: "移動: 米湖 → Godafoss (約 50m)", 類別: "🚗 移動"},
-            {地點: "Godafoss眾神瀑布", 照片: "https://mimihan.tw/wp-content/uploads/20180609144626_42.jpg", 類別: "⛱ 景點", lat: 65.6828, lng: -17.5503, mapLabel: "Goðafoss", mapPriority: 3},
-            {地點: "移動: Godafoss -> Akureyri(Kaffi Ilmur ehf) (約 40m)", 類別: "🚗 移動"},
-            {地點: "Kaffi Ilmur ehf", 類別: "🧁 吃喝", 描述: "自助式Buffer吃到飽", 克朗:"2,290", lat: 65.6805, lng: -18.0903, mapLabel: "Kaffi Ilmur", mapPriority: 4},
-            {地點: "Brynja 冰淇淋", 描述:"Hafnarstræti 購物街市區晃晃", 類別: "🧁 吃喝", lat: 65.6790, lng: -18.0970, mapLabel: "Brynja", mapPriority: 5},
-            {地點: "Sæluhús Apartments & Houses, Akureyri", 類別: "🏡 住宿", 描述: "Búðartröð 2, 600 Akureyri, Iceland", 網址: "https://www.booking.com/Share-5KDXEqD", lat: 65.6835, lng: -18.1050, mapLabel: "Sæluhús Apartments & Houses"}
-        ]},
-        // Day 9
-        { dayGroup: "Day 9", dayTitle: "Day 9: 10/13(一) 北岸風光 (10/13)", mapCenter: { lat: 65.5, lng: -19.8 }, mapZoom: 8, items: [
-            {地點: "移動: Akureyri → Bjórböðin SPA (約 31m)", 描述:"看要不要去？", 類別: "🚗 移動"},
-            {地點: "Bjórböðin SPA", 台幣:"4600", 描述: "泡 25分鐘 兩人 ＋ 休息區躺25分鐘...", 照片: "https://mimihan.tw/wp-content/uploads/20180613111632_26.jpg", 類別: "🎭 活動", lat: 66.0698, lng: -18.5323, mapLabel: "Bjórböðin - The Beer Spa"}, // SPA is an activity
-            {地點: "移動: Akureyri → Glaumbær (約 1h 22m)", 類別: "🚗 移動"},
-            {地點: "Glaumbaer Museum 草屋博物館", 照片: "https://mimihan.tw/wp-content/uploads/20180618141607_36.jpg", 類別: "⛱ 景點", lat: 65.6085, lng: -19.5000, mapLabel: "Glaumbær Farm & Museum", mapPriority: 1},
-            {地點: "移動: Glaumbær → Blönduóskirkja (約 43m)", 類別: "🚗 移動"},
-            {地點: "Blonduoskirkja 火山教堂、鯨魚教堂", 描述: "可順便加油", 照片: "https://mimihan.tw/wp-content/uploads/20180618141633_68.jpg", 類別: "⛱ 景點", lat: 65.6580, lng: -20.2785, mapLabel: "Blönduóskirkja", mapPriority: 2},
-            {地點: "移動: Blönduóskirkja → 巨人峽谷 (約 37m)", 類別: "🚗 移動"},
-            {地點: "巨人峽谷 (Kolugljúfur Canyon)", 類別: "⛱ 景點", lat: 65.3303, lng: -20.7008, mapLabel: "Kolugljúfur Canyon", mapPriority: 3},
-            {地點: "住 華姆斯唐吉？或路上選擇", 類別: "🏡 住宿", lat: 65.3967, lng: -20.9331, mapLabel: "Hvammstangi", mapPriority: 4}
-        ]},
-        // Day 10
-        { dayGroup: "Day 10", dayTitle: "Day 10: 10/14(二) 斯奈山半島", mapCenter: { lat: 64.85, lng: -23.3 }, mapZoom: 9, items: [
-            {地點: "移動: 華姆斯唐吉 → 教堂山 (約 2h 36m)", 類別: "🚗 移動"},
-            {地點: "Kirkjufellsfoss 教堂山", 照片: "https://mimihan.tw/wp-content/uploads/20180620190950_46.jpg", 類別: "⛱ 景點", lat: 64.9260, lng: -23.2719, mapLabel: "Kirkjufellsfoss", mapPriority: 1},
-            {地點: "移動: 教堂山 → Ólafsvík (約 20m)", 類別: "🚗 移動"},
-            {地點: "Ólafsvík小鎮", 描述: "進入斯奈山國家公園的最後一個比較大的城鎮", 類別: "⛱ 景點", lat: 64.8940, lng: -23.7100, mapLabel: "Ólafsvík", mapPriority: 2},
-            {地點: "移動: Ólafsvík → SAXHÓLAR CRATER (約 20m)", 類別: "🚗 移動"},
-            {地點: "SAXHÓLAR CRATER 火山", 描述: "是一座沈睡400年的火山", 照片: "https://mimihan.tw/wp-content/uploads/20180826212128_25.jpg", 類別: "⛱ 景點", lat: 64.8510, lng: -23.9150, mapLabel: "Saxhóll Crater", mapPriority: 3},
-            {地點: "VATNSHELLIR CAVE 地心探險", 描述: "每個小時有一團，約莫45分鐘", 照片: "https://kavana.tw/wp-content/uploads/pixnet/f85425c596023b29c7f0d9089858b438.jpg", 類別: "🎭 活動", lat: 64.7520, lng: -23.8200, mapLabel: "Vatnshellir Cave", mapPriority: 4}, // Caving is an activity
-            {地點: "Londrangar 怪物海岸", 照片: "https://mimihan.tw/wp-content/uploads/20180826212202_97.jpg", 類別: "⛱ 景點", lat: 64.7360, lng: -23.7800, mapLabel: "Lóndrangar", mapPriority: 5},
-            {地點: "BÁRÐAR SAGA 石巨人", 照片: "https://mimihan.tw/wp-content/uploads/20180826212210_84.jpg", 類別: "⛱ 景點", lat: 64.7744, lng: -23.7791, mapLabel: "Bárður Snæfellsás (Arnarstapi)", mapPriority: 6},
-            {地點: "移動: Arnarstapi → Ytri Tunga (約 30m)", 類別: "🚗 移動"},
-            {地點: "Ytri Tunga 海豹沙灘", 描述: "太晚的話可以隔天來", 照片: "https://icelandthebeautiful.com/wp-content/uploads/2020/01/Ytri-tunga-beach-snaefellsnes-west-iceland_DSC7489.jpg", 類別: "⛱ 景點", lat: 64.8001, lng: -23.0346, mapLabel: "Ytri Tunga Beach", mapPriority: 7},
-            {地點: "住 斯奈山半島", 類別: "🏡 住宿", lat: 64.8900, lng: -23.2500, mapLabel: "Grundarfjörður (斯奈山住宿參考)", mapPriority: 8}
-        ]},
-        // Day 11
-        { dayGroup: "Day 11", dayTitle: "Day 11: 10/15(三)返回雷克雅維克 (10/15)", mapCenter: { lat: 64.5, lng: -22.5 }, mapZoom: 8, items: [
-            {地點: "移動: 斯奈山半島 → Sky Lagoon (約 2h)", 類別: "🚗 移動"},
-            {地點: "Sky Lagoon", 照片: "https://shiningchan-com.sfo3.digitaloceanspaces.com/wp-content/uploads/2024/10/scimgKj5yjW.webp", 類別: "🎭 活動", lat: 64.1278, lng: -21.9519, mapLabel: "Sky Lagoon", mapPriority: 1}, // Bathing is an activity
-            {地點: "Harpa音樂廳", 描述: "曾被《紐約時報》評選「全球最值得旅遊的41個地方」之一", 照片: "https://bobbyworld.tw/wp-content/uploads/pixnet/e69707fafbb86d7381c6565d441727f7.jpg", 類別: "⛱ 景點", lat: 64.1502, lng: -21.9348, mapLabel: "Harpa Concert Hall and Conference Centre", mapPriority: 5, 營業時間: "10:00–18:00 (周日至周二)；10:00–20:00 (周三至周六)"},
-            {地點: "哈爾格林姆教堂( Hallgrímskirkja)", 克朗: "1,400", 描述: "全冰島最大教堂，風格前衛，外觀如被風化的柱狀玄武岩", 照片: "https://mimihan.tw/wp-content/uploads/20180429160946_55.jpg", 類別: "⛱ 景點", lat: 64.1417, lng: -21.9266, mapLabel: "Hallgrímskirkja", mapPriority: 6, 營業時間: "10:00~17:00\n 景觀塔：10:00~16:30"},
-            {地點: "移動: 市區 → 藍湖 (42m)", 類別: "🚗 移動"},
-            {地點: "藍湖", 照片: "https://bobbyworld.tw/wp-content/uploads/pixnet/9f13156749eb0d1db3bd5dbd7190ff51.jpg", 類別: "⛱ 景點", lat: 63.8806, lng: -22.4496, mapLabel: "Blue Lagoon", mapPriority: 2, 營業時間: "08:00–22:00"},
-           
-            {地點: "住雷克雅維克", 類別: "🏡 住宿", lat: 64.1466, lng: -21.9426, mapLabel: "雷克雅維克住宿", mapPriority: 2}
-        ]},
-        // Day 12
-        { dayGroup: "Day 12", dayTitle: "Day 12: 10/16(四) ", mapCenter: { lat: 64.05, lng: -22.2 }, mapZoom: 9, items: [
-            {地點: "KEF 機場還車、搭機", 描述: "要確認下可以還車的時間", 類別: "🚗 移動", lat: 63.9850, lng: -22.6056, mapLabel: "KEF Airport", mapPriority: 1},
-            {地點: "10:30班機", 類別: "✈️ 飛行"},
-            {地點: "移動: 雷克雅維克 → AMS", 類別: "🚗 移動"},
-            {地點: "抵達 AMS 15:45  ",  類別: "✈️ 飛行"},
-        ]}
-    ];
-
-    const mapsInitialized = {};
-
-    // --- Function to get category class ---
-    function getCategoryClass(category) {
-        if (!category) return 'cat-default';
-        // New Day 0 categories
-        if (category.includes('🌟 行程總覽')) return 'cat-journey-overview';
-        if (category.includes('✈️ 飛行')) return 'cat-flight-segment';
-        if (category.includes('⏳ 轉機')) return 'cat-layover-time';
-        if (category.includes('🏁 抵達待轉')) return 'cat-arrival-next-leg';
-        // Original categories
-        if (category.includes('🚗 移動')) return 'cat-mov';
-        if (category.includes('🧁 吃喝')) return 'cat-eat';
-        if (category.includes('⛱ 景點') || category.includes('👍')) return 'cat-see';
-        if (category.includes('🏡 住宿')) return 'cat-stay';
-        if (category.includes('🎭 活動')) return 'cat-act'; // Using 🎭 for activities for clarity
-        return 'cat-default';
-    }
-
-    // --- Image Modal Logic ---
-    const modal = document.getElementById("myImageModal");
-    const modalImg = document.getElementById("imgModalSrc");
-    const modalCloseBtn = document.querySelector(".image-modal-close");
-
-    function openImageModal(imgSrc) {
-        if (modal && modalImg) {
+        // --- 類別標籤色彩 ---
+        function getCategoryClass(category) {
+            if (!category) return 'cat-default';
+            if (category.includes('🌟')) return 'cat-journey-overview';
+            if (category.includes('✈️')) return 'cat-flight-segment';
+            if (category.includes('⏳')) return 'cat-layover-time';
+            if (category.includes('🏁')) return 'cat-arrival-next-leg';
+            if (category.includes('🚗')) return 'cat-mov';
+            if (category.includes('🧁')) return 'cat-eat';
+            if (category.includes('⛱') || category.includes('👍')) return 'cat-see';
+            if (category.includes('🏡')) return 'cat-stay';
+            if (category.includes('🎭')) return 'cat-act';
+            return 'cat-default';
+        }
+        // --- 縮圖 Modal ---
+        const modal = document.getElementById("myImageModal");
+        const modalImg = document.getElementById("imgModalSrc");
+        document.querySelector(".image-modal-close").onclick = () => { modal.style.display = "none"; }
+        window.onclick = (e) => { if (e.target === modal) modal.style.display = "none"; }
+        document.addEventListener('keydown', (e) => { if (e.key === "Escape" && modal.style.display === "block") modal.style.display = "none"; });
+        function openImageModal(src) {
             modal.style.display = "block";
-            modalImg.src = imgSrc;
+            modalImg.src = src;
         }
-    }
-    if (modalCloseBtn) {
-        modalCloseBtn.onclick = function() {
-            if (modal) modal.style.display = "none";
-        }
-    }
-    // Close modal if user clicks outside the image (on the modal background)
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            if (modal) modal.style.display = "none";
-        }
-    }
-    // Close modal with Escape key
-    document.addEventListener('keydown', function(event) {
-        if (event.key === "Escape" || event.key === "Esc") {
-            if (modal && modal.style.display === "block") {
-                modal.style.display = "none";
+        // --- 行程內容產生 ---
+        function generateDayHtml(dayData, dayIndex) {
+            if (dayIndex === 0 && dayData.isSpecialDay === "departure") {
+                return `<h2>${dayData.dayTitle}</h2>
+                <table class="itinerary-table"><thead><tr><th>項目</th><th>說明</th></tr></thead>
+                <tbody>${dayData.items.map(item =>
+                    `<tr><td>${item.地點 || ''}</td><td>${item.描述 || ''}</td></tr>`
+                ).join('')}</tbody></table>
+                <p style="text-align:center; color:#555;">啟程日，專注飛行，本地圖無景點顯示。</p>`;
             }
-        }
-    });
-
-
-    // --- Function to generate HTML for each day's itinerary ---
-    function generateDayHtml(dayData, dayIndex) {
-        let itemsHtml = '';
-        // Day 0: 用表格顯示飛行資訊
-        if (dayIndex === 0 && dayData.isSpecialDay === "departure") {
-            const generateTableRow = (item) => `
-                <tr>
-                    <td>${item.地點 || ''}</td>
-                    <td>${item.描述 || ''}</td>
-                </tr>`;
-
-            itemsHtml += `<table class="itinerary-table">
-                <thead>
-                    <tr>
-                        <th>項目</th>
-                        <th>說明</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    ${dayData.items.map(generateTableRow).join('')}
-                </tbody>
-            </table>`;
-        } else {
-            itemsHtml += '<ul class="itinerary-list">';
+            let itemsHtml = '<ul class="itinerary-list">';
             dayData.items.forEach(item => {
                 const categoryClass = getCategoryClass(item.類別);
-                const isDrivingInfo = item.類別 && item.類別.includes('🚗 移動') && item.地點.startsWith("移動:");
-
-                if (isDrivingInfo) {
+                const isDriving = item.類別?.includes('🚗') && item.地點?.startsWith("移動:");
+                if (isDriving) {
                     itemsHtml += `<li class="driving-info">${item.地點.replace("移動:", "").trim()}</li>`;
+                    return;
+                }
+                // 景點/吃喝/活動/住宿含照片
+                if (['cat-see','cat-eat','cat-act','cat-stay'].includes(categoryClass) && item.照片) {
+                    const photoUrl = String(item.照片).split(',')[0].trim();
+                    itemsHtml += `<li class="itinerary-item"><div style="display:flex;align-items:flex-start;gap:1rem;">
+                        <div><img src="${photoUrl}" alt="${item.地點} 縮圖" class="item-photo-thumbnail" onclick="openImageModal('${photoUrl}')"></div>
+                        <div style="flex:1;">
+                            <span class="item-category ${categoryClass}">${item.類別||'資訊'}</span>
+                            ${item.lat && item.lng ? `<strong><a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.mapLabel||item.地點)}&ll=${item.lat},${item.lng}" target="_blank">${item.mapPriority ? item.mapPriority+'. ' : ''}${item.地點}</a></strong>` : `<strong>${item.地點}</strong>`}
+                            ${item.描述 ? `<div class="item-description">${item.描述}</div>` : ''}
+                            ${item.克朗 ? `<div class="item-description">費用：約 ${item.克朗} ISK</div>` : ''}
+                            ${item.台幣 ? `<div class="item-description">費用參考：約 ${item.台幣} TWD</div>` : ''}
+                            ${item.營業時間 ? `<div class="item-description"><span style="color:#005792;font-weight:bold;">營業時間：</span>${item.營業時間}</div>` : ''}
+                            ${item.網址 ? `<div class="item-url"><a href="${item.網址}" target="_blank">相關連結</a></div>` : ''}
+                        </div></div></li>`;
                 } else {
-                    // 景點、吃喝、活動：圖片左、文字右
-                    if ((categoryClass === 'cat-see' || categoryClass === 'cat-eat' || categoryClass === 'cat-act' || categoryClass === 'cat-stay') && item.照片) {
-                        const photoUrls = String(item.照片).split(',');
-                        const photoUrl = photoUrls[0].trim();
-                        itemsHtml += `<li class="itinerary-item">
-                            <div style="display:flex;align-items:flex-start;gap:1rem;">
-                                <div style="flex-shrink:0;">
-                                    <img src="${photoUrl}" alt="${item.地點} 縮圖" class="item-photo-thumbnail" onclick="openImageModal('${photoUrl}')">
-                                </div>
-                                <div style="flex:1;min-width:0;">
-                                    <span class="item-category ${categoryClass}">${item.類別 || '資訊'}</span>`;
-                        if (item.lat && item.lng) {
-                            itemsHtml += `<strong><a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.mapLabel || item.地點)}${item.lat && item.lng ? `&ll=${item.lat},${item.lng}` : ''}" target="_blank" title="在 Google 地圖中打開">${item.mapPriority}. ${item.地點}</a></strong>`;
-                        } else {
-                            itemsHtml += `<strong>${item.地點}</strong>`;
-                        }
-                        if (item.描述) itemsHtml += `<div class="item-description">${item.描述}</div>`;
-                        if (item.克朗) itemsHtml += `<div class="item-description">費用：約 ${item.克朗} ISK</div>`;
-                        if (item.台幣) itemsHtml += `<div class="item-description">費用參考：約 ${item.台幣} TWD</div>`;
-                        if (item.營業時間) itemsHtml += `<div class="item-description"><span style='color:#005792;font-weight:bold;'>營業時間：</span>${item.營業時間}</div>`;
-                        if (item.網址) itemsHtml += `<div class="item-url"><a href="${item.網址}" target="_blank">相關連結</a></div>`;
-                        itemsHtml += `</div></div></li>`;
-                    } else {
-                        // 其他類型維持原本排版
-                        itemsHtml += `<li class="itinerary-item">`;
-                        itemsHtml += `<span class="item-category ${categoryClass}">${item.類別 || '資訊'}</span>`;
-                        if (item.lat && item.lng) {
-                            itemsHtml += `<strong><a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.mapLabel || item.地點)}${item.lat && item.lng ? `&ll=${item.lat},${item.lng}` : ''}" target="_blank" title="在 Google 地圖中打開">${item.mapPriority ? `${item.mapPriority}. ` : ''}${item.地點}</a></strong>`;
-                        } else {
-                            itemsHtml += `<strong>${item.地點}</strong>`;
-                        }
-                        if (item.描述) itemsHtml += `<div class="item-description">${item.描述}</div>`;
-                        if (item.克朗) itemsHtml += `<div class="item-description">費用：約 ${item.克朗} ISK</div>`;
-                        if (item.台幣) itemsHtml += `<div class="item-description">費用參考：約 ${item.台幣} TWD</div>`;
-                        if (item.網址) itemsHtml += `<div class="item-url"><a href="${item.網址}" target="_blank">相關連結</a></div>`;
-                        itemsHtml += `</li>`;
-                    }
+                    itemsHtml += `<li class="itinerary-item">
+                        <span class="item-category ${categoryClass}">${item.類別||'資訊'}</span>
+                        ${item.lat && item.lng ? `<strong><a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.mapLabel||item.地點)}&ll=${item.lat},${item.lng}" target="_blank">${item.mapPriority ? item.mapPriority+'. ' : ''}${item.地點}</a></strong>` : `<strong>${item.地點}</strong>`}
+                        ${item.描述 ? `<div class="item-description">${item.描述}</div>` : ''}
+                        ${item.克朗 ? `<div class="item-description">費用：約 ${item.克朗} ISK</div>` : ''}
+                        ${item.台幣 ? `<div class="item-description">費用參考：約 ${item.台幣} TWD</div>` : ''}
+                        ${item.網址 ? `<div class="item-url"><a href="${item.網址}" target="_blank">相關連結</a></div>` : ''}
+                    </li>`;
                 }
             });
             itemsHtml += '</ul>';
+            // 地圖顯示
+            const hasMap = dayData.mapCenter || (dayData.items && dayData.items.some(it => it.lat && it.lng && it.mapLabel && typeof it.mapPriority === 'number'));
+            return `<h2>${dayData.dayTitle}</h2>${itemsHtml}${hasMap ? `<div id="mapDay${dayIndex}" class="map-container"></div>` : ''}`;
         }
-
-        let mapHtml = '';
-        const hasMapPoints = dayData.items && dayData.items.some(it => it.lat && it.lng && it.mapLabel && typeof it.mapPriority === 'number');
-        if (dayData.mapCenter || hasMapPoints) {
-            mapHtml = `<div id="mapDay${dayIndex}" class="map-container"></div>`;
-        } else if (dayIndex === 0 && dayData.isSpecialDay === "departure") { // Special message for Day 0
-             mapHtml = `<p style="text-align:center; padding:10px; color:#555; font-style:italic;">啟程日，專注飛行，本地圖無景點顯示。</p>`;
-        }
-        else {
-            mapHtml = `<p style="text-align:center; padding:10px; color:#777;">本日無地圖路線規劃。</p>`;
-        }
-        return `<h2>${dayData.dayTitle}</h2>${itemsHtml}${mapHtml}`;
-    }
-
-
-    // --- Google Maps API Functions ---
-    function displayRoute(mapId, locations, mapCenter, mapZoom) {
-        const mapElement = document.getElementById(mapId);
-        if (!mapElement) {
-            console.error("Map element not found:", mapId);
-            return;
-        }
-        if (!google || !google.maps) {
-            console.error("Google Maps API not loaded yet.");
-            mapElement.innerHTML = "<p style='text-align:center; padding-top:20px;'>地圖服務載入中...</p>";
-            return;
-        }
-
-        if (locations.length === 0 && !mapCenter) {
-             mapElement.innerHTML = "<p style='text-align:center; padding-top:20px;'>本地圖無景點可顯示。</p>";
-            return;
-        }
-
-        const map = new google.maps.Map(mapElement, {
-            zoom: mapZoom || 8,
-            center: mapCenter || locations[0]?.location || { lat: 64.9631, lng: -19.0208 } // Iceland center
-        });
-
-        if (locations.length === 0) {
-            if(mapCenter) new google.maps.Marker({ position: mapCenter, map: map, title: "地圖中心" });
-            return;
-        }
-
-        if (locations.length === 1) {
-            new google.maps.Marker({
-                position: locations[0].location,
-                map: map,
-                label: locations[0].title, // Use title instead of A, B, C
-                title: locations[0].title
-            });
-            map.setCenter(locations[0].location);
-            return;
-        }
-
-        const directionsService = new google.maps.DirectionsService();
-        const directionsRenderer = new google.maps.DirectionsRenderer({
-            map: map,
-            suppressMarkers: true // Suppress default markers to use custom ones
-        });
-
-        const waypoints = locations.slice(1, -1).map(loc => ({
-            location: loc.location,
-            stopover: true
-        }));
-
-        const request = {
-            origin: locations[0].location,
-            destination: locations[locations.length - 1].location,
-            waypoints: waypoints,
-            optimizeWaypoints: true, // Usually good to keep true for complex routes
-            travelMode: google.maps.TravelMode.DRIVING
-        };
-
-        directionsService.route(request, function(result, status) {
-            if (status == 'OK') {
-                directionsRenderer.setDirections(result);
-
-                // Add custom markers for each location
-                locations.forEach((loc, index) => {
-                    new google.maps.Marker({
-                        position: loc.location,
-                        map: map,
-                        label: `${index + 1}`, // Use numbers instead of A, B, C
-                        title: loc.title
-                    });
-
-                    // Add number to the corresponding itinerary item
-                    const itineraryItems = document.querySelectorAll('.itinerary-item strong');
-                    itineraryItems.forEach((item, itemIndex) => {
-                        if (item.textContent.includes(loc.title)) {
-                            item.innerHTML = `<span style='color: #005792; font-weight: bold;'></span>` + item.innerHTML;
-                        }
-                    });
-                });
-            } else {
-                console.error('Directions request failed for ' + mapId + ' due to ' + status, result);
-                mapElement.innerHTML = `<p style='text-align:center; padding-top:20px;'>地圖路線載入失敗 (${status})。</p>`;
-                // Fallback: place individual markers if directions fail
-                locations.forEach((loc, index) => {
-                    new google.maps.Marker({
-                        position: loc.location,
-                        map: map,
-                        label: `${index + 1}`, // Use numbers instead of A, B, C
-                        title: loc.title
-                    });
-                });
-            }
-        });
-    }
-
-
-    // --- Tab Switching Logic ---
-    function openDayTab(dayIndex) {
-        const tabButtons = document.querySelectorAll('.tab-button');
-        const tabContents = document.querySelectorAll('.tab-content');
-
-        tabButtons.forEach(btn => btn.classList.remove('active'));
-        tabContents.forEach(content => content.classList.remove('active'));
-
-        if (tabButtons[dayIndex]) {
-            tabButtons[dayIndex].classList.add('active');
-        }
-        if (tabContents[dayIndex]) {
-            tabContents[dayIndex].classList.add('active');
-
-            // Save active tab index to localStorage
-            try {
-                localStorage.setItem('activeItineraryTabIndex', dayIndex.toString());
-            } catch (e) {
-                console.warn("Could not save tab state to localStorage:", e);
-            }
-
-
-            const dayData = allItineraryData[dayIndex];
-            const mapId = `mapDay${dayIndex}`;
-
-            const locationsForMap = dayData.items
-                .filter(item => item.lat && item.lng && item.mapLabel && typeof item.mapPriority === 'number')
-                .sort((a, b) => a.mapPriority - b.mapPriority)
-                .map(item => ({ location: { lat: item.lat, lng: item.lng }, title: item.mapLabel }));
-
-            const shouldInitializeMap = dayData.mapCenter || locationsForMap.length > 0;
-
-            if (shouldInitializeMap && !mapsInitialized[mapId]) {
-                if (typeof google !== 'undefined' && google.maps) {
-                    displayRoute(mapId, locationsForMap, dayData.mapCenter, dayData.mapZoom);
-                    mapsInitialized[mapId] = true;
+        // --- Google Maps 初始化 ---
+        function displayRoute(mapId, locations, mapCenter, mapZoom) {
+            const el = document.getElementById(mapId);
+            if (!el) return;
+            if (!google?.maps) return el.innerHTML = "<p style='text-align:center;padding-top:20px;'>地圖服務載入中...</p>";
+            const map = new google.maps.Map(el, { zoom: mapZoom || 8, center: mapCenter || locations[0]?.location || { lat: 64.9631, lng: -19.0208 } });
+            if (locations.length === 1) return new google.maps.Marker({ position: locations[0].location, map, label: locations[0].title, title: locations[0].title });
+            if (!locations.length) return;
+            const directionsService = new google.maps.DirectionsService();
+            const directionsRenderer = new google.maps.DirectionsRenderer({ map, suppressMarkers: true });
+            const waypoints = locations.slice(1, -1).map(loc => ({ location: loc.location, stopover: true }));
+            directionsService.route({
+                origin: locations[0].location,
+                destination: locations[locations.length - 1].location,
+                waypoints, optimizeWaypoints: true, travelMode: google.maps.TravelMode.DRIVING
+            }, (result, status) => {
+                if (status === 'OK') {
+                    directionsRenderer.setDirections(result);
+                    locations.forEach((loc, i) => new google.maps.Marker({ position: loc.location, map, label: `${i+1}`, title: loc.title }));
                 } else {
-                    console.warn("Google Maps API not ready when trying to init map for tab:", mapId);
-                    const mapElement = document.getElementById(mapId);
-                    if(mapElement) mapElement.innerHTML = "<p style='text-align:center; padding-top:20px;'>地圖服務等候載入...</p>";
+                    el.innerHTML = `<p style='text-align:center; padding-top:20px;'>地圖路線載入失敗 (${status})。</p>`;
+                    locations.forEach((loc, i) => new google.maps.Marker({ position: loc.location, map, label: `${i+1}`, title: loc.title }));
                 }
+            });
+        }
+        // --- Tab 切換 ---
+        function openDayTab(dayIdx) {
+            document.querySelectorAll('.tab-button').forEach((btn,i) => btn.classList.toggle('active', i===dayIdx));
+            document.querySelectorAll('.tab-content').forEach((ctn,i) => ctn.classList.toggle('active', i===dayIdx));
+            localStorage.setItem('activeItineraryTabIndex', dayIdx);
+            // Google Map
+            const dayData = window.allItineraryData[dayIdx];
+            const mapId = `mapDay${dayIdx}`;
+            if ((dayData.mapCenter || (dayData.items && dayData.items.some(it => it.lat && it.lng && it.mapLabel && typeof it.mapPriority === 'number'))) && !window.mapsInitialized?.[mapId]) {
+                const locations = (dayData.items||[]).filter(it => it.lat && it.lng && it.mapLabel && typeof it.mapPriority === 'number')
+                    .sort((a,b)=>a.mapPriority-b.mapPriority)
+                    .map(it => ({ location: { lat: it.lat, lng: it.lng }, title: it.mapLabel }));
+                if (window.google?.maps) displayRoute(mapId, locations, dayData.mapCenter, dayData.mapZoom);
+                window.mapsInitialized = window.mapsInitialized || {};
+                window.mapsInitialized[mapId] = true;
             }
         }
-    }
+        // --- 初始化頁面 ---
+        function initPage() {
+            const tabCtn = document.getElementById('tabContainer');
+            const tabContentCtn = document.getElementById('tabContentContainer');
+            window.allItineraryData.forEach((day, i) => {
+                const btn = document.createElement('a');
+                btn.className = 'tab-button'; btn.textContent = day.dayGroup; btn.href = `#day${i}`;
+                btn.onclick = e => { e.preventDefault(); window.location.hash = `#day${i}`; openDayTab(i);}
+                tabCtn.appendChild(btn);
 
-    // --- Initialize Page ---
-    function initPage() { // This is now the callback for Google Maps API
-        const tabContainer = document.getElementById('tabContainer');
-        const tabContentContainer = document.getElementById('tabContentContainer');
-
-
-        allItineraryData.forEach((dayData, index) => {
-            // 改為 <a> 並加上 href
-            const tabButton = document.createElement('a');
-            tabButton.className = 'tab-button';
-            tabButton.textContent = dayData.dayGroup;
-            tabButton.href = `#day${index}`;
-            tabButton.onclick = (e) => {
-                e.preventDefault();
-                window.location.hash = `#day${index}`;
-                openDayTab(index);
-            };
-            tabContainer.appendChild(tabButton);
-
-            const tabContent = document.createElement('div');
-            tabContent.className = 'tab-content';
-            tabContent.id = `dayContent${index}`;
-            if (dayData.isSpecialDay === "departure") { // Add class for Day 0 styling
-                tabContent.classList.add('departure-day-content');
-            }
-            tabContent.innerHTML = generateDayHtml(dayData, index);
-            tabContentContainer.appendChild(tabContent);
-        });
-
-        // 先判斷 hash
-        let initialTabIndex = 0;
-        const hash = window.location.hash;
-        if (hash && hash.startsWith('#day')) {
-            const hashIndex = parseInt(hash.replace('#day', ''), 10);
-            if (!isNaN(hashIndex) && hashIndex >= 0 && hashIndex < allItineraryData.length) {
-                initialTabIndex = hashIndex;
-            }
-        } else {
-            // fallback: localStorage
-            try {
-                const savedTabIndex = localStorage.getItem('activeItineraryTabIndex');
-                if (savedTabIndex !== null) {
-                    const parsedTabIndex = parseInt(savedTabIndex, 10);
-                    if (!isNaN(parsedTabIndex) && parsedTabIndex >= 0 && parsedTabIndex < allItineraryData.length) {
-                        initialTabIndex = parsedTabIndex;
-                    }
-                }
-            } catch (e) {
-                console.warn("Could not read tab state from localStorage:", e);
-            }
+                const ctn = document.createElement('div');
+                ctn.className = 'tab-content'; ctn.id = `dayContent${i}`;
+                if (day.isSpecialDay === "departure") ctn.classList.add('departure-day-content');
+                ctn.innerHTML = generateDayHtml(day, i);
+                tabContentCtn.appendChild(ctn);
+            });
+            // 依hash或localStorage選啟始tab
+            let idx = 0, hash = window.location.hash;
+            if (hash.startsWith('#day')) { let hi = parseInt(hash.replace('#day',''),10); if (!isNaN(hi)) idx = hi; }
+            else { let lidx = parseInt(localStorage.getItem('activeItineraryTabIndex'),10); if (!isNaN(lidx)) idx = lidx;}
+            openDayTab(idx);
+            window.addEventListener('hashchange', () => {
+                let hi = parseInt(window.location.hash.replace('#day',''),10);
+                if (!isNaN(hi)) openDayTab(hi);
+            });
         }
-
-        if (allItineraryData.length > 0) {
-            openDayTab(initialTabIndex); // Open the stored tab or the first tab
-        }
-
-        // 監聽 hashchange，允許直接切換
-        window.addEventListener('hashchange', function() {
-            const hash = window.location.hash;
-            if (hash && hash.startsWith('#day')) {
-                const hashIndex = parseInt(hash.replace('#day', ''), 10);
-                if (!isNaN(hashIndex) && hashIndex >= 0 && hashIndex < allItineraryData.length) {
-                    openDayTab(hashIndex);
-                }
-            }
-        });
-    }
     </script>
-    <script type="module">
-    import { GOOGLE_MAPS_API_KEY } from './const.js';
-
-    // 動態載入 Google Maps API，避免 API KEY 寫死在 HTML
-    function loadGoogleMapsApi() {
-        if (typeof GOOGLE_MAPS_API_KEY === 'undefined' || !GOOGLE_MAPS_API_KEY || GOOGLE_MAPS_API_KEY.indexOf('__GOOGLE_MAPS_API_KEY__') === 0) {
-            console.error('Google Maps API 金鑰未設定，請檢查 const.js');
-            return;
-        }
-        var script = document.createElement('script');
-        script.src = `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_MAPS_API_KEY}&callback=initPage&libraries=routes`;
-        script.async = true;
-        script.defer = true;
-        document.body.appendChild(script);
-    }
-    // 頁面載入後執行
-    window.addEventListener('DOMContentLoaded', loadGoogleMapsApi);
-</script>
 </body>
 </html>
