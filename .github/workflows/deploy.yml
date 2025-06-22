@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy Vite Site to GitHub Pages
 
 on:
   push:
@@ -9,34 +9,28 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
-    environment: github-pages
-
     steps:
-
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup git user
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-
-      - name: Setup Node.js (for string replacement, not required for static hosting)
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
-      - name: Generate const.js with secret
-        run: |
-          echo "export const GOOGLE_MAPS_API_KEY = \"${{ secrets.GOOGLE_MAPS_API_KEY }}\";" > ./const.js
+      - name: Install dependencies
+        run: npm install
 
-      - name: Debug list files
+      - name: Inject .env for build
         run: |
-          cat ./const.js
+          echo "VITE_GOOGLE_MAPS_API_KEY=${{ secrets.GOOGLE_MAPS_API_KEY }}" > .env
+
+      - name: Build Vite site
+        run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GH_PAT }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # 你也可以改用 GH_PAT
           publish_branch: gh-pages
-          publish_dir:    .
+          publish_dir: ./dist
