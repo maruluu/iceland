@@ -8,6 +8,7 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    environment: github-pages 
 
     steps:
       - name: Checkout repository
@@ -23,13 +24,14 @@ jobs:
 
       - name: Build Vite site
         run: npm run build
-        env: 
-            VITE_GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
+        env:
+          VITE_GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
 
-      - name: Debug print env
+      - name: Debug print VITE env
         run: |
+          set +e
           echo "VITE_GOOGLE_MAPS_API_KEY: $VITE_GOOGLE_MAPS_API_KEY"
-          env | grep VITE_GOOGLE
+          env | grep VITE_GOOGLE_MAPS_API_KEY || true
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
