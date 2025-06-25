@@ -23,7 +23,7 @@ jobs:
 
       - name: Inject .env for build
         run: |
-          echo "VITE_GOOGLE_MAPS_API_KEY= \"${{ secrets.GOOGLE_MAPS_API_KEY }}\" > .env
+          echo "VITE_GOOGLE_MAPS_API_KEY=\"${{ secrets.GOOGLE_MAPS_API_KEY }}\"" > .env
 
       - name: Build Vite site
         run: npm run build
