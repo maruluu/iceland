@@ -634,15 +634,15 @@
                 <div class="day-list">
                     <div class="day-item" onclick="selectDay('netherlands', 0, this)">
                         <span class="day-number">D13</span>
-                        <span class="day-name">阿姆斯特丹</span>
+                        <span class="day-name">阿姆斯特丹市區慢遊</span>
                     </div>
                     <div class="day-item" onclick="selectDay('netherlands', 1, this)">
                         <span class="day-number">D14</span>
-                        <span class="day-name">羊角村</span>
+                        <span class="day-name">羊角村一日遊</span>
                     </div>
                     <div class="day-item" onclick="selectDay('netherlands', 2, this)">
                         <span class="day-number">D15</span>
-                        <span class="day-name">庫肯霍夫花園</span>
+                        <span class="day-name">小孩堤防+鹿特丹</span>
                     </div>
                     <div class="day-item" onclick="selectDay('netherlands', 3, this)">
                         <span class="day-number">D16</span>
@@ -685,9 +685,9 @@
                         <option value="iceland-12">Day 12: 返程</option>
                     </optgroup>
                     <optgroup label="🇳🇱 荷蘭">
-                        <option value="netherlands-0">Day 13: 阿姆斯特丹</option>
-                        <option value="netherlands-1">Day 14: 羊角村</option>
-                        <option value="netherlands-2">Day 15: 庫肯霍夫花園</option>
+                        <option value="netherlands-0">Day 13: 阿姆斯特丹市區慢遊</option>
+                        <option value="netherlands-1">Day 14: 羊角村一日遊</option>
+                        <option value="netherlands-2">Day 15: 小孩堤防+鹿特丹</option>
                         <option value="netherlands-3">Day 16: 風車村</option>
                         <option value="netherlands-4">Day 17: 海牙</option>
                         <option value="netherlands-5">Day 18: 鹿特丹</option>
@@ -860,7 +860,7 @@
                         itemsHtml += `
                             <div style="background: #f8f9fa; padding: 15px; margin: 10px 0; border-radius: 8px; border-left: 4px solid #007bff;">
                                 <h4 style="margin: 0 0 10px 0; color: #2c3e50;">
-                                    ${item.類別 || ''} ${item.地點 || ''}
+                                    ${item.mapPriority && typeof item.mapPriority === 'number' ? `${item.mapPriority}. ` : ''}${item.類別 ? item.類別 + ' ' : ''}${item.地點 || ''}
                                 </h4>
                                 ${item.描述 ? `<p style="margin: 5px 0; color: #555;">${item.描述}</p>` : ''}
                                 ${item.照片 ? `<img src="${item.照片.split(',')[0].trim()}" alt="${item.地點}" style="max-width: 100%; height: auto; border-radius: 4px; margin-top: 10px;">` : ''}
@@ -908,7 +908,8 @@
                 .sort((a, b) => a.mapPriority - b.mapPriority)
                 .map(item => ({
                     location: { lat: item.lat, lng: item.lng },
-                    title: item.mapLabel || item.地點
+                    title: item.mapLabel || item.地點,
+                    priority: item.mapPriority
                 }));
             
             if (locations.length === 0) {
@@ -970,7 +971,7 @@
                 new google.maps.Marker({
                     position: locations[0].location,
                     map: map,
-                    label: '1',
+                    label: locations[0].priority.toString(),
                     title: locations[0].title
                 });
                 return;
@@ -1004,7 +1005,7 @@
                     new google.maps.Marker({
                         position: loc.location,
                         map: map,
-                        label: (index + 1).toString(),
+                        label: loc.priority.toString(),
                         title: loc.title
                     });
                 });

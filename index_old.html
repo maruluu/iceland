@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>冰島12天行程</title>
+    <link rel="stylesheet" href="./style.css"/>
+</head>
+<body>
+    <div class="page-container">
+        <header><h1>來去冰島看極光11天行程</h1></header>
+        <div class="important-notes">
+            <ul>
+                <li>點擊景點名稱可在 Google 地圖中打開該地點。</li>
+                <li>點擊行程中的小圖片可查看大圖。</li>
+            </ul>
+        </div>
+        <div class="tab-container" id="tabContainer"></div>
+        <div id="tabContentContainer"></div>
+    </div>
+    <!-- Image Modal -->
+    <div id="myImageModal" class="image-modal">
+        <span class="image-modal-close">&times;</span>
+        <img class="image-modal-content" id="imgModalSrc" alt="放大圖片">
+    </div>
+
+    <script>
+        // --- 類別標籤色彩 ---
+        function getCategoryClass(category) {
+            if (!category) return 'cat-default';
+            if (category.includes('🌟')) return 'cat-journey-overview';
+            if (category.includes('✈️')) return 'cat-flight-segment';
+            if (category.includes('⏳')) return 'cat-layover-time';
+            if (category.includes('🏁')) return 'cat-arrival-next-leg';
+            if (category.includes('🚗')) return 'cat-mov';
+            if (category.includes('🧁')) return 'cat-eat';
+            if (category.includes('⛱') || category.includes('👍')) return 'cat-see';
+            if (category.includes('🏡')) return 'cat-stay';
+            if (category.includes('🎭')) return 'cat-act';
+            return 'cat-default';
+        }
+        // --- 縮圖 Modal ---
+        const modal = document.getElementById("myImageModal");
+        const modalImg = document.getElementById("imgModalSrc");
+        document.querySelector(".image-modal-close").onclick = () => { modal.style.display = "none"; }
+        window.onclick = (e) => { if (e.target === modal) modal.style.display = "none"; }
+        document.addEventListener('keydown', (e) => { if (e.key === "Escape" && modal.style.display === "block") modal.style.display = "none"; });
+        function openImageModal(src) {
+            modal.style.display = "block";
+            modalImg.src = src;
+        }
+        // --- 行程內容產生 ---
+        function generateDayHtml(dayData, dayIndex) {
+            if (dayIndex === 0 && dayData.isSpecialDay === "departure") {
+                return `<h2>${dayData.dayTitle}</h2>
+                <table class="itinerary-table"><thead><tr><th>項目</th><th>說明</th></tr></thead>
+                <tbody>${dayData.items.map(item =>
+                    `<tr><td>${item.地點 || ''}</td><td>${item.描述 || ''}</td></tr>`
+                ).join('')}</tbody></table>
+                <p style="text-align:center; color:#555;">啟程日，專注飛行，本地圖無景點顯示。</p>`;
+            }
+            let itemsHtml = '<ul class="itinerary-list">';
+            dayData.items.forEach(item => {
+                const categoryClass = getCategoryClass(item.類別);
+                const isDriving = item.類別?.includes('🚗') && item.地點?.startsWith("移動:");
+                if (isDriving) {
+                    itemsHtml += `<li class="driving-info">${item.地點.replace("移動:", "").trim()}</li>`;
+                    return;
+                }
+                // 景點/吃喝/活動/住宿含照片
+                if (['cat-see','cat-eat','cat-act','cat-stay'].includes(categoryClass) && item.照片) {
+                    const photoUrl = String(item.照片).split(',')[0].trim();
+                    itemsHtml += `<li class="itinerary-item"><div style="display:flex;align-items:flex-start;gap:1rem;">
+                        <div><img src="${photoUrl}" alt="${item.地點} 縮圖" class="item-photo-thumbnail" onclick="openImageModal('${photoUrl}')"></div>
+                        <div style="flex:1;">
+                            <span class="item-category ${categoryClass}">${item.類別||'資訊'}</span>
+                            ${item.lat && item.lng ? `<strong><a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.mapLabel||item.地點)}&ll=${item.lat},${item.lng}" target="_blank">${item.mapPriority ? item.mapPriority+'. ' : ''}${item.地點}</a></strong>` : `<strong>${item.地點}</strong>`}
+                            ${item.描述 ? `<div class="item-description">${item.描述}</div>` : ''}
+                            ${item.克朗 ? `<div class="item-description">費用：約 ${item.克朗} ISK</div>` : ''}
+                            ${item.台幣 ? `<div class="item-description">費用參考：約 ${item.台幣} TWD</div>` : ''}
+                            ${item.營業時間 ? `<div class="item-description"><span style="color:#005792;font-weight:bold;">營業時間：</span>${item.營業時間}</div>` : ''}
+                            ${item.網址 ? `<div class="item-url"><a href="${item.網址}" target="_blank">相關連結</a></div>` : ''}
+                        </div></div></li>`;
+                } else {
+                    itemsHtml += `<li class="itinerary-item">
+                        <span class="item-category ${categoryClass}">${item.類別||'資訊'}</span>
+                        ${item.lat && item.lng ? `<strong><a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.mapLabel||item.地點)}&ll=${item.lat},${item.lng}" target="_blank">${item.mapPriority ? item.mapPriority+'. ' : ''}${item.地點}</a></strong>` : `<strong>${item.地點}</strong>`}
+                        ${item.描述 ? `<div class="item-description">${item.描述}</div>` : ''}
+                        ${item.克朗 ? `<div class="item-description">費用：約 ${item.克朗} ISK</div>` : ''}
+                        ${item.台幣 ? `<div class="item-description">費用參考：約 ${item.台幣} TWD</div>` : ''}
+                        ${item.網址 ? `<div class="item-url"><a href="${item.網址}" target="_blank">相關連結</a></div>` : ''}
+                    </li>`;
+                }
+            });
+            itemsHtml += '</ul>';
+            // 地圖顯示
+            const hasMap = dayData.mapCenter || (dayData.items && dayData.items.some(it => it.lat && it.lng && it.mapLabel && typeof it.mapPriority === 'number'));
+            return `<h2>${dayData.dayTitle}</h2>${itemsHtml}${hasMap ? `<div id="mapDay${dayIndex}" class="map-container"></div>` : ''}`;
+        }
+        // --- Google Maps 初始化 ---
+        function displayRoute(mapId, locations, mapCenter, mapZoom) {
+            const el = document.getElementById(mapId);
+            if (!el) return;
+            if (!google?.maps) return el.innerHTML = "<p style='text-align:center;padding-top:20px;'>地圖服務載入中...</p>";
+            const map = new google.maps.Map(el, { zoom: mapZoom || 8, center: mapCenter || locations[0]?.location || { lat: 64.9631, lng: -19.0208 } });
+            if (locations.length === 1) return new google.maps.Marker({ position: locations[0].location, map, label: locations[0].title, title: locations[0].title });
+            if (!locations.length) return;
+            const directionsService = new google.maps.DirectionsService();
+            const directionsRenderer = new google.maps.DirectionsRenderer({ map, suppressMarkers: true });
+            const waypoints = locations.slice(1, -1).map(loc => ({ location: loc.location, stopover: true }));
+            directionsService.route({
+                origin: locations[0].location,
+                destination: locations[locations.length - 1].location,
+                waypoints, optimizeWaypoints: true, travelMode: google.maps.TravelMode.DRIVING
+            }, (result, status) => {
+                if (status === 'OK') {
+                    directionsRenderer.setDirections(result);
+                    locations.forEach((loc, i) => new google.maps.Marker({ position: loc.location, map, label: `${i+1}`, title: loc.title }));
+                } else {
+                    el.innerHTML = `<p style='text-align:center; padding-top:20px;'>地圖路線載入失敗 (${status})。</p>`;
+                    locations.forEach((loc, i) => new google.maps.Marker({ position: loc.location, map, label: `${i+1}`, title: loc.title }));
+                }
+            });
+        }
+        // --- Tab 切換 ---
+        function openDayTab(dayIdx) {
+            document.querySelectorAll('.tab-button').forEach((btn,i) => btn.classList.toggle('active', i===dayIdx));
+            document.querySelectorAll('.tab-content').forEach((ctn,i) => ctn.classList.toggle('active', i===dayIdx));
+            localStorage.setItem('activeItineraryTabIndex', dayIdx);
+            // Google Map
+            const dayData = window.allItineraryData[dayIdx];
+            const mapId = `mapDay${dayIdx}`;
+            if ((dayData.mapCenter || (dayData.items && dayData.items.some(it => it.lat && it.lng && it.mapLabel && typeof it.mapPriority === 'number'))) && !window.mapsInitialized?.[mapId]) {
+                const locations = (dayData.items||[]).filter(it => it.lat && it.lng && it.mapLabel && typeof it.mapPriority === 'number')
+                    .sort((a,b)=>a.mapPriority-b.mapPriority)
+                    .map(it => ({ location: { lat: it.lat, lng: it.lng }, title: it.mapLabel }));
+                if (window.google?.maps) displayRoute(mapId, locations, dayData.mapCenter, dayData.mapZoom);
+                window.mapsInitialized = window.mapsInitialized || {};
+                window.mapsInitialized[mapId] = true;
+            }
+        }
+        // --- 初始化頁面 ---
+        function initPage() {
+            const tabCtn = document.getElementById('tabContainer');
+            const tabContentCtn = document.getElementById('tabContentContainer');
+            window.allItineraryData.forEach((day, i) => {
+                const btn = document.createElement('a');
+                btn.className = 'tab-button'; btn.textContent = day.dayGroup; btn.href = `#day${i}`;
+                btn.onclick = e => { e.preventDefault(); window.location.hash = `#day${i}`; openDayTab(i);}
+                tabCtn.appendChild(btn);
+
+                const ctn = document.createElement('div');
+                ctn.className = 'tab-content'; ctn.id = `dayContent${i}`;
+                if (day.isSpecialDay === "departure") ctn.classList.add('departure-day-content');
+                ctn.innerHTML = generateDayHtml(day, i);
+                tabContentCtn.appendChild(ctn);
+            });
+            // 依hash或localStorage選啟始tab
+            let idx = 0, hash = window.location.hash;
+            if (hash.startsWith('#day')) { let hi = parseInt(hash.replace('#day',''),10); if (!isNaN(hi)) idx = hi; }
+            else { let lidx = parseInt(localStorage.getItem('activeItineraryTabIndex'),10); if (!isNaN(lidx)) idx = lidx;}
+            openDayTab(idx);
+            window.addEventListener('hashchange', () => {
+                let hi = parseInt(window.location.hash.replace('#day',''),10);
+                if (!isNaN(hi)) openDayTab(hi);
+            });
+        }
+    </script>
+    <script type="module">
+        const googleMapsApiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY
+        console.log('載入 Google Maps API...', googleMapsApiKey);
+        function loadGoogleMapsApi() {
+            if (!googleMapsApiKey || googleMapsApiKey.startsWith('__')) {
+                console.error('Google Maps API 金鑰未設定');
+                return;
+            }
+            let script = document.createElement('script');
+            script.src = `https://maps.googleapis.com/maps/api/js?key=${googleMapsApiKey}&callback=initPage&libraries=routes`;
+            script.async = true; script.defer = true;
+            document.body.appendChild(script);
+        }
+        import { allItineraryData } from './config.js';
+        window.allItineraryData = allItineraryData;
+        // Day 0 - Updated with flight info
+       
+
+
+        window.addEventListener('DOMContentLoaded', loadGoogleMapsApi);
+    </script>
+</body>
+</html>
