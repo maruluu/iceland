@@ -127,6 +127,27 @@
 
         .country-section.expanded .day-list {
             max-height: 500px;
+            overflow-y: auto;
+        }
+
+        /* 自定義 day-list 卷軸樣式 */
+        .day-list::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .day-list::-webkit-scrollbar-track {
+            background: rgba(255,255,255,0.1);
+            border-radius: 3px;
+        }
+
+        .day-list::-webkit-scrollbar-thumb {
+            background: rgba(255,255,255,0.3);
+            border-radius: 3px;
+            transition: background 0.3s ease;
+        }
+
+        .day-list::-webkit-scrollbar-thumb:hover {
+            background: rgba(255,255,255,0.5);
         }
 
         .day-item {
@@ -772,7 +793,21 @@
         // 國家分組切換
         function toggleCountry(header) {
             const section = header.parentElement;
-            section.classList.toggle('expanded');
+            const isCurrentlyExpanded = section.classList.contains('expanded');
+            
+            // 關閉所有其他的國家分組
+            document.querySelectorAll('.country-section').forEach(otherSection => {
+                if (otherSection !== section) {
+                    otherSection.classList.remove('expanded');
+                }
+            });
+            
+            // 切換當前分組的展開狀態
+            if (isCurrentlyExpanded) {
+                section.classList.remove('expanded');
+            } else {
+                section.classList.add('expanded');
+            }
         }
 
         // 選擇日程
