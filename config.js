@@ -28,7 +28,7 @@ export const allItineraryData = [
         { dayGroup: "Day 2", dayTitle: "Day 2: 10/6(一)黃金圈", mapCenter: { lat: 64.20, lng: -20.7 }, mapZoom: 9, items: [
             {地點: "移動: 雷克雅維克 → 辛格韋德利國家公園 (約 1h 45m)", 類別: "🚗 移動"},
             {地點: "辛格韋德利國家公園Þingvellir National Park- P1停車場", 描述: "(停留約 1~1.5 小時)，世界上唯一在海平面以上的北美板塊與歐亞板塊...", 照片: "https://bobbyworld.tw/wp-content/uploads/pixnet/b60bf02b2f8e7debf6d89af4ee21b3d6.jpg", 類別: "⛱ 景點", lat: 64.25579, lng: -21.13547,   mapLabel: "Þingvellir Parking P1", mapPriority: 1},
-            {地點: "阿爾曼納陡崖 (Almannagjá)", 描述: "在辛格韋德利國家公園內，北美版塊、歐亞板塊分界處...", 照片: "https://bobbyworld.tw/wp-content/uploads/pixnet/9297d22ba307260f2a0b01ea7db764f8.jpg", 類別: "⛱ 景點", lat: 64.2659, lng: -21.1205, mapLabel: "Almannagjá", mapPriority: 2},
+            {地點: "阿爾曼納陡崖 (Almannagjá)", 描述: "在辛格韋德利國家公園內，北美版塊、歐亞版塊分界處...", 照片: "https://bobbyworld.tw/wp-content/uploads/pixnet/9297d22ba307260f2a0b01ea7db764f8.jpg", 類別: "⛱ 景點", lat: 64.2659, lng: -21.1205, mapLabel: "Almannagjá", mapPriority: 2},
             {地點: "移動: 辛格韋德利 → Bruarfoss (約 40m)", 類別: "🚗 移動"},
             {地點: "藍色瀑布 Bruarfoss", 照片: "https://mlz24bjzzgqm.i.optimole.com/w:463/h:694/q:mauto/dpr:2.0/ig:avif/https://dragonflytravelblog.com/wp-content/uploads/2024/07/DSC08814.jpg", 類別: "⛱ 景點", lat: 64.26284, lng: -20.51917, mapLabel: "Brúarfoss Waterfall Parking", mapPriority: 3},
             {地點: "移動: Bruarfoss → 間歇泉 (約 25m)", 類別: "🚗 移動"},
@@ -187,3 +187,11 @@ export const allItineraryData = [
 
 // 將數據暴露到全局作用域
 window.allItineraryData = allItineraryData;
+
+// Helper function to generate Google Maps URL
+function generateGoogleMapsUrl(lat, lng, label) {
+    if (lat && lng) {
+        return `https://www.google.com/maps/search/?api=1&query=${lat},${lng}&query_place_id=${encodeURIComponent(label || '')}`;
+    }
+    return null;
+}
