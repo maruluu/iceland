@@ -669,8 +669,16 @@
         }
 
         function toggleCountry(header) {
-            const section = header.parentElement;
-            section.classList.toggle('expanded');
+            const currentSection = header.parentElement;
+            const isExpanded = currentSection.classList.contains('expanded');
+
+            document.querySelectorAll('.country-section').forEach(section => {
+                section.classList.remove('expanded');
+            });
+
+            if (!isExpanded) {
+                currentSection.classList.add('expanded');
+            }
         }
 
         function renderSidebarAndMobileMenu() {
