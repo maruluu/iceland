@@ -564,7 +564,7 @@
             }
         }
     </style>
-  <script type="module" crossorigin src="/iceland/assets/index-DVWbl5OK.js"></script>
+  <script type="module" crossorigin src="/iceland/assets/index-B4wRQL4j.js"></script>
 </head>
 <body>
     <div class="app-container">
@@ -857,7 +857,10 @@
         }
 
         function showQuickStats() {
-            // ... (rest of the function)
+            const content = document.getElementById('dayContent');
+            content.innerHTML = `<h2>旅程統計</h2><div class="quick-stats" style="margin-bottom: 20px;"><div class="stat-card"><div class="stat-number">21</div><div class="stat-label">總天數</div></div><div class="stat-card"><div class="stat-number">2</div><div class="stat-label">國家</div></div><div class="stat-card"><div class="stat-number">100+</div><div class="stat-label">景點與活動</div></div><div class="stat-card"><div class="stat-number">15+</div><div class="stat-label">住宿點</div></div></div><div style="background: white; padding: 20px; border-radius: 10px;"><h3 style="margin-bottom: 15px; color: #2c3e50;">行程概覽</h3><p>🇮🇸 <strong>冰島</strong>：10/5 - 10/17 (13天)</p><p>• 環島自駕，體驗冰川、火山、瀑布與極光。</p><br><p>🇳🇱 <strong>荷蘭 & 比利時</strong>：10/18 - 10/25 (8天)</p><p>• 探索運河城市、歷史古鎮與藝術文化。</p><img src="/iceland/assets/airline.png" alt="Airline Information" style="width: 100%; margin-top: 20px; border-radius: 8px;"></div>`;
+            document.getElementById('mainTitle').textContent = '旅程統計總覽';
+            document.getElementById('breadcrumb').textContent = '📊 統計 > 總覽';
         }
 
         // --- 頁面載入邏輯 ---
