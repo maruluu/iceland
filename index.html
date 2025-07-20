@@ -563,6 +563,50 @@
                 margin-top: 15px;
             }
         }
+
+        /* Image Modal Styles */
+        .image-modal { 
+            display: none; 
+            position: fixed; 
+            z-index: 1000; 
+            padding-top: 5vh; 
+            left: 0; 
+            top: 0; 
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background: rgba(0,0,0,0.9); 
+            text-align: center; 
+        }
+        
+        .image-modal-content { 
+            margin: auto; 
+            display: inline-block; 
+            max-width: 95%; 
+            max-height: 90vh; 
+            animation: zoom 0.3s; 
+        }
+        
+        @keyframes zoom { 
+            from {transform:scale(0.5); opacity: 0;} 
+            to {transform:scale(1); opacity: 1;} 
+        }
+        
+        .image-modal-close { 
+            position: absolute; 
+            top: 15px; 
+            right: 25px; 
+            color: #f1f1f1; 
+            font-size: 2.5rem; 
+            font-weight: bold; 
+            transition: 0.3s; 
+            cursor: pointer; 
+            padding: 5px;
+        }
+        
+        .image-modal-close:hover { 
+            color: #bbb;
+        }
     </style>
 </head>
 <body>
@@ -583,7 +627,7 @@
                 <div class="country-header" onclick="toggleCountry(this)">
                     <div class="country-name">
                         <span class="country-flag">🇮🇸</span>
-                        <span>冰島 (13天)</span>
+                        <span>冰島(12天)</span>
                     </div>
                     <span class="expand-icon">▶</span>
                 </div>
@@ -766,16 +810,40 @@
                     if (item.營業時間) extraInfo += `<p style="margin: 5px 0; color: #666; font-size: 0.9em;"><strong>營業時間:</strong> ${item.營業時間}</p>`;
                     if (item.台幣) extraInfo += `<p style="margin: 5px 0; color: #e74c3c; font-weight: bold;">💰 台幣: ${item.台幣}</p>`;
                     if (item.克朗) extraInfo += `<p style="margin: 5px 0; color: #e74c3c; font-weight: bold;">💰 克朗: ${item.克朗}</p>`;
-                    if (item.網址) extraInfo += `<p style="margin: 5px 0;"><a href="${item.網址}" target="_blank" style="color: #007bff; text-decoration: none; padding: 8px 16px; background: #f8f9fa; border-radius: 4px; display: inline-block; border: 1px solid #007bff;">🔗 查看更多資訊</a></p>`;
+                    if (item.網址) {
+                        const urlEntries = item.網址.split(',').map(entry => entry.trim()).filter(entry => entry);
+                        if (urlEntries.length > 0) {
+                            extraInfo += `<p style="margin: 5px 0;">`;
+                            urlEntries.forEach((entry, index) => {
+                                let linkText = '🔗 查看更多資訊';
+                                let url = entry;
+                                
+                                // Check if entry contains name|url format
+                                if (entry.includes('|')) {
+                                    const parts = entry.split('|');
+                                    if (parts.length >= 2) {
+                                        linkText = `🔗 ${parts[0].trim()}`;
+                                        url = parts[1].trim();
+                                    }
+                                } else if (urlEntries.length > 1) {
+                                    linkText = `🔗 查看更多資訊 ${index + 1}`;
+                                }
+                                
+                                extraInfo += `<a href="${url}" target="_blank" style="color: #007bff; text-decoration: none; padding: 8px 16px; background: #f8f9fa; border-radius: 4px; display: inline-block; border: 1px solid #007bff; margin-right: 8px; margin-bottom: 5px;">${linkText}</a>`;
+                            });
+                            extraInfo += `</p>`;
+                        }
+                    }
                     
                     const locationName = item.lat && item.lng ? `<a href="https://www.google.com/maps/search/?api=1&query=${item.lat},${item.lng}" target="_blank" style="color: #2c3e50; text-decoration: none; border-bottom: 1px dashed #007bff;" title="在 Google Maps 中開啟">${item.地點 || ''}</a>` : (item.地點 || '');
                     const priorityBadge = typeof item.mapPriority === 'number' ? `<span style="background: #007bff; color: white; padding: 2px 8px; border-radius: 12px; font-size: 0.8em; margin-right: 8px;">${item.mapPriority}</span>` : '';
-                    const image = item.照片 ? `<img src="${item.照片.split(',')[0].trim()}" alt="${item.地點}" style="max-width: 100%; height: auto; border-radius: 4px; margin-top: 10px;">` : '';
+                    const imageUrl = item.照片 ? item.照片.split(',')[0].trim() : '';
+                    const image = item.照片 ? `<img src="${imageUrl}" alt="${item.地點}" data-image-src="${imageUrl}" class="clickable-image" style="max-width: 50%; height: auto; border-radius: 4px; margin-top: 10px; cursor: pointer; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">` : '';
 
                     return `
                         <div style="background: #f8f9fa; padding: 15px; margin: 10px 0; border-radius: 8px; border-left: 4px solid #007bff;">
                             <h4 style="margin: 0 0 10px 0; color: #2c3e50;">${priorityBadge}${item.類別 || ''} ${locationName}</h4>
-                            ${item.描述 ? `<p style="margin: 5px 0; color: #555;">${item.描述}</p>` : ''}
+                            ${item.描述 ? `<p style="margin: 5px 0; color: #555;">${item.描述.replace(/\n/g, '<br>')}</p>` : ''}
                             ${image}
                             ${extraInfo}
                         </div>`;
@@ -917,6 +985,60 @@
         } else {
             console.warn('Google Maps API 金鑰未設定，地圖功能將無法使用');
         }
+    </script>
+
+    <!-- Image Modal -->
+    <div id="myImageModal" class="image-modal">
+        <span class="image-modal-close">&times;</span>
+        <img class="image-modal-content" id="imgModalSrc" alt="放大圖片">
+    </div>
+
+    <script>
+        // Image Modal functionality
+        function initImageModal() {
+            const modal = document.getElementById("myImageModal");
+            const modalImg = document.getElementById("imgModalSrc");
+            const closeBtn = document.querySelector(".image-modal-close");
+            
+            // Event delegation for clickable images
+            document.addEventListener('click', function(e) {
+                if (e.target.classList.contains('clickable-image')) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const imageSrc = e.target.getAttribute('data-image-src');
+                    if (imageSrc) {
+                        openImageModal(imageSrc);
+                    }
+                }
+            });
+            
+            // Close modal when clicking X
+            closeBtn.onclick = () => { modal.style.display = "none"; };
+            
+            // Close modal when clicking outside image
+            modal.onclick = (e) => { 
+                if (e.target === modal) {
+                    modal.style.display = "none"; 
+                }
+            };
+            
+            // Close modal with Escape key
+            document.addEventListener('keydown', (e) => { 
+                if (e.key === "Escape" && modal.style.display === "block") 
+                    modal.style.display = "none"; 
+            });
+        }
+        
+        function openImageModal(src) {
+            const modal = document.getElementById("myImageModal");
+            const modalImg = document.getElementById("imgModalSrc");
+            console.log('Opening modal with image:', src); // Debug log
+            modal.style.display = "block";
+            modalImg.src = src;
+        }
+        
+        // Initialize modal when page loads
+        document.addEventListener('DOMContentLoaded', initImageModal);
     </script>
 </body>
 </html>

@@ -1,11 +1,11 @@
 export const allItineraryData = [
-        // Day 0 - Updated with flight info
+        // Day 1 - 出發及飛行日
         {
-            dayGroup: "Day 0",
-            dayTitle: "Day 0: 10/5(日) 出發前往歐洲",
+            dayGroup: "Day 1",
+            dayTitle: "Day 1: 10/4(六) 出發前往歐洲",
             isSpecialDay: "departure", // Flag for special styling
             items: [
-                { 地點: "✈️ 台北(TPE) → 阿姆斯特丹(AMS)", 類別: "🌟 行程總覽", 描述: "經香港(HKG)轉機。總飛行與轉機時間約 17小時 5分鐘。" },
+                { 地點: "✈️ 台北(TPE) → 阿姆斯特丹(AMS)", 類別: "🌟 行程總覽", 描述: "經香港(HKG)轉機。總飛行與轉機時間約 17小時 5分鐘。", 照片: "/iceland/assets/airline1.png" },
                 { 地點: "🚗 ", 描述: "從家裡前往桃園國際機場 (TPE)", 類別: "🚗 移動" },
                 { 地點: "✈️ 國泰航空 CX531", 描述: "台北(TPE) 19:50 → 香港(HKG) 22:00. 飛行 2h 10m.", 類別: "✈️ 飛行" },
                 { 地點: "⏳香港(HKG) 轉機", 描述: "停留 1h 15m.", 類別: "⏳ 轉機" },
@@ -14,8 +14,8 @@ export const allItineraryData = [
                 { 地點: "✈️ 10/5(日) 12:30 ", 描述: "Play 航空 AMS -> KEF 13:50", 類別: "✈️ 飛行"}
             ]
         },
-        // Day 1
-        { dayGroup: "Day 1", dayTitle: "Day 1: 10/6(一) 雷克雅維克", mapCenter: { lat: 64.05, lng: -22.0 }, mapZoom: 9, items: [
+        // Day 2
+        { dayGroup: "Day 2", dayTitle: "Day 2: 10/5(日) 雷克雅維克", mapCenter: { lat: 64.05, lng: -22.0 }, mapZoom: 9, items: [
             {地點: "凱夫拉維克國際機場 (KEF)", 描述:"航班 13:50 抵達", 類別: "🚗 移動", lat: 63.9850, lng: -22.6056, mapLabel: "KEF 機場", mapPriority: 1}, // Updated description slightly
             {地點: "租車", 描述:"市中心的停車格是要收費的，收費時間星期一至五09:00~18:00；星期六10:00~16:00，其餘時間則是免費" }, // Consider "🚗 活動" or similar
             {地點: "移動: 機場 → 市區 (40m)", 類別: "🚗 移動"},
@@ -24,8 +24,8 @@ export const allItineraryData = [
             {地點: "市區採買", 類別: "⛱ 景點", lat: 64.1470, lng: -21.9400, mapLabel: "Reykjavik City Center"},
             {地點: "Grettir Guesthouse Downtown Charm", 類別: "🏡 住宿", 描述: "<span style='color:green;'>&#10003;</span>廚房，<span style='color:red;'>&#10007;</span>洗衣，<span style='color:red;'>&#10007;</span>早餐，<span style='color:red;'>&#10007;</span>停車", 照片:"https://cf.bstatic.com/xdata/images/hotel/max1280x900/606428941.jpg?k=b320806e5ae8120e9e96f85a42fd59ede02a2254b487d767a4381df5e47ada66&o=&hp=1" ,網址: "https://www.booking.com/Share-NeX74T", lat: 64.14523324228844, lng: -21.92748344376633, mapLabel: "Grettir Guesthouse", mapPriority: 6},
         ]},
-        // Day 2
-        { dayGroup: "Day 2", dayTitle: "Day 2: 10/7(二) 黃金圈", mapCenter: { lat: 64.20, lng: -20.7 }, mapZoom: 9, items: [
+        // Day 3
+        { dayGroup: "Day 3", dayTitle: "Day 3: 10/6(一) 黃金圈", mapCenter: { lat: 64.20, lng: -20.7 }, mapZoom: 9, items: [
             {地點: "移動: 雷克雅維克 → 辛格韋德利國家公園 (約 1h 45m)", 類別: "🚗 移動"},
             {地點: "辛格韋德利國家公園Þingvellir National Park- P1停車場", 描述: "(停留約 1~1.5 小時)，世界上唯一在海平面以上的北美板塊與歐亞板塊...", 照片: "https://bobbyworld.tw/wp-content/uploads/pixnet/b60bf02b2f8e7debf6d89af4ee21b3d6.jpg", 類別: "⛱ 景點", lat: 64.25579, lng: -21.13547,   mapLabel: "Þingvellir Parking P1", mapPriority: 1},
             {地點: "阿爾曼納陡崖 (Almannagjá)", 描述: "在辛格韋德利國家公園內，北美版塊、歐亞版塊分界處...", 照片: "https://bobbyworld.tw/wp-content/uploads/pixnet/9297d22ba307260f2a0b01ea7db764f8.jpg", 類別: "⛱ 景點", lat: 64.2659, lng: -21.1205, mapLabel: "Almannagjá", mapPriority: 2},
@@ -43,8 +43,8 @@ export const allItineraryData = [
                 照片:"https://cf.bstatic.com/xdata/images/hotel/max1024x768/572843141.jpg?k=bd25d80ecc24f8438a0fa0e11b86375006dba85f7a0091d7b0f82c9be588dc5e&o=",
                 lat: 63.96181409291465, lng: -21.10362489259309, mapLabel: "Hotel Hjardarbol", mapPriority: 6}
         ]},
-        // Day 3
-        { dayGroup: "Day 3", dayTitle: "Day 3: 10/8(三) 南部", mapCenter: { lat: 63.70, lng: -20.0 }, mapZoom: 8, items: [
+        // Day 4
+        { dayGroup: "Day 4", dayTitle: "Day 4: 10/7(二) 南部", mapCenter: { lat: 63.70, lng: -20.0 }, mapZoom: 8, items: [
             {地點: "8:00 賽爾弗斯 → 野溪溫泉 (約 20m)",類別: "🚗 移動"},
             {地點: "Reykjadalur 野溪溫泉", 描述: "單程約 3 km（1.8 mi），來回 1.5 小時，需爬升約 320 m，預留3小時", 照片: "https://mlz24bjzzgqm.i.optimole.com/w:768/h:512/q:mauto/dpr:2.0/ig:avif/https://dragonflytravelblog.com/wp-content/uploads/2024/07/reykjadalur.jpg", 類別: "⛱ 景點", lat: 64.0238, lng: -21.2116, mapLabel: "Reykjadalur Hot Spring Thermal River Parking", mapPriority: 1},
             {地點: "移動: 賽爾弗斯 → 火口湖 (約 20m - 若從Selfoss出發)", 類別: "🚗 移動"},
@@ -57,8 +57,8 @@ export const allItineraryData = [
             {地點: "Reynisfjara黑沙灘", 描述: "海蝕洞是千年前火山噴發下的遺跡...，約停留 40 分", 照片: "https://bobbyworld.tw/wp-content/uploads/pixnet/9ed7a628e2f547092920693ada18878e.jpg, https://bobbyworld.tw/wp-content/uploads/pixnet/4da10f837463f77bb344b3c267fa4950.jpg", 類別: "⛱ 景點", lat: 63.4027, lng: -19.0452, mapLabel: "Reynisfjara Beach", mapPriority: 5},
             {地點: "The Barn", 類別: "🏡 住宿", 描述: "<span style='color:green;'>&#10003;</span>廚房，<span style='color:red;'>&#10007;</span>洗衣，<span style='color:red;'>&#10007;</span>早餐，<span style='color:green;'>&#10003;</span>停車", 網址: "https://www.booking.com/Share-fIi5i4", lat: 63.43602218824341, lng: -19.06163856764566, mapLabel: "The Barn", mapPriority: 6}
         ]},
-        // Day 4
-        { dayGroup: "Day 4", dayTitle: "Day 4: 10/9(四) 維克周邊與冰洞", mapCenter: { lat: 63.6, lng: -18.5 }, mapZoom: 9, items: [
+        // Day 5
+        { dayGroup: "Day 5", dayTitle: "Day 5: 10/8(三) 維克周邊與冰洞", mapCenter: { lat: 63.6, lng: -18.5 }, mapZoom: 9, items: [
             {地點: "Vik 集合 10:00 卡特拉火山冰洞 3h", 台幣: "7,000", 網址:"https://adventures.is/iceland/day-tours/ice-caves/katla-ice-cave-tour-under-the-volcano/", 類別: "🎭 活動", lat: 63.4177, lng: -18.9976, mapLabel: "維克(冰洞集合)", mapPriority: 1}, // Changed ⛱ 景點 to 🎭 活動
             {地點: "移動: Vik → 羽毛峽谷 (約 50m)", 類別: "🚗 移動"},
             {地點: "羽毛峽谷 (Fjadrargljufur Canyon)", 照片: "https://bobbyworld.tw/wp-content/uploads/pixnet/c62297747249d35459e0fde974ee8204.jpg", 類別: "⛱ 景點", lat: 63.7713, lng: -18.1719, mapLabel: "Fjaðrárgljúfur", mapPriority: 2},
@@ -66,14 +66,14 @@ export const allItineraryData = [
             {地點: "玄武岩黑瀑布（Svartifoss", 描述: "到時候決定要不要去", 照片: "https://mimihan.tw/wp-content/uploads/20230326222137_3.jpg", 類別: "⛱ 景點", lat: 64.01637, lng: -16.9691857, mapLabel: "Svartifoss", mapPriority: 3},
             {地點: "Hvoll Hostel", 照片:"https://content.skyscnr.com/available/1885334561/1885334561_WxH.jpg", 類別: "🏡 住宿", 描述: "<span style='color:green;'>&#10003;</span>廚房，<span style='color:red;'>&#10007;</span>洗衣，<span style='color:red;'>&#10007;</span>早餐，<span style='color:green;'>&#10003;</span>停車", 網址: "https://www.booking.com/Share-80MqhM", lat: 63.9095725904926, lng: -17.682835288876085, mapLabel: "Hvoll Hostel", mapPriority: 5}
         ]},
-        // Day 5
-        { dayGroup: "Day 5", dayTitle: "Day 5: 10/10(五) 冰川健行與冰河湖", mapCenter: { lat: 64.03, lng: -16.5 }, mapZoom: 9, items: [
+        // Day 6
+        { dayGroup: "Day 6", dayTitle: "Day 6: 10/9(四) 冰川健行與冰河湖", mapCenter: { lat: 64.03, lng: -16.5 }, mapZoom: 9, items: [
             {地點: "Skaftafell 冰川健行 5h 11:00", 網址: "https://cn.guidetoiceland.is/connect-with-locals/6640/iceland-local-tour-skaftafell-svinafellsjokull-glacier-hiking-experience", 照片: "https://adventures.is/media/237243/iceland-skaftafell-glacier-hiking-on-spikes.jpg?anchor=center&mode=crop&width=330&height=188&format=webp&quality=80&rnd=133728672360000000", 類別: "🎭 活動", lat: 64.0162, lng: -16.9661, mapLabel: "Skaftafell Visitor Centre (健行集合)", mapPriority: 1}, // Changed ⛱ 景點 to 🎭 活動
             {地點: "移動: Skaftafell → 冰河湖 (約 50m)", 類別: "🚗 移動"},
             {地點: "Skyrhusid HI Hostel", 類別: "🏡 住宿", 描述: "<span style='color:green;'>&#10003;</span>廚房，<span style='color:red;'>&#10007;</span>洗衣，<span style='color:red;'>&#10007;</span>早餐，<span style='color:green;'>&#10003;</span>停車", 網址: "https://www.booking.com/Share-YoGsX0", lat: 64.1295014055353, lng: -16.01554051772359, 照片: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/278680612.jpg?k=ee223e58c9a9b45210b21577298dfb8562c8357725eda10ad488c555df2d6b5b&o=", mapLabel: "Skyrhusid HI Hostel", mapPriority: 2}
         ]},
-        // Day 6
-        { dayGroup: "Day 6", dayTitle: "Day 6: 10/11(六) 東邊 - 冰河湖到埃伊爾斯塔濟", mapCenter: { lat: 64.7, lng: -15.3 }, mapZoom: 7, items: [
+        // Day 7
+        { dayGroup: "Day 7", dayTitle: "Day 7: 10/10(五) 東邊 - 冰河湖到埃伊爾斯塔濟", mapCenter: { lat: 64.7, lng: -15.3 }, mapZoom: 7, items: [
             {地點: "Jokulsarlon冰河湖獨木舟", 台幣: "2382", 照片: "https://mlz24bjzzgqm.i.optimole.com/w:768/h:512/q:mauto/dpr:2.0/ig:avif/https://dragonflytravelblog.com/wp-content/uploads/2024/08/IMG_0303.jpg", 類別: "🎭 活動", lat: 64.0484, lng: -16.1794, mapLabel: "Jökulsárlón", mapPriority: 1}, // Changed ⛱ 景點 to 🎭 活動
             {地點: "鑽石冰沙灘", 照片: "https://mimihan.tw/wp-content/uploads/20230326222910_99.jpg", 類別: "⛱ 景點", lat: 64.0450, lng: -16.1780, mapLabel: "Diamond Beach", mapPriority: 2},
             {地點: "移動: 冰河湖 → Vestrahorn (約 1h 21m)", 類別: "🚗 移動"},
@@ -82,8 +82,8 @@ export const allItineraryData = [
             {地點: "移動: Vestrahorn/Höfn → 埃伊爾斯塔濟 (約 3h 18m)", 類別: "🚗 移動"},
             {地點: "Bankinn - Hotel by Aldan", 類別: "🏡 住宿", 描述: "<span style='color:green;'>&#10003;</span>廚房，<span style='color:red;'>&#10007;</span>洗衣，早餐 588/人，<span style='color:green;'>&#10003;</span>停車", 網址: "https://www.booking.com/Share-B9kJa6", lat: 65.26192036188023, lng: -14.009229280026773, mapLabel: "Bankinn - Hotel by Aldan", mapPriority: 4}
         ]},
-        // Day 7
-        { dayGroup: "Day 7", dayTitle: "Day 7: 10/12(日) 北部 - 米湖周邊", mapCenter: { lat: 65.6, lng: -16.0 }, mapZoom: 8, items: [
+        // Day 8
+        { dayGroup: "Day 8", dayTitle: "Day 8: 10/11(六) 北部 - 米湖周邊", mapCenter: { lat: 65.6, lng: -16.0 }, mapZoom: 8, items: [
             {地點: "移動: 埃伊爾斯塔濟 → Seyðisfjörður (來回約 1h)", 類別: "🚗 移動"},
             {地點: "Seyðisfjörður 白日夢冒險王小鎮", 照片: "https://mimihan.tw/wp-content/uploads/20230408152422_67.jpg", 類別: "⛱ 景點", lat: 65.2600, lng: -14.0100, mapLabel: "Seyðisfjarðarkirkja", mapPriority: 1},
             {地點: "移動: 埃伊爾斯塔濟 → Viti (約 2h)", 類別: "🚗 移動"},
@@ -95,8 +95,8 @@ export const allItineraryData = [
             {地點: "Vogafjos Cafe", 類別: "🧁 吃喝", lat: 65.5913, lng: -16.9204, mapLabel: "Vogafjós Farm Resort", mapPriority: 6},
             {地點: "Eldá Guesthouse", 類別: "🏡 住宿", 描述: "<span style='color:green;'>&#10003;</span>廚房，<span style='color:red;'>&#10007;</span>洗衣，<span style='color:red;'>&#10007;</span>早餐，<span style='color:green;'>&#10003;</span>停車，NT$8,399，雙人房", 網址: "https://www.booking.com/Share-y95ofhe", lat: 65.6411510806318, lng: -16.90701006974602, 照片: "https://gti.images.tshiftcdn.com/2947681/x/0/62802992.jpg?ixlib=php-3.3.0&ar=1.91%3A1&w=1200&fit=crop", mapLabel: "Eldá Guesthouse", mapPriority: 7}
         ]},
-        // Day 8
-        { dayGroup: "Day 8", dayTitle: "Day 8: 10/13(一) 米湖到阿克雷里", mapCenter: { lat: 65.65, lng: -17.5 }, mapZoom: 9, items: [
+        // Day 9
+        { dayGroup: "Day 9", dayTitle: "Day 9: 10/12(日) 米湖到阿克雷里", mapCenter: { lat: 65.65, lng: -17.5 }, mapZoom: 9, items: [
             {地點: "Hverfjall 惠爾火山 2-3h", 照片: "https://mimihan.tw/wp-content/uploads/20180529132824_95.jpg", 類別: "🎭 活動", lat: 65.6033, lng: -16.8734, mapLabel: "Hverfjall", mapPriority: 1}, // Hiking is an activity
             {地點: "黑色城堡 Dimmuborgir", 照片: "https://mimihan.tw/wp-content/uploads/20180529221509_26.jpg", 類別: "⛱ 景點", lat: 65.5911, lng: -16.9119, mapLabel: "Dimmuborgir", mapPriority: 2},
             {地點: "移動: 米湖 → Godafoss (約 50m)", 類別: "🚗 移動"},
@@ -106,8 +106,8 @@ export const allItineraryData = [
             {地點: "Brynja 冰淇淋", 描述:"Hafnarstræti 購物街市區晃晃", 類別: "🧁 吃喝", lat: 65.6790, lng: -18.0970, mapLabel: "Brynja", mapPriority: 5},
             {地點: "K16Apartments", 類別: "🏡 住宿", 描述: "<span style='color:green;'>&#10003;</span>廚房，<span style='color:green;'>&#10003;</span>洗衣，<span style='color:red;'>&#10007;</span>早餐，<span style='color:green;'>&#10003;</span>停車，NT$5,006，1張加大雙人床1張沙發床", 網址: "https://www.booking.com/Share-iepTNB", lat: 65.26190464800021, lng: -14.009830094386174, 照片: "https://suhowtravel.com/wp-content/uploads/2024/09/K16Apartments-scaled-e1726112596746.jpg", mapLabel: "K16Apartments", mapPriority: 6}
         ]},
-        // Day 9
-        { dayGroup: "Day 9", dayTitle: "Day 9: 10/14(二) 北岸風光", mapCenter: { lat: 65.5, lng: -19.8 }, mapZoom: 8, items: [
+        // Day 10
+        { dayGroup: "Day 10", dayTitle: "Day 10: 10/13(一) 北岸風光", mapCenter: { lat: 65.5, lng: -19.8 }, mapZoom: 8, items: [
             {地點: "移動: Akureyri → Bjórböðin SPA (約 31m)", 描述:"看要不要去？", 類別: "🚗 移動"},
             {地點: "Bjórböðin SPA", 台幣:"4600", 描述: "泡 25分鐘 兩人 ＋ 休息區躺25分鐘...", 照片: "https://mimihan.tw/wp-content/uploads/20180613111632_26.jpg", 類別: "🎭 活動", lat: 66.0698, lng: -18.5323, mapLabel: "Bjórböðin - The Beer Spa"}, // SPA is an activity
             {地點: "移動: Akureyri → Glaumbær (約 1h 22m)", 類別: "🚗 移動"},
@@ -118,8 +118,8 @@ export const allItineraryData = [
             {地點: "巨人峽谷 (Kolugljúfur Canyon)", 類別: "⛱ 景點", lat: 65.3303, lng: -20.7008, mapLabel: "Kolugljúfur Canyon", mapPriority: 3},
             {地點: "Fagrabrekka Guesthouse", 類別: "🏡 住宿", 描述: "<span style='color:green;'>&#10003;</span>廚房，<span style='color:red;'>&#10007;</span>洗衣，<span style='color:red;'>&#10007;</span>早餐，<span style='color:green;'>&#10003;</span>停車，NT$6,243，小型雙人房－附共用衛浴", 網址: "https://www.booking.com/Share-bHZrFT6", lat: 65.16652428821554, lng: -20.792702936640737, 照片: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/388785829.jpg?k=ce43059e0eba37b9b9a009299298845542d60277c611fd5ac938f98c1963cc86&o=", mapLabel: "Fagrabrekka Guesthouse", mapPriority: 4}
         ]},
-        // Day 10
-        { dayGroup: "Day 10", dayTitle: "Day 10: 10/15(三) 斯奈山半島", mapCenter: { lat: 64.85, lng: -23.3 }, mapZoom: 9, items: [
+        // Day 11
+        { dayGroup: "Day 11", dayTitle: "Day 11: 10/14(二) 斯奈山半島", mapCenter: { lat: 64.85, lng: -23.3 }, mapZoom: 9, items: [
             {地點: "移動: 華姆斯唐吉 → 教堂山 (約 2h 36m)", 類別: "🚗 移動"},
             {地點: "Kirkjufellsfoss 教堂山", 照片: "https://mimihan.tw/wp-content/uploads/20180620190950_46.jpg", 類別: "⛱ 景點", lat: 64.9260, lng: -23.2719, mapLabel: "Kirkjufellsfoss", mapPriority: 1},
             {地點: "移動: 教堂山 → Ólafsvík (約 20m)", 類別: "🚗 移動"},
@@ -133,8 +133,8 @@ export const allItineraryData = [
             {地點: "Ytri Tunga 海豹沙灘", 描述: "太晚的話可以隔天來", 類別: "⛱ 景點", lat: 64.8001, lng: -23.0346, mapLabel: "Ytri Tunga Beach", mapPriority: 7},
             {地點: "Grundarfjordur Hostel", 類別: "🏡 住宿", 描述: "<span style='color:green;'>&#10003;</span>廚房，<span style='color:red;'>&#10007;</span>洗衣，<span style='color:red;'>&#10007;</span>早餐，<span style='color:green;'>&#10003;</span>停車，NT$5,894，全上下舖", 網址: "https://www.booking.com/Share-rdYIiX", lat: 64.92306302849966, lng: -23.257502113944486, 照片: "https://mimihan.tw/wp-content/uploads/20180620203603_42.jpg", mapLabel: "Grundarfjordur Hostel", mapPriority: 8}
         ]},
-        // Day 11
-        { dayGroup: "Day 11", dayTitle: "Day 11: 10/16(四) 返回雷克雅維克", mapCenter: { lat: 64.5, lng: -22.5 }, mapZoom: 8, items: [
+        // Day 12
+        { dayGroup: "Day 12", dayTitle: "Day 12: 10/15(三) 返回雷克雅維克", mapCenter: { lat: 64.5, lng: -22.5 }, mapZoom: 8, items: [
             {地點: "移動: 斯奈山半島 → Sky Lagoon (約 2h)", 類別: "🚗 移動"},
             {地點: "Sky Lagoon", 類別: "🎭 活動", lat: 64.1278, lng: -21.9519, mapLabel: "Sky Lagoon", mapPriority: 1}, // Bathing is an activity
             {地點: "Harpa音樂廳", 描述: "曾被《紐約時報》評選「全球最值得旅遊的41個地方」之一", 類別: "⛱ 景點", lat: 64.1502, lng: -21.9348, mapLabel: "Harpa Concert Hall and Conference Centre", mapPriority: 5, 營業時間: "10:00–18:00 (周日至周二)；10:00–20:00 (周三至周六)"},
@@ -144,32 +144,32 @@ export const allItineraryData = [
            
             {地點: "Grettir Guesthouse Downtown Charm", 類別: "🏡 住宿", 描述: "<span style='color:green;'>&#10003;</span>廚房，<span style='color:red;'>&#10007;</span>洗衣，<span style='color:red;'>&#10007;</span>早餐，<span style='color:green;'>&#10003;</span>停車，NT$7,996，雙人房", 網址: "https://www.booking.com/Share-NeX74T", lat: 64.14523324228844, lng: -21.92748344376633, 照片: "https://cf.bstatic.com/xdata/images/hotel/max1280x900/606428941.jpg?k=b320806e5ae8120e9e96f85a42fd59ede02a2254b487d767a4381df5e47ada66&o=&hp=1", mapLabel: "Grettir Guesthouse", mapPriority: 7}
         ]},
-        // Day 12
-        { dayGroup: "Day 12", dayTitle: "Day 12: 10/17(五) 返回阿姆斯特丹", mapCenter: { lat: 64.05, lng: -22.2 }, mapZoom: 9, items: [
-            {地點: "KEF 機場還車、搭機", 描述: "要確認下可以還車的時間", 類別: "🚗 移動", lat: 63.9850, lng: -22.6056, mapLabel: "KEF Airport", mapPriority: 1},
+        // Day 13
+        { dayGroup: "Day 13", dayTitle: "Day 13: 10/16(四) 冰島往阿姆斯特丹", mapCenter: { lat: 64.05, lng: -22.2 }, mapZoom: 9, items: [
+            {地點: "KEF 機場還車、搭機", 描述: "要確認下可以還車的時間", 類別: "🚗 移動"},
             {地點: "10:30班機", 類別: "✈️ 飛行"},
             {地點: "移動: 雷克雅維克 → AMS", 類別: "🚗 移動"},
             {地點: "抵達 AMS 15:45  ",  類別: "✈️ 飛行"},
         ]},
         // 荷蘭行程開始
-        // Day 13 (from ams.md Day 1)
+        // Day 14 (from ams.md Day 1)
         {
-            dayGroup: "Day 13",
-            dayTitle: "Day 13: 10/18(六) 阿姆斯特丹往返羊角村",
+            dayGroup: "Day 14",
+            dayTitle: "Day 14: 10/17(五) 阿姆斯特丹往返羊角村",
             mapCenter: { lat: 52.6749, lng: 6.0889 }, // Approximate center for Giethoorn
             mapZoom: 12,
             items: [
-                { 地點: "阿姆斯特丹中央站 → Steenwijk → 公車70/270 → 羊角村", 描述: "07:30 出發", 類別: "🚄 移動", 網址: "https://maps.google.com/?cid=5909847684150077508", mapLabel: "羊角村", mapPriority: 1, lat: 52.3791, lng: 4.9003 }, // Amsterdam Centraal
-                { 地點: "羊角村", 描述: "運河風光：村內無汽車道路，以水道取代馬路，漫步於茅草屋與木橋間宛如童話。\n小船泛舟：租手划或電動小船，近距離欣賞水畔農舍與橋樑倒影。\n田園景致：Bovenwijde 湖畔遠眺開闊水面與綠野，拍攝最經典運河＋茅屋全景。", 類別: "🌷 景點", mapLabel: "羊角村", mapPriority: 2, lat: 52.6749, lng: 6.0889 },
+                { 地點: "阿姆斯特丹中央站 → Steenwijk → 公車70/270 → 羊角村（2.5h）", 描述: "搭火車轉公車。2.5小時/€30\n出發站：Amsterdam Centraal\n火車站：Steenwijk，你可以買從阿姆斯特丹直達Steenwijk的或是於Almere Centrum轉到Steenwijk\n到Steenwijk站之後，再轉公車70號，在Dominee Hylkemaweg, Giethoorn下車。", 類別: "🚄 移動", 網址: "https://lillian.tw/giethoorn/", mapLabel: "羊角村", mapPriority: 1, lat: 52.3791, lng: 4.9003 }, // Amsterdam Centraal
+                { 地點: "羊角村", 描述: "運河風光：村內無汽車道路，以水道取代馬路，漫步於茅草屋與木橋間宛如童話。\n小船泛舟：租手划或電動小船，近距離欣賞水畔農舍與橋樑倒影。\n田園景致：Bovenwijde 湖畔遠眺開闊水面與綠野，拍攝最經典運河＋茅屋全景。", 類別: "🌷 景點", 照片: "https://i0.wp.com/lillian.tw/wp-content/uploads/20221006153447_61.jpg?resize=800%2C420&quality=99&ssl=1", mapLabel: "羊角村", mapPriority: 2, lat: 52.6749, lng: 6.0889 },
                 { 地點: "返回阿姆斯特丹", 描述: "15:30 出發", 類別: "🚄 移動", mapLabel: "阿姆斯特丹", mapPriority: 3, lat: 52.3791, lng: 4.9003 },
-                { 地點: "夜遊阿姆斯特丹運河", 類別: "🌃 活動", 網址: "https://maps.google.com/?cid=2379724085717603866", mapLabel: "阿姆斯特丹運河", mapPriority: 4, lat: 52.3676, lng: 4.9041 },
-                { 地點: "ibis Amsterdam Centre 或 Hotel Library Amsterdam", 類別: "🏨 住宿", mapLabel: "阿姆斯特丹住宿", mapPriority: 5, 網址: "https://www.booking.com/hotel/nl/ibiscentre.zh-tw.html" } // Using Amsterdam Centraal for ibis
+                { 地點: "夜遊阿姆斯特丹運河", 類別: "🌃 活動", 網址: "https://www.klook.com/zh-TW/activity/85269-amsterdam-wine-cheese-evening-canal-cruise/?aid=11455&utm_medium=affiliate-alwayson&utm_source=non-network&utm_campaign=11455&utm_term=", mapLabel: "阿姆斯特丹運河", mapPriority: 4, lat: 52.3676, lng: 4.9041 },
+                { 地點: "ibis Amsterdam Centre 或 Hotel Library Amsterdam", 描述:"阿姆斯特丹住宿太貴了，也可以住羊角村", 類別: "🏨 住宿", mapLabel: "阿姆斯特丹住宿", mapPriority: 5, 網址: "阿姆斯特丹住宿|https://www.booking.com/hotel/nl/ibiscentre.zh-tw.html, 羊角村住宿|https://www.booking.com/hotel/nl/hoteldepergola.zh-tw.html?aid=304142&label=gen173bo-1FCAsoqQFCCmliaXNjZW50cmVIMFgDaOcBiAEBmAEwuAEHyAEM2AEB6AEB-AEDiAIBmAICqAIDuALjnNTDBsACAdICJDM0NjVkNTU3LTNkMzAtNGU2Ny1hYjY4LTdhYTdmOGRiYmI5YdgCBeACAQ&sid=f352d4109b5b1b44eab6ee651e9a42fd&all_sr_blocks=1132601_401096774_0_1_0%2C1132601_401096774_0_1_0&checkin=2025-10-18&checkout=2025-10-19&dest_id=11326&dest_type=hotel&dist=0&group_adults=4&group_children=0&hapos=1&highlighted_blocks=1132601_401096774_0_1_0%2C1132601_401096774_0_1_0&hpos=1&matching_block_id=1132601_401096774_0_1_0&no_rooms=1&req_adults=4&req_children=0&room1=A%2CA%2CA%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=1132601_401096774_0_1_0__9900%2C1132601_401096774_0_1_0__9900&srepoch=1752502458&srpvid=45750f5571b56df7dfd8cbd636b42731&type=total&ucfs=1&#_" } // Using Amsterdam Centraal for ibis
             ]
         },
-        // Day 14 (from ams.md Day 2)
+        // Day 15 (from ams.md Day 2)
         {
-            dayGroup: "Day 14",
-            dayTitle: "Day 14: 10/19(日) 阿姆斯特丹 → 小孩堤防 → 鹿特丹",
+            dayGroup: "Day 15",
+            dayTitle: "Day 15: 10/18(六) 阿姆斯特丹 → 小孩堤防 → 鹿特丹",
             mapCenter: { lat: 51.9244, lng: 4.4777 }, // Rotterdam Central Station
             mapZoom: 13,
             items: [
@@ -180,10 +180,10 @@ export const allItineraryData = [
                 { 地點: "Holiday Inn Express Rotterdam Central Station", 類別: "🏨 住宿", mapLabel: "鹿特丹住宿", mapPriority: 5, 網址: "https://www.booking.com/hotel/nl/holiday-inn-express-rotterdam-central-station.zh-tw.html" } // Using Rotterdam Centraal for Holiday Inn
             ]
         },
-        // Day 15 (from ams.md Day 3)
+        // Day 16 (from ams.md Day 3)
         {
-            dayGroup: "Day 15",
-            dayTitle: "Day 15: 10/20(一) 鹿特丹 → 布魯日 Bruges",
+            dayGroup: "Day 16",
+            dayTitle: "Day 16: 10/19(日) 鹿特丹 → 布魯日 Bruges",
             mapCenter: { lat: 51.2085, lng: 3.2250 }, // Bruges Market Square
             mapZoom: 13,
             items: [
@@ -195,10 +195,10 @@ export const allItineraryData = [
                 { 地點: "Hotel Bourgoensch Hof", 類別: "🏨 住宿", mapLabel: "布魯日住宿", mapPriority: 6, 網址: "https://www.booking.com/hotel/be/bourgoensch-hof.zh-tw.html" } // Using Bruges Market Square for Hotel
             ]
         },
-        // Day 16 (from ams.md Day 4)
+        // Day 17 (from ams.md Day 4)
         {
-            dayGroup: "Day 16",
-            dayTitle: "Day 16: 10/21(二) 布魯日 → 根特日遊 → 布魯日",
+            dayGroup: "Day 17",
+            dayTitle: "Day 17: 10/20(一) 布魯日 → 根特日遊 → 布魯日",
             mapCenter: { lat: 51.0543, lng: 3.7174 }, // Ghent
             mapZoom: 13,
             items: [
@@ -210,10 +210,10 @@ export const allItineraryData = [
                 { 地點: "Hotel Bourgoensch Hof", 類別: "🏨 住宿", mapLabel: "布魯日住宿", mapPriority: 6, 網址: "https://www.booking.com/hotel/be/bourgoensch-hof.zh-tw.html" }
             ]
         },
-        // Day 17 (from ams.md Day 5)
+        // Day 18 (from ams.md Day 5)
         {
-            dayGroup: "Day 17",
-            dayTitle: "Day 17: 10/22(三) 布魯日 → 布魯塞爾 Brussels",
+            dayGroup: "Day 18",
+            dayTitle: "Day 18: 10/21(二) 布魯日 → 布魯塞爾 Brussels",
             mapCenter: { lat: 50.8467, lng: 4.3525 }, // Grand Place
             mapZoom: 13,
             items: [
@@ -226,10 +226,10 @@ export const allItineraryData = [
                 { 地點: "easyHotel Brussels City Centre", 類別: "🏨 住宿", mapLabel: "布魯塞爾住宿", mapPriority: 7, 網址: "https://www.booking.com/hotel/be/easyhotel-brussels-city-centre.zh-tw.html" }
             ]
         },
-        // Day 18 (from ams.md Day 6)
+        // Day 19 (from ams.md Day 6)
         {
-            dayGroup: "Day 18",
-            dayTitle: "Day 18: 10/23(四) 布魯塞爾 → 代爾夫特 Delft → 阿姆斯特丹",
+            dayGroup: "Day 19",
+            dayTitle: "Day 19: 10/22(三) 布魯塞爾 → 代爾夫特 Delft → 阿姆斯特丹",
             mapCenter: { lat: 52.0116, lng: 4.3571 }, // Delft
             mapZoom: 13,
             items: [
@@ -242,10 +242,10 @@ export const allItineraryData = [
                 { 地點: "ibis Amsterdam Centre 或 Hotel Library Amsterdam", 類別: "🏨 住宿", mapLabel: "阿姆斯特丹住宿", mapPriority: 7, 網址: "https://www.booking.com/hotel/nl/ibiscentre.zh-tw.html" }
             ]
         },
-        // Day 19 (from ams.md Day 7)
+        // Day 20 (from ams.md Day 7)
         {
-            dayGroup: "Day 19",
-            dayTitle: "Day 19: 10/24(五) 阿姆斯特丹近郊 → 薩恩塞斯安斯風車村 → 市區漫遊",
+            dayGroup: "Day 20",
+            dayTitle: "Day 20: 10/23(四) 阿姆斯特丹近郊 → 薩恩塞斯安斯風車村 → 市區漫遊",
             mapCenter: { lat: 52.4709, lng: 4.7989 }, // Zaanse Schans
             mapZoom: 13,
             items: [
@@ -257,10 +257,10 @@ export const allItineraryData = [
                 { 地點: "ibis Amsterdam Centre 或 Hotel Library Amsterdam", 類別: "🏨 住宿", mapLabel: "阿姆斯特丹住宿", mapPriority: 6, 網址: "https://www.booking.com/hotel/nl/ibiscentre.zh-tw.html" }
             ]
         },
-        // Day 20 - 回程日
+        // Day 21 - 回程日
         {
-            dayGroup: "Day 20",
-            dayTitle: "Day 20: 10/25(六) 回程",
+            dayGroup: "Day 21",
+            dayTitle: "Day 21: 10/24(五) 回程",
             mapCenter: { lat: 52.3105, lng: 4.7683 }, // Schiphol Airport
             mapZoom: 11,
             items: [
