@@ -145,11 +145,12 @@ export const allItineraryData = [
             {地點: "Grettir Guesthouse Downtown Charm", 類別: "🏡 住宿", 描述: "<span style='color:green;'>&#10003;</span>廚房，<span style='color:red;'>&#10007;</span>洗衣，<span style='color:red;'>&#10007;</span>早餐，<span style='color:green;'>&#10003;</span>停車，NT$7,996，雙人房", 網址: "https://www.booking.com/Share-NeX74T", lat: 64.14523324228844, lng: -21.92748344376633, 照片: "https://cf.bstatic.com/xdata/images/hotel/max1280x900/606428941.jpg?k=b320806e5ae8120e9e96f85a42fd59ede02a2254b487d767a4381df5e47ada66&o=&hp=1", mapLabel: "Grettir Guesthouse", mapPriority: 7}
         ]},
         // Day 13
-        { dayGroup: "Day 13", dayTitle: "Day 13: 10/16(四) 冰島往阿姆斯特丹", mapCenter: { lat: 64.05, lng: -22.2 }, mapZoom: 9, items: [
+        { dayGroup: "Day 13", dayTitle: "Day 13: 10/16(四) 冰島往阿姆斯特丹", mapCenter: { lat: 52.387386706609, lng: 4.8361497102209166 }, mapZoom: 11, items: [
             {地點: "KEF 機場還車、搭機", 描述: "要確認下可以還車的時間", 類別: "🚗 移動"},
             {地點: "10:30班機", 類別: "✈️ 飛行"},
             {地點: "移動: 雷克雅維克 → AMS", 類別: "🚗 移動"},
             {地點: "抵達 AMS 15:45  ",  類別: "✈️ 飛行"},
+            { 地點: "Mercure Amsterdam", 類別: "🏨 住宿", 描述: "<span style='color:red;'>&#10007;</span>廚房，<span style='color:green;'>&#10003;</span>洗衣，早餐 817/人，<span style='color:red;'>&#10007;</span>停車", 網址: "https://www.booking.com/Share-pKL0NjK", 照片: "https://lh3.googleusercontent.com/p/AF1QipPF7x2vAiloy-8e3CjEmThdweLXibLEX3VMmjcr=w324-h312-n-k-no", lat: 52.387386706609, lng: 4.8361497102209166, mapLabel: "Mercure Amsterdam", mapPriority: 5 }
         ]},
         // 荷蘭行程開始
         // Day 14 (新版根據 ams.md)
@@ -163,7 +164,7 @@ export const allItineraryData = [
                 { 地點: "🌷 羊角村（Giethoorn）", 描述: "運河風光：村內無汽車道路，以水道取代馬路，漫步於茅草屋與木橋間宛如童話。\n小船泛舟：租手劃或電動小船，近距離欣賞水畔農舍與橋樑倒影。\n田園景致：Bovenwijde 湖畔遠眺開闊水面與綠野，拍攝最經典運河＋茅屋全景。", 類別: "🌷 景點", lat: 52.6749, lng: 6.0889, mapLabel: "羊角村", mapPriority: 2 },
                 { 地點: "15:30 羊角村 → 阿姆斯特丹", 描述: "公車70/270 15分鐘 → Steenwijk → 阿姆斯特丹 1小時35分，預計17:20抵達阿姆斯特丹中央站", 類別: "🚄 移動", lat: 52.3791, lng: 4.9003, mapLabel: "阿姆斯特丹中央站", mapPriority: 3 },
                 { 地點: "🌃 夜間市區漫步", 描述: "達姆廣場夜景", 類別: "🌃 活動", 網址: "https://maps.google.com/?q=Dam+Square+Amsterdam, https://maps.google.com/?q=Red+Light+District+Amsterdam", lat: 52.3676, lng: 4.9041, mapLabel: "紅燈區", mapPriority: 4 },
-                { 地點: "ibis Amsterdam Centre 或 Hotel Library Amsterdam", 類別: "🏨 住宿", lat: 52.3791, lng: 4.9003, mapLabel: "阿姆斯特丹住宿", mapPriority: 5 }
+                { 地點: "Mercure Amsterdam", 類別: "🏨 住宿", 描述: "<span style='color:red;'>&#10007;</span>廚房，<span style='color:green;'>&#10003;</span>洗衣，早餐 817/人，<span style='color:red;'>&#10007;</span>停車，NT$30,302（2晚）", 網址: "https://www.booking.com/Share-pKL0NjK", 照片: "https://lh3.googleusercontent.com/p/AF1QipPF7x2vAiloy-8e3CjEmThdweLXibLEX3VMmjcr=w324-h312-n-k-no", lat: 52.387386706609, lng: 4.8361497102209166, mapLabel: "Mercure Amsterdam", mapPriority: 5 }
             ]
         },
         // Day 15 (新版根據 ams.md)
@@ -178,7 +179,7 @@ export const allItineraryData = [
                 { 地點: "🌷 薩恩塞斯安斯風車村", 描述: "8座18世紀風車群：製油、鋸木等傳統工藝風車\n起司農舍與木鞋作坊：試吃起司並購買荷蘭木鞋\n桑河畔步道：拍攝經典風車鄉村景觀", 類別: "🌷 景點", 網址: "https://maps.google.com/?q=Zaanse+Schans", lat: 52.4709, lng: 4.7989, mapLabel: "風車村", mapPriority: 3 },
                 { 地點: "14:00 贊丹 → 鹿特丹", 描述: "1小時", 類別: "🚄 移動", lat: 51.9244, lng: 4.4777, mapLabel: "鹿特丹中央站", mapPriority: 4 },
                 { 地點: "🏙️ 鹿特丹現代建築", 描述: "方塊屋：前衛立體建築群\n馬克拱廊市場：號稱全球最美菜市場\n伊拉斯莫斯橋：天鵝橋夕陽美景", 類別: "🌷 景點", 網址: "https://maps.google.com/?q=Rotterdam+Centraal+Station, https://maps.google.com/?q=Cube+Houses+Rotterdam, https://maps.google.com/?q=Markthal+Rotterdam", lat: 51.9244, lng: 4.4777, mapLabel: "鹿特丹建築", mapPriority: 5 },
-                { 地點: "Holiday Inn Express Rotterdam Central Station", 類別: "🏨 住宿", lat: 51.9244, lng: 4.4777, mapLabel: "鹿特丹住宿", mapPriority: 6 }
+                { 地點: "Motel One Rotterdam", 類別: "🏨 住宿", 描述: "<span style='color:red;'>&#10007;</span>廚房，<span style='color:red;'>&#10007;</span>洗衣，早餐 588/人，<span style='color:red;'>&#10007;</span>停車，NT$10,709", 網址: "https://www.booking.com/Share-6OxlQuP", 照片: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/482030588.jpg?k=db54de22b746793597fc3fe9c2b245c786ed9d17705c70964a77cc44edd75091&o=&hp=1", lat: 51.921130219846425, lng: 4.4852683041027595, mapLabel: "Motel One Rotterdam", mapPriority: 6 }
             ]
         },
         // Day 16 (新版根據 ams.md)
@@ -192,7 +193,7 @@ export const allItineraryData = [
                 { 地點: "🌷 布魯日（Bruges）中世紀古城", 描述: "市集廣場（Markt）與鐘樓：壯麗哥德鐘樓與行會會館\n布魯日鐘樓登頂：俯瞰整座古城全景\n愛情湖（Minnewater）：天鵝湖畔最浪漫拍照點\n貝居安會院：白牆庭院與寧靜修道院", 類別: "🌷 景點", lat: 51.2085, lng: 3.2250, mapLabel: "布魯日古城", mapPriority: 2 },
                 { 地點: "🛶 14:00 布魯日運河遊船", 描述: "唯一一次運河體驗", 類別: "🛶 活動", 網址: "https://maps.google.com/?q=Rozenhoedkaai+Bruges", lat: 51.2085, lng: 3.2250, mapLabel: "玫瑰碼頭", mapPriority: 3 },
                 { 地點: "🍫 巧克力工坊＋蕾絲店巡禮", 類別: "🛍️ 活動", lat: 51.2085, lng: 3.2250, mapLabel: "布魯日購物", mapPriority: 4 },
-                { 地點: "Hotel Bourgoensch Hof", 類別: "🏨 住宿", lat: 51.2085, lng: 3.2250, mapLabel: "布魯日住宿", mapPriority: 5 }
+                { 地點: "Gepetto's", 類別: "🏨 住宿", 描述: "<span style='color:red;'>&#10007;</span>廚房，<span style='color:red;'>&#10007;</span>洗衣，<span style='color:red;'>&#10007;</span>早餐，<span style='color:red;'>&#10007;</span>停車，NT$27,993（3晚）", 網址: "https://www.booking.com/Share-stMBLN", 照片: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/268730642.jpg?k=ef3823877d854be5261108b20a7d0d4950a9de24bb1873f6e90c89f611df69c6&o=", lat: 51.2085, lng: 3.2250, mapLabel: "Gepetto's", mapPriority: 5 }
             ]
         },
         // Day 17 (新版根據 ams.md)
@@ -210,7 +211,7 @@ export const allItineraryData = [
                 { 地點: "⛪ 聖尼古拉斯教堂", 描述: "典型比利時哥德式建築", 類別: "⛪ 景點", lat: 51.0543, lng: 3.7174, mapLabel: "聖尼古拉斯教堂", mapPriority: 6 },
                 { 地點: "🍻 根特啤酒品嚐＋比利時華夫餅", 類別: "🍻 活動", lat: 51.0543, lng: 3.7174, mapLabel: "根特美食", mapPriority: 7 },
                 { 地點: "16:30 根特 → 布魯日", 描述: "25分鐘", 類別: "🚄 移動", lat: 51.2085, lng: 3.2250, mapLabel: "布魯日", mapPriority: 8 },
-                { 地點: "Hotel Bourgoensch Hof", 類別: "🏨 住宿", lat: 51.2085, lng: 3.2250, mapLabel: "布魯日住宿", mapPriority: 9 }
+                { 地點: "Gepetto's", 類別: "🏨 住宿", 描述: "<span style='color:red;'>&#10007;</span>廚房，<span style='color:red;'>&#10007;</span>洗衣，<span style='color:red;'>&#10007;</span>早餐，<span style='color:red;'>&#10007;</span>停車，NT$27,993（3晚）", 網址: "https://www.booking.com/Share-stMBLN", 照片: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/268730642.jpg?k=ef3823877d854be5261108b20a7d0d4950a9de24bb1873f6e90c89f611df69c6&o=", lat: 51.2085, lng: 3.2250, mapLabel: "Gepetto's", mapPriority: 9 }
             ]
         },
         // Day 18 (新版根據 ams.md)
@@ -226,7 +227,7 @@ export const allItineraryData = [
                 { 地點: "🍽 午餐 Rue des Bouchers 美食街", 描述: "淡菜＋啤酒", 類別: "🍽 吃喝", 網址: "https://maps.google.com/?q=Rue+des+Bouchers+Brussels", lat: 50.8485, lng: 4.3500, mapLabel: "Rue des Bouchers", mapPriority: 4 },
                 { 地點: "🛍️ 聖於貝爾長廊", 描述: "歐洲最美購物拱廊", 類別: "🛍️ 景點", 網址: "https://maps.google.com/?q=Galeries+Royales+Saint-Hubert+Brussels", lat: 50.8485, lng: 4.3500, mapLabel: "聖休伯特拱廊街", mapPriority: 5 },
                 { 地點: "🏰 布魯塞爾皇宮區", 描述: "皇家廣場＋聖雅各教堂", 類別: "🏰 景點", lat: 50.8467, lng: 4.3600, mapLabel: "皇宮區", mapPriority: 6 },
-                { 地點: "easyHotel Brussels City Centre", 類別: "🏨 住宿", lat: 50.8467, lng: 4.3525, mapLabel: "布魯塞爾住宿", mapPriority: 7 }
+                { 地點: "Gepetto's (Brussels)", 類別: "🏨 住宿", 描述: "<span style='color:red;'>&#10007;</span>廚房，<span style='color:red;'>&#10007;</span>洗衣，<span style='color:red;'>&#10007;</span>早餐，<span style='color:red;'>&#10007;</span>停車，NT$27,993（3晚）", 網址: "https://www.booking.com/Share-stMBLN", 照片: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/268730642.jpg?k=ef3823877d854be5261108b20a7d0d4950a9de24bb1873f6e90c89f611df69c6&o=", lat: 50.8467, lng: 4.3525, mapLabel: "Gepetto's Brussels", mapPriority: 7 }
             ]
         },
         // Day 19 (新版根據 ams.md)
@@ -241,7 +242,7 @@ export const allItineraryData = [
                 { 地點: "14:30 代爾夫特 → 阿姆斯特丹", 描述: "1小時", 類別: "🚄 移動", lat: 52.3791, lng: 4.9003, mapLabel: "阿姆斯特丹", mapPriority: 3 },
                 { 地點: "🚴 九條小街（Negen Straatjes）", 描述: "精品店與咖啡廳聚集地", 類別: "🚴 活動", 網址: "https://maps.google.com/?q=Nine+Streets+Amsterdam", lat: 52.3676, lng: 4.8910, mapLabel: "九條街", mapPriority: 4 },
                 { 地點: "🚶 喬丹區（Jordaan）", 描述: "藝術家聚集的波希米亞區域", 類別: "🚶 景點", 網址: "https://maps.google.com/?q=Jordaan+Amsterdam", lat: 52.3740, lng: 4.8830, mapLabel: "約丹", mapPriority: 5 },
-                { 地點: "ibis Amsterdam Centre 或 Hotel Library Amsterdam", 類別: "🏨 住宿", lat: 52.3791, lng: 4.9003, mapLabel: "阿姆斯特丹住宿", mapPriority: 6 }
+                { 地點: "Mercure Amsterdam", 類別: "🏨 住宿", 描述: "<span style='color:red;'>&#10007;</span>廚房，<span style='color:green;'>&#10003;</span>洗衣，早餐 817/人，<span style='color:red;'>&#10007;</span>停車，NT$25,807（2晚）", 網址: "https://www.booking.com/Share-pKL0NjK", 照片: "https://lh3.googleusercontent.com/p/AF1QipPF7x2vAiloy-8e3CjEmThdweLXibLEX3VMmjcr=w324-h312-n-k-no", lat: 52.387386706609, lng: 4.8361497102209166, mapLabel: "Mercure Amsterdam", mapPriority: 6 }
             ]
         },
         // Day 20 (新版根據 ams.md)
@@ -256,7 +257,7 @@ export const allItineraryData = [
                 { 地點: "🌃 紅燈區（Red Light District）", 描述: "夜間獨特文化體驗", 類別: "🌃 活動", 網址: "https://maps.google.com/?q=Red+Light+District+Amsterdam", lat: 52.3740, lng: 4.8980, mapLabel: "紅燈區", mapPriority: 3 },
                 { 地點: "🌳 馮德爾公園（Vondelpark）", 描述: "市區綠洲散步", 類別: "🌳 景點", 網址: "https://maps.google.com/?q=Vondelpark+Amsterdam", lat: 52.3584, lng: 4.8680, mapLabel: "Vondelpark", mapPriority: 4 },
                 { 地點: "🛍️ 購物街區", 描述: "卡爾弗街（Kalverstraat）：主要購物大街\n萊茲廣場（Leidseplein）：夜生活娛樂中心", 類別: "🛍️ 活動", lat: 52.3676, lng: 4.8910, mapLabel: "購物街區", mapPriority: 5 },
-                { 地點: "ibis Amsterdam Centre 或 Hotel Library Amsterdam", 類別: "🏨 住宿", lat: 52.3791, lng: 4.9003, mapLabel: "阿姆斯特丹住宿", mapPriority: 6 }
+                { 地點: "Mercure Amsterdam", 類別: "🏨 住宿", 描述: "<span style='color:red;'>&#10007;</span>廚房，<span style='color:green;'>&#10003;</span>洗衣，早餐 817/人，<span style='color:red;'>&#10007;</span>停車，NT$25,807（2晚）", 網址: "https://www.booking.com/Share-pKL0NjK", 照片: "https://lh3.googleusercontent.com/p/AF1QipPF7x2vAiloy-8e3CjEmThdweLXibLEX3VMmjcr=w324-h312-n-k-no", lat: 52.387386706609, lng: 4.8361497102209166, mapLabel: "Mercure Amsterdam", mapPriority: 6 }
             ]
         },
         // Day 21 - 回程日
