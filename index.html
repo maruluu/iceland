@@ -773,6 +773,18 @@
         }
 
         function selectDay(country, dayIndex, element) {
+            // 展開對應的國家選單
+            document.querySelectorAll('.country-section').forEach(section => {
+                section.classList.remove('expanded');
+            });
+            
+            // 根據選擇的國家展開對應選單
+            if (country === 'iceland') {
+                document.querySelector('.country-section:first-of-type').classList.add('expanded');
+            } else {
+                document.querySelector('.country-section:last-of-type').classList.add('expanded');
+            }
+
             document.querySelectorAll('.day-item').forEach(item => item.classList.remove('active'));
             if(element) element.classList.add('active');
 
