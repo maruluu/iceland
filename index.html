@@ -876,7 +876,52 @@
             const mapElement = document.getElementById(mapId);
             if (!mapElement) return;
 
-            const locations = (dayData.items || []).filter(item => item.lat && item.lng && item.mapLabel && typeof item.mapPriority === 'number').sort((a, b) => a.mapPriority - b.mapPriority).map(item => ({ location: { lat: item.lat, lng: item.lng }, title: item.mapLabel || item.地點 }));
+            const rawLocations = (dayData.items || []).filter(item => item.lat && item.lng && item.mapLabel && typeof item.mapPriority === 'number').sort((a, b) => a.mapPriority - b.mapPriority);
+            
+            // 處理相同經緯度的標籤重疊問題
+            const locationGroups = {};
+            const locations = [];
+            
+            rawLocations.forEach(item => {
+                const key = `${item.lat},${item.lng}`;
+                if (!locationGroups[key]) {
+                    locationGroups[key] = [];
+                }
+                locationGroups[key].push(item.mapLabel || item.地點);
+            });
+            
+            rawLocations.forEach((item, index) => {
+                const key = `${item.lat},${item.lng}`;
+                const group = locationGroups[key];
+                
+                if (group.length > 1) {
+                    // 相同位置的標籤合併或添加編號
+                    const uniqueLabels = [...new Set(group)];
+                    if (uniqueLabels.length === 1) {
+                        // 所有標籤相同，只顯示一個
+                        if (locations.findIndex(loc => loc.location.lat === item.lat && loc.location.lng === item.lng) === -1) {
+                            locations.push({ 
+                                location: { lat: item.lat, lng: item.lng }, 
+                                title: uniqueLabels[0] 
+                            });
+                        }
+                    } else {
+                        // 不同標籤，合併顯示
+                        if (locations.findIndex(loc => loc.location.lat === item.lat && loc.location.lng === item.lng) === -1) {
+                            locations.push({ 
+                                location: { lat: item.lat, lng: item.lng }, 
+                                title: uniqueLabels.join(' / ') 
+                            });
+                        }
+                    }
+                } else {
+                    // 獨特位置，直接添加
+                    locations.push({ 
+                        location: { lat: item.lat, lng: item.lng }, 
+                        title: item.mapLabel || item.地點 
+                    });
+                }
+            });
 
             if (locations.length === 0) {
                 mapElement.innerHTML = '<div class="map-loading">此日程無地圖資料</div>';
