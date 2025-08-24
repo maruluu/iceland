@@ -184,20 +184,101 @@ export const allItineraryData = [
                 { 地點: "Motel One Rotterdam", 類別: "🏨 住宿", 描述: "<span style='color:red;'>&#10007;</span>廚房，<span style='color:red;'>&#10007;</span>洗衣，早餐 588/人，NT$10,709", 網址: "https://www.booking.com/Share-6OxlQuP", 照片: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/482030588.jpg?k=db54de22b746793597fc3fe9c2b245c786ed9d17705c70964a77cc44edd75091&o=&hp=1", lat: 51.921130219846425, lng: 4.4852683041027595, mapLabel: "Motel One Rotterdam", mapPriority: 4 }
             ]
         },
-        // Day 16 (新版根據 ams.md)
-        {
-            dayGroup: "Day 16",
-            dayTitle: "Day 16: 10/19(日) 鹿特丹 → 布魯日 Bruges",
-            mapCenter: { lat: 51.2085, lng: 3.2250 },
-            mapZoom: 13,
-            items: [
-                { 地點: "08:00 鹿特丹 → 布魯日", 描述: "約2–2.5小時", 類別: "🚄 移動", 網址: "https://maps.google.com/?q=Bruges+Belgium", lat: 51.2085, lng: 3.2250, mapLabel: "布魯日", mapPriority: 1 },
-                { 地點: "🌷 布魯日（Bruges）中世紀古城", 描述: "市集廣場（Markt）與鐘樓：壯麗哥德鐘樓與行會會館\n布魯日鐘樓登頂：俯瞰整座古城全景\n愛情湖（Minnewater）：天鵝湖畔最浪漫拍照點\n貝居安會院：白牆庭院與寧靜修道院", 類別: "🌷 景點", lat: 51.2085, lng: 3.2250, mapLabel: "布魯日古城", mapPriority: 2 },
-                { 地點: "🛶 14:00 布魯日運河遊船", 描述: "唯一一次運河體驗", 類別: "🛶 活動", 網址: "https://maps.google.com/?q=Rozenhoedkaai+Bruges", lat: 51.2085, lng: 3.2250, mapLabel: "玫瑰碼頭", mapPriority: 3 },
-                { 地點: "🍫 巧克力工坊＋蕾絲店巡禮", 類別: "🛍️ 活動", lat: 51.2085, lng: 3.2250, mapLabel: "布魯日購物", mapPriority: 4 },
-                { 地點: "Gepetto's", 類別: "🏨 住宿", 描述: "<span style='color:red;'>&#10007;</span>廚房，<span style='color:red;'>&#10007;</span>洗衣，<span style='color:red;'>&#10007;</span>早餐，<span style='color:red;'>&#10007;</span>停車，NT$27,993（3晚）", 網址: "https://www.booking.com/Share-stMBLN", 照片: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/268730642.jpg?k=ef3823877d854be5261108b20a7d0d4950a9de24bb1873f6e90c89f611df69c6&o=", lat: 51.2085, lng: 3.2250, mapLabel: "Gepetto's", mapPriority: 5 }
-            ]
-        },
+// Day 16
+{
+  "dayGroup": "Day 16",
+  "dayTitle": "Day 16: 10/19(日) 鹿特丹 → 根特 Ghent（入住 Gepetto’s）",
+  "mapCenter": { "lat": 51.0543, "lng": 3.7174 },
+  "mapZoom": 13,
+  "items": [
+    {
+      "地點": "Motel One Rotterdam → 步行至 Beurs 站 → Metro 地鐵 D/E 線（往 Den Haag Centraal 方向）→ Rotterdam Centraal",
+      "描述": "約 10–12 分鐘；行李多可改搭 Uber",
+      "類別": "🚄 移動"
+    },
+    {
+      "地點": "Rotterdam Centraal → Antwerpen-Centraal",
+      "描述": "🚉 搭 NS Intercity Brussels（IC Brussels）約 35–45 分； \n⚠️ 購票：NS International App 一次買到 Gent-Sint-Pieters（跨境 + 比利時段都包含），不需額外買 SNCB",
+      "類別": "🚄 移動"
+    },
+    {
+      "地點": "Antwerpen-Centraal → Gent-Sint-Pieters",
+      "描述": "轉乘比利時國鐵 SNCB InterCity 約 50 分；此段已包含在 NS International 車票內，不需再另外購票",
+      "類別": "🚄 移動"
+    },
+    {
+      "地點": "Gent-Sint-Pieters → Gepetto’s 放行李",
+      "描述": "下火車 → 走出 Station 主出口\n電車站牌位置：你會看到有軌道在正前方廣場，Tram 1 的月台在最靠近火車站的軌道，有電子看板顯示班次\n搭 Tram 1 往 Centrum/Korenmarkt 方向，於 Korenmarkt 下車步行 3–5 分 \n⚠️ 上車時刷信用卡 / Apple Pay / Google Pay 感應即可 (€2.5–3)；或 Uber 10–15 分",
+      "類別": "🚋 市內交通",
+      "lat": 51.0547,
+      "lng": 3.7210,
+      "mapLabel": "Korenmarkt 停靠點",
+      "mapPriority": 1
+    },
+    {
+      "地點": "Gepetto’s（Ghent）",
+      "類別": "🏨 住宿",
+      "描述": "<span style='color:red;'>&#10007;</span>廚房，<span style='color:red;'>&#10007;</span>洗衣，<span style='color:red;'>&#10007;</span>早餐，<span style='color:red;'>&#10007;</span>停車（實際以訂房為準）",
+      "網址": "https://www.booking.com/Share-stMBLN",
+      "照片": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/268730642.jpg?k=ef3823877d854be5261108b20a7d0d4950a9de24bb1873f6e90c89f611df69c6&o=",
+      "lat": 51.0543,
+      "lng": 3.7174,
+      "mapLabel": "Gepetto’s（Ghent）",
+      "mapPriority": 2
+    },
+    {
+      "地點": "Gravensteen（伯爵城堡）",
+      "描述": "Gepetto’s 步行約 3 分鐘 \n12 世紀要塞，屋頂視野佳；建議 45–60 分 \n開放時間：10:00–18:00（最晚入場 16:40）\n票價：€13",
+      "類別": "🏰 景點",
+      "照片": "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrAI6D1ESjSruErhNtmeaKjK-fJcXqyjPcC-zDUj7ozS_E0w_sbA4JEZg20nFcNTDsIxJmkq0Yp6sVT5aIYPtqsuL0v0DYIRj5y1JDqh7o1Eb1x-CvMBQRr34FtEzpdV_gcjfBu=w408-h306-k-no",
+      "lat": 51.0570,
+      "lng": 3.7200,
+      "mapLabel": "Gravensteen",
+      "mapPriority": 3
+    },
+    {
+      "地點": "Graslei & Korenlei 河畔 (香草河岸與穀物河岸)",
+      "描述": "根特經典河岸立面；黃昏、夜景皆適合拍照",
+      "照片": "https://www.leo-travel.idv.tw/wp-content/uploads/belgium-ghent-Graslei-DSC_6529.webp",
+      "類別": "🌉 景點",
+      "lat": 51.0543,
+      "lng": 3.7174,
+      "mapLabel": "Graslei & Korenlei",
+      "mapPriority": 4
+    },
+    {
+      "地點": "聖巴夫大教堂（St. Bavo）",
+      "描述": "\n 營業時間：08:30-17:00，免費，畫作參觀要錢 \n 收藏世界名畫《神秘羔羊》祭壇畫；可安排 30–45 分",
+      "類別": "⛪ 景點",
+      "照片": "https://hojenjen.com/wp-content/uploads/20180427202614_51.jpg",
+      "lat": 51.0536,
+      "lng": 3.7250,
+      "mapLabel": "St. Bavo Cathedral",
+      "mapPriority": 5
+    },
+    {
+      "地點": "根特鐘樓（Belfort van Gent）",
+      "描述": "聯合國世界遺產，可登塔俯瞰整座城市；約 45–60 分\n票價：€10，開放時間 10:00–18:00",
+      "類別": "🏰 景點",
+      "照片": "https://lohanpush.com/wp-content/uploads/2020/03/1_jpn3310.jpg",
+      "lat": 51.0540,
+      "lng": 3.7245,
+      "mapLabel": "Belfort van Gent",
+      "mapPriority": 6
+    },
+    {
+      "地點": "晚餐建議：Korenmarkt 一帶",
+      "描述": "比利時啤酒＋啤酒燉牛肉／淡菜 (mussels)\n Moules-frites（青口配薯條）：比利時與法國北部的招牌料理(青口通常用白酒、洋蔥、大蒜、芹菜清蒸)\n；餐後可沿河散步回住宿",
+      "類別": "🍽 吃喝",
+      "照片": "https://images.food52.com/YpbM9r97nWl2OTzu8UZDnY6Zk8E=/1ba77541-905b-4ab4-a658-2e413ca8a5f3--20190420_195546.jpg?w=3840&q=75",
+      "lat": 51.0547,
+      "lng": 3.7210,
+      "mapLabel": "Korenmarkt 餐廳區",
+      "mapPriority": 7
+    }
+  ]
+}
+,
         // Day 17 (新版根據 ams.md)
         {
             dayGroup: "Day 17",
