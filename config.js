@@ -519,21 +519,103 @@ export const allItineraryData = [
   ]
 },
         // Day 19 (新版根據 ams.md)
-        {
-            dayGroup: "Day 19",
-            dayTitle: "Day 19: 10/22(三) 布魯塞爾 → 代爾夫特 Delft → 阿姆斯特丹",
-            mapCenter: { lat: 52.0116, lng: 4.3571 },
-            mapZoom: 13,
-            items: [
-                { 地點: "08:00 布魯塞爾 → 鹿特丹 → 代爾夫特", 描述: "1小時20分 + 15分鐘（經鹿特丹轉車）", 類別: "🚄 移動", 網址: "https://maps.google.com/?q=Delft+Netherlands", lat: 52.0116, lng: 4.3571, mapLabel: "代爾夫特", mapPriority: 1 },
-                { 地點: "🏘️ 代爾夫特古城區", 描述: "市集廣場（Markt）與新教堂（Nieuwe Kerk）：斜塔與皇家陵墓\n舊教堂（Oude Kerk）：傾斜塔樓拍照聖地\n東門（Oostpoort）：13世紀古城門\n維梅爾中心：《戴珍珠耳環的少女》畫家故鄉", 類別: "🏘️ 景點", lat: 52.0116, lng: 4.3571, mapLabel: "代爾夫特古城", mapPriority: 2 },
-                { 地點: "14:30 代爾夫特 → 阿姆斯特丹", 描述: "1小時", 類別: "🚄 移動", lat: 52.3791, lng: 4.9003, mapLabel: "阿姆斯特丹", mapPriority: 3 },
-                { 地點: "🚴 九條小街（Negen Straatjes）", 描述: "精品店與咖啡廳聚集地", 類別: "🚴 活動", 網址: "https://maps.google.com/?q=Nine+Streets+Amsterdam", lat: 52.3676, lng: 4.8910, mapLabel: "九條街", mapPriority: 4 },
-                { 地點: "🚶 喬丹區（Jordaan）", 描述: "藝術家聚集的波希米亞區域", 類別: "🚶 景點", 網址: "https://maps.google.com/?q=Jordaan+Amsterdam", lat: 52.3740, lng: 4.8830, mapLabel: "約丹", mapPriority: 5 },
-                { 地點: "Mercure Amsterdam", 類別: "🏨 住宿", 描述: "<span style='color:red;'>&#10007;</span>廚房，<span style='color:green;'>&#10003;</span>洗衣，早餐 817/人，<span style='color:red;'>&#10007;</span>停車，NT$25,807（2晚）", 網址: "https://www.booking.com/Share-pKL0NjK", 照片: "https://lh3.googleusercontent.com/p/AF1QipPF7x2vAiloy-8e3CjEmThdweLXibLEX3VMmjcr=w324-h312-n-k-no", lat: 52.387386706609, lng: 4.8361497102209166, mapLabel: "Mercure Amsterdam", mapPriority: 6 }
-            ]
-        },
-        // Day 20 (新版根據 ams.md)
+{
+  "dayGroup": "Day 19",
+  "dayTitle": "Day 19: 10/22(三) 根特 → 代爾夫特 Delft → 阿姆斯特丹",
+  "mapCenter": { "lat": 52.0116, "lng": 4.3571 },
+  "mapZoom": 13,
+  "items": [
+    {
+      "地點": "Gepetto’s → Korenmarkt Tram 1 站",
+      "描述": "從住宿步行約 3–5 分鐘到 Korenmarkt。\n搭 Tram 1（往 Gent-Sint-Pieters 方向），車程約 10–12 分鐘，班次 5–10 分鐘一班。\n⚠️ 上車刷信用卡 / Apple Pay / Google Pay (€2.5–3)，或用 De Lijn App。終點站 Gent-Sint-Pieters。",
+      "類別": "🚋 市內交通",
+      "lat": 51.0547,
+      "lng": 3.7210,
+      "mapLabel": "Korenmarkt Tram 站",
+      "mapPriority": 1
+    },
+    {
+      "地點": "Gent-Sint-Pieters → Rotterdam Centraal",
+      "描述": "搭乘 NS International Intercity Brussels (IC Brussels)，約 1 小時 40 分鐘。\n⚠️ 建議用 NS International App 一次買到 Delft，避免分段買票。",
+      "類別": "🚄 移動",
+      "lat": 51.0351,
+      "lng": 3.7103,
+      "mapLabel": "Gent-Sint-Pieters",
+      "mapPriority": 2
+    },
+    {
+      "地點": "Rotterdam Centraal → Delft",
+      "描述": "轉乘 NS 區間車 (Intercity 或 Sprinter)，約 15 分鐘，班次每 10 分鐘一班。\n台夫特火車站分成 Delft 和 Delft Zuid，市中心的火車站是「Delft」。\n\n⚠️ 行李要先放車站 luggage locker。",
+      "類別": "🚄 移動",
+      "lat": 51.9244,
+      "lng": 4.4777,
+      "mapLabel": "Rotterdam Centraal",
+      "mapPriority": 3
+    },
+    {
+      "地點": "市集廣場 (Markt)",
+      "描述": "Delft 市中心廣場，兩側是新教堂與市政廳。適合先在這裡定位路線。",
+      "類別": "🌆 景點",
+      "照片":"https://www.leo-travel.idv.tw/wp-content/uploads/holland-delft-half-day-trip-1111-14460-photo.jpg",
+      "lat": 52.0116,
+      "lng": 4.3571,
+      "mapLabel": "Delft Markt",
+      "mapPriority": 4
+    },
+    {
+      "地點": "Nieuwe Kerk（新教堂）",
+      "描述": "位於 Markt 廣場上，以橘色王室墓園聞名，可登塔俯瞰 Delft 景色(爬上超過360階的階梯)。\n停留：30–40 分鐘。",
+      "照片": "https://www.leo-travel.idv.tw/wp-content/uploads/holland-delft-half-day-trip-2000-14460-photo.jpg",
+      "類別": "⛪ 景點",
+      "lat": 52.0116,
+      "lng": 4.3572,
+      "mapLabel": "Nieuwe Kerk",
+      "mapPriority": 5
+    },
+    {
+      "地點": "Oude Kerk（舊教堂）",
+      "描述": "有明顯傾斜的鐘塔，內部收藏維梅爾墓碑。\n停留：20–30 分鐘。",
+      "照片": "https://www.leo-travel.idv.tw/wp-content/uploads/holland-delft-half-day-trip-11.jpg",
+      "類別": "⛪ 景點",
+      "lat": 52.0125,
+      "lng": 4.3557,
+      "mapLabel": "Oude Kerk",
+      "mapPriority": 6
+    },
+    {
+      "地點": "Oostpoort（東門）",
+      "描述": "Delft 唯一保留的中世紀城門，雙塔結構，風景優美。\n停留：15–20 分鐘。",
+      "照片": "https://www.leo-travel.idv.tw/wp-content/uploads/holland-delft-half-day-trip-DSC_4168.jpg",
+      "類別": "🏰 景點",
+      "lat": 52.0170,
+      "lng": 4.3681,
+      "mapLabel": "Oostpoort",
+      "mapPriority": 7
+    },
+    {
+      "地點": "Delft → Amsterdam Sloterdijk（下車步行至飯店）",
+      "描述": "NS Intercity 約 50–60 分鐘；部分班次可能於 Leiden/Schiphol 轉乘。\n抵達 Amsterdam Sloterdijk 後步行 3–5 分鐘至飯店。\n付款：可直接刷信用卡進站，或用 NS App。",
+      "類別": "🚄 移動",
+      "lat": 52.3890,
+      "lng": 4.8380,
+      "mapLabel": "Amsterdam Sloterdijk",
+      "mapPriority": 8
+    },
+
+    {
+      "地點": "Mercure Amsterdam 住宿",
+      "描述": "<span style='color:red;'>&#10007;</span> 廚房，<span style='color:green;'>&#10003;</span> 洗衣，早餐 817/人。\nNT$25,807（2晚）",
+      "類別": "🏨 住宿",
+      "網址": "https://www.booking.com/Share-pKL0NjK",
+      "照片": "https://lh3.googleusercontent.com/p/AF1QipPF7x2vAiloy-8e3CjEmThdweLXibLEX3VMmjcr=w324-h312-n-k-no",
+      "lat": 52.387386706609,
+      "lng": 4.8361497102209166,
+      "mapLabel": "Mercure Amsterdam",
+      "mapPriority": 9
+    }
+  ]
+},
+    // Day 20 (新版根據 ams.md)
         {
             dayGroup: "Day 20",
             dayTitle: "Day 20: 10/23(四) 阿姆斯特丹市區精華遊",
