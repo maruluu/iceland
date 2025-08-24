@@ -616,30 +616,146 @@ export const allItineraryData = [
   ]
 },
     // Day 20 (新版根據 ams.md)
-        {
-            dayGroup: "Day 20",
-            dayTitle: "Day 20: 10/23(四) 阿姆斯特丹市區精華遊",
-            mapCenter: { lat: 52.3676, lng: 4.9041 },
-            mapZoom: 13,
-            items: [
-                { 地點: "🚴 阿姆斯特丹經典地標巡禮", 描述: "水壩廣場（Dam Square）：阿姆斯特丹心臟地帶\n阿姆斯特丹王宮（Royal Palace）：17世紀巴洛克建築\n老教堂（Oude Kerk）：阿姆斯特丹最古老建築\n鑄幣塔（Munttoren）：17世紀歷史古塔\n新教堂（Nieuwe Kerk）：皇室加冕教堂\n西教堂（Westerkerk）：安妮法蘭克附近地標教堂", 類別: "🚴 活動", 網址: "https://maps.google.com/?q=Dam+Square+Amsterdam, https://maps.google.com/?q=Royal+Palace+Amsterdam, https://maps.google.com/?q=Oude+Kerk+Amsterdam, https://maps.google.com/?q=Munttoren+Amsterdam", lat: 52.3676, lng: 4.9041, mapLabel: "阿姆斯特丹地標", mapPriority: 1 },
-                { 地點: "🍺 喜力啤酒博物館", 描述: "互動體驗＋啤酒品嚐", 類別: "🍺 活動", 網址: "https://maps.google.com/?q=Heineken+Experience+Amsterdam", lat: 52.3573, lng: 4.8918, mapLabel: "喜力體驗館", mapPriority: 2 },
-                { 地點: "🌃 紅燈區（Red Light District）", 描述: "夜間獨特文化體驗", 類別: "🌃 活動", 網址: "https://maps.google.com/?q=Red+Light+District+Amsterdam", lat: 52.3740, lng: 4.8980, mapLabel: "紅燈區", mapPriority: 3 },
-                { 地點: "🌳 馮德爾公園（Vondelpark）", 描述: "市區綠洲散步", 類別: "🌳 景點", 網址: "https://maps.google.com/?q=Vondelpark+Amsterdam", lat: 52.3584, lng: 4.8680, mapLabel: "Vondelpark", mapPriority: 4 },
-                { 地點: "🛍️ 購物街區", 描述: "卡爾弗街（Kalverstraat）：主要購物大街\n萊茲廣場（Leidseplein）：夜生活娛樂中心", 類別: "🛍️ 活動", lat: 52.3676, lng: 4.8910, mapLabel: "購物街區", mapPriority: 5 },
-                { 地點: "Mercure Amsterdam", 類別: "🏨 住宿", 描述: "<span style='color:red;'>&#10007;</span>廚房，<span style='color:green;'>&#10003;</span>洗衣，早餐 817/人，<span style='color:red;'>&#10007;</span>停車，NT$25,807（2晚）", 網址: "https://www.booking.com/Share-pKL0NjK", 照片: "https://lh3.googleusercontent.com/p/AF1QipPF7x2vAiloy-8e3CjEmThdweLXibLEX3VMmjcr=w324-h312-n-k-no", lat: 52.387386706609, lng: 4.8361497102209166, mapLabel: "Mercure Amsterdam", mapPriority: 6 }
-            ]
-        },
+{
+  "dayGroup": "Day 20",
+  "dayTitle": "Day 20: 10/23(四) 阿姆斯特丹市區精華遊",
+  "mapCenter": { "lat": 52.3676, "lng": 4.9041 },
+  "mapZoom": 13,
+  "items": [
+    {
+      "地點": "Mercure Amsterdam Sloterdijk Station → Amsterdam Centraal",
+      "描述": "從住宿步行 3–5 分鐘到 Sloterdijk 站，搭乘 NS 火車或 Metro 51/52/53，約 6–8 分鐘即可抵達 Amsterdam Centraal，班次非常密集。",
+      "類別": "🚄 移動",
+      "lat": 52.3890,
+      "lng": 4.8380,
+      "mapLabel": "Amsterdam Sloterdijk",
+      "mapPriority": 1
+    },
+    {
+      "地點": "阿姆斯特丹王宮（Royal Palace）",
+      "描述": "從 Centraal 步行 10 分鐘到 Dam Square；17 世紀巴洛克建築，現為國王接待外賓和舉行國宴的場所。",
+      "類別": "🏛️ 景點",
+      "lat": 52.3732,
+      "lng": 4.8925,
+      "mapLabel": "Royal Palace",
+      "mapPriority": 2
+    },
+    {
+      "地點": "新教堂（Nieuwe Kerk）",
+      "描述": "王宮旁邊，步行 1 分鐘；皇室加冕教堂，舉辦大型展覽與典禮。",
+      "類別": "⛪ 景點",
+      "lat": 52.3730,
+      "lng": 4.8910,
+      "mapLabel": "Nieuwe Kerk",
+      "mapPriority": 3
+    },
+    {
+      "地點": "老教堂（Oude Kerk）",
+      "描述": "從 Dam Square 步行約 7 分鐘；阿姆斯特丹最古老的建築（1306 年），歌德式風格。",
+      "類別": "⛪ 景點",
+      "lat": 52.3740,
+      "lng": 4.8980,
+      "mapLabel": "Oude Kerk",
+      "mapPriority": 4
+    },
+    {
+      "地點": "鑄幣塔（Munttoren）",
+      "描述": "從 Oude Kerk 步行 10 分鐘；17 世紀歷史古塔，原本是城門的一部分，後來作為鑄幣之用。",
+      "類別": "🏰 景點",
+      "lat": 52.3663,
+      "lng": 4.8931,
+      "mapLabel": "Munttoren",
+      "mapPriority": 5
+    },
+    {
+      "地點": "西教堂（Westerkerk）",
+      "描述": "可從 Munttoren 步行或搭 Tram 2/11/12 約 8–10 分鐘；安妮之家旁邊的地標教堂，塔樓可登頂俯瞰市景。",
+      "類別": "⛪ 景點",
+      "lat": 52.3731,
+      "lng": 4.8836,
+      "mapLabel": "Westerkerk",
+      "mapPriority": 6
+    },
+    {
+      "地點": "🍺 喜力啤酒博物館",
+      "描述": "從 Westerkerk 搭 Tram 24 約 10 分鐘至 Stadhouderskade 站下車；互動體驗＋啤酒品嚐。",
+      "類別": "🍺 活動",
+      "網址": "https://maps.google.com/?q=Heineken+Experience+Amsterdam",
+      "lat": 52.3573,
+      "lng": 4.8918,
+      "mapLabel": "喜力體驗館",
+      "mapPriority": 7
+    },
+    {
+      "地點": "🌳 馮德爾公園（Vondelpark）",
+      "描述": "從喜力博物館步行約 12 分鐘即可抵達；阿姆斯特丹市區的綠洲，適合散步休息。",
+      "類別": "🌳 景點",
+      "網址": "https://maps.google.com/?q=Vondelpark+Amsterdam",
+      "lat": 52.3584,
+      "lng": 4.8680,
+      "mapLabel": "Vondelpark",
+      "mapPriority": 8
+    },
+    {
+      "地點": "🛍️ 購物街區",
+      "描述": "從 Vondelpark 出來步行 10 分鐘到 Kalverstraat（主要購物大街），再走到 Leidseplein（夜生活娛樂中心）。",
+      "類別": "🛍️ 活動",
+      "lat": 52.3676,
+      "lng": 4.8910,
+      "mapLabel": "購物街區",
+      "mapPriority": 9
+    },
+    {
+      "地點": "Amsterdam Centraal → Mercure Amsterdam Sloterdijk Station",
+      "描述": "從市中心搭 NS 火車或 Metro 51/52/53 返回 Sloterdijk，約 6–8 分鐘；步行 3–5 分鐘回飯店。",
+      "類別": "🚄 移動",
+      "lat": 52.3791,
+      "lng": 4.9003,
+      "mapLabel": "返回 Sloterdijk",
+      "mapPriority": 10
+    },
+    {
+      "地點": "Mercure Amsterdam Sloterdijk Station",
+      "類別": "🏨 住宿",
+      "描述": "<span style='color:red;'>&#10007;</span> 廚房，<span style='color:green;'>&#10003;</span> 洗衣，早餐 817/人，<span style='color:green;'>&#10003;</span>近車站，NT$25,807（2晚）",
+      "網址": "https://www.booking.com/Share-pKL0NjK",
+      "照片": "https://lh3.googleusercontent.com/p/AF1QipPF7x2vAiloy-8e3CjEmThdweLXibLEX3VMmjcr=w324-h312-n-k-no",
+      "lat": 52.387386706609,
+      "lng": 4.8361497102209166,
+      "mapLabel": "Mercure Amsterdam Sloterdijk",
+      "mapPriority": 11
+    }
+  ]
+},
         // Day 21 - 回程日
-        {
-            dayGroup: "Day 21",
-            dayTitle: "Day 21: 10/24(五) 回程",
-            mapCenter: { lat: 52.3105, lng: 4.7683 }, // Schiphol Airport
-            mapZoom: 11,
-            items: [
-                { 地點: "回程", 描述: "早上12:15回台北", 類別: "✈️ 回程", 照片: "/iceland/public/assets/airline2.png", lat: 52.3105, lng: 4.7683, mapLabel: "機場", mapPriority: 1 }
-            ]
-        }
+{
+  "dayGroup": "Day 21",
+  "dayTitle": "Day 21: 10/24(五) 回程",
+  "mapCenter": { "lat": 52.3105, "lng": 4.7683 },
+  "mapZoom": 11,
+  "items": [
+    {
+      "地點": "Mercure Amsterdam Sloterdijk → Schiphol Airport",
+      "描述": "🚄 方式1. 火車：從 Sloterdijk 搭 NS 直達 Schiphol，約 11–15 分鐘，班次 10 分鐘一班，可直接信用卡感應進站。\n🚖 方式2. Uber / 計程車：約 20–25 分鐘，費用 €35–45。",
+      "類別": "🚄 移動",
+      "lat": 52.3874,
+      "lng": 4.8361,
+      "mapLabel": "Sloterdijk 出發",
+      "mapPriority": 1
+    },
+    {
+      "地點": "回程航班",
+      "描述": "中午 12:15 ✈️ 阿姆斯特丹 Schiphol 機場 → 台北",
+      "類別": "✈️ 回程",
+      "照片": "/iceland/public/assets/airline2.png",
+      "lat": 52.3105,
+      "lng": 4.7683,
+      "mapLabel": "Schiphol Airport",
+      "mapPriority": 2
+    }
+  ]
+}
+
     ];
 
 // 將數據暴露到全局作用域
