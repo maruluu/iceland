@@ -280,39 +280,244 @@ export const allItineraryData = [
 }
 ,
         // Day 17 (新版根據 ams.md)
-        {
-            dayGroup: "Day 17",
-            dayTitle: "Day 17: 10/20(一) 布魯日 → 根特日遊 → 布魯日",
-            mapCenter: { lat: 51.0543, lng: 3.7174 },
-            mapZoom: 13,
-            items: [
-                { 地點: "08:30 布魯日 → 根特", 描述: "25分鐘", 類別: "🚄 移動", 網址: "https://maps.google.com/?q=Ghent+Belgium", lat: 51.0543, lng: 3.7174, mapLabel: "根特", mapPriority: 1 },
-                { 地點: "🏰 伯爵城堡（Gravensteen）", 描述: "12世紀要塞城堡", 類別: "🏰 景點", 網址: "https://maps.google.com/?q=Gravensteen+Castle+Ghent", lat: 51.0570, lng: 3.7200, mapLabel: "伯爵城堡", mapPriority: 2 },
-                { 地點: "🌉 格拉斯利 & 科恩利（Graslei & Korenlei）", 描述: "河畔行會大廈建築群", 類別: "🌉 景點", 網址: "https://maps.google.com/?q=Graslei+Ghent", lat: 51.0543, lng: 3.7174, mapLabel: "格拉斯利", mapPriority: 3 },
-                { 地點: "⛪ 聖巴夫大教堂", 描述: "範艾克兄弟《神秘羔羊》祭壇畫", 類別: "⛪ 景點", 網址: "https://maps.google.com/?q=Saint+Bavo+Cathedral+Ghent", lat: 51.0543, lng: 3.7174, mapLabel: "聖巴夫大教堂", mapPriority: 4 },
-                { 地點: "🏰 根特鐘樓", 描述: "聯合國世界遺產鐘樓", 類別: "🏰 景點", lat: 51.0543, lng: 3.7174, mapLabel: "根特鐘樓", mapPriority: 5 },
-                { 地點: "⛪ 聖尼古拉斯教堂", 描述: "典型比利時哥德式建築", 類別: "⛪ 景點", lat: 51.0543, lng: 3.7174, mapLabel: "聖尼古拉斯教堂", mapPriority: 6 },
-                { 地點: "🍻 根特啤酒品嚐＋比利時華夫餅", 類別: "🍻 活動", lat: 51.0543, lng: 3.7174, mapLabel: "根特美食", mapPriority: 7 },
-                { 地點: "16:30 根特 → 布魯日", 描述: "25分鐘", 類別: "🚄 移動", lat: 51.2085, lng: 3.2250, mapLabel: "布魯日", mapPriority: 8 },
-                { 地點: "Gepetto's", 類別: "🏨 住宿", 描述: "<span style='color:red;'>&#10007;</span>廚房，<span style='color:red;'>&#10007;</span>洗衣，<span style='color:red;'>&#10007;</span>早餐，<span style='color:red;'>&#10007;</span>停車，NT$27,993（3晚）", 網址: "https://www.booking.com/Share-stMBLN", 照片: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/268730642.jpg?k=ef3823877d854be5261108b20a7d0d4950a9de24bb1873f6e90c89f611df69c6&o=", lat: 51.2085, lng: 3.2250, mapLabel: "Gepetto's", mapPriority: 9 }
-            ]
-        },
+{
+  "dayGroup": "Day 17",
+  "dayTitle": "Day 17: 10/20(一) 根特 → 布魯日 Bruges 一日遊（晚回根特）",
+  "mapCenter": { "lat": 51.2085, "lng": 3.2250 },
+  "mapZoom": 13,
+  "items": [
+    {
+      "地點": "Gent-Sint-Pieters → Brugge（布魯日）",
+      "描述": "SNCB 區間車約 25–30 分；10–20 分鐘一班。\n⚠️ 購票：SNCB App／售票機（不支援信用卡感應進站）。\n列車種類：以 InterCity (IC) 為主；多數往 Oostende／Knokke／Blankenberge 的車都會停 Brugge。",
+      "類別": "🚄 移動",
+      "lat": 51.0351,
+      "lng": 3.7103,
+      "mapLabel": "Gent-Sint-Pieters",
+      "mapPriority": 1
+    },
+    {
+      "地點": "Brugge Station → 市集廣場 Markt",
+      "描述": "方案1. 步行 20 分（Koning Albert I-laan → Zuidzandstraat）\n方案2. 搭公車 1/2/3/4 約 10 分至 Brugge Markt 或 Stadsschouwburg；上車可刷信用卡/Apple Pay（€3）。",
+      "類別": "🚌 市內交通",
+      "lat": 51.1989,
+      "lng": 3.2172,
+      "mapLabel": "Brugge Station",
+      "mapPriority": 2
+    },
+    {
+      "地點": "Markt 市集廣場 & 布魯日鐘樓",
+      "描述": "城市核心；可登鐘樓俯瞰老城（建議先排）。",
+      "照片": "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqg6vgjVYtwWKncDvv_jxhCdPtmnium8YqyrzKfjsyZZR2F-1_nuXt-dELSRIfZShCevchcpnjf3BJ-FH8Kn6aKzxWhSpvc148g5eROBimp9mV3EZZxMZic6NLxDbLaa92AgW3h=w270-h312-n-k-no",
+      "類別": "🌷 景點",
+      "lat": 51.2085,
+      "lng": 3.2249,
+      "mapLabel": "Markt & Belfry",
+      "mapPriority": 3
+    },
+    {
+      "地點": "Burg 廣場 & 市政廳",
+      "描述": "哥德式市政廳與聖血教堂周邊建築群。",
+      "照片": "https://www.leo-travel.idv.tw/wp-content/uploads/belgium-Brugge-Brug-DSC_6785.webp",
+      "類別": "🏛️ 景點",
+      "lat": 51.2089,
+      "lng": 3.2270,
+      "mapLabel": "Burg Square",
+      "mapPriority": 4
+    },
+    {
+      "地點": "Chez Albert - Gauffres - Waffles",
+      "描述": "人氣列日鬆餅；位於 Markt 與 Burg 之間，順路外帶品嚐。",
+      "類別": "🍩 美食",
+      "網址": "https://maps.google.com/?q=Chez+Albert+Bruges",
+      "lat": 51.2087,
+      "lng": 3.2265,
+      "mapLabel": "Chez Albert",
+      "mapPriority": 5
+    },
+    {
+      "地點": "Rozenhoedkaai（玫瑰碼頭）",
+      "描述": "布魯日經典打卡點；建議接運河遊船。",
+      "照片": "https://photos.smugmug.com/BlogAlbum/BElgium/n-5wzpvc/Bruges/i-pv7t7WP/0/f3a60bae/XL/WCP-5551-XL.jpg",
+      "類別": "📸 景點",
+      "lat": 51.2073,
+      "lng": 3.2276,
+      "mapLabel": "Rozenhoedkaai",
+      "mapPriority": 6
+    },
+    {
+      "地點": "布魯日運河遊船",
+      "描述": "約 30 分；多個碼頭可上船（玫瑰碼頭最方便）。可現場購票，旺季建議提早排隊。",
+      "照片": "https://lohanpush.com/wp-content/uploads/2020/02/1_jpn2064-1.jpg",
+      "類別": "🛶 活動",
+      "lat": 51.2069,
+      "lng": 3.2267,
+      "mapLabel": "Boat Tour",
+      "mapPriority": 7
+    },
+    {
+      "地點": "午餐：市中心餐館",
+      "描述": "可選布魯日特色料理（啤酒燉牛肉、炸薯條、燉羊肉等），避免重複青口。",
+      "類別": "🍽 吃喝",
+      "lat": 51.2086,
+      "lng": 3.2262,
+      "mapLabel": "餐廳區",
+      "mapPriority": 8
+    },
+    {
+      "地點": "聖母教堂 (Church of Our Lady Bruges)",
+      "描述": "代表性哥德式教堂，塔樓 115 m；收藏米開朗基羅《聖母子》。午餐後步行 6–8 分可達。",
+      "照片": "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nr0aTFJU9JTgpIz_i0xl46zw6-wbh0DO-sQ1yvC6RzYZ0P70Ch1m1cGL5pYHh_Ij1D2IvcI8ioipeVdzMhQFIWffcb4hOa6VPO4xbVA-7rc0OEwY7F1txFi7af8Vi_vWKpC-4HChQ=w270-h312-n-k-no",
+      "類別": "⛪ 景點",
+      "lat": 51.2044,
+      "lng": 3.2246,
+      "mapLabel": "Church of Our Lady",
+      "mapPriority": 9
+    },
+    {
+      "地點": "愛情湖 Minnewaterpark & 貝居安會院",
+      "描述": "湖畔天鵝與白牆庭院；午後光線佳。由聖母教堂往南步行 5–7 分抵達。",
+      "照片": "https://live.staticflickr.com/65535/53789545501_d48db266f9_b.jpg",
+      "類別": "🌳 景點",
+      "lat": 51.2003,
+      "lng": 3.2248,
+      "mapLabel": "Minnewater & Begijnhof",
+      "mapPriority": 10
+    },
+    {
+      "地點": "The Chocolate Line",
+      "描述": "布魯日指標巧克力店（Dominique Persoone）。從愛情湖回市中心順路採買。",
+      "類別": "🛍️ 活動",
+      "網址": "https://maps.google.com/?q=The+Chocolate+Line+Bruges",
+      "lat": 51.2063,
+      "lng": 3.2245,
+      "mapLabel": "The Chocolate Line",
+      "mapPriority": 11
+    },
+    {
+      "地點": "布魯日市區 → Brugge Station",
+      "描述": "在「Brugge Markt」或「Stadsschouwburg」站搭 1/2/3/4 公車約 10 分回火車站；或步行約 20 分。\n上車可刷信用卡/Apple Pay（€3）。",
+      "類別": "🚌 市內交通",
+      "lat": 51.2085,
+      "lng": 3.2249,
+      "mapLabel": "返回車站動線",
+      "mapPriority": 12
+    },
+    {
+      "地點": "Brugge → Gent-Sint-Pieters（返回根特）",
+      "描述": "SNCB 區間車約 25–30 分；晚餐可回根特 Korenmarkt 一帶。",
+      "類別": "🚄 移動",
+      "lat": 51.0351,
+      "lng": 3.7103,
+      "mapLabel": "回到 Ghent",
+      "mapPriority": 13
+    }
+  ]
+},
         // Day 18 (新版根據 ams.md)
-        {
-            dayGroup: "Day 18",
-            dayTitle: "Day 18: 10/21(二) 布魯日 → 布魯塞爾 Brussels",
-            mapCenter: { lat: 50.8467, lng: 4.3525 },
-            mapZoom: 13,
-            items: [
-                { 地點: "09:00 布魯日 → 布魯塞爾", 描述: "約1小時", 類別: "🚄 移動", lat: 50.8467, lng: 4.3525, mapLabel: "布魯塞爾", mapPriority: 1 },
-                { 地點: "🏛️ 大廣場（Grand Place）", 描述: "聯合國世界遺產黃金廣場\n市政廳與行會大廈：哥德式與巴洛克建築傑作", 類別: "🏛️ 景點", 網址: "https://maps.google.com/?q=Grand+Place+Brussels", lat: 50.8467, lng: 4.3525, mapLabel: "大廣場", mapPriority: 2 },
-                { 地點: "🚶 小尿童（Manneken Pis）", 描述: "布魯塞爾最著名地標", 類別: "🚶 景點", 網址: "https://maps.google.com/?q=Manneken+Pis+Brussels", lat: 50.8449, lng: 4.3500, mapLabel: "小尿童", mapPriority: 3 },
-                { 地點: "🍽 午餐 Rue des Bouchers 美食街", 描述: "淡菜＋啤酒", 類別: "🍽 吃喝", 網址: "https://maps.google.com/?q=Rue+des+Bouchers+Brussels", lat: 50.8485, lng: 4.3500, mapLabel: "Rue des Bouchers", mapPriority: 4 },
-                { 地點: "🛍️ 聖於貝爾長廊", 描述: "歐洲最美購物拱廊", 類別: "🛍️ 景點", 網址: "https://maps.google.com/?q=Galeries+Royales+Saint-Hubert+Brussels", lat: 50.8485, lng: 4.3500, mapLabel: "聖休伯特拱廊街", mapPriority: 5 },
-                { 地點: "🏰 布魯塞爾皇宮區", 描述: "皇家廣場＋聖雅各教堂", 類別: "🏰 景點", lat: 50.8467, lng: 4.3600, mapLabel: "皇宮區", mapPriority: 6 },
-                { 地點: "Gepetto's (Brussels)", 類別: "🏨 住宿", 描述: "<span style='color:red;'>&#10007;</span>廚房，<span style='color:red;'>&#10007;</span>洗衣，<span style='color:red;'>&#10007;</span>早餐，<span style='color:red;'>&#10007;</span>停車，NT$27,993（3晚）", 網址: "https://www.booking.com/Share-stMBLN", 照片: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/268730642.jpg?k=ef3823877d854be5261108b20a7d0d4950a9de24bb1873f6e90c89f611df69c6&o=", lat: 50.8467, lng: 4.3525, mapLabel: "Gepetto's Brussels", mapPriority: 7 }
-            ]
-        },
+{
+  "dayGroup": "Day 18",
+  "dayTitle": "Day 18: 10/21(二) 根特 → 布魯塞爾 Brussels 半日遊 + 根特夜景",
+  "mapCenter": { "lat": 51.0543, "lng": 3.7174 },
+  "mapZoom": 13,
+  "items": [
+    {
+      "地點": "Gent-Sint-Pieters → Bruxelles-Central",
+      "描述": "SNCB 區間車，約 30–40 分鐘；班次 10–20 分鐘一班。\n⚠️ 購票：SNCB App／售票機（不支援信用卡感應進站）。\n建議直接到 Bruxelles-Central 下車（離大廣場最近）。",
+      "類別": "🚄 移動",
+      "lat": 51.0351,
+      "lng": 3.7103,
+      "mapLabel": "Gent-Sint-Pieters 出發",
+      "mapPriority": 1
+    },
+    {
+      "地點": "🏛️ 大廣場（Grand Place）",
+      "描述": "聯合國世界遺產黃金廣場；市政廳與行會大廈的哥德式與巴洛克建築群。\n從 Bruxelles-Central 步行約 5 分鐘。",
+      "類別": "🏛️ 景點",
+      "照片": "https://i0.wp.com/lillian.tw/wp-content/uploads/20170222105017_86.jpg?resize=800%2C532&quality=99&ssl=1",
+      "lat": 50.8467,
+      "lng": 4.3525,
+      "mapLabel": "大廣場",
+      "mapPriority": 2
+    },
+    {
+      "地點": "🚶 小尿童（Manneken Pis）",
+      "描述": "布魯塞爾最著名地標；步行約 5 分鐘，雕像會隨節日換裝。",
+      "類別": "🚶 景點",
+      "照片": "https://i0.wp.com/lillian.tw/wp-content/uploads/20170222105028_10.jpg?resize=800%2C532&quality=99&ssl=1",
+      "lat": 50.8449,
+      "lng": 4.3500,
+      "mapLabel": "小尿童",
+      "mapPriority": 3
+    },
+    {
+      "地點": "🍽 午餐 Rue des Bouchers 美食街",
+      "描述": "比利時經典料理街區；推薦啤酒燉牛肉、薯條、比利時啤酒。",
+      "類別": "🍽 吃喝",
+      "lat": 50.8485,
+      "lng": 4.3500,
+      "mapLabel": "Rue des Bouchers",
+      "mapPriority": 4
+    },
+    {
+      "地點": "🛍️ 聖於貝爾長廊（Galeries Royales Saint-Hubert）",
+      "描述": "距離大廣場步行 1 分鐘；室內購物拱廊，巧克力名店與咖啡館雲集。\n可順路採買伴手禮。",
+      "類別": "🛍️ 景點",
+      "照片": "https://travelwithmiya.com/wp-content/uploads/2024/06/brussels-22-768x1024.jpg",
+      "lat": 50.84824580486562,
+      "lng": 4.3555838575,
+      "mapLabel": "聖休伯特拱廊街",
+      "mapPriority": 5
+    },
+    {
+      "地點": "Mont des Arts（藝術之丘）",
+      "描述": "布魯塞爾經典視角制高點，可俯瞰城市天際線；午後光線佳，適合拍照。",
+      "類別": "🌆 景點",
+      "照片": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/59/a6/f5/img-20160712-163754-largejpg.jpg?w=900&h=500&s=1",
+      "lat": 50.8447,
+      "lng": 4.3561,
+      "mapLabel": "Mont des Arts",
+      "mapPriority": 6
+    },
+    {
+      "地點": "布魯塞爾 → Gent-Sint-Pieters（返回根特）",
+      "描述": "SNCB 區間車約 30–40 分；班次 10–20 分鐘一班。\n建議 17:00–18:00 間返程，晚上安排根特夜景與晚餐。",
+      "類別": "🚄 移動",
+      "lat": 51.0351,
+      "lng": 3.7103,
+      "mapLabel": "返回 Ghent",
+      "mapPriority": 7
+    },
+    {
+      "地點": "聖米歇爾橋 (St. Michael’s Bridge)",
+      "描述": "根特最美拍照點；橋上可同時看到三大教堂與河畔建築。\n建議日落或夜景時間造訪。\n 也可以去旁邊的 聖米歇爾教堂（Sint-Michielskerk。",
+      "類別": "🌉 景點",
+      "照片": "https://hojenjen.com/wp-content/uploads/20180427234018_32.jpg",
+      "lat": 51.0549,
+      "lng": 3.7206,
+      "mapLabel": "聖米歇爾橋",
+      "mapPriority": 8
+    },
+    {
+      "地點": "Patershol 晚餐",
+      "描述": "老城區小巷弄區，餐廳林立；推薦比利時傳統料理或當地精釀酒館。\n氛圍悠閒，適合晚餐。",
+      "類別": "🍽 吃喝",
+      "lat": 51.0580,
+      "lng": 3.7245,
+      "mapLabel": "Patershol",
+      "mapPriority": 9
+    },
+    {
+      "地點": "Graslei & Korenlei 河岸夜景",
+      "描述": "夜晚燈光映照下的中世紀河岸建築群，是根特最浪漫的景色。\n建議餐後散步收尾。",
+      "類別": "🌃 景點",
+      "照片": "https://www.leo-travel.idv.tw/wp-content/uploads/belgium-ghent-Graslei-DSC_6529.webp",
+      "lat": 51.0543,
+      "lng": 3.7174,
+      "mapLabel": "Graslei & Korenlei",
+      "mapPriority": 10
+    }
+  ]
+},
         // Day 19 (新版根據 ams.md)
         {
             dayGroup: "Day 19",
