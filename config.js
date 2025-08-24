@@ -747,7 +747,7 @@ export const allItineraryData = [
       "地點": "回程航班",
       "描述": "中午 12:15 ✈️ 阿姆斯特丹 Schiphol 機場 → 台北",
       "類別": "✈️ 回程",
-      "照片": "/iceland/public/assets/airline2.png",
+      "照片": "/iceland/assets/airline2.png",
       "lat": 52.3105,
       "lng": 4.7683,
       "mapLabel": "Schiphol Airport",
