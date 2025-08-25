@@ -750,17 +750,16 @@
                 }
 
                 if (dayNum < 13) { // 冰島
-                    const icelandDayIndex = dayNum;
                     icelandSidebarHTML += `
-                        <div class="day-item" onclick="selectDay('iceland', ${icelandDayIndex}, this)">
+                        <div class="day-item" id="iceland-day-${dayNum}" onclick="selectDayById('iceland', ${dayNum}, 'iceland-day-${dayNum}')">
                             <span class="day-number">D${dayNum}</span>
                             <span class="day-name">${dayName}</span>
                         </div>`;
-                    mobileIcelandOptgroupHTML += `<option value="iceland-${icelandDayIndex}">${day.dayTitle}</option>`;
+                    mobileIcelandOptgroupHTML += `<option value="iceland-${dayNum}">${day.dayTitle}</option>`;
                 } else { // 荷蘭
                     const netherlandsDayIndex = dayNum - 13;
                     netherlandsSidebarHTML += `
-                        <div class="day-item" onclick="selectDay('netherlands', ${netherlandsDayIndex}, this)">
+                        <div class="day-item" id="netherlands-day-${netherlandsDayIndex}" onclick="selectDayById('netherlands', ${netherlandsDayIndex}, 'netherlands-day-${netherlandsDayIndex}')">
                             <span class="day-number">D${dayNum}</span>
                             <span class="day-name">${dayName}</span>
                         </div>`;
@@ -773,21 +772,45 @@
             mobileDaySelect.innerHTML = mobileIcelandOptgroupHTML + '</optgroup>' + mobileNetherlandsOptgroupHTML + '</optgroup>';
         }
 
+        function selectDayById(country, dayIndex, elementId) {
+            const element = document.getElementById(elementId);
+            selectDay(country, dayIndex, element);
+        }
+
         function selectDay(country, dayIndex, element) {
             // 展開對應的國家選單
-            document.querySelectorAll('.country-section').forEach(section => {
+            const countrySections = document.querySelectorAll('.country-section');
+            
+            countrySections.forEach(section => {
                 section.classList.remove('expanded');
             });
             
             // 根據選擇的國家展開對應選單
             if (country === 'iceland') {
-                document.querySelector('.country-section:first-of-type').classList.add('expanded');
+                const icelandSection = countrySections[0];
+                if (icelandSection) {
+                    icelandSection.classList.add('expanded');
+                }
             } else {
-                document.querySelector('.country-section:last-of-type').classList.add('expanded');
+                const netherlandsSection = countrySections[1];
+                if (netherlandsSection) {
+                    netherlandsSection.classList.add('expanded');
+                }
             }
 
+            // 移除所有active類別
             document.querySelectorAll('.day-item').forEach(item => item.classList.remove('active'));
-            if(element) element.classList.add('active');
+            
+            // 設定active類別
+            if (element) {
+                element.classList.add('active');
+            } else {
+                const elementId = `${country}-day-${dayIndex}`;
+                const fallbackElement = document.getElementById(elementId);
+                if (fallbackElement) {
+                    fallbackElement.classList.add('active');
+                }
+            }
 
             const dayNum = country === 'iceland' ? dayIndex : dayIndex + 13;
             const dayData = window.allItineraryData.find(d => d.dayGroup === `Day ${dayNum}`);
@@ -977,7 +1000,8 @@
         function selectDayFromMobile(select) {
             const [country, dayIndex] = select.value.split('-');
             const dayNum = parseInt(dayIndex, 10);
-            const targetItem = document.querySelector(`.day-item[onclick*="'${country}', ${dayNum}"]`);
+            const elementId = `${country}-day-${dayIndex}`;
+            const targetItem = document.getElementById(elementId);
             if (targetItem) selectDay(country, dayNum, targetItem);
         }
 
@@ -1003,7 +1027,8 @@
                 let initialDaySet = false;
                 if (savedDay) {
                     const { country, dayIndex } = savedDay;
-                    const targetItem = document.querySelector(`.day-item[onclick*="'${country}', ${dayIndex}"]`);
+                    const elementId = `${country}-day-${dayIndex}`;
+                    const targetItem = document.getElementById(elementId);
                     if (targetItem) {
                         selectDay(country, dayIndex, targetItem);
                         initialDaySet = true;
@@ -1013,7 +1038,7 @@
                 if (!initialDaySet) {
                     const firstDayItem = document.querySelector('#iceland-day-list .day-item');
                     if (firstDayItem) {
-                        selectDay('iceland', 0, firstDayItem);
+                        selectDay('iceland', 1, firstDayItem);
                     }
                 }
             };
