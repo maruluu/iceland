@@ -127,14 +127,16 @@ export const allItineraryData = [
             {地點: "Kirkjufellsfoss 教堂山", 照片: "https://mimihan.tw/wp-content/uploads/20180620190950_46.jpg", 類別: "⛱ 景點", lat: 64.9260, lng: -23.2719, mapLabel: "Kirkjufellsfoss", mapPriority: 1},
             {地點: "移動: 教堂山 → Ólafsvík (約 20m)", 類別: "🚗 移動"},
             {地點: "Ólafsvík小鎮", 描述: "進入斯奈山國家公園的最後一個比較大的城鎮", 類別: "⛱ 景點", lat: 64.8940, lng: -23.7100, mapLabel: "Ólafsvík", mapPriority: 2},
-            {地點: "移動: Ólafsvík → SAXHÓLAR CRATER (約 20m)", 類別: "🚗 移動"},
-            {地點: "SAXHÓLAR CRATER 火山", 描述: "是一座沈睡400年的火山", 類別: "⛱ 景點", lat: 64.8510, lng: -23.9150, mapLabel: "Saxhóll Crater", mapPriority: 3},
-            {地點: "VATNSHELLIR CAVE 地心探險", 描述: "每個小時有一團，約莫45分鐘", 類別: "🎭 活動", lat: 64.7520, lng: -23.8200, mapLabel: "Vatnshellir Cave", mapPriority: 4}, // Caving is an activity
-            {地點: "Londrangar 怪物海岸", 類別: "⛱ 景點", lat: 64.7360, lng: -23.7800, mapLabel: "Lóndrangar", mapPriority: 5},
-            {地點: "BÁRÐAR SAGA 石巨人", 類別: "⛱ 景點", lat: 64.7744, lng: -23.7791, mapLabel: "Bárður Snæfellsás (Arnarstapi)", mapPriority: 6},
+            {地點: "移動: Ólafsvík → Ingjaldshóll Church(10m)", 類別: "🚗 移動"},
+            {地點: "Ingjaldshóll Church", 描述: "視力檢查小房子", 類別: "⛱ 景點", lat: 64.90877, lng: -23.847721, mapLabel: "Ingjaldshóll", mapPriority: 3, 照片:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfAVn3jyCFJfYkBKb32wHFtW9_e_MTec0j3g&s"},
+            
+            {地點: "SAXHÓLAR CRATER 火山", 描述: "是一座沈睡400年的火山", 類別: "⛱ 景點", lat: 64.8510, lng: -23.9150, mapLabel: "Saxhóll Crater", mapPriority: 4},
+            {地點: "VATNSHELLIR CAVE 地心探險", 描述: "每個小時有一團，約莫45分鐘", 類別: "🎭 活動", lat: 64.7520, lng: -23.8200, mapLabel: "Vatnshellir Cave", mapPriority: 5}, // Caving is an activity
+            {地點: "Londrangar 怪物海岸", 類別: "⛱ 景點", lat: 64.7360, lng: -23.7800, mapLabel: "Lóndrangar", mapPriority: 6},
+            {地點: "BÁRÐAR SAGA 石巨人", 類別: "⛱ 景點", lat: 64.7744, lng: -23.7791, mapLabel: "Bárður Snæfellsás (Arnarstapi)", mapPriority: 7},
             {地點: "移動: Arnarstapi → Ytri Tunga (約 30m)", 類別: "🚗 移動"},
-            {地點: "Ytri Tunga 海豹沙灘", 描述: "太晚的話可以隔天來", 類別: "⛱ 景點", lat: 64.8001, lng: -23.0346, mapLabel: "Ytri Tunga Beach", mapPriority: 7},
-            {地點: "Grundarfjordur Hostel", 類別: "🏡 住宿", 描述: "<span style='color:green;'>&#10003;</span>廚房，<span style='color:red;'>&#10007;</span>洗衣，<span style='color:red;'>&#10007;</span>早餐，<span style='color:green;'>&#10003;</span>停車，NT$5,894，全上下舖", 網址: "https://www.booking.com/Share-rdYIiX", lat: 64.92306302849966, lng: -23.257502113944486, 照片: "https://mimihan.tw/wp-content/uploads/20180620203603_42.jpg", mapLabel: "Grundarfjordur Hostel", mapPriority: 8}
+            {地點: "Ytri Tunga 海豹沙灘", 描述: "太晚的話可以隔天來", 類別: "⛱ 景點", lat: 64.8001, lng: -23.0346, mapLabel: "Ytri Tunga Beach", mapPriority: 8},
+            {地點: "Grundarfjordur Hostel", 類別: "🏡 住宿", 描述: "<span style='color:green;'>&#10003;</span>廚房，<span style='color:red;'>&#10007;</span>洗衣，<span style='color:red;'>&#10007;</span>早餐，<span style='color:green;'>&#10003;</span>停車，NT$5,894，全上下舖", 網址: "https://www.booking.com/Share-rdYIiX", lat: 64.92306302849966, lng: -23.257502113944486, 照片: "https://mimihan.tw/wp-content/uploads/20180620203603_42.jpg", mapLabel: "Grundarfjordur Hostel", mapPriority: 9}
         ]},
         // Day 12
         { dayGroup: "Day 12", dayTitle: "Day 12: 10/15(三) 返回雷克雅維克", mapCenter: { lat: 64.5, lng: -22.5 }, mapZoom: 8, items: [
