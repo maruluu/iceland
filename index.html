@@ -608,7 +608,7 @@
             color: #bbb;
         }
     </style>
-  <script type="module" crossorigin src="/iceland/assets/index-xYgJpOoI.js"></script>
+  <script type="module" crossorigin src="/iceland/assets/index-BHPHyfvn.js"></script>
 </head>
 <body>
     <div class="app-container">
@@ -900,7 +900,13 @@
             const mapElement = document.getElementById(mapId);
             if (!mapElement) return;
 
-            const rawLocations = (dayData.items || []).filter(item => item.lat && item.lng && item.mapLabel && typeof item.mapPriority === 'number').sort((a, b) => a.mapPriority - b.mapPriority);
+            const rawLocations = (dayData.items || []).filter(item => {
+                const hasCoords = item.lat && item.lng;
+                const hasLabel = item.mapLabel;
+                const hasPriority = typeof item.mapPriority === 'number';
+                console.log(`Item: ${item.地點}, hasCoords: ${hasCoords}, hasLabel: ${hasLabel}, hasPriority: ${hasPriority}`);
+                return hasCoords && hasLabel && hasPriority;
+            }).sort((a, b) => a.mapPriority - b.mapPriority);
             
             // 處理相同經緯度的標籤重疊問題
             const locationGroups = {};
