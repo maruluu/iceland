@@ -17,7 +17,7 @@ export const allItineraryData = [
         // Day 2
         { dayGroup: "Day 2", dayTitle: "Day 2: 10/5(日) 雷克雅維克", mapCenter: { lat: 64.05, lng: -22.0 }, mapZoom: 9, items: [
             {地點: "凱夫拉維克國際機場 (KEF)", 描述:"航班 13:50 抵達", 類別: "🚗 移動", lat: 63.9850, lng: -22.6056, mapLabel: "KEF 機場", mapPriority: 1}, // Updated description slightly
-            {地點: "租車", 描述:"市中心的停車格是要收費的，收費時間星期一至五09:00~18:00；星期六10:00~16:00，其餘時間則是免費" }, // Consider "🚗 活動" or similar
+            {地點: "租車", 描述:"市中心的停車格是要收費的，收費時間星期一至五09:00~18:00；星期六10:00~16:00，其餘時間則是免費", 網址: "https://docs.google.com/document/d/1DSub7L2VsHixnwSMOQ2Phk8cowwv8zoZjXCIi_kEkZY/edit?tab=t.sbrz3anlv24d"}, // Consider "🚗 活動" or similar
             {地點: "移動: 機場 → 市區 (40m)", 類別: "🚗 移動"},
             {地點: "Svarta Kaffid 麵包湯", 照片: "https://mimihan.tw/wp-content/uploads/20180706200030_83.jpg", 類別: "🧁 吃喝", lat: 64.14446, lng: -21.92346, mapLabel: "Svarta Kaffið", mapPriority: 2, 營業時間: "11:30–22:00"},
             {地點: "Braud & Co麵包店", 描述:"有很多分店",  照片: "https://mimihan.tw/wp-content/uploads/20180503165237_63.jpg", 類別: "🧁 吃喝", lat: 64.1440, lng: -21.9280, mapLabel: "Brauð & Co.", mapPriority: 3, 營業時間: "06:30–17:00"},
@@ -27,15 +27,18 @@ export const allItineraryData = [
         // Day 3
         { dayGroup: "Day 3", dayTitle: "Day 3: 10/6(一) 黃金圈", mapCenter: { lat: 64.20, lng: -20.7 }, mapZoom: 9, items: [
             {地點: "移動: 雷克雅維克 → 辛格韋德利國家公園 (約 1h 45m)", 類別: "🚗 移動"},
-            {地點: "辛格韋德利國家公園Þingvellir National Park- P1停車場", 描述: "(停留約 1~1.5 小時)，世界上唯一在海平面以上的北美板塊與歐亞板塊...", 照片: "https://bobbyworld.tw/wp-content/uploads/pixnet/b60bf02b2f8e7debf6d89af4ee21b3d6.jpg", 類別: "⛱ 景點", lat: 64.25579, lng: -21.13547,   mapLabel: "Þingvellir Parking P1", mapPriority: 1},
+            {地點: "8:10 Silfra Snorkeling Tour", 
+                描述: "活動 8:30 ~ 11:30 \n 定位點 Þingvellir Parking P5",
+                類別: "⛱ 景點", 網址:"https://drive.google.com/file/d/12cQLBefEPznXv6zYw47awZPQAml2UtH7/view?usp=sharing", lat: 64.25589767754398, lng: -21.12318335520558, mapLabel: "Silfra Snorkeling Tour", mapPriority: 0}, 
+            {地點: "辛格韋德利國家公園Þingvellir National Park- P1停車場", 描述: "(停留約 1~1.5 小時)，世界上唯一在海平面以上的北美板塊與歐亞板塊...\n世界上最早舉行議會的地方，1928年成為國家公園，2004年列入世界遺產。", 照片: "https://bobbyworld.tw/wp-content/uploads/pixnet/b60bf02b2f8e7debf6d89af4ee21b3d6.jpg", 類別: "⛱ 景點", lat: 64.25579, lng: -21.13547,   mapLabel: "Þingvellir Parking P1", mapPriority: 1},
             {地點: "阿爾曼納陡崖 (Almannagjá)", 描述: "在辛格韋德利國家公園內，北美版塊、歐亞版塊分界處...", 照片: "https://bobbyworld.tw/wp-content/uploads/pixnet/9297d22ba307260f2a0b01ea7db764f8.jpg", 類別: "⛱ 景點", lat: 64.2659, lng: -21.1205, mapLabel: "Almannagjá", mapPriority: 2},
             {地點: "移動: 辛格韋德利 → Bruarfoss (約 40m)", 類別: "🚗 移動"},
             {地點: "藍色瀑布 Bruarfoss", 照片: "https://mlz24bjzzgqm.i.optimole.com/w:463/h:694/q:mauto/dpr:2.0/ig:avif/https://dragonflytravelblog.com/wp-content/uploads/2024/07/DSC08814.jpg", 類別: "⛱ 景點", lat: 64.26284, lng: -20.51917, mapLabel: "Brúarfoss Waterfall Parking", mapPriority: 3},
             {地點: "移動: Bruarfoss → 間歇泉 (約 25m)", 類別: "🚗 移動"},
-            {地點: "史托克間歇泉Strokkur Geyser", 描述: "水柱高度約落在15-20公尺...", 照片: "https://bobbyworld.tw/wp-content/uploads/pixnet/97c71f9eebe535acfed9aaa4f815907c.jpg", 類別: "⛱ 景點", lat: 64.3127, lng: -20.3000, mapLabel: "Strokkur", mapPriority: 4},
+            {地點: "史托克間歇泉Strokkur Geyser", 描述: "史托克間歇泉水柱高度約落在15-20公尺，有時可高達40公尺，噴發時間約4-8分鐘，曾被譽為世界奇景之一。", 照片: "https://bobbyworld.tw/wp-content/uploads/pixnet/97c71f9eebe535acfed9aaa4f815907c.jpg", 類別: "⛱ 景點", lat: 64.3127, lng: -20.3000, mapLabel: "Strokkur", mapPriority: 4},
             {地點: "移動: 間歇泉 → 古佛斯瀑布 (約 10m)", 類別: "🚗 移動"},
-            {地點: "古佛斯瀑布 Gullfoss 黃金", 描述: "世界十大瀑布之一...", 照片: "https://bobbyworld.tw/wp-content/uploads/pixnet/6772ba08ae239a0952383c81195d6dd2.jpg", 類別: "⛱ 景點", lat: 64.3271, lng: -20.1199, mapLabel: "Gullfoss Falls", mapPriority: 5},
-            {地點: "GullfossKaffi Ehf羊肉湯", 描述: "Gullfoss Waterfall 旁邊", 照片: "https://bobbyworld.tw/wp-content/uploads/pixnet/9c600eab4147cda40e9a7a0f9e68a57b.jpg", 類別: "🧁 吃喝", lat: 64.3250, lng: -20.1240, mapLabel: "Gullfoss Kaffi"},
+            {地點: "古佛斯瀑布 Gullfoss 黃金", 描述: "世界十大瀑布之一，冰島古佛斯瀑布 (Gullfoss) 有黃金瀑布之稱，是冰島第二大瀑布。", 網址:"https://bobbyfun.tw/2022-10-26-2180/", 照片: "https://bobbyworld.tw/wp-content/uploads/pixnet/6772ba08ae239a0952383c81195d6dd2.jpg", 類別: "⛱ 景點", lat: 64.3271, lng: -20.1199, mapLabel: "Gullfoss Falls", mapPriority: 5},
+            {地點: "GullfossKaffi Ehf羊肉湯", 描述: "Gullfoss Waterfall 旁邊", 照片: "https://bobbyworld.tw/wp-content/uploads/pixnet/9c600eab4147cda40e9a7a0f9e68a57b.jpg", 類別: "🧁 吃喝", lat: 64.3250, lng: -20.1240, mapLabel: "Gullfoss Kaffi", mapPriority: 7},
             {地點: "移動: 黃金瀑布 → 塞爾福斯 (約 1h)", 類別: "🚗 移動"},
             {地點: "Hotel Hjardarbol", 類別: "🏡 住宿", 
                 描述: "<span style='color:red;'>&#10007;</span>廚房，<span style='color:red;'>&#10007;</span>洗衣，早餐 845/人，<span style='color:green;'>&#10003;</span>停車", 
@@ -50,7 +53,7 @@ export const allItineraryData = [
             {地點: "移動: 賽爾弗斯 → 火口湖 (約 20m - 若從Selfoss出發)", 類別: "🚗 移動"},
             {地點: "凱瑞斯火口湖 Kerid Crater", 描述:"約停留 30 分", 照片: "https://mimihan.tw/wp-content/uploads/20180427004523_29.jpg", 類別: "⛱ 景點", lat: 64.0413, lng: -20.8850, mapLabel: "Kerið", mapPriority: 2},
             {地點: "移動: 火口湖 → 塞里雅蘭瀑布 (約 1h 10m)", 類別: "🚗 移動"},
-            {地點: "塞里雅瀑布 Seljalandsfoss", 描述: "水簾洞瀑布，有廁所，約停留 40 分", 照片: "https://mimihan.tw/wp-content/uploads/20180507121849_84.jpg", 類別: "⛱ 景點", lat: 63.6156, lng: -19.9886, mapLabel: "Seljalandsfoss", mapPriority: 3},
+            {地點: "塞里雅瀑布 Seljalandsfoss", 描述: "水簾洞瀑布，有廁所，約停留 40 分\n⚠️ 會濕，建議穿防水的！", 照片: "https://mimihan.tw/wp-content/uploads/20180507121849_84.jpg", 類別: "⛱ 景點", lat: 63.6156, lng: -19.9886, mapLabel: "Seljalandsfoss", mapPriority: 3},
             {地點: "移動: 塞里雅瀑布 → 斯科加爾瀑布 (約 31m)", 類別: "🚗 移動"},
             {地點: "斯科加爾瀑布 Skogafoss", 描述: "高人氣《白日夢冒險王》拍攝場景..., 約停留 40 分", 照片: "https://bobbyworld.tw/wp-content/uploads/pixnet/b5354d87a4320ee73ff7fafc4ba00d30.jpg", 類別: "⛱ 景點", lat: 63.5321, lng: -19.5114, mapLabel: "Skógafoss", mapPriority: 4},
             {地點: "移動: 斯科加爾瀑布 → 黑沙灘 (約 32m)", 類別: "🚗 移動"},
@@ -59,7 +62,7 @@ export const allItineraryData = [
         ]},
         // Day 5
         { dayGroup: "Day 5", dayTitle: "Day 5: 10/8(三) 維克周邊與冰洞", mapCenter: { lat: 63.6, lng: -18.5 }, mapZoom: 9, items: [
-            {地點: "Vik 集合 10:00 卡特拉火山冰洞 3h", 台幣: "7,000", 網址:"https://adventures.is/iceland/day-tours/ice-caves/katla-ice-cave-tour-under-the-volcano/", 類別: "🎭 活動", lat: 63.4177, lng: -18.9976, mapLabel: "維克(冰洞集合)", mapPriority: 1}, // Changed ⛱ 景點 to 🎭 活動
+            {地點: "Vik 集合 08:30 卡特拉火山冰洞 3h", 台幣: "6,000", 網址:"https://adventures.is/iceland/day-tours/ice-caves/katla-ice-cave-tour-under-the-volcano/", 類別: "🎭 活動", lat: 63.4177, lng: -18.9976, mapLabel: "維克(冰洞集合)", mapPriority: 1}, // Changed ⛱ 景點 to 🎭 活動
             {地點: "移動: Vik → 羽毛峽谷 (約 50m)", 類別: "🚗 移動"},
             {地點: "羽毛峽谷 (Fjadrargljufur Canyon)", 照片: "https://bobbyworld.tw/wp-content/uploads/pixnet/c62297747249d35459e0fde974ee8204.jpg", 類別: "⛱ 景點", lat: 63.7713, lng: -18.1719, mapLabel: "Fjaðrárgljúfur", mapPriority: 2},
             {地點: "移動: 羽毛峽谷 → Skaftafell 區域 (約 1h)", 類別: "🚗 移動"},
@@ -147,9 +150,9 @@ export const allItineraryData = [
         // Day 13
         { dayGroup: "Day 13", dayTitle: "Day 13: 10/16(四) 冰島往阿姆斯特丹", mapCenter: { lat: 52.387386706609, lng: 4.8361497102209166 }, mapZoom: 11, items: [
             {地點: "KEF 機場還車、搭機", 描述: "要確認下可以還車的時間", 類別: "🚗 移動"},
-            {地點: "10:30班機", 類別: "✈️ 飛行"},
-            {地點: "移動: 雷克雅維克 → AMS", 類別: "🚗 移動"},
-            {地點: "抵達 AMS 15:45  ",  類別: "✈️ 飛行"},
+            {地點: "10:00班機", 類別: "✈️ 飛行"},
+            {地點: "移動: 雷克雅維克 → AMS 3h10m", 類別: "🚗 移動"},
+            {地點: "抵達 AMS 15:10  ",  類別: "✈️ 飛行"},
             {地點: "🚄 Schiphol Airport → Sloterdijk", 描述: "搭乘火車約12分鐘，從機場Schiphol Airport站到Sloterdijk站", 類別: "🚄 移動", lat: 52.3105, lng: 4.7683, mapLabel: "Schiphol Airport", mapPriority: 4},
             { 地點: "Mercure Amsterdam", 類別: "🏨 住宿", 描述: "<span style='color:red;'>&#10007;</span>廚房，<span style='color:green;'>&#10003;</span>洗衣，早餐 817/人，<span style='color:red;'>&#10007;</span>停車", 網址: "https://www.booking.com/Share-pKL0NjK", 照片: "https://lh3.googleusercontent.com/p/AF1QipPF7x2vAiloy-8e3CjEmThdweLXibLEX3VMmjcr=w324-h312-n-k-no", lat: 52.387386706609, lng: 4.8361497102209166, mapLabel: "Mercure Amsterdam", mapPriority: 5 }
         ]},
