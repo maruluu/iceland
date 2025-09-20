@@ -10,18 +10,18 @@ export const allItineraryData = [
                 { 地點: "✈️ 國泰航空 CX531", 描述: "台北(TPE) 19:50 → 香港(HKG) 22:00. 飛行 2h 10m.", 類別: "✈️ 飛行" },
                 { 地點: "⏳香港(HKG) 轉機", 描述: "停留 1h 15m.", 類別: "⏳ 轉機" },
                 { 地點: "✈️ 國泰航空 CX271", 描述: "香港(HKG) 23:15 → 阿姆斯特丹(AMS) 06:55 (+1日). 飛行 13h 40m. 抵達日期: 10/5 (週日).", 類別: "✈️ 飛行" },
-                { 地點: "⏳10/5(日) 06:55", 描述: " 抵達阿姆斯特丹 (AMS)", 類別: "🏁 抵達待轉"},	
-                { 地點: "✈️ 10/5(日) 12:30 ", 描述: "Play 航空 AMS -> KEF 13:50", 類別: "✈️ 飛行"}
             ]
         },
         // Day 2
         { dayGroup: "Day 2", dayTitle: "Day 2: 10/5(日) 雷克雅維克", mapCenter: { lat: 64.05, lng: -22.0 }, mapZoom: 9, items: [
+            { 地點: "⏳10/5(日) 06:55", 描述: "抵達阿姆斯特丹 (AMS)", 類別: "🏁 抵達待轉"},	
+            { 地點: "✈️ 10/5(日) 12:30 to KEF ", 描述: "Play 航空 AMS -> KEF 13:50", 類別: "✈️ 飛行", 照片: "/iceland/assets/toKEF.png"},
             {地點: "凱夫拉維克國際機場 (KEF)", 描述:"航班 13:50 抵達", 類別: "🚗 移動", lat: 63.9850, lng: -22.6056, mapLabel: "KEF 機場", mapPriority: 1}, // Updated description slightly
             {地點: "租車", 描述:"市中心的停車格是要收費的，收費時間星期一至五09:00~18:00；星期六10:00~16:00，其餘時間則是免費", 網址: "https://docs.google.com/document/d/1DSub7L2VsHixnwSMOQ2Phk8cowwv8zoZjXCIi_kEkZY/edit?tab=t.sbrz3anlv24d"}, // Consider "🚗 活動" or similar
             {地點: "移動: 機場 → 市區 (40m)", 類別: "🚗 移動"},
             {地點: "Svarta Kaffid 麵包湯", 照片: "https://mimihan.tw/wp-content/uploads/20180706200030_83.jpg", 類別: "🧁 吃喝", lat: 64.14446, lng: -21.92346, mapLabel: "Svarta Kaffið", mapPriority: 2, 營業時間: "11:30–22:00"},
             {地點: "Braud & Co麵包店", 描述:"有很多分店",  照片: "https://mimihan.tw/wp-content/uploads/20180503165237_63.jpg", 類別: "🧁 吃喝", lat: 64.1440, lng: -21.9280, mapLabel: "Brauð & Co.", mapPriority: 3, 營業時間: "06:30–17:00"},
-            {地點: "市區採買", 類別: "⛱ 景點", lat: 64.1470, lng: -21.9400, mapLabel: "Reykjavik City Center"},
+            {地點: "市區採買", 描述: "雷克雅維克市中心購物區", 營業時間: "平日 11:00～18:30\n週五 10:00～19:30\n週六 10:00～18:00\n週日 12:00～18:00", 類別: "⛱ 景點", lat: 64.1470, lng: -21.9400, mapLabel: "Reykjavik City Center"},
             {地點: "Grettir Guesthouse Downtown Charm", 類別: "🏡 住宿", 描述: "<span style='color:green;'>&#10003;</span>廚房，<span style='color:red;'>&#10007;</span>洗衣，<span style='color:red;'>&#10007;</span>早餐，<span style='color:red;'>&#10007;</span>停車", 照片:"https://cf.bstatic.com/xdata/images/hotel/max1280x900/606428941.jpg?k=b320806e5ae8120e9e96f85a42fd59ede02a2254b487d767a4381df5e47ada66&o=&hp=1" ,網址: "https://www.booking.com/Share-NeX74T", lat: 64.14523324228844, lng: -21.92748344376633, mapLabel: "Grettir Guesthouse", mapPriority: 6},
         ]},
         // Day 3
@@ -146,14 +146,13 @@ export const allItineraryData = [
             {地點: "哈爾格林姆教堂( Hallgrímskirkja)", 克朗: "1,400", 描述: "全冰島最大教堂，風格前衛，外觀如被風化的柱狀玄武岩", 類別: "⛱ 景點", lat: 64.1417, lng: -21.9266, mapLabel: "Hallgrímskirkja", mapPriority: 6, 營業時間: "10:00~17:00\n 景觀塔：10:00~16:30"},
             {地點: "移動: 市區 → 藍湖 (42m)", 類別: "🚗 移動"},
             {地點: "藍湖", 類別: "⛱ 景點", lat: 63.8806, lng: -22.4496, mapLabel: "Blue Lagoon", mapPriority: 2, 營業時間: "08:00–22:00"},
-           
             {地點: "Grettir Guesthouse Downtown Charm", 類別: "🏡 住宿", 描述: "<span style='color:green;'>&#10003;</span>廚房，<span style='color:red;'>&#10007;</span>洗衣，<span style='color:red;'>&#10007;</span>早餐，<span style='color:green;'>&#10003;</span>停車，NT$7,996，雙人房", 網址: "https://www.booking.com/Share-NeX74T", lat: 64.14523324228844, lng: -21.92748344376633, 照片: "https://cf.bstatic.com/xdata/images/hotel/max1280x900/606428941.jpg?k=b320806e5ae8120e9e96f85a42fd59ede02a2254b487d767a4381df5e47ada66&o=&hp=1", mapLabel: "Grettir Guesthouse", mapPriority: 7}
         ]},
         // Day 13
         { dayGroup: "Day 13", dayTitle: "Day 13: 10/16(四) 冰島往阿姆斯特丹", mapCenter: { lat: 52.387386706609, lng: 4.8361497102209166 }, mapZoom: 11, items: [
             {地點: "KEF 機場還車、搭機", 描述: "要確認下可以還車的時間", 類別: "🚗 移動"},
             {地點: "10:00班機", 類別: "✈️ 飛行"},
-            {地點: "移動: 雷克雅維克 → AMS 3h10m", 類別: "🚗 移動"},
+            {地點: "移動: 雷克雅維克 → AMS 3h10m", 類別: "🚗 移動", 照片: "/iceland/assets/toAMS.png"},
             {地點: "抵達 AMS 15:10  ",  類別: "✈️ 飛行"},
             {地點: "🚄 Schiphol Airport → Sloterdijk", 描述: "搭乘火車約12分鐘，從機場Schiphol Airport站到Sloterdijk站", 類別: "🚄 移動", lat: 52.3105, lng: 4.7683, mapLabel: "Schiphol Airport", mapPriority: 4},
             { 地點: "Mercure Amsterdam", 類別: "🏨 住宿", 描述: "<span style='color:red;'>&#10007;</span>廚房，<span style='color:green;'>&#10003;</span>洗衣，早餐 817/人，<span style='color:red;'>&#10007;</span>停車", 網址: "https://www.booking.com/Share-pKL0NjK", 照片: "https://lh3.googleusercontent.com/p/AF1QipPF7x2vAiloy-8e3CjEmThdweLXibLEX3VMmjcr=w324-h312-n-k-no", lat: 52.387386706609, lng: 4.8361497102209166, mapLabel: "Mercure Amsterdam", mapPriority: 5 }
