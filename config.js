@@ -21,7 +21,7 @@ export const allItineraryData = [
             {地點: "移動: 機場 → 市區 (40m)", 類別: "🚗 移動"},
             {地點: "Svarta Kaffid 麵包湯", 照片: "https://mimihan.tw/wp-content/uploads/20180706200030_83.jpg", 類別: "🧁 吃喝", lat: 64.14446, lng: -21.92346, mapLabel: "Svarta Kaffið", mapPriority: 2, 營業時間: "11:30–22:00"},
             {地點: "Braud & Co麵包店", 描述:"有很多分店",  照片: "https://mimihan.tw/wp-content/uploads/20180503165237_63.jpg", 類別: "🧁 吃喝", lat: 64.1440, lng: -21.9280, mapLabel: "Brauð & Co.", mapPriority: 3, 營業時間: "06:30–17:00"},
-            {地點: "市區採買", 描述: "雷克雅維克市中心購物區", 營業時間: "平日 11:00～18:30\n週五 10:00～19:30\n週六 10:00～18:00\n週日 12:00～18:00", 類別: "⛱ 景點", lat: 64.1470, lng: -21.9400, mapLabel: "Reykjavik City Center"},
+            {地點: "市區採買", 描述: "雷克雅維克市中心購物區", 營業時間: "平日 11:00～18:30<br/>週五 10:00～19:30<br/>週六 10:00～18:00<br/>週日 12:00～18:00", 類別: "⛱ 景點", lat: 64.1470, lng: -21.9400, mapLabel: "Reykjavik City Center"},
             {地點: "Grettir Guesthouse Downtown Charm", 類別: "🏡 住宿", 描述: "<span style='color:green;'>&#10003;</span>廚房，<span style='color:red;'>&#10007;</span>洗衣，<span style='color:red;'>&#10007;</span>早餐，<span style='color:red;'>&#10007;</span>停車", 照片:"https://cf.bstatic.com/xdata/images/hotel/max1280x900/606428941.jpg?k=b320806e5ae8120e9e96f85a42fd59ede02a2254b487d767a4381df5e47ada66&o=&hp=1" ,網址: "https://www.booking.com/Share-NeX74T", lat: 64.14523324228844, lng: -21.92748344376633, mapLabel: "Grettir Guesthouse", mapPriority: 6},
         ]},
         // Day 3
@@ -30,30 +30,45 @@ export const allItineraryData = [
             {地點: "8:10 Silfra Snorkeling Tour", 
                 描述: "活動 8:30 ~ 11:30 \n 定位點 Þingvellir Parking P5",
                 類別: "⛱ 景點", 網址:"https://drive.google.com/file/d/12cQLBefEPznXv6zYw47awZPQAml2UtH7/view?usp=sharing", lat: 64.25589767754398, lng: -21.12318335520558, mapLabel: "Silfra Snorkeling Tour", mapPriority: 0}, 
-            {地點: "辛格韋德利國家公園Þingvellir National Park- P1停車場", 描述: "(停留約 1~1.5 小時)，世界上唯一在海平面以上的北美板塊與歐亞板塊...\n世界上最早舉行議會的地方，1928年成為國家公園，2004年列入世界遺產。", 照片: "https://bobbyworld.tw/wp-content/uploads/pixnet/b60bf02b2f8e7debf6d89af4ee21b3d6.jpg", 類別: "⛱ 景點", lat: 64.25579, lng: -21.13547,   mapLabel: "Þingvellir Parking P1", mapPriority: 1},
-            {地點: "阿爾曼納陡崖 (Almannagjá)", 描述: "在辛格韋德利國家公園內，北美版塊、歐亞版塊分界處...", 照片: "https://bobbyworld.tw/wp-content/uploads/pixnet/9297d22ba307260f2a0b01ea7db764f8.jpg", 類別: "⛱ 景點", lat: 64.2659, lng: -21.1205, mapLabel: "Almannagjá", mapPriority: 2},
+            {地點: "辛格韋德利國家公園Þingvellir National Park- P1停車場", 
+              描述: "(停留約 1~1.5 小時)，世界上唯一在海平面以上的北美板塊與歐亞板塊...\n世界上最早舉行議會的地方，1928年成為國家公園，2004年列入世界遺產。", 
+              照片: "https://bobbyworld.tw/wp-content/uploads/pixnet/b60bf02b2f8e7debf6d89af4ee21b3d6.jpg", 類別: "⛱ 景點", 
+              lat: 64.25579, lng: -21.13547,   
+              mapLabel: "Þingvellir Parking P1", 
+              mapPriority: 1},
+            {地點: "阿爾曼納陡崖 (Almannagjá)", 描述: "在辛格韋德利國家公園內，北美版塊、歐亞版塊分界處...", 
+              照片: "https://bobbyworld.tw/wp-content/uploads/pixnet/9297d22ba307260f2a0b01ea7db764f8.jpg", 類別: "⛱ 景點", 
+              lat: 64.2659, lng: -21.1205, 
+              mapLabel: "Almannagjá", mapPriority: 2},
             {地點: "移動: 辛格韋德利 → Bruarfoss (約 40m)", 類別: "🚗 移動"},
-            {地點: "藍色瀑布 Bruarfoss", 照片: "https://mlz24bjzzgqm.i.optimole.com/w:463/h:694/q:mauto/dpr:2.0/ig:avif/https://dragonflytravelblog.com/wp-content/uploads/2024/07/DSC08814.jpg", 類別: "⛱ 景點", lat: 64.26284, lng: -20.51917, mapLabel: "Brúarfoss Waterfall Parking", mapPriority: 3},
+            {地點: "藍色瀑布 Bruarfoss", 
+              照片: "https://mlz24bjzzgqm.i.optimole.com/w:463/h:694/q:mauto/dpr:2.0/ig:avif/https://dragonflytravelblog.com/wp-content/uploads/2024/07/DSC08814.jpg", 
+              類別: "⛱ 景點", lat: 64.26245326144793, lng:  -20.519232936638627, mapLabel: "Brúarfoss Waterfall Parking", mapPriority: 3},
             {地點: "移動: Bruarfoss → 間歇泉 (約 25m)", 類別: "🚗 移動"},
             {地點: "史托克間歇泉Strokkur Geyser", 描述: "史托克間歇泉水柱高度約落在15-20公尺，有時可高達40公尺，噴發時間約4-8分鐘，曾被譽為世界奇景之一。", 照片: "https://bobbyworld.tw/wp-content/uploads/pixnet/97c71f9eebe535acfed9aaa4f815907c.jpg", 類別: "⛱ 景點", lat: 64.3127, lng: -20.3000, mapLabel: "Strokkur", mapPriority: 4},
             {地點: "移動: 間歇泉 → 古佛斯瀑布 (約 10m)", 類別: "🚗 移動"},
             {地點: "古佛斯瀑布 Gullfoss 黃金", 描述: "世界十大瀑布之一，冰島古佛斯瀑布 (Gullfoss) 有黃金瀑布之稱，是冰島第二大瀑布。", 網址:"https://bobbyfun.tw/2022-10-26-2180/", 照片: "https://bobbyworld.tw/wp-content/uploads/pixnet/6772ba08ae239a0952383c81195d6dd2.jpg", 類別: "⛱ 景點", lat: 64.3271, lng: -20.1199, mapLabel: "Gullfoss Falls", mapPriority: 5},
             {地點: "GullfossKaffi Ehf羊肉湯", 描述: "Gullfoss Waterfall 旁邊", 照片: "https://bobbyworld.tw/wp-content/uploads/pixnet/9c600eab4147cda40e9a7a0f9e68a57b.jpg", 類別: "🧁 吃喝", lat: 64.3250, lng: -20.1240, mapLabel: "Gullfoss Kaffi", mapPriority: 7},
-            {地點: "移動: 黃金瀑布 → 塞爾福斯 (約 1h)", 類別: "🚗 移動"},
+            {地點: "移動: 黃金瀑布 → 火口湖 Kerid Crater(約 50m)", 類別: "🚗 移動"},
+            {地點: "凱瑞斯火口湖 Kerid Crater", 描述:"約停留 30 分", 照片: "https://mimihan.tw/wp-content/uploads/20180427004523_29.jpg", 類別: "⛱ 景點", lat: 64.0413, lng: -20.8850, mapLabel: "Kerið", mapPriority: 8},
+            {地點: "移動: 火口湖 → Hotel Hjardarbol(約 15m)", 類別: "🚗 移動"},
             {地點: "Hotel Hjardarbol", 類別: "🏡 住宿", 
                 描述: "<span style='color:red;'>&#10007;</span>廚房，<span style='color:red;'>&#10007;</span>洗衣，早餐 845/人，<span style='color:green;'>&#10003;</span>停車", 
                 網址: "https://www.booking.com/Share-oquGKhz", 
                 照片:"https://cf.bstatic.com/xdata/images/hotel/max1024x768/572843141.jpg?k=bd25d80ecc24f8438a0fa0e11b86375006dba85f7a0091d7b0f82c9be588dc5e&o=",
-                lat: 63.96181409291465, lng: -21.10362489259309, mapLabel: "Hotel Hjardarbol", mapPriority: 6}
+                lat: 63.96181409291465, lng: -21.10362489259309, mapLabel: "Hotel Hjardarbol", mapPriority: 9}
         ]},
         // Day 4
         { dayGroup: "Day 4", dayTitle: "Day 4: 10/7(二) 南部", mapCenter: { lat: 63.70, lng: -20.0 }, mapZoom: 8, items: [
             {地點: "8:00 賽爾弗斯 → 野溪溫泉 (約 20m)",類別: "🚗 移動"},
-            {地點: "Reykjadalur 野溪溫泉", 描述: "單程約 3 km（1.8 mi），來回 1.5 小時，需爬升約 320 m，預留3小時", 照片: "https://mlz24bjzzgqm.i.optimole.com/w:768/h:512/q:mauto/dpr:2.0/ig:avif/https://dragonflytravelblog.com/wp-content/uploads/2024/07/reykjadalur.jpg", 類別: "⛱ 景點", lat: 64.0238, lng: -21.2116, mapLabel: "Reykjadalur Hot Spring Thermal River Parking", mapPriority: 1},
-            {地點: "移動: 賽爾弗斯 → 火口湖 (約 20m - 若從Selfoss出發)", 類別: "🚗 移動"},
-            {地點: "凱瑞斯火口湖 Kerid Crater", 描述:"約停留 30 分", 照片: "https://mimihan.tw/wp-content/uploads/20180427004523_29.jpg", 類別: "⛱ 景點", lat: 64.0413, lng: -20.8850, mapLabel: "Kerið", mapPriority: 2},
-            {地點: "移動: 火口湖 → 塞里雅蘭瀑布 (約 1h 10m)", 類別: "🚗 移動"},
-            {地點: "塞里雅瀑布 Seljalandsfoss", 描述: "水簾洞瀑布，有廁所，約停留 40 分\n⚠️ 會濕，建議穿防水的！", 照片: "https://mimihan.tw/wp-content/uploads/20180507121849_84.jpg", 類別: "⛱ 景點", lat: 63.6156, lng: -19.9886, mapLabel: "Seljalandsfoss", mapPriority: 3},
+            {地點: "Reykjadalur 野溪溫泉", 描述: "單程約 3 km（1.8 mi），來回 1.5 小時，需爬升約 320 m，預留3小時", 
+              照片: "https://mlz24bjzzgqm.i.optimole.com/w:768/h:512/q:mauto/dpr:2.0/ig:avif/https://dragonflytravelblog.com/wp-content/uploads/2024/07/reykjadalur.jpg", 類別: "⛱ 景點", 
+              lat: 64.0238, lng: -21.2116, mapLabel: "Reykjadalur Hot Spring Thermal River Parking", 
+              mapPriority: 1},
+            {地點: "移動: 野溪溫泉 → 塞里雅蘭瀑布 (約 1h 15m)", 類別: "🚗 移動"},
+            {地點: "塞里雅瀑布 Seljalandsfoss", 描述: "水簾洞瀑布，有廁所，約停留 40 分\n⚠️ 會濕，建議穿防水的！", 
+              照片: "https://mimihan.tw/wp-content/uploads/20180507121849_84.jpg", 類別: "⛱ 景點", lat: 63.6156, lng: -19.9886, mapLabel: "Seljalandsfoss", 
+              mapPriority: 2},
             {地點: "移動: 塞里雅瀑布 → 斯科加爾瀑布 (約 31m)", 類別: "🚗 移動"},
             {地點: "斯科加爾瀑布 Skogafoss", 描述: "高人氣《白日夢冒險王》拍攝場景..., 約停留 40 分", 照片: "https://bobbyworld.tw/wp-content/uploads/pixnet/b5354d87a4320ee73ff7fafc4ba00d30.jpg", 類別: "⛱ 景點", lat: 63.5321, lng: -19.5114, mapLabel: "Skógafoss", mapPriority: 4},
             {地點: "移動: 斯科加爾瀑布 → 黑沙灘 (約 32m)", 類別: "🚗 移動"},
@@ -62,16 +77,28 @@ export const allItineraryData = [
         ]},
         // Day 5
         { dayGroup: "Day 5", dayTitle: "Day 5: 10/8(三) 維克周邊與冰洞", mapCenter: { lat: 63.6, lng: -18.5 }, mapZoom: 9, items: [
-            {地點: "Vik 集合 08:30 卡特拉火山冰洞 3h", 台幣: "6,000", 網址:"https://drive.google.com/file/d/1jg4erRi83MotQCUW5NVCiHsypcKrbxRZ/view?usp=sharing", 類別: "🎭 活動", lat: 63.4177, lng: -18.9976, mapLabel: "維克(冰洞集合)", mapPriority: 1}, // Changed ⛱ 景點 to 🎭 活動
+            {地點: "Vik 集合 08:30 卡特拉火山冰洞 3h", 
+              描述:"The meeting point for your Katla Ice Cave adventures is by the parking lot behind the Icewear Magasin building(facing the sea) in Vik, South Iceland. Look for our Arctic Adventures Katla Meeting Point sign!", 
+              網址:"https://drive.google.com/file/d/1jg4erRi83MotQCUW5NVCiHsypcKrbxRZ/view?usp=sharing", 類別: "🎭 活動", 
+              lat: 63.41709398433794, lng: -19.00008523699244, mapLabel: "維克(冰洞集合)", 
+              mapPriority: 1}, // Changed ⛱ 景點 to 🎭 活動
             {地點: "移動: Vik → 羽毛峽谷 (約 50m)", 類別: "🚗 移動"},
-            {地點: "羽毛峽谷 (Fjadrargljufur Canyon)", 描述:"在9,000年前冰河時期成形，有著「世界最美峽谷」美譽，爬坡上瀑布觀景台是另一個截然不同的視角。步道全程約1.5公里，來回大概需要2小時，波比認為頂端觀看瀑布的畫面，沒有特別美。相反的路途約1/3的地方，反倒最能彰顯峽谷壯麗之感，因此建議時間有限的人，走到單程約15分鐘的觀景台即可。", 照片: "https://bobbyworld.tw/wp-content/uploads/pixnet/c62297747249d35459e0fde974ee8204.jpg", 類別: "⛱ 景點", lat: 63.7713, lng: -18.1719, mapLabel: "Fjaðrárgljúfur", mapPriority: 2},
+            {地點: "羽毛峽谷 (Fjadrargljufur Canyon)", 描述:"在9,000年前冰河時期成形，有著「世界最美峽谷」美譽，爬坡上瀑布觀景台是另一個截然不同的視角。步道全程約1.5公里，來回大概需要2小時，波比認為頂端觀看瀑布的畫面，沒有特別美。相反的路途約1/3的地方，反倒最能彰顯峽谷壯麗之感，因此建議時間有限的人，走到單程約15分鐘的觀景台即可。", 照片: "https://bobbyworld.tw/wp-content/uploads/pixnet/c62297747249d35459e0fde974ee8204.jpg", 類別: "⛱ 景點", 
+              lat: 63.7713, lng: -18.1719, mapLabel: "Fjaðrárgljúfur", 
+              mapPriority: 2},
             {地點: "移動: 羽毛峽谷 → Skaftafell 區域 (約 1h)", 類別: "🚗 移動"},
-            {地點: "玄武岩黑瀑布（Svartifoss", 描述: "到時候決定要不要去", 照片: "https://mimihan.tw/wp-content/uploads/20230326222137_3.jpg", 類別: "⛱ 景點", lat: 64.01637, lng: -16.9691857, mapLabel: "Svartifoss", mapPriority: 3},
-            {地點: "Hvoll Hostel", 照片:"https://content.skyscnr.com/available/1885334561/1885334561_WxH.jpg", 類別: "🏡 住宿", 描述: "<span style='color:green;'>&#10003;</span>廚房，<span style='color:red;'>&#10007;</span>洗衣，<span style='color:red;'>&#10007;</span>早餐，<span style='color:green;'>&#10003;</span>停車", 網址: "https://www.booking.com/Share-80MqhM", lat: 63.9095725904926, lng: -17.682835288876085, mapLabel: "Hvoll Hostel", mapPriority: 5}
+            {地點: "玄武岩黑瀑布（Svartifoss", 描述: "從國家公園停車場走上去大約25分鐘，來回大概要抓90分", 照片: "https://mimihan.tw/wp-content/uploads/20230326222137_3.jpg", 
+              類別: "⛱ 景點", lat: 64.01487361332752,lng: -16.96429613746107, mapLabel: "Skaftafell Parking", 
+              mapPriority: 3},
+            {地點: "移動: Skaftafell → Hvoll Hostel (約 36m)", 類別: "🚗 移動"},
+            {地點: "Hvoll Hostel", 照片:"https://content.skyscnr.com/available/1885334561/1885334561_WxH.jpg", 類別: "🏡 住宿", 
+              描述: "<span style='color:green;'>&#10003;</span>廚房，<span style='color:red;'>&#10007;</span>洗衣，<span style='color:red;'>&#10007;</span>早餐，<span style='color:green;'>&#10003;</span>停車", 
+              網址: "https://www.booking.com/Share-80MqhM", lat: 63.9095725904926, lng: -17.682835288876085, mapLabel: "Hvoll Hostel", 
+              mapPriority: 4}
         ]},
         // Day 6
         { dayGroup: "Day 6", dayTitle: "Day 6: 10/9(四) 冰川健行與冰河湖", mapCenter: { lat: 64.03, lng: -16.5 }, mapZoom: 9, items: [
-            {地點: "Skaftafell 冰川健行 5h 11:00", 網址: "https://cn.guidetoiceland.is/connect-with-locals/6640/iceland-local-tour-skaftafell-svinafellsjokull-glacier-hiking-experience", 照片: "https://adventures.is/media/237243/iceland-skaftafell-glacier-hiking-on-spikes.jpg?anchor=center&mode=crop&width=330&height=188&format=webp&quality=80&rnd=133728672360000000", 類別: "🎭 活動", lat: 64.0162, lng: -16.9661, mapLabel: "Skaftafell Visitor Centre (健行集合)", mapPriority: 1}, // Changed ⛱ 景點 to 🎭 活動
+            {地點: "Skaftafell 冰川健行 5h 10:30 集合 ～ 15:30", 網址: "https://cn.guidetoiceland.is/connect-with-locals/6640/iceland-local-tour-skaftafell-svinafellsjokull-glacier-hiking-experience", 照片: "https://adventures.is/media/237243/iceland-skaftafell-glacier-hiking-on-spikes.jpg?anchor=center&mode=crop&width=330&height=188&format=webp&quality=80&rnd=133728672360000000", 類別: "🎭 活動", lat: 64.0162, lng: -16.9661, mapLabel: "Skaftafell Visitor Centre (健行集合)", mapPriority: 1}, // Changed ⛱ 景點 to 🎭 活動
             {地點: "移動: Skaftafell → 冰河湖 (約 50m)", 類別: "🚗 移動"},
             {地點: "Skyrhusid HI Hostel", 類別: "🏡 住宿", 描述: "<span style='color:green;'>&#10003;</span>廚房，<span style='color:red;'>&#10007;</span>洗衣，<span style='color:red;'>&#10007;</span>早餐，<span style='color:green;'>&#10003;</span>停車", 網址: "https://www.booking.com/Share-YoGsX0", lat: 64.1295014055353, lng: -16.01554051772359, 照片: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/278680612.jpg?k=ee223e58c9a9b45210b21577298dfb8562c8357725eda10ad488c555df2d6b5b&o=", mapLabel: "Skyrhusid HI Hostel", mapPriority: 2}
         ]},
@@ -79,9 +106,13 @@ export const allItineraryData = [
         { dayGroup: "Day 7", dayTitle: "Day 7: 10/10(五) 東邊 - 冰河湖到埃伊爾斯塔濟", mapCenter: { lat: 64.7, lng: -15.3 }, mapZoom: 7, items: [
             {地點: "Jokulsarlon冰河湖獨木舟", 照片: "https://mlz24bjzzgqm.i.optimole.com/w:768/h:512/q:mauto/dpr:2.0/ig:avif/https://dragonflytravelblog.com/wp-content/uploads/2024/08/IMG_0303.jpg", 類別: "🎭 活動", lat: 64.0484, lng: -16.1794, mapLabel: "Jökulsárlón", mapPriority: 1}, // Changed ⛱ 景點 to 🎭 活動
             {地點: "鑽石冰沙灘", 照片: "https://mimihan.tw/wp-content/uploads/20230326222910_99.jpg", 類別: "⛱ 景點", lat: 64.0450, lng: -16.1780, mapLabel: "Diamond Beach", mapPriority: 2},
-            {地點: "移動: 冰河湖 → Vestrahorn (約 1h 21m)", 類別: "🚗 移動"},
-            {地點: "Vestrahorn 蝙蝠山 x 維京人聚落 Viking Village", 照片: "https://kavana.tw/wp-content/uploads/pixnet/f2174d2460d318a9f09be7bb3a57b0db.jpg, https://kavana.tw/wp-content/uploads/pixnet/4cc7f163b96e90a32d2ab027110392b7.jpg", 類別: "⛱ 景點", lat: 64.2470, lng: -14.9960, mapLabel: "Stokksnes (Vestrahorn Viewpoint)", mapPriority: 3},
-            {地點: "Pakkhús Restaurant 小龍蝦", 照片: "https://mimihan.tw/wp-content/uploads/20180628173749_56.jpg", 類別: "🧁 吃喝", lat: 64.2500, lng: -15.2080, mapLabel: "Pakkhús Restaurant (Höfn)"},
+            {地點: "移動: 冰河湖 → Vestrahorn (約 1h 21m)", 描述:"要來Vestrahorn，Google Map 設定導航：Viking Cafe", 類別: "🚗 移動"},
+            {地點: "Vestrahorn 蝙蝠山 x 維京人聚落 Viking Village", 
+              描述:"Viking Cafe 是在維京人聚落＆拍倒影海灘的出入口位置，大家要先在這裡停車買票。<br/>從這裡就分成兩條路，一條是走路前往北歐電影場景 – 維京人聚落（Viking Village），另一條是往可以拍蝙蝠山倒影海灘的車道，車道有管制，沒買票取得QR-code就無法開車進入，只能走進去。也提醒大家，因為並不是每次來的時候潮汐、天氣都可以拍倒影，所以是否買票進去就要自己斟酌。",  
+              照片: "https://kavana.tw/wp-content/uploads/pixnet/f2174d2460d318a9f09be7bb3a57b0db.jpg, https://kavana.tw/wp-content/uploads/pixnet/4cc7f163b96e90a32d2ab027110392b7.jpg", 
+              網址: "https://mimigo.tw/vestrahorn/",
+              類別: "⛱ 景點", lat: 64.2470, lng: -14.9960, mapLabel: "Stokksnes (Vestrahorn Viewpoint)", mapPriority: 3},
+            {地點: "Pakkhús Restaurant 小龍蝦", 照片: "https://mimihan.tw/wp-content/uploads/20180628173749_56.jpg", 類別: "🧁 吃喝", lat: 64.25014760364019, lng: -15.203563225099883, mapLabel: "Pakkhús Restaurant (Höfn)"},
             {地點: "移動: Vestrahorn/Höfn → 埃伊爾斯塔濟 (約 3h 18m)", 類別: "🚗 移動"},
             {地點: "Bankinn - Hotel by Aldan", 類別: "🏡 住宿", 描述: "<span style='color:green;'>&#10003;</span>廚房，<span style='color:red;'>&#10007;</span>洗衣，早餐 588/人，<span style='color:green;'>&#10003;</span>停車", 網址: "https://www.booking.com/Share-B9kJa6", lat: 65.26192036188023, lng: -14.009229280026773, mapLabel: "Bankinn - Hotel by Aldan", mapPriority: 4}
         ]},
@@ -95,7 +126,7 @@ export const allItineraryData = [
             {地點: "Námafjall Hverir 火山地熱谷", 照片: "https://mimihan.tw/wp-content/uploads/20180529165813_72.jpg", 類別: "⛱ 景點", lat: 65.6415, lng: -16.8093, mapLabel: "Hverir (Námafjall)", mapPriority: 3},
             {地點: "洞穴溫泉Grjótagjá", 照片: "https://mimihan.tw/wp-content/uploads/20180603221410_36.jpg", 類別: "⛱ 景點", lat: 65.6262, lng: -16.8820, mapLabel: "Grjótagjá cave", mapPriority: 4},
             {地點: "米湖溫泉", 照片: "https://mimihan.tw/wp-content/uploads/20180530184317_85.jpg", 類別: "🎭 活動", lat: 65.6305, lng: -16.8480, mapLabel: "Mývatn Nature Baths", mapPriority: 5}, // Changed ⛱ 景點 to 🎭 活動 (bathing is an activity)
-            {地點: "Vogafjos Cafe", 類別: "🧁 吃喝", lat: 65.5913, lng: -16.9204, mapLabel: "Vogafjós Farm Resort", mapPriority: 6},
+            {地點: "Vogafjós Farm Resort", 類別: "🧁 吃喝", 描述:"吃羊排、羊膝、可麗餅，是TripAdvisor在當地評價的第一名餐廳", lat: 65.6243907547431, lng: -16.919686287406144, mapLabel: "Vogafjós", mapPriority: 6},
             {地點: "Eldá Guesthouse", 類別: "🏡 住宿", 描述: "<span style='color:green;'>&#10003;</span>廚房，<span style='color:red;'>&#10007;</span>洗衣，<span style='color:red;'>&#10007;</span>早餐，<span style='color:green;'>&#10003;</span>停車，NT$8,399，雙人房", 網址: "https://www.booking.com/Share-y95ofhe", lat: 65.6411510806318, lng: -16.90701006974602, 照片: "https://gti.images.tshiftcdn.com/2947681/x/0/62802992.jpg?ixlib=php-3.3.0&ar=1.91%3A1&w=1200&fit=crop", mapLabel: "Eldá Guesthouse", mapPriority: 7}
         ]},
         // Day 9
@@ -106,7 +137,7 @@ export const allItineraryData = [
             {地點: "移動: 米湖 → Godafoss (約 50m)", 類別: "🚗 移動"},
             {地點: "Godafoss眾神瀑布", 照片: "https://mimihan.tw/wp-content/uploads/20180609144626_42.jpg", 類別: "⛱ 景點", lat: 65.6828, lng: -17.5503, mapLabel: "Goðafoss", mapPriority: 3},
             {地點: "移動: Godafoss -> Akureyri(Kaffi Ilmur ehf) (約 40m)", 類別: "🚗 移動"},
-            {地點: "Kaffi Ilmur ehf", 類別: "🧁 吃喝", 描述: "自助式Buffer吃到飽", 克朗:"2,290", lat: 65.6805, lng: -18.0903, mapLabel: "Kaffi Ilmur", mapPriority: 4},
+            {地點: "Kaffi Ilmur ehf", 類別: "🧁 吃喝", 描述: "buffet in the weekend from 11am to 2.30pm", 克朗:"2,290", lat: 65.6805, lng: -18.0903, mapLabel: "Kaffi Ilmur", mapPriority: 4},
             {地點: "Brynja 冰淇淋", 描述:"Hafnarstræti 購物街市區晃晃", 類別: "🧁 吃喝", lat: 65.6790, lng: -18.0970, mapLabel: "Brynja", mapPriority: 5},
             {地點: "K16Apartments", 類別: "🏡 住宿", 描述: "<span style='color:green;'>&#10003;</span>廚房，<span style='color:green;'>&#10003;</span>洗衣，<span style='color:red;'>&#10007;</span>早餐，<span style='color:green;'>&#10003;</span>停車，NT$5,006，1張加大雙人床1張沙發床", 網址: "https://www.booking.com/Share-iepTNB", lat: 65.68027183628328, lng: -18.0918670372408, 照片: "https://suhowtravel.com/wp-content/uploads/2024/09/K16Apartments-scaled-e1726112596746.jpg", mapLabel: "K16Apartments", mapPriority: 6}
         ]},
@@ -120,7 +151,14 @@ export const allItineraryData = [
             {地點: "Blonduoskirkja 火山教堂、鯨魚教堂", 描述: "可順便加油", 照片: "https://mimihan.tw/wp-content/uploads/20180618141633_68.jpg", 類別: "⛱ 景點", lat: 65.6580, lng: -20.2785, mapLabel: "Blönduóskirkja", mapPriority: 2},
             {地點: "移動: Blönduóskirkja → 巨人峽谷 (約 37m)", 類別: "🚗 移動"},
             {地點: "巨人峽谷 (Kolugljúfur Canyon)", 類別: "⛱ 景點", lat: 65.3303, lng: -20.7008, mapLabel: "Kolugljúfur Canyon", mapPriority: 3},
-            {地點: "Fagrabrekka Guesthouse", 類別: "🏡 住宿", 描述: "<span style='color:green;'>&#10003;</span>廚房，<span style='color:red;'>&#10007;</span>洗衣，<span style='color:red;'>&#10007;</span>早餐，<span style='color:green;'>&#10003;</span>停車，NT$6,243，小型雙人房－附共用衛浴", 網址: "https://www.booking.com/Share-bHZrFT6", lat: 65.16652428821554, lng: -20.792702936640737, 照片: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/388785829.jpg?k=ce43059e0eba37b9b9a009299298845542d60277c611fd5ac938f98c1963cc86&o=", mapLabel: "Fagrabrekka Guesthouse", mapPriority: 4}
+            {地點: "Fagrabrekka Guesthouse", 類別: "🏡 住宿", 
+              描述: "<span style='color:green;'>&#10003;</span>廚房，<span style='color:red;'>&#10007;</span>洗衣，<span style='color:red;'>&#10007;</span>早餐，<span style='color:green;'>&#10003;</span>停車，NT$6,243，小型雙人房－附共用衛浴", 
+              網址: "https://www.booking.com/Share-bHZrFT6", 
+              lat: 65.14119813682076,  lng: -21.077053457672005, 
+              照片: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/388785829.jpg?k=ce43059e0eba37b9b9a009299298845542d60277c611fd5ac938f98c1963cc86&o=", 
+              mapLabel: "Fagrabrekka Guesthouse", 
+              mapPriority: 4
+            }
         ]},
         // Day 11
         { dayGroup: "Day 11", dayTitle: "Day 11: 10/14(二) 斯奈山半島", mapCenter: { lat: 64.85, lng: -23.3 }, mapZoom: 9, items: [
@@ -132,7 +170,7 @@ export const allItineraryData = [
             {地點: "Ingjaldshóll Church", 描述: "視力檢查小房子", 類別: "⛱ 景點", lat: 64.90877, lng: -23.847721, mapLabel: "Ingjaldshóll", mapPriority: 3, 照片:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfAVn3jyCFJfYkBKb32wHFtW9_e_MTec0j3g&s"},
             
             {地點: "SAXHÓLAR CRATER 火山", 描述: "是一座沈睡400年的火山", 類別: "⛱ 景點", lat: 64.8510, lng: -23.9150, mapLabel: "Saxhóll Crater", mapPriority: 4},
-            {地點: "VATNSHELLIR CAVE 地心探險", 描述: "每個小時有一團，約莫45分鐘", 類別: "🎭 活動", lat: 64.7520, lng: -23.8200, mapLabel: "Vatnshellir Cave", mapPriority: 5}, // Caving is an activity
+            {地點: "15:00 VATNSHELLIR CAVE 地心探險", 描述: "約莫45分鐘", 類別: "🎭 活動", lat: 64.7520, lng: -23.8200, mapLabel: "Vatnshellir Cave", mapPriority: 5}, // Caving is an activity
             {地點: "Londrangar 怪物海岸", 類別: "⛱ 景點", lat: 64.7360, lng: -23.7800, mapLabel: "Lóndrangar", mapPriority: 6},
             {地點: "BÁRÐAR SAGA 石巨人", 類別: "⛱ 景點", lat: 64.7744, lng: -23.7791, mapLabel: "Bárður Snæfellsás (Arnarstapi)", mapPriority: 7},
             {地點: "移動: Arnarstapi → Ytri Tunga (約 30m)", 類別: "🚗 移動"},
@@ -142,7 +180,7 @@ export const allItineraryData = [
         // Day 12
         { dayGroup: "Day 12", dayTitle: "Day 12: 10/15(三) 返回雷克雅維克", mapCenter: { lat: 64.5, lng: -22.5 }, mapZoom: 8, items: [
             {地點: "移動: 斯奈山半島 → Sky Lagoon (約 2h)", 類別: "🚗 移動"},
-            {地點: "Sky Lagoon", 類別: "🎭 活動", lat: 64.1278, lng: -21.9519, mapLabel: "Sky Lagoon", mapPriority: 1}, // Bathing is an activity
+            {地點: "Sky Lagoon", 類別: "🎭 活動", lat: 64.1173703444258, lng: -21.93890345074608, mapLabel: "Sky Lagoon", mapPriority: 1}, // Bathing is an activity
             {地點: "Harpa音樂廳", 描述: "曾被《紐約時報》評選「全球最值得旅遊的41個地方」之一", 類別: "⛱ 景點", lat: 64.1502, lng: -21.9348, mapLabel: "Harpa Concert Hall and Conference Centre", mapPriority: 5, 營業時間: "10:00–18:00 (周日至周二)；10:00–20:00 (周三至周六)"},
             {地點: "哈爾格林姆教堂( Hallgrímskirkja)", 克朗: "1,400", 描述: "全冰島最大教堂，風格前衛，外觀如被風化的柱狀玄武岩", 類別: "⛱ 景點", lat: 64.1417, lng: -21.9266, mapLabel: "Hallgrímskirkja", mapPriority: 6, 營業時間: "10:00~17:00\n 景觀塔：10:00~16:30"},
             {地點: "移動: 市區 → 藍湖 (42m)", 類別: "🚗 移動"},
