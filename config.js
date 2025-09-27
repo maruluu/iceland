@@ -104,39 +104,52 @@ export const allItineraryData = [
         ]},
         // Day 7
         { dayGroup: "Day 7", dayTitle: "Day 7: 10/10(五) 東邊 - 冰河湖到埃伊爾斯塔濟", mapCenter: { lat: 64.7, lng: -15.3 }, mapZoom: 7, items: [
-            {地點: "Jokulsarlon冰河湖獨木舟", 照片: "https://mlz24bjzzgqm.i.optimole.com/w:768/h:512/q:mauto/dpr:2.0/ig:avif/https://dragonflytravelblog.com/wp-content/uploads/2024/08/IMG_0303.jpg", 類別: "🎭 活動", lat: 64.0484, lng: -16.1794, mapLabel: "Jökulsárlón", mapPriority: 1}, // Changed ⛱ 景點 to 🎭 活動
+            {地點: "移動: Skyrhusid HI Hostel → 冰河湖 (約 14m)", 類別: "🚗 移動"},
+            {地點: "Jokulsarlon冰河湖", 照片: "https://mlz24bjzzgqm.i.optimole.com/w:768/h:512/q:mauto/dpr:2.0/ig:avif/https://dragonflytravelblog.com/wp-content/uploads/2024/08/IMG_0303.jpg", 類別: "🎭 活動", lat: 64.0484, lng: -16.1794, mapLabel: "Jökulsárlón", mapPriority: 1}, // Changed ⛱ 景點 to 🎭 活動
             {地點: "鑽石冰沙灘", 照片: "https://mimihan.tw/wp-content/uploads/20230326222910_99.jpg", 類別: "⛱ 景點", lat: 64.0450, lng: -16.1780, mapLabel: "Diamond Beach", mapPriority: 2},
             {地點: "移動: 冰河湖 → Vestrahorn (約 1h 21m)", 描述:"要來Vestrahorn，Google Map 設定導航：Viking Cafe", 類別: "🚗 移動"},
             {地點: "Vestrahorn 蝙蝠山 x 維京人聚落 Viking Village", 
               描述:"Viking Cafe 是在維京人聚落＆拍倒影海灘的出入口位置，大家要先在這裡停車買票。<br/>從這裡就分成兩條路，一條是走路前往北歐電影場景 – 維京人聚落（Viking Village），另一條是往可以拍蝙蝠山倒影海灘的車道，車道有管制，沒買票取得QR-code就無法開車進入，只能走進去。也提醒大家，因為並不是每次來的時候潮汐、天氣都可以拍倒影，所以是否買票進去就要自己斟酌。",  
               照片: "https://kavana.tw/wp-content/uploads/pixnet/f2174d2460d318a9f09be7bb3a57b0db.jpg, https://kavana.tw/wp-content/uploads/pixnet/4cc7f163b96e90a32d2ab027110392b7.jpg", 
               網址: "https://mimigo.tw/vestrahorn/",
-              類別: "⛱ 景點", lat: 64.2470, lng: -14.9960, mapLabel: "Stokksnes (Vestrahorn Viewpoint)", mapPriority: 3},
-            {地點: "Pakkhús Restaurant 小龍蝦", 照片: "https://mimihan.tw/wp-content/uploads/20180628173749_56.jpg", 類別: "🧁 吃喝", lat: 64.25014760364019, lng: -15.203563225099883, mapLabel: "Pakkhús Restaurant (Höfn)"},
-            {地點: "移動: Vestrahorn/Höfn → 埃伊爾斯塔濟 (約 3h 18m)", 類別: "🚗 移動"},
+              類別: "⛱ 景點", lat: 64.25525350924946, lng: -14.991962015334453, mapLabel: "Stokksnes (Vestrahorn Viewpoint)", mapPriority: 3},
+            {地點: "Pakkhús Restaurant 小龍蝦", 描述:"12:00–21:30", 照片: "https://mimihan.tw/wp-content/uploads/20180628173749_56.jpg", 類別: "🧁 吃喝", lat: 64.25014760364019, lng: -15.203563225099883, mapLabel: "Pakkhús Restaurant (Höfn)"},
+            {地點: "移動: Vestrahorn/Höfn → Bankinn - Hotel by Aldan (約 3h 18m)", 類別: "🚗 移動"},
             {地點: "Bankinn - Hotel by Aldan", 類別: "🏡 住宿", 描述: "<span style='color:green;'>&#10003;</span>廚房，<span style='color:red;'>&#10007;</span>洗衣，早餐 588/人，<span style='color:green;'>&#10003;</span>停車", 網址: "https://www.booking.com/Share-B9kJa6", lat: 65.26192036188023, lng: -14.009229280026773, mapLabel: "Bankinn - Hotel by Aldan", mapPriority: 4}
         ]},
         // Day 8
         { dayGroup: "Day 8", dayTitle: "Day 8: 10/11(六) 北部 - 米湖周邊", mapCenter: { lat: 65.6, lng: -16.0 }, mapZoom: 8, items: [
-            {地點: "埃伊爾斯塔濟 → Seyðisfjörður (來回約 1h)", 類別: "🚗 移動"},
-            {地點: "Seyðisfjörður 白日夢冒險王小鎮", 照片: "https://mimihan.tw/wp-content/uploads/20230408152422_67.jpg", 類別: "⛱ 景點", lat: 65.2600, lng: -14.0100, mapLabel: "Seyðisfjarðarkirkja", mapPriority: 1},
-            {地點: "移動: 埃伊爾斯塔濟 → Viti (約 2h)", 類別: "🚗 移動"},
-            {地點: "Viti 維提火山湖 👍", 照片: "https://mimihan.tw/wp-content/uploads/20180529165813_72.jpg", 類別: "⛱ 景點", lat: 65.7165, lng: -16.7522, mapLabel: "Víti crater (Krafla)", mapPriority: 2},
+            {地點: "Seyðisfjörður 白日夢冒險王小鎮", 描述:"人口只有700人的小村莊", 
+              照片: "https://mimihan.tw/wp-content/uploads/20230408152422_67.jpg", 類別: "⛱ 景點", 
+              lat: 65.2600, lng: -14.0100, mapLabel: "Seyðisfjarðarkirkja", 
+              mapPriority: 1},
+            {地點: "移動: Seyðisfjörður → Viti (約 2h30m)", 類別: "🚗 移動"},
+            {地點: "Viti 維提火山湖 👍", 照片: "https://mimihan.tw/wp-content/uploads/20180529165813_72.jpg", 類別: "⛱ 景點", 
+              lat: 65.64141900908815, lng: -16.807989435375713, mapLabel: "Víti crater (Krafla)", mapPriority: 2},
             {地點: "移動: Viti → Námafjall Hverir (約 11m)", 類別: "🚗 移動"},
             {地點: "Námafjall Hverir 火山地熱谷", 照片: "https://mimihan.tw/wp-content/uploads/20180529165813_72.jpg", 類別: "⛱ 景點", lat: 65.6415, lng: -16.8093, mapLabel: "Hverir (Námafjall)", mapPriority: 3},
-            {地點: "洞穴溫泉Grjótagjá", 照片: "https://mimihan.tw/wp-content/uploads/20180603221410_36.jpg", 類別: "⛱ 景點", lat: 65.6262, lng: -16.8820, mapLabel: "Grjótagjá cave", mapPriority: 4},
-            {地點: "米湖溫泉", 照片: "https://mimihan.tw/wp-content/uploads/20180530184317_85.jpg", 類別: "🎭 活動", lat: 65.6305, lng: -16.8480, mapLabel: "Mývatn Nature Baths", mapPriority: 5}, // Changed ⛱ 景點 to 🎭 活動 (bathing is an activity)
-            {地點: "Vogafjós Farm Resort", 類別: "🧁 吃喝", 描述:"吃羊排、羊膝、可麗餅，是TripAdvisor在當地評價的第一名餐廳", lat: 65.6243907547431, lng: -16.919686287406144, mapLabel: "Vogafjós", mapPriority: 6},
+            {地點: "洞穴溫泉Grjótagjá", 描述:"冰與火之歌》其中一個取景地<br/>原本的地洞溫泉Grjótagjá水溫是可以泡湯的，而某年開始水溫變得不穩定，有時甚至會超過50度，雖然還是會有回到正常溫度的時間，但為了避免危險冰島政府已經放警告標示禁止泡湯了", 
+              照片: "https://mimihan.tw/wp-content/uploads/20180603221410_36.jpg", 類別: "⛱ 景點", lat: 65.6262, lng: -16.8820, 
+              mapLabel: "Grjótagjá cave", 
+              mapPriority: 4},
+            {地點: "米湖溫泉", 描述:"台幣：1850<br/> 營業時間: 12:00–22:00", 照片: "https://mimihan.tw/wp-content/uploads/20180530184317_85.jpg", 類別: "🎭 活動", lat: 65.6305, lng: -16.8480, mapLabel: "Mývatn Nature Baths", mapPriority: 5}, // Changed ⛱ 景點 to 🎭 活動 (bathing is an activity)
+            {地點: "Vogafjós Farm Resort", 類別: "🧁 吃喝", 描述:"吃羊排、羊膝、可麗餅，是TripAdvisor在當地評價的第一名餐廳<br/> 營業時間：12:00 至 22:00", lat: 65.6243907547431, lng: -16.919686287406144, mapLabel: "Vogafjós", mapPriority: 6},
             {地點: "Eldá Guesthouse", 類別: "🏡 住宿", 描述: "<span style='color:green;'>&#10003;</span>廚房，<span style='color:red;'>&#10007;</span>洗衣，<span style='color:red;'>&#10007;</span>早餐，<span style='color:green;'>&#10003;</span>停車，NT$8,399，雙人房", 網址: "https://www.booking.com/Share-y95ofhe", lat: 65.6411510806318, lng: -16.90701006974602, 照片: "https://gti.images.tshiftcdn.com/2947681/x/0/62802992.jpg?ixlib=php-3.3.0&ar=1.91%3A1&w=1200&fit=crop", mapLabel: "Eldá Guesthouse", mapPriority: 7}
         ]},
         // Day 9
         { dayGroup: "Day 9", dayTitle: "Day 9: 10/12(日) 米湖到阿克雷里", mapCenter: {lat: 65.6411510806318, lng: -16.90701006974602 }, mapZoom: 9, items: [
             {地點: "Eldá Guesthouse → Hverfjall (約 13m)", 類別: "🚗 移動"},
-            {地點: "Hverfjall 惠爾火山 2-3h", 照片: "https://mimihan.tw/wp-content/uploads/20180529132824_95.jpg", 類別: "🎭 活動", lat: 65.6033, lng: -16.8734, mapLabel: "Hverfjall", mapPriority: 1}, // Hiking is an activity
-            {地點: "黑色城堡 Dimmuborgir", 照片: "https://mimihan.tw/wp-content/uploads/20180529221509_26.jpg", 類別: "⛱ 景點", lat: 65.5911, lng: -16.9119, mapLabel: "Dimmuborgir", mapPriority: 2},
+            {地點: "Hverfjall 惠爾火山 2-3h", 
+              描述: "巨大的偽火山口，大約形成於2500年前，是因當時火山爆發後，熔岩覆蓋周圍的湖水，底下悶燒的池水在密閉空間裡累積大量水蒸氣，最終噴發所造就的地景。看起來就和真的火山口沒有兩樣，但它其實底下是沒有熔岩。<br/><br/>車子可以直接開進惠爾火山步道旁遊客資訊站",
+              照片: "https://mimihan.tw/wp-content/uploads/20180529132824_95.jpg", 
+              類別: "🎭 活動", lat: 65.60971239580145, lng: -16.867233925970147, mapLabel: "Hverfjall", mapPriority: 1}, // Hiking is an activity
+            {地點: "黑色城堡 Dimmuborgir", 
+              描述: "由各種怪異形狀的熔岩層與火山洞組成的奇景，黑色的熔岩層加上洞穴，看起來就像是荒廢倒塌的城堡，因此Dimmuborgir在北歐語中有黑色的城堡或堡壘的意思。<br/>這裏有不同長短的健行步道，較為推薦的是Church Circle，輕鬆好走繞一圈約一小時走2.3公里，可以看到獨特有趣的熔岩景觀以及有名的弧形洞穴 Kirkjan。", 
+              照片: "https://mimihan.tw/wp-content/uploads/20180529221509_26.jpg", 類別: "⛱ 景點", lat: 65.5911, lng: -16.9119, mapLabel: "Dimmuborgir", mapPriority: 2},
             {地點: "移動: 米湖 → Godafoss (約 50m)", 類別: "🚗 移動"},
-            {地點: "Godafoss眾神瀑布", 照片: "https://mimihan.tw/wp-content/uploads/20180609144626_42.jpg", 類別: "⛱ 景點", lat: 65.6828, lng: -17.5503, mapLabel: "Goðafoss", mapPriority: 3},
-            {地點: "移動: Godafoss -> Akureyri(Kaffi Ilmur ehf) (約 40m)", 類別: "🚗 移動"},
+            {地點: "Godafoss眾神瀑布", 描述:"眾神瀑布之名源自公元 1000 年冰島基督教化的歷史傳說。當時冰島酋長 Þorgeir Ljósvetningagoði 決定全島改信基督教，並將北歐異教的神像丟入這座瀑布中，以示摒棄舊信仰，此事件讓瀑布成為冰島文化和宗教歷史的重要象徵。<br/><br/>建議停留時間：1~1.5 小時（可看東西兩側，只看一側約 0.5~1 小時）", 
+              照片: "https://mimihan.tw/wp-content/uploads/20180609144626_42.jpg", 類別: "⛱ 景點", lat: 65.6828, lng: -17.5503, mapLabel: "Goðafoss", mapPriority: 3},
+            {地點: "移動: Godafoss -> Akureyri(Kaffi Ilmur ehf) (約 40m)", 描述:"！！注意這段會經過付費隧道 Vaðlaheiðargöng，要上網繳費", 類別: "🚗 移動"},
             {地點: "Kaffi Ilmur ehf", 類別: "🧁 吃喝", 描述: "buffet in the weekend from 11am to 2.30pm", 克朗:"2,290", lat: 65.6805, lng: -18.0903, mapLabel: "Kaffi Ilmur", mapPriority: 4},
             {地點: "Brynja 冰淇淋", 描述:"Hafnarstræti 購物街市區晃晃", 類別: "🧁 吃喝", lat: 65.6790, lng: -18.0970, mapLabel: "Brynja", mapPriority: 5},
             {地點: "K16Apartments", 類別: "🏡 住宿", 描述: "<span style='color:green;'>&#10003;</span>廚房，<span style='color:green;'>&#10003;</span>洗衣，<span style='color:red;'>&#10007;</span>早餐，<span style='color:green;'>&#10003;</span>停車，NT$5,006，1張加大雙人床1張沙發床", 網址: "https://www.booking.com/Share-iepTNB", lat: 65.68027183628328, lng: -18.0918670372408, 照片: "https://suhowtravel.com/wp-content/uploads/2024/09/K16Apartments-scaled-e1726112596746.jpg", mapLabel: "K16Apartments", mapPriority: 6}
@@ -146,15 +159,22 @@ export const allItineraryData = [
             {地點: "移動: Akureyri → Bjórböðin SPA (約 31m)", 描述:"看要不要去？", 類別: "🚗 移動"},
             {地點: "Bjórböðin SPA", 台幣:"4600", 描述: "泡 25分鐘 兩人 ＋ 休息區躺25分鐘...", 照片: "https://mimihan.tw/wp-content/uploads/20180613111632_26.jpg", 類別: "🎭 活動", lat: 66.0698, lng: -18.5323, mapLabel: "Bjórböðin - The Beer Spa"}, // SPA is an activity
             {地點: "移動: Akureyri → Glaumbær (約 1h 22m)", 類別: "🚗 移動"},
-            {地點: "Glaumbaer Museum 草屋博物館", 照片: "https://mimihan.tw/wp-content/uploads/20180618141607_36.jpg", 類別: "⛱ 景點", lat: 65.6085, lng: -19.5000, mapLabel: "Glaumbær Farm & Museum", mapPriority: 1},
+            {地點: "Glaumbaer Museum 草屋博物館", 
+              描述:"18世紀冰島人這樣生活。冰島因為氣候與土地的關係，並沒有足夠的樹木可以當成建材來擋風遮雨，而此時聰明的冰島人就把腦筋動到隨處可見的草皮上，除了保暖耐用，且還不用油漆，每年屋頂會自動換新裝。<br/><br/>可以買門票走進以前的房子內與草屋中，不過教堂建議門口看看就好。", 
+              照片: "https://mimihan.tw/wp-content/uploads/20180618141607_36.jpg", 類別: "⛱ 景點", lat: 65.6085, lng: -19.5000, mapLabel: "Glaumbær Farm & Museum", mapPriority: 1},
             {地點: "移動: Glaumbær → Blönduóskirkja (約 43m)", 類別: "🚗 移動"},
-            {地點: "Blonduoskirkja 火山教堂、鯨魚教堂", 描述: "可順便加油", 照片: "https://mimihan.tw/wp-content/uploads/20180618141633_68.jpg", 類別: "⛱ 景點", lat: 65.6580, lng: -20.2785, mapLabel: "Blönduóskirkja", mapPriority: 2},
+            {地點: "Blonduoskirkja 火山教堂、鯨魚教堂", 描述: "因造型貌似鯨魚昂首而得此暱稱。<br/>可順便加油<br/> 附近Ommukaffi，它是Tripadvisor評選出來的本地第一名的用餐地點，老闆大力推薦的人氣主食是披薩和漢堡<br/>營業時間：09:00-17:00", 
+              照片: "https://scontent.ftpe4-2.fna.fbcdn.net/v/t39.30808-6/518404622_31085681751030258_5393250706398479160_n.jpg?stp=cp6_dst-jpegr_tt6&_nc_cat=110&ccb=1-7&_nc_sid=f727a1&_nc_ohc=Gdcw21LLCtgQ7kNvwHCiGm6&_nc_oc=AdlRGn8X2AbN0ckcw9zdO6CteuFz-cWffg6OUqxJt4rLOT7oYtvYsKCKZcRbzDSh9n_d_2c_YmX39p-lC2HdcnuE&_nc_zt=23&se=-1&_nc_ht=scontent.ftpe4-2.fna&_nc_gid=TzLpCeH3bYAy6GVW7ForBQ&oh=00_AfbjE0jEwV9RuYBecNi0OazU8X5XUlgls-q9jkShUTTgPA&oe=68DD91A6", 類別: "⛱ 景點", 
+              lat: 65.65980955115842,  lng: -20.27991470064455, mapLabel: "Blönduóskirkja", mapPriority: 2},
             {地點: "移動: Blönduóskirkja → 巨人峽谷 (約 37m)", 類別: "🚗 移動"},
-            {地點: "巨人峽谷 (Kolugljúfur Canyon)", 類別: "⛱ 景點", lat: 65.3303, lng: -20.7008, mapLabel: "Kolugljúfur Canyon", mapPriority: 3},
+            {地點: "巨人峽谷 (Kolugljúfur Canyon)", 
+              照片:"https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqbVVlsqKCtwhfEipZCgbiZ48U6Vz_MZDxTSs-wS-3h-5QQAqzui74v4drXbTOvahM3Cp8ZR7nQ5_ZeoX5u7iTj26JCiiwXFXhmL8DRYda4bb2rcQu7gJDwkcci32NhS-QH68gYpfZe7Q-1=w270-h312-n-k-no", 
+              類別: "⛱ 景點", lat: 65.33432881376768, lng: -20.56337996667329, mapLabel: "Kolugljúfur Canyon", mapPriority: 3},
+            {地點: "移動:巨人峽谷 → Fagrabrekka Guesthouse (約 37m)", 類別: "🚗 移動"},
             {地點: "Fagrabrekka Guesthouse", 類別: "🏡 住宿", 
               描述: "<span style='color:green;'>&#10003;</span>廚房，<span style='color:red;'>&#10007;</span>洗衣，<span style='color:red;'>&#10007;</span>早餐，<span style='color:green;'>&#10003;</span>停車，NT$6,243，小型雙人房－附共用衛浴", 
               網址: "https://www.booking.com/Share-bHZrFT6", 
-              lat: 65.14119813682076,  lng: -21.077053457672005, 
+              lat: 65.13922197478192,  lng: -21.08936188687137, 
               照片: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/388785829.jpg?k=ce43059e0eba37b9b9a009299298845542d60277c611fd5ac938f98c1963cc86&o=", 
               mapLabel: "Fagrabrekka Guesthouse", 
               mapPriority: 4
